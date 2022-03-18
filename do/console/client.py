@@ -1,20 +1,26 @@
 from datetime import date
 
 from do import storage
+from do import config
 from do.model import Data
-
-
-def _context():
-    config = storage.config()
-    if config.has_option('database', 'context'):
-        return config.get('database', 'context')
-
-    return 'default'
 
 
 class Client:
     def __init__(self):
-        self.data = Data(storage.database(), _context())
+        self.data = Data(storage.database(), config.context())
+
+    @staticmethod
+    def set_context(new_context):
+        config.set_context(new_context)
+
+    @staticmethod
+    def contexts():
+        for context_ in config.contexts():
+            print(context_)
+
+    @staticmethod
+    def context():
+        print(config.context())
 
     def plan_priorities(self, date_: date):
         day = self.data.day(date_)
