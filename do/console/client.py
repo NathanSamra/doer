@@ -1,8 +1,41 @@
 from datetime import date
+from typing import List
 
 from do import storage
 from do import config
-from do.model import Data
+from do.model import Data, Day
+
+
+def _collect_items(date_) -> List[str]:
+    items = []
+    line = input(f'List items for {date_}')
+
+    while line:
+        items.append(line)
+        line = input('Anymore?')
+
+    return items
+
+
+def _order_items(items) -> List[str]:
+    print('your items:')
+    for i, item in enumerate(items, start=1):
+        print(f'{i}. {item}')
+
+    choice = input('Please order your items')
+    success = False
+    nums = []
+    while not success:
+        nums = [int(num) for num in choice.split()]
+        success = True
+
+    return [items[i - 1] for i in nums]
+
+
+def _show_day(day: Day, date_: date):
+    print(f'Priorities for {date_} are:')
+    for i, priority in enumerate(day.priorities, start=1):
+        print(f'{i}. {priority}')
 
 
 class Client:
@@ -25,30 +58,15 @@ class Client:
     def plan_priorities(self, date_: date):
         day = self.data.day(date_)
         items = []
-        line = input(f'List all your items for {date_}')
+        if len(day.priorities) > 0:
+            _show_day(day, date_)
+            items.extend(day.priorities)
 
-        while line:
-            items.append(line)
-            line = input('Anymore?')
-
-        print('your items:')
-        for i, item in enumerate(items, start=1):
-            print(f'{i}. {item}')
-
-        choice = input('Please order your items')
-        success = False
-        nums = []
-        while not success:
-            nums = [int(num) for num in choice.split()]
-            success = True
-
-        day.priorities = [items[i - 1] for i in nums]
-
-        print('done')
+        items.extend(_collect_items(date_))
+        day.priorities = _order_items(items)
         self.data.set_day(date_, day)
+        _show_day(day, date_)
 
     def show(self, date_: date):
         day = self.data.day(date_)
-        print(f'Priorities for {date_} are:')
-        for i, priority in enumerate(day.priorities, start=1):
-            print(f'{i}. {priority}')
+        _show_day(day, date_)
