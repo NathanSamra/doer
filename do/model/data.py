@@ -2,19 +2,21 @@ import json
 from datetime import date
 from pathlib import Path
 
-from appdirs import AppDirs
-
 from do.metadata import __version__
 from do.model.day import Day
 from do.model.year import Year, year_from_json, year_to_json
 
 
 class Data:
-    def __init__(self, context: str = 'default'):
-        dirs = AppDirs('do')
-        self._database = Path(dirs.user_data_dir, context)
+    def __init__(self, database: Path, context: str):
+        self._root = database
+        self._context = context
         if not self._database.exists():
             self._database.mkdir(parents=True)
+
+    @property
+    def _database(self):
+        return self._root / self._context
 
     def year(self, year_num: int, ) -> Year:
         year_file = self._year_file(year_num)

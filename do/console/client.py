@@ -1,23 +1,23 @@
-from datetime import date, timedelta
+from datetime import date
 
+from do import storage
 from do.model import Data
 
 
-def _tomorrow() -> date:
-    return date.today() + timedelta(days=1)
+def _context():
+    config = storage.config()
+    if config.has_option('database', 'context'):
+        return config.get('database', 'context')
+
+    return 'default'
 
 
-class Do:
-    def __init__(self, context: str = None):
-        if context:
-            self.data = Data(context)
-        else:
-            self.data = Data()
+class Client:
+    def __init__(self):
+        self.data = Data(storage.database(), _context())
 
-    def plan_priorities(self, date_: date = _tomorrow()):
+    def plan_priorities(self, date_: date):
         day = self.data.day(date_)
-        print(f'List all your items for {date_}')
-
         items = []
         line = input(f'List all your items for {date_}')
 
@@ -46,9 +46,3 @@ class Do:
         print(f'Priorities for {date_} are:')
         for i, priority in enumerate(day.priorities, start=1):
             print(f'{i}. {priority}')
-
-    def show_today(self):
-        self.show(date.today())
-
-    def show_tomorrow(self):
-        self.show(_tomorrow())

@@ -7,5 +7,5 @@ setup(name=metadata.name,
       version=metadata.__version__,
       packages=find_packages(),
       entry_points={
-          'console_scripts': ['do=do.entry_point:enter']
+          'console_scripts': ['do=do.console.entry_point:enter']
       })
