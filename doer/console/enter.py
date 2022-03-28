@@ -1,6 +1,8 @@
 import argparse
+import sys
 from datetime import date, timedelta
 
+from doer import metadata
 from doer.console.client import Client
 
 
@@ -48,6 +50,8 @@ def _add_date_group(parser):
 
 def enter():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--version', action='version', version=metadata.version)
+
     action_parsers = parser.add_subparsers()
 
     plan_parser = action_parsers.add_parser('plan')
@@ -67,6 +71,9 @@ def enter():
     set_context_parser = action_parsers.add_parser('set_context')
     set_context_parser.add_argument('context', help='Context to switch to')
     set_context_parser.set_defaults(func=_set_context)
+
+    if len(sys.argv) == 1:
+        sys.argv.append('--help')
 
     args = parser.parse_args()
     args.func(args)
