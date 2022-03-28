@@ -1,3 +1,3 @@
-from do.console.enter import enter
+from doer.console.enter import enter
 
 enter()

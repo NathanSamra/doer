@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from do import metadata
+from doer import metadata
 
 setup(name=metadata.name,
       author=metadata.author,
@@ -8,5 +8,5 @@ setup(name=metadata.name,
       install_requires=['appdirs~=1.4.4'],
       packages=find_packages(),
       entry_points={
-          'console_scripts': ['do=do.console:enter']
+          'console_scripts': ['doer=doer.console:enter']
       })

@@ -1,7 +1,7 @@
 import typing
 from datetime import date
 
-from do.model.day import Day
+from doer.model.day import Day
 
 Year = typing.Dict[date, Day]
 

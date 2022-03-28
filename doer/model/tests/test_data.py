@@ -2,9 +2,9 @@ import random
 import unittest
 from datetime import date
 
-from do import storage
-from do.model.data import Data
-from do.model.day import Day
+from doer import storage
+from doer.model.data import Data
+from doer.model.day import Day
 
 
 class DataTests(unittest.TestCase):

@@ -3,7 +3,7 @@ from pathlib import Path
 
 from appdirs import AppDirs
 
-from do import metadata
+from doer import metadata
 
 _dirs = AppDirs(appname=metadata.name, appauthor=metadata.author)
 _config_file = Path(_dirs.user_config_dir, 'config.ini')

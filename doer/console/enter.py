@@ -1,7 +1,7 @@
 import argparse
 from datetime import date, timedelta
 
-from do.console.client import Client
+from doer.console.client import Client
 
 
 def _date(args) -> date:

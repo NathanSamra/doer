@@ -2,9 +2,9 @@ import json
 from datetime import date
 from pathlib import Path
 
-from do.metadata import __version__
-from do.model.day import Day
-from do.model.year import Year, year_from_json, year_to_json
+from doer.metadata import __version__
+from doer.model.day import Day
+from doer.model.year import Year, year_from_json, year_to_json
 
 
 class Data:

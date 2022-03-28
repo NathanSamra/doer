@@ -1,9 +1,9 @@
 from datetime import date
 from typing import List
 
-from do import storage
-from do import config
-from do.model import Data, Day
+from doer import storage
+from doer import config
+from doer.model import Data, Day
 
 
 def _collect_items(date_) -> List[str]:
