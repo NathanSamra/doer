@@ -1,2 +1,0 @@
-appdirs~=1.4.4
-setuptools~=57.0.0
