@@ -1,3 +1,3 @@
-from do.console.entry_point import enter
+from do.console.enter import enter
 
 enter()
