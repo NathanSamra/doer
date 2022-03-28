@@ -8,28 +8,33 @@ from do.model import Data, Day
 
 def _collect_items(date_) -> List[str]:
     items = []
-    line = input(f'List items for {date_}')
+    line = input(f'List items for {date_}\n')
 
     while line:
         items.append(line)
-        line = input('Anymore?')
+        line = input('Anymore?\n')
 
     return items
 
 
 def _order_items(items) -> List[str]:
-    print('your items:')
-    for i, item in enumerate(items, start=1):
-        print(f'{i}. {item}')
+    result = []
+    remaining = items
 
-    choice = input('Please order your items')
-    success = False
-    nums = []
-    while not success:
-        nums = [int(num) for num in choice.split()]
-        success = True
+    for priority in range(6):
+        if len(remaining) == 0:
+            return result
 
-    return [items[i - 1] for i in nums]
+        print('Remaining:')
+        for i, item in enumerate(remaining, start=1):
+            print(f'{i}. {item}')
+        choice = input('Select the top priority, or press enter to end.\n')
+        if not choice:
+            return result
+
+        result.append(remaining.pop(int(choice) - 1))
+
+    return result
 
 
 def _show_day(day: Day, date_: date):
