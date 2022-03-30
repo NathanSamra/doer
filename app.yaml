@@ -1,0 +1,14 @@
+runtime: python38
+
+entrypoint: gunicorn -b :$PORT doer.web.config.wsgi
+
+env_variables:
+  # BUCKET_NAME: "doer-bucket"
+  APPENGINE_URL: https://doer-345720.nw.r.appspot.com
+
+handlers:
+- url: /static
+  static_dir: static/
+
+- url: /.*
+  script: auto
