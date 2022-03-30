@@ -37,12 +37,6 @@ def _order_items(items) -> List[str]:
     return result
 
 
-def _show_day(day: Day, date_: date):
-    print(f'Priorities for {date_} are:')
-    for i, priority in enumerate(day.priorities, start=1):
-        print(f'{i}. {priority}')
-
-
 class Client:
     def __init__(self):
         self.data = Data(storage.database(), config.context())
@@ -64,14 +58,21 @@ class Client:
         day = self.data.day(date_)
         items = []
         if len(day.priorities) > 0:
-            _show_day(day, date_)
+            self.show(date_)
             items.extend(day.priorities)
 
         items.extend(_collect_items(date_))
         day.priorities = _order_items(items)
         self.data.set_day(date_, day)
-        _show_day(day, date_)
+        self.show(date_)
+
+    def copy_priorities(self, date_from: date, date_to: date):
+        from_ = self.data.day(date_from)
+        self.data.set_day(date_to, from_)
+        self.show(date_to)
 
     def show(self, date_: date):
         day = self.data.day(date_)
-        _show_day(day, date_)
+        print(f'Priorities for {date_} are:')
+        for i, priority in enumerate(day.priorities, start=1):
+            print(f'{i}. {priority}')

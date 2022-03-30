@@ -6,8 +6,12 @@ from doer import metadata
 from doer.console.client import Client
 
 
-def _date(args) -> date:
-    date_ = date.today() + timedelta(days=1)
+def _tomorrow() -> date:
+    return date.today() + timedelta(days=1)
+
+
+def _date_from_args(args) -> date:
+    date_ = _tomorrow()
     if args.today:
         date_ = date.today()
     elif args.day is not None:
@@ -16,14 +20,29 @@ def _date(args) -> date:
     return date_
 
 
+def _date_from_str(date_str) -> date:
+    if date_str == 'today':
+        return date.today()
+
+    if date_str == 'tomorrow':
+        return _tomorrow()
+
+    return date.fromisoformat(date_str)
+
+
 def _plan(args):
     client = Client()
-    client.plan_priorities(_date(args))
+    client.plan_priorities(_date_from_args(args))
+
+
+def _copy(args):
+    client = Client()
+    client.copy_priorities(_date_from_str(args.from_), _date_from_str(args.to))
 
 
 def _show(args):
     client = Client()
-    client.show(_date(args))
+    client.show(_date_from_args(args))
 
 
 def _context(args):
@@ -57,6 +76,13 @@ def enter():
     plan_parser = action_parsers.add_parser('plan')
     _add_date_group(plan_parser)
     plan_parser.set_defaults(func=_plan)
+
+    copy_parser = action_parsers.add_parser('copy')
+    copy_parser.add_argument('from_', type=str, help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
+                                                     'ISO format')
+    copy_parser.add_argument('to', type=str, help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
+                                                  'ISO format')
+    copy_parser.set_defaults(func=_copy)
 
     show_parser = action_parsers.add_parser('show')
     _add_date_group(show_parser)
