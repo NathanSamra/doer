@@ -36,7 +36,7 @@ class Data:
     def set_year(self, year_num: int, year: Year):
         year_file = self._year_file(year_num)
         year_dict = year_to_json(year)
-        year_dict['version'] = __version__
+        year_dict['version'] = str(__version__)
 
         with year_file.open('w+') as f:
             json.dump(year_dict, f, indent=4)
