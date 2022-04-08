@@ -3,22 +3,22 @@ from typing import List
 
 from doer import storage
 from doer import config
-from doer.model import Data, Day
+from doer.model import Data, Day, Priority
 
 
-def _collect_items(date_) -> List[str]:
-    items = []
+def _collect_items(date_) -> List[Priority]:
+    items: List[Priority] = []
     line = input(f'List items for {date_}\n')
 
     while line:
-        items.append(line)
+        items.append(Priority(line))
         line = input('Anymore?\n')
 
     return items
 
 
-def _order_items(items) -> List[str]:
-    result = []
+def _order_items(items: List[Priority]) -> List[Priority]:
+    result: List[Priority] = []
     remaining = items
 
     for priority in range(6):
@@ -27,7 +27,7 @@ def _order_items(items) -> List[str]:
 
         print('Remaining:')
         for i, item in enumerate(remaining, start=1):
-            print(f'{i}. {item}')
+            print(f'{i}. {item.name}')
         choice = input('Select the top priority, or press enter to end.\n')
         if not choice:
             return result
@@ -56,7 +56,7 @@ class Client:
 
     def plan_priorities(self, date_: date):
         day = self.data.day(date_)
-        items = []
+        items: List[Priority] = []
         if len(day.priorities) > 0:
             self.show(date_)
             items.extend(day.priorities)
@@ -75,4 +75,24 @@ class Client:
         day = self.data.day(date_)
         print(f'Priorities for {date_} are:')
         for i, priority in enumerate(day.priorities, start=1):
-            print(f'{i}. {priority}')
+            if priority.done:
+                print(f'{i}. {priority.name} - done')
+            else:
+                print(f'{i}. {priority.name}')
+
+    def tick(self, date_: date, id_: int):
+        self._set_tick(date_, id_, True)
+
+    def un_tick(self, date_: date, id_: int):
+        self._set_tick(date_, id_, False)
+
+    def _set_tick(self, date_: date, id_: int, state: bool):
+        day = self.data.day(date_)
+        max_id = len(day.priorities) - 1
+        if id_ > max_id:
+            print(f'id {id_} invalid, maximum is {max_id}')
+            return
+
+        day.priorities[id_].done = state
+        self.data.set_day(date_, day)
+

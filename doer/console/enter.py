@@ -70,8 +70,30 @@ def _add_show_action(parsers):
     show_parser.set_defaults(func=action)
 
 
-def _add_context_action(parsers):
+def _add_tick_action(parsers):
     def action(args):
+        client = Client()
+        client.tick(_date_from_args(args), int(args.id_))
+
+    tick_parser = parsers.add_parser('tick')
+    _add_date_group(tick_parser)
+    tick_parser.add_argument('id_')
+    tick_parser.set_defaults(func=action)
+
+
+def _add_un_tick_action(parsers):
+    def action(args):
+        client = Client()
+        client.un_tick(_date_from_args(args), int(args.id_))
+
+    un_tick_parser = parsers.add_parser('un-tick')
+    _add_date_group(un_tick_parser)
+    un_tick_parser.add_argument('id_')
+    un_tick_parser.set_defaults(func=action)
+
+
+def _add_context_action(parsers):
+    def action():
         client = Client()
         client.context()
 
@@ -80,7 +102,7 @@ def _add_context_action(parsers):
 
 
 def _add_contexts_action(parsers):
-    def action(args):
+    def action():
         client = Client()
         client.contexts()
 
@@ -106,6 +128,8 @@ def enter():
     _add_plan_action(action_parsers)
     _add_copy_action(action_parsers)
     _add_show_action(action_parsers)
+    _add_tick_action(action_parsers)
+    _add_un_tick_action(action_parsers)
     _add_context_action(action_parsers)
     _add_contexts_action(action_parsers)
     _add_set_context_action(action_parsers)

@@ -1,3 +1,3 @@
 from .data import Data
-from .day import Day
+from .day import Day, Priority
 from .year import Year
