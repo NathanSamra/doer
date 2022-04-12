@@ -73,7 +73,7 @@ def _add_show_action(parsers):
 def _add_tick_action(parsers):
     def action(args):
         client = Client()
-        client.tick(_date_from_args(args), int(args.id_))
+        client.tick(_date_from_args(args), int(args.id_) - 1)
 
     tick_parser = parsers.add_parser('tick')
     _add_date_group(tick_parser)
@@ -84,7 +84,7 @@ def _add_tick_action(parsers):
 def _add_un_tick_action(parsers):
     def action(args):
         client = Client()
-        client.un_tick(_date_from_args(args), int(args.id_))
+        client.un_tick(_date_from_args(args), int(args.id_) - 1)
 
     un_tick_parser = parsers.add_parser('un-tick')
     _add_date_group(un_tick_parser)
