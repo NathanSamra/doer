@@ -1,6 +1,6 @@
 from semantic_version import Version
 
-__version__ = Version('1.2.1')
+__version__ = Version('1.3.0')
 
 
 name = 'doer'

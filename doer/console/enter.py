@@ -120,6 +120,44 @@ def _add_set_context_action(parsers):
     set_context_parser.set_defaults(func=action)
 
 
+def _add_set_focus(parsers):
+    def action(args):
+        client = Client()
+        focus = args.focus
+        if focus.isnumeric():
+            client.set_focus_to_priority(int(focus) - 1)
+        else:
+            client.set_focus(focus)
+
+    set_focus_parser = parsers.add_parser('set_focus')
+    set_focus_parser.add_argument('focus', help='name or ID of focus')
+    set_focus_parser.set_defaults(func=action)
+
+
+def _add_start_break(parsers):
+    def action(args):
+        client = Client().start_break()
+
+    start_break_parser = parsers.add_parser('start_break')
+    start_break_parser.set_defaults(func=action)
+
+
+def _add_end_break(parsers):
+    def action(args):
+        client = Client().end_break()
+
+    end_break_parser = parsers.add_parser('end_break')
+    end_break_parser.set_defaults(func=action)
+
+
+def _add_end_day(parsers):
+    def action(args):
+        Client().end_day()
+
+    end_day_parser = parsers.add_parser('end_day')
+    end_day_parser.set_defaults(func=action)
+
+
 def enter():
     parser = argparse.ArgumentParser()
     parser.add_argument('--version', action='version', version=metadata.version)
@@ -133,6 +171,10 @@ def enter():
     _add_context_action(action_parsers)
     _add_contexts_action(action_parsers)
     _add_set_context_action(action_parsers)
+    _add_set_focus(action_parsers)
+    _add_start_break(action_parsers)
+    _add_end_break(action_parsers)
+    _add_end_day(action_parsers)
 
     if len(sys.argv) == 1:
         sys.argv.append('--help')
