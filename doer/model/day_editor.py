@@ -14,5 +14,6 @@ class DayEditor:
         return self._day
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self._data.set_day(self._date, self._day)
+        if exc_type is None:
+            self._data.set_day(self._date, self._day)
         self._day = None
