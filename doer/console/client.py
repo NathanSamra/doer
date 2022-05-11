@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import List
+from typing import List, Optional
 
 from doer import storage
 from doer import config
@@ -18,18 +18,38 @@ def _collect_items(date_) -> List[Priority]:
     return items
 
 
+def _get_item_id(max_id) -> Optional[int]:
+    while True:
+        choice = input('Select the top priority, or press enter to end.\n')
+        if choice is None:
+            return None
+
+        if not choice.isdigit():
+            print(f'{choice} is not a digit, please try again')
+            continue
+
+        id_ = int(choice)
+        if id_ > max_id:
+            print(f'{id_} is too large, maximum is {max_id}')
+            continue
+
+        return id_
+
+
 def _order_items(items: List[Priority]) -> List[Priority]:
     result: List[Priority] = []
     remaining = items
 
     for priority in range(6):
-        if len(remaining) == 0:
+        max_id = len(remaining)
+        if max_id == 0:
             return result
 
         print('Remaining:')
         for i, item in enumerate(remaining, start=1):
             print(f'{i}. {item.name}')
-        choice = input('Select the top priority, or press enter to end.\n')
+
+        choice = _get_item_id(max_id)
         if not choice:
             return result
 
