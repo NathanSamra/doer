@@ -46,6 +46,7 @@ class Day:
         self.priorities: typing.List[Priority] = []
         self.log: typing.List[Focus] = []
         self.end_time: typing.Optional[time] = None
+        self.notes: typing.List[str] = []
 
     @property
     def focus(self) -> typing.Optional[Focus]:

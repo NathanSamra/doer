@@ -20,7 +20,8 @@ def year_to_json(year: Year):
                     'start': break_.start_time.isoformat(),
                     'end': break_.end_time.isoformat()
                 } for break_ in focus.breaks]
-            } for focus in day.log]
+            } for focus in day.log],
+            'notes': day.notes
         }
 
         if day.end_time is not None:
@@ -70,6 +71,9 @@ def year_from_json(year_dict):
 
         if 'end_time' in day_dict:
             day.end_time = time.fromisoformat(day_dict['end_time'])
+
+        if 'notes' in day_dict:
+            day.notes = day_dict['notes']
 
         year[date_] = day
 

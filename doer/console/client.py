@@ -98,6 +98,7 @@ class Client:
     def show(self, date_: date):
         self.show_priorities(date_)
         self.show_log(date_)
+        self.show_notes(date_)
 
     def show_priorities(self, date_: date):
         day = self._data.day(date_)
@@ -146,6 +147,20 @@ class Client:
 
         print('\n')
 
+    def show_notes(self, date_: date):
+        day = self._data.day(date_)
+
+        if len(day.notes) == 0:
+            print(f'{date_} has no notes')
+            return
+
+        print(f'Notes for {date_}:')
+
+        for i, note in enumerate(day.notes, start=1):
+            print(f'{i}. {note}')
+
+        print('\n')
+
     def tick(self, id_: int):
         self._set_tick(id_, True)
 
@@ -185,6 +200,10 @@ class Client:
     def end_day(self):
         with self._edit_today() as day:
             day.end()
+
+    def note(self, note: str):
+        with self._edit_today() as day:
+            day.notes.append(note)
 
     def _edit_day(self, date_: date):
         return DayEditor(date_, self._data)

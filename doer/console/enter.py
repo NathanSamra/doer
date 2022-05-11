@@ -153,6 +153,15 @@ def _add_end_day(parsers):
     end_day_parser.set_defaults(func=action)
 
 
+def _add_note(parsers):
+    def action(args):
+        Client().note(args.note)
+
+    note_parser = parsers.add_parser('note')
+    note_parser.add_argument('note', type=str, help='Note for today')
+    note_parser.set_defaults(func=action)
+
+
 def enter():
     parser = argparse.ArgumentParser()
     parser.add_argument('--version', action='version', version=metadata.version)
@@ -170,6 +179,7 @@ def enter():
     _add_start_break(action_parsers)
     _add_end_break(action_parsers)
     _add_end_day(action_parsers)
+    _add_note(action_parsers)
 
     if len(sys.argv) == 1:
         sys.argv.append('--help')
