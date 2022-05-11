@@ -8,6 +8,9 @@ class Priority:
         self.name: str = name
         self.done: bool = False
 
+    def __eq__(self, other):
+        return (self.name, self.done) == (other.name, other.done)
+
 
 class Focus:
     class Break:

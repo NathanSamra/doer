@@ -4,6 +4,7 @@ from typing import List
 from doer import storage
 from doer import config
 from doer.model import Data, Priority
+from doer.model.day_editor import DayEditor
 
 
 def _collect_items(date_) -> List[Priority]:
@@ -39,7 +40,8 @@ def _order_items(items: List[Priority]) -> List[Priority]:
 
 class Client:
     def __init__(self):
-        self.data = Data(storage.database(), config.context())
+        self._data = Data(storage.database(), config.context())
+        self._day_editor = DayEditor(date.today(), self._data)
 
     @staticmethod
     def set_context(new_context):
@@ -55,20 +57,20 @@ class Client:
         print(config.context())
 
     def plan_priorities(self, date_: date):
-        day = self.data.day(date_)
-        items: List[Priority] = []
-        if len(day.priorities) > 0:
-            self.show_priorities(date_)
-            items.extend(day.priorities)
+        with self._edit_day(date_) as day:
+            items: List[Priority] = []
+            if len(day.priorities) > 0:
+                self.show_priorities(date_)
+                items.extend(day.priorities)
 
-        items.extend(_collect_items(date_))
-        day.priorities = _order_items(items)
-        self.data.set_day(date_, day)
+            items.extend(_collect_items(date_))
+            day.priorities = _order_items(items)
+
         self.show_priorities(date_)
 
     def copy_priorities(self, date_from: date, date_to: date):
-        from_ = self.data.day(date_from)
-        self.data.set_day(date_to, from_)
+        from_ = self._data.day(date_from)
+        self._data.set_day(date_to, from_)
         self.show_priorities(date_to)
 
     def show(self, date_: date):
@@ -76,7 +78,7 @@ class Client:
         self.show_log(date_)
 
     def show_priorities(self, date_: date):
-        day = self.data.day(date_)
+        day = self._data.day(date_)
         focus = day.focus.name if day.focus is not None else ''
 
         print(f'Priorities for {date_} are:')
@@ -98,7 +100,7 @@ class Client:
         print('\n')
 
     def show_log(self, date_: date):
-        day = self.data.day(date_)
+        day = self._data.day(date_)
         print(f'Log for {date_} is:')
 
         for focus in day.log:
@@ -119,47 +121,41 @@ class Client:
         self._set_tick(date_, id_, False)
 
     def _set_tick(self, date_: date, id_: int, state: bool):
-        day = self.data.day(date_)
-        max_id = len(day.priorities) - 1
-        if id_ > max_id:
-            print(f'id {id_} invalid, maximum is {max_id}')
-            return
+        with self._edit_day(date_) as day:
+            max_id = len(day.priorities) - 1
+            if id_ > max_id:
+                print(f'id {id_} invalid, maximum is {max_id}')
+                return
 
-        day.priorities[id_].done = state
-        self.data.set_day(date_, day)
-
-    def _today(self):
-        return self.data.day(date.today())
-
-    def _set_today(self, day):
-        self.data.set_day(date.today(), day)
+            day.priorities[id_].done = state
 
     def set_focus_to_priority(self, id_: int):
-        day = self._today()
-        max_id = len(day.priorities) - 1
-        if id_ > max_id:
-            print(f'id {id_} invalid, maximum is {max_id}')
-            return
+        with self._edit_today() as day:
+            max_id = len(day.priorities) - 1
+            if id_ > max_id:
+                print(f'id {id_} invalid, maximum is {max_id}')
+                return
 
-        day.focus = day.priorities[id_].name
-        self._set_today(day)
+            day.focus = day.priorities[id_].name
 
     def set_focus(self, name: str):
-        day = self._today()
-        day.focus = name
-        self._set_today(day)
+        with self._edit_today() as day:
+            day.focus = name
 
     def start_break(self):
-        day = self._today()
-        day.focus.start_break()
-        self._set_today(day)
+        with self._edit_today() as day:
+            day.focus.start_break()
 
     def end_break(self):
-        day = self._today()
-        day.focus.end_break()
-        self._set_today(day)
+        with self._edit_today() as day:
+            day.focus.end_break()
 
     def end_day(self):
-        day = self._today()
-        day.end()
-        self._set_today(day)
+        with self._edit_today() as day:
+            day.end()
+
+    def _edit_day(self, date_: date):
+        return DayEditor(date_, self._data)
+
+    def _edit_today(self):
+        return self._edit_day(date.today())
