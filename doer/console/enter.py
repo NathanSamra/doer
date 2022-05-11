@@ -73,10 +73,9 @@ def _add_show_action(parsers):
 def _add_tick_action(parsers):
     def action(args):
         client = Client()
-        client.tick(_date_from_args(args), int(args.id_) - 1)
+        client.tick(int(args.id_) - 1)
 
     tick_parser = parsers.add_parser('tick')
-    _add_date_group(tick_parser)
     tick_parser.add_argument('id_')
     tick_parser.set_defaults(func=action)
 
@@ -84,10 +83,9 @@ def _add_tick_action(parsers):
 def _add_un_tick_action(parsers):
     def action(args):
         client = Client()
-        client.un_tick(_date_from_args(args), int(args.id_) - 1)
+        client.un_tick(int(args.id_) - 1)
 
     un_tick_parser = parsers.add_parser('un-tick')
-    _add_date_group(un_tick_parser)
     un_tick_parser.add_argument('id_')
     un_tick_parser.set_defaults(func=action)
 
@@ -136,7 +134,7 @@ def _add_set_focus(parsers):
 
 def _add_start_break(parsers):
     def action(args):
-        client = Client().start_break()
+        Client().start_break()
 
     start_break_parser = parsers.add_parser('start_break')
     start_break_parser.set_defaults(func=action)
@@ -144,7 +142,7 @@ def _add_start_break(parsers):
 
 def _add_end_break(parsers):
     def action(args):
-        client = Client().end_break()
+        Client().end_break()
 
     end_break_parser = parsers.add_parser('end_break')
     end_break_parser.set_defaults(func=action)

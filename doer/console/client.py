@@ -116,14 +116,14 @@ class Client:
 
         print('\n')
 
-    def tick(self, date_: date, id_: int):
-        self._set_tick(date_, id_, True)
+    def tick(self, id_: int):
+        self._set_tick(id_, True)
 
-    def un_tick(self, date_: date, id_: int):
-        self._set_tick(date_, id_, False)
+    def un_tick(self, id_: int):
+        self._set_tick(id_, False)
 
-    def _set_tick(self, date_: date, id_: int, state: bool):
-        with self._edit_day(date_) as day:
+    def _set_tick(self, id_: int, state: bool):
+        with self._edit_today() as day:
             max_id = len(day.priorities) - 1
             if id_ > max_id:
                 print(f'id {id_} invalid, maximum is {max_id}')
