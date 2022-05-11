@@ -9,9 +9,23 @@ from doer.console.client import Client
 def _date_from_arg(arg) -> date:
     today = date.today()
 
+    def weekday(id_):
+        diff = id_ - today.weekday()
+        return today + timedelta(days=diff)
+
     aliases = {
+        # Shorthand for nearby days
+        "yesterday": today - timedelta(days=1),
         "today": today,
         "tomorrow": date.today() + timedelta(days=1),
+        # Days of the current week
+        "monday": weekday(0),
+        "tuesday": weekday(1),
+        "wednesday": weekday(2),
+        "thursday": weekday(3),
+        "friday": weekday(4),
+        "saturday": weekday(5),
+        "sunday": weekday(6)
     }
 
     if arg in aliases:
