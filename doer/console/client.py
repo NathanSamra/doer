@@ -101,6 +101,11 @@ class Client:
 
     def show_priorities(self, date_: date):
         day = self._data.day(date_)
+
+        if len(day.priorities) == 0:
+            print(f'{date_} has no priorities')
+            return
+
         focus = day.focus.name if day.focus is not None else ''
 
         print(f'Priorities for {date_} are:')
@@ -123,6 +128,11 @@ class Client:
 
     def show_log(self, date_: date):
         day = self._data.day(date_)
+
+        if len(day.log) == 0:
+            print(f'{date_} has no log')
+            return
+
         print(f'Log for {date_} is:')
 
         for focus in day.log:
