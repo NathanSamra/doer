@@ -88,7 +88,7 @@ def _add_un_tick_action(parsers):
 
 
 def _add_context_action(parsers):
-    def action():
+    def action(_args):
         client = Client()
         client.context()
 
@@ -97,7 +97,7 @@ def _add_context_action(parsers):
 
 
 def _add_contexts_action(parsers):
-    def action():
+    def action(_args):
         client = Client()
         client.contexts()
 
@@ -130,7 +130,7 @@ def _add_set_focus(parsers):
 
 
 def _add_start_break(parsers):
-    def action():
+    def action(_args):
         Client().start_break()
 
     start_break_parser = parsers.add_parser('start_break')
@@ -138,7 +138,7 @@ def _add_start_break(parsers):
 
 
 def _add_end_break(parsers):
-    def action():
+    def action(_args):
         Client().end_break()
 
     end_break_parser = parsers.add_parser('end_break')
@@ -146,7 +146,7 @@ def _add_end_break(parsers):
 
 
 def _add_end_day(parsers):
-    def action():
+    def action(_args):
         Client().end_day()
 
     end_day_parser = parsers.add_parser('end_day')
