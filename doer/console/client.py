@@ -69,8 +69,10 @@ class Client:
         self.show_priorities(date_)
 
     def copy_priorities(self, date_from: date, date_to: date):
-        from_ = self._data.day(date_from)
-        self._data.set_day(date_to, from_)
+        with self._edit_day(date_to) as to_:
+            from_ = self._data.day(date_from)
+            to_.priorities = from_.priorities
+
         self.show_priorities(date_to)
 
     def show(self, date_: date):
