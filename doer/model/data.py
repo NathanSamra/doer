@@ -18,7 +18,10 @@ class Data:
     def _database(self):
         return self._root / self._context
 
-    def year(self, year_num: int, ) -> Year:
+    def year(
+        self,
+        year_num: int,
+    ) -> Year:
         year_file = self._year_file(year_num)
         if not year_file.exists():
             return {}

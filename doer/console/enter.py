@@ -25,7 +25,7 @@ def _date_from_arg(arg) -> date:
         "thursday": weekday(3),
         "friday": weekday(4),
         "saturday": weekday(5),
-        "sunday": weekday(6)
+        "sunday": weekday(6),
     }
 
     if arg in aliases:
@@ -50,10 +50,18 @@ def _add_copy_action(parsers):
         client.copy_priorities(_date_from_arg(args.from_), _date_from_arg(args.to))
 
     copy_parser = parsers.add_parser('copy')
-    copy_parser.add_argument('from_', type=str, help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
-                                                     'ISO format')
-    copy_parser.add_argument('to', type=str, help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
-                                                  'ISO format')
+    copy_parser.add_argument(
+        'from_',
+        type=str,
+        help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
+        'ISO format',
+    )
+    copy_parser.add_argument(
+        'to',
+        type=str,
+        help='Date to copy from. Can be \'today\', \'tomorrow\', or a date in '
+        'ISO format',
+    )
     copy_parser.set_defaults(func=action)
 
 

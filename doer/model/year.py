@@ -12,16 +12,25 @@ Year = typing.Dict[date, Day]
 def year_to_json(year: Year):
     def day_to_json(day: Day):
         day_dict = {
-            'priorities': [{'name': priority.name, 'done': priority.done} for priority in day.priorities],
-            'log': [{
-                'name': focus.name,
-                'start': focus.start.isoformat(),
-                'breaks': [{
-                    'start': break_.start_time.isoformat(),
-                    'end': break_.end_time.isoformat()
-                } for break_ in focus.breaks]
-            } for focus in day.log],
-            'notes': day.notes
+            'priorities': [
+                {'name': priority.name, 'done': priority.done}
+                for priority in day.priorities
+            ],
+            'log': [
+                {
+                    'name': focus.name,
+                    'start': focus.start.isoformat(),
+                    'breaks': [
+                        {
+                            'start': break_.start_time.isoformat(),
+                            'end': break_.end_time.isoformat(),
+                        }
+                        for break_ in focus.breaks
+                    ],
+                }
+                for focus in day.log
+            ],
+            'notes': day.notes,
         }
 
         if day.end_time is not None:
@@ -29,7 +38,9 @@ def year_to_json(year: Year):
 
         return day_dict
 
-    return {'days': {date_.isoformat(): day_to_json(day) for date_, day in year.items()}}
+    return {
+        'days': {date_.isoformat(): day_to_json(day) for date_, day in year.items()}
+    }
 
 
 def year_from_json(year_dict):
@@ -64,7 +75,10 @@ def year_from_json(year_dict):
             if SimpleSpec('<1.2.0').match(json_version):
                 day.priorities = [Priority(name) for name in priorities_dicts]
             else:
-                day.priorities = [priority_from_json(priority_dict) for priority_dict in priorities_dicts]
+                day.priorities = [
+                    priority_from_json(priority_dict)
+                    for priority_dict in priorities_dicts
+                ]
 
         if 'log' in day_dict:
             day.log = [focus_from_json(focus_dict) for focus_dict in day_dict['log']]

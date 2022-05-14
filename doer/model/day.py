@@ -31,12 +31,12 @@ class Focus:
 
         if len(self.breaks) > 0:
             last_break = self.breaks[-1]
-            assert (last_break.end_time < new_break.start_time)
+            assert last_break.end_time < new_break.start_time
 
         self.breaks.append(new_break)
 
     def end_break(self):
-        assert(len(self.breaks) > 0)
+        assert len(self.breaks) > 0
         break_ = self.breaks[-1]
         break_.end()
 
