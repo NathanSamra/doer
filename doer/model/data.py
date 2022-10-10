@@ -1,4 +1,6 @@
 import json
+import os
+import typing
 from datetime import date
 from pathlib import Path
 
@@ -35,6 +37,27 @@ class Data:
             return year[date_]
 
         return Day()
+
+    @property
+    def last_date(self) -> date:
+        year = self.year(self.last_year)
+        today = date.today()
+
+        for date_ in sorted(year.keys(), reverse=True):
+            if date_ <= today:
+                return date_
+
+        raise RuntimeError("No dates saved in year")
+
+    @property
+    def last_year(self) -> int:
+        current_year = date.today().year
+
+        for year_num in [int(year_file.stem) for year_file in sorted(self._database.glob("*.json"), reverse=True)]:
+            if year_num <= current_year:
+                return year_num
+
+        raise RuntimeError("No year data found")
 
     def set_year(self, year_num: int, year: Year):
         year_file = self._year_file(year_num)

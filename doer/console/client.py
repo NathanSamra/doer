@@ -76,6 +76,10 @@ class Client:
     def context():
         print(config.context())
 
+    @property
+    def last_date(self) -> date:
+        return self._data.last_date
+
     def plan_priorities(self, date_: date):
         with self._edit_day(date_) as day:
             items: List[Priority] = []

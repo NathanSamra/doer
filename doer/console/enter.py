@@ -75,6 +75,16 @@ def _add_show_action(parsers):
     show_parser.set_defaults(func=action)
 
 
+def _add_show_last_action(parsers):
+    def action(args):
+        client = Client()
+        date_ = client.last_date
+        client.show(date_)
+
+    show_last_parser = parsers.add_parser("show_last")
+    show_last_parser.set_defaults(func=action)
+
+
 def _add_tick_action(parsers):
     def action(args):
         client = Client()
@@ -178,6 +188,7 @@ def enter():
     _add_plan_action(action_parsers)
     _add_copy_action(action_parsers)
     _add_show_action(action_parsers)
+    _add_show_last_action(action_parsers)
     _add_tick_action(action_parsers)
     _add_un_tick_action(action_parsers)
     _add_context_action(action_parsers)
