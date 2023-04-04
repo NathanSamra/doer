@@ -1,0 +1,9 @@
+[project]
+name="doer"
+version="1.4.1"
+authors=[
+    {name="Nathan Samra", email="me@nathansamra.com"}
+]
+
+[project.scripts]
+doer="doer.console:enter"

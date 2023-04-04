@@ -1,8 +1,9 @@
+from importlib import metadata
+
 from semantic_version import Version
-
-__version__ = Version("1.4.0")
-
 
 name = "doer"
 author = "Nathan Samra"
+
+__version__ = Version(metadata.version(__package__))
 version = __version__
