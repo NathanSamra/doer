@@ -4,7 +4,7 @@ from datetime import date
 
 from doer import storage
 from doer.model.data import Data
-from doer.model.day import Day, Priority
+from doer.model.day import Priority
 from doer.model.day_editor import DayEditor
 
 

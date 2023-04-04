@@ -1,1 +1,3 @@
-appdirs~=1.4.4
+
+-r cli/requirements.txt
+pre-commit~=3.1

@@ -1,7 +1,6 @@
 import typing
-from datetime import date, datetime, time
+from datetime import date, time
 
-import semantic_version
 from semantic_version import Version, SimpleSpec
 
 from doer.model.day import Day, Priority, Focus
