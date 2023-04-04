@@ -11,7 +11,7 @@ from doer.model.day_editor import DayEditor
 class DataTests(unittest.TestCase):
     def test_write_and_read(self):
         priorities = [Priority(str(random.randint(0, 100))) for i in range(0, 6)]
-        data = Data(storage.database(), 'test')
+        data = Data(storage.database(), "test")
 
         with DayEditor(date.today(), data) as day:
             day.priorities = priorities

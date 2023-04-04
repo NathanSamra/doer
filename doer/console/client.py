@@ -9,28 +9,28 @@ from doer.model.day_editor import DayEditor
 
 def _collect_items(date_) -> List[Priority]:
     items: List[Priority] = []
-    line = input(f'List items for {date_}\n')
+    line = input(f"List items for {date_}\n")
 
     while line:
         items.append(Priority(line))
-        line = input('Anymore?\n')
+        line = input("Anymore?\n")
 
     return items
 
 
 def _get_item_id(max_id) -> Optional[int]:
     while True:
-        choice = input('Select the top priority, or press enter to end.\n')
+        choice = input("Select the top priority, or press enter to end.\n")
         if choice is None:
             return None
 
         if not choice.isdigit():
-            print(f'{choice} is not a digit, please try again')
+            print(f"{choice} is not a digit, please try again")
             continue
 
         id_ = int(choice)
         if id_ > max_id:
-            print(f'{id_} is too large, maximum is {max_id}')
+            print(f"{id_} is too large, maximum is {max_id}")
             continue
 
         return id_
@@ -45,9 +45,9 @@ def _order_items(items: List[Priority]) -> List[Priority]:
         if max_id == 0:
             return result
 
-        print('Remaining:')
+        print("Remaining:")
         for i, item in enumerate(remaining, start=1):
-            print(f'{i}. {item.name}')
+            print(f"{i}. {item.name}")
 
         choice = _get_item_id(max_id)
         if not choice:
@@ -108,62 +108,62 @@ class Client:
         day = self._data.day(date_)
 
         if len(day.priorities) == 0:
-            print(f'{date_} has no priorities')
+            print(f"{date_} has no priorities")
             return
 
-        focus = day.focus.name if day.focus is not None else ''
+        focus = day.focus.name if day.focus is not None else ""
 
-        print(f'Priorities for {date_} are:')
+        print(f"Priorities for {date_} are:")
         for i, priority in enumerate(day.priorities, start=1):
-            line = f'{i}. {priority.name}'
+            line = f"{i}. {priority.name}"
 
             if priority.name == focus:
-                line += '*'
-                focus = ''
+                line += "*"
+                focus = ""
 
             if priority.done:
-                line += ' - done'
+                line += " - done"
 
             print(line)
 
-        if focus != '':
-            print(f'\nFocus: {focus}')
+        if focus != "":
+            print(f"\nFocus: {focus}")
 
-        print('\n')
+        print("\n")
 
     def show_log(self, date_: date):
         day = self._data.day(date_)
 
         if len(day.log) == 0:
-            print(f'{date_} has no log')
+            print(f"{date_} has no log")
             return
 
-        print(f'Log for {date_} is:')
+        print(f"Log for {date_} is:")
 
         for focus in day.log:
-            start = focus.start.isoformat('minutes')
-            print(f'{start} - {focus.name}')
+            start = focus.start.isoformat("minutes")
+            print(f"{start} - {focus.name}")
 
             for break_ in focus.breaks:
-                break_start = break_.start_time.isoformat('minutes')
-                break_end = break_.end_time.isoformat('minutes')
-                print(f'\t{break_start} - {break_end}')
+                break_start = break_.start_time.isoformat("minutes")
+                break_end = break_.end_time.isoformat("minutes")
+                print(f"\t{break_start} - {break_end}")
 
-        print('\n')
+        print("\n")
 
     def show_notes(self, date_: date):
         day = self._data.day(date_)
 
         if len(day.notes) == 0:
-            print(f'{date_} has no notes')
+            print(f"{date_} has no notes")
             return
 
-        print(f'Notes for {date_}:')
+        print(f"Notes for {date_}:")
 
         for i, note in enumerate(day.notes, start=1):
-            print(f'{i}. {note}')
+            print(f"{i}. {note}")
 
-        print('\n')
+        print("\n")
 
     def tick(self, id_: int):
         self._set_tick(id_, True)
@@ -175,7 +175,7 @@ class Client:
         with self._edit_today() as day:
             max_id = len(day.priorities) - 1
             if id_ > max_id:
-                print(f'id {id_} invalid, maximum is {max_id}')
+                print(f"id {id_} invalid, maximum is {max_id}")
                 return
 
             day.priorities[id_].done = state
@@ -184,7 +184,7 @@ class Client:
         with self._edit_today() as day:
             max_id = len(day.priorities) - 1
             if id_ > max_id:
-                print(f'id {id_} invalid, maximum is {max_id}')
+                print(f"id {id_} invalid, maximum is {max_id}")
                 return
 
             day.focus = day.priorities[id_].name

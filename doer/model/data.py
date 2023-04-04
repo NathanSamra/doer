@@ -28,7 +28,7 @@ class Data:
         if not year_file.exists():
             return {}
 
-        with year_file.open('r') as f:
+        with year_file.open("r") as f:
             return year_from_json(json.load(f))
 
     def day(self, date_: date) -> Day:
@@ -53,7 +53,10 @@ class Data:
     def last_year(self) -> int:
         current_year = date.today().year
 
-        for year_num in [int(year_file.stem) for year_file in sorted(self._database.glob("*.json"), reverse=True)]:
+        for year_num in [
+            int(year_file.stem)
+            for year_file in sorted(self._database.glob("*.json"), reverse=True)
+        ]:
             if year_num <= current_year:
                 return year_num
 
@@ -62,9 +65,9 @@ class Data:
     def set_year(self, year_num: int, year: Year):
         year_file = self._year_file(year_num)
         year_dict = year_to_json(year)
-        year_dict['version'] = str(__version__)
+        year_dict["version"] = str(__version__)
 
-        with year_file.open('w+') as f:
+        with year_file.open("w+") as f:
             json.dump(year_dict, f, indent=4)
 
     def set_day(self, date_: date, day: Day):
@@ -73,4 +76,4 @@ class Data:
         self.set_year(date_.year, year)
 
     def _year_file(self, year_num: int) -> Path:
-        return self._database / f'{year_num}.json'
+        return self._database / f"{year_num}.json"

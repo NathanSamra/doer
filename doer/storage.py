@@ -6,7 +6,7 @@ from appdirs import AppDirs
 from doer import metadata
 
 _dirs = AppDirs(appname=metadata.name, appauthor=metadata.author)
-_config_file = Path(_dirs.user_config_dir, 'config.ini')
+_config_file = Path(_dirs.user_config_dir, "config.ini")
 
 
 def database() -> Path:
@@ -23,12 +23,12 @@ def config():
         _config_file.touch()
 
     config_ = ConfigParser()
-    with _config_file.open('r') as f:
+    with _config_file.open("r") as f:
         config_.read_file(f)
 
     return config_
 
 
 def set_config(config_: ConfigParser):
-    with _config_file.open('w+') as f:
+    with _config_file.open("w+") as f:
         config_.write(f)
