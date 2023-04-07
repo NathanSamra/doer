@@ -7,3 +7,5 @@
 /static/
 
 /cli/build/
+/server/target/
+/target/
