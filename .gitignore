@@ -5,7 +5,3 @@
 /dist/
 /venv/
 /static/
-
-/cli/build/
-/server/target/
-/target/
