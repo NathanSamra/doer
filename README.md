@@ -16,6 +16,7 @@ From your command line type _doer_ and then your command. For a list of commands
 ### Pre-requisites
 
 1. [Python](https://www.python.org/downloads/)
+2. [Rust](https://www.rust-lang.org/tools/install)
 
 ### Setup
 
