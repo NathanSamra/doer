@@ -1,6 +1,6 @@
 [package]
 name = "doer"
-version = "2.0.0"
+version = "2.0.0-alpha.0"
 edition = "2021"
 authors = ["Nathan Samra <me@nathansamra.com>"]
 description = "Doer is a tool designed to help you organise your day to day"
