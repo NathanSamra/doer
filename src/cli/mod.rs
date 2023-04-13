@@ -1,5 +1,5 @@
 mod command;
-mod smart_date;
+mod date_parser;
 
 use crate::cli::command::Command;
 

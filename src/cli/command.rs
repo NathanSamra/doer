@@ -1,5 +1,6 @@
-use crate::cli::smart_date::SmartDate;
+use crate::cli::date_parser::{parse_date, today};
 use crate::priority::PriorityId;
+use chrono::NaiveDate;
 
 use crate::focus::Focus;
 use clap::{Args, Subcommand};
@@ -58,23 +59,25 @@ impl Command {
 #[derive(Args)]
 pub struct PlanArgs {
     /// Date to plan
-    #[arg(default_value_t = SmartDate::Today)]
-    date: SmartDate,
+    #[arg(value_parser = parse_date, default_value_t = today())]
+    date: NaiveDate,
 }
 
 #[derive(Args)]
 pub struct CopyArgs {
+    #[arg(value_parser = parse_date)]
     /// Date to copy from
-    from: SmartDate,
+    from: NaiveDate,
+    #[arg(value_parser = parse_date)]
     /// Date to copy to
-    to: SmartDate,
+    to: NaiveDate,
 }
 
 #[derive(Args)]
 pub struct ShowArgs {
     /// Date to plan
-    #[arg(default_value_t = SmartDate::Today)]
-    date: SmartDate,
+    #[arg(value_parser = parse_date, default_value_t = today())]
+    date: NaiveDate,
 }
 
 #[derive(Args)]
@@ -82,8 +85,8 @@ pub struct TickArgs {
     /// Priority to tick
     priority_id: PriorityId,
     /// Date, otherwise today
-    #[arg(short, long)]
-    date: Option<SmartDate>,
+    #[arg(short, long, value_parser = parse_date)]
+    date: Option<NaiveDate>,
     /// Reset tick
     #[arg(short, long)]
     reset: bool,
