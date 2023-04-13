@@ -1,22 +1,10 @@
+use crate::cli::smart_date::SmartDate;
 use crate::priority::PriorityId;
-use chrono::{Local, NaiveDate};
-use clap::{Args, Parser, Subcommand};
 
-#[derive(Parser)]
-#[command(author, version, about)]
-pub struct Cli {
-    #[command(subcommand)]
-    command: Command,
-}
-
-impl Cli {
-    pub fn run(&self) {
-        self.command.execute()
-    }
-}
+use clap::{Args, Subcommand};
 
 #[derive(Subcommand)]
-enum Command {
+pub enum Command {
     /// Plan priorities
     Plan(PlanArgs),
     /// Copy priorities
@@ -77,38 +65,34 @@ impl Command {
 }
 
 #[derive(Args)]
-struct PlanArgs {
+pub struct PlanArgs {
     /// Date to plan
-    #[arg(default_value_t = today())]
-    date: NaiveDate,
+    #[arg(default_value_t = SmartDate::Today)]
+    date: SmartDate,
 }
 
 #[derive(Args)]
-struct CopyArgs {
+pub struct CopyArgs {
     /// Date to copy from
-    from: NaiveDate,
+    from: SmartDate,
     /// Date to copy to
-    to: NaiveDate,
+    to: SmartDate,
 }
 
 #[derive(Args)]
-struct ShowArgs {
+pub struct ShowArgs {
     /// Date to plan
-    #[arg(default_value_t = today())]
-    date: NaiveDate,
+    #[arg(default_value_t = SmartDate::Today)]
+    date: SmartDate,
 }
 
 #[derive(Args)]
-struct TickArgs {
+pub struct TickArgs {
     /// Priority to tick
     priority_id: PriorityId,
     /// Date
-    #[arg(default_value_t = today())]
-    date: NaiveDate,
+    #[arg(default_value_t = SmartDate::Today)]
+    date: SmartDate,
     /// Reset tick
     reset: bool,
-}
-
-fn today() -> NaiveDate {
-    Local::now().naive_local().date()
 }
