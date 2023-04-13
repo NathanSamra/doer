@@ -8,5 +8,6 @@ description = "Doer is a tool designed to help you organise your day to day"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+chrono = { version = "0.4.24", features = ["serde"] }
 clap = { version = "4.2.1", features = ["derive"] }
 serde = { version = "1.0.160", features = ["derive"] }

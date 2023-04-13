@@ -1,21 +1,11 @@
 mod cli;
+mod priority;
 
-use crate::cli::{Cli, Command};
+use crate::cli::Cli;
 
 use clap::Parser;
 
 fn main() {
     let cli = Cli::parse();
-
-    match &cli.command {
-        Command::Plan => {}
-        Command::Copy => {}
-        Command::Show => {}
-        Command::Tick => {}
-        Command::Context => {}
-        Command::Focus => {}
-        Command::Break => {}
-        Command::EndDay => {}
-        Command::Note => {}
-    }
+    cli.run();
 }
