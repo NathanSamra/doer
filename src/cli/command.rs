@@ -1,6 +1,7 @@
 use crate::cli::smart_date::SmartDate;
 use crate::priority::PriorityId;
 
+use crate::focus::Focus;
 use clap::{Args, Subcommand};
 
 #[derive(Subcommand)]
@@ -14,17 +15,13 @@ pub enum Command {
     /// Show last given priorities
     ShowLast,
     /// Tick priorities
-    Tick,
+    Tick(TickArgs),
     /// Work context
-    Context,
+    Context(ContextArgs),
     /// Current focus
-    Focus,
-    /// Break from work
-    Break,
-    /// End the day
-    EndDay,
+    Focus(FocusArgs),
     /// Add a note to the day
-    Note,
+    Note(NoteArgs),
 }
 
 impl Command {
@@ -42,22 +39,16 @@ impl Command {
             Command::ShowLast => {
                 todo!()
             }
-            Command::Tick => {
+            Command::Tick(_tick_args) => {
                 todo!()
             }
-            Command::Context => {
+            Command::Context(_context_args) => {
                 todo!()
             }
-            Command::Focus => {
+            Command::Focus(_focus_args) => {
                 todo!()
             }
-            Command::Break => {
-                todo!()
-            }
-            Command::EndDay => {
-                todo!()
-            }
-            Command::Note => {
+            Command::Note(_note_args) => {
                 todo!()
             }
         }
@@ -95,4 +86,48 @@ pub struct TickArgs {
     date: SmartDate,
     /// Reset tick
     reset: bool,
+}
+
+#[derive(Args)]
+pub struct ContextArgs {
+    /// Context command
+    #[command(subcommand)]
+    command: ContextCommand,
+}
+
+#[derive(Subcommand)]
+pub enum ContextCommand {
+    /// Show current context
+    Show,
+    /// List all contexts
+    List,
+    /// Set context
+    Set { context: String },
+}
+
+#[derive(Args)]
+pub struct FocusArgs {
+    /// Focus command
+    #[command(subcommand)]
+    command: FocusCommand,
+}
+
+#[derive(Subcommand)]
+pub enum FocusCommand {
+    /// Show current context
+    Show,
+    /// Set context
+    Set { focus: Focus },
+    /// Start focus break
+    StartBreak,
+    /// End focus break
+    EndBreak,
+    /// End focus
+    EndDay,
+}
+
+#[derive(Args)]
+pub struct NoteArgs {
+    /// Note
+    note: String,
 }

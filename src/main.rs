@@ -1,4 +1,5 @@
 mod cli;
+mod focus;
 mod priority;
 
 use crate::cli::Cli;
