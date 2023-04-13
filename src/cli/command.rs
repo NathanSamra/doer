@@ -81,10 +81,11 @@ pub struct ShowArgs {
 pub struct TickArgs {
     /// Priority to tick
     priority_id: PriorityId,
-    /// Date
-    #[arg(default_value_t = SmartDate::Today)]
-    date: SmartDate,
+    /// Date, otherwise today
+    #[arg(short, long)]
+    date: Option<SmartDate>,
     /// Reset tick
+    #[arg(short, long)]
     reset: bool,
 }
 
