@@ -1,8 +1,8 @@
 use crate::cli::date_parser::{parse_date, today};
-use crate::priority::PriorityId;
-use chrono::NaiveDate;
+use crate::model::focus::Focus;
+use crate::model::priority::PriorityId;
 
-use crate::focus::Focus;
+use chrono::NaiveDate;
 use clap::{Args, Subcommand};
 
 #[derive(Subcommand)]

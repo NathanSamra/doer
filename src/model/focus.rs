@@ -1,4 +1,4 @@
-use crate::priority::PriorityId;
+use crate::model::priority::PriorityId;
 
 #[derive(Clone)]
 pub enum Focus {
