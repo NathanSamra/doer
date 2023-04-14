@@ -25,3 +25,17 @@ pub fn parse_date(date_str: &str) -> ParseResult<NaiveDate> {
         _ => NaiveDate::parse_from_str(date_str, "%Y-%m-%d"),
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn parse_iso_date() {
+        let expected = NaiveDate::from_ymd_opt(2022, 7, 15).unwrap();
+
+        let parsed = parse_date("2022-07-15").unwrap();
+
+        assert_eq!(parsed, expected);
+    }
+}
