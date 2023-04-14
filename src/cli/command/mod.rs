@@ -1,4 +1,21 @@
+mod context;
+mod copy;
+mod focus;
+mod note;
+mod plan;
+mod show;
+mod tick;
+
+use crate::cli::command::context::{list_contexts, set_context, show_context};
+use crate::cli::command::copy::copy;
+use crate::cli::command::focus::{end_break, end_day, set_focus, show_focus, start_break};
+use crate::cli::command::note::note;
+use crate::cli::command::plan::plan;
+use crate::cli::command::show::{show, show_last};
+use crate::cli::command::tick::{tick, un_tick};
+
 use crate::cli::date_parser::{parse_date, today};
+
 use crate::model::focus::Focus;
 use crate::model::priority::PriorityId;
 
@@ -28,30 +45,32 @@ pub enum Command {
 impl Command {
     pub fn execute(&self) {
         match &self {
-            Command::Plan(_plan_args) => {
-                todo!()
+            Command::Plan(args) => plan(&args.date),
+            Command::Copy(args) => copy(&args.from, &args.to),
+            Command::Show(args) => show(&args.date),
+            Command::ShowLast => show_last(),
+            Command::Tick(args) => {
+                let date = args.date.unwrap_or_else(today);
+
+                if args.reset {
+                    un_tick(&date, &args.priority_id)
+                } else {
+                    tick(&date, &args.priority_id)
+                }
             }
-            Command::Copy(_copy_args) => {
-                todo!()
-            }
-            Command::Show(_show_args) => {
-                todo!()
-            }
-            Command::ShowLast => {
-                todo!()
-            }
-            Command::Tick(_tick_args) => {
-                todo!()
-            }
-            Command::Context(_context_args) => {
-                todo!()
-            }
-            Command::Focus(_focus_args) => {
-                todo!()
-            }
-            Command::Note(_note_args) => {
-                todo!()
-            }
+            Command::Context(args) => match &args.command {
+                ContextCommand::Show => show_context(),
+                ContextCommand::List => list_contexts(),
+                ContextCommand::Set { context } => set_context(context),
+            },
+            Command::Focus(args) => match &args.command {
+                FocusCommand::Show => show_focus(),
+                FocusCommand::Set { focus } => set_focus(focus),
+                FocusCommand::StartBreak => start_break(),
+                FocusCommand::EndBreak => end_break(),
+                FocusCommand::EndDay => end_day(),
+            },
+            Command::Note(args) => note(&args.note),
         }
     }
 }
