@@ -2,6 +2,7 @@
 
 mod cli;
 mod config;
+mod database;
 mod model;
 
 use crate::cli::Cli;

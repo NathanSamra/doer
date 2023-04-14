@@ -61,7 +61,7 @@ impl Command {
             Command::Context(args) => match &args.command {
                 ContextCommand::Show => show_context(),
                 ContextCommand::List => list_contexts(),
-                ContextCommand::Set { context } => set_context(context),
+                ContextCommand::Set { context } => set_context(context.clone()),
             },
             Command::Focus(args) => match &args.command {
                 FocusCommand::Show => show_focus(),

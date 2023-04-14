@@ -1,11 +1,10 @@
-use crate::config::CONFIG;
+use crate::database::DATABASE;
 
 pub fn show_context() {
-    let config = &*CONFIG;
-    println!("{}", config.database.context)
+    println!("{}", DATABASE.context())
 }
 
-pub fn set_context(_context: &str) {
+pub fn set_context(_context: String) {
     todo!()
 }
 
