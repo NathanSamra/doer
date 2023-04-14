@@ -10,4 +10,6 @@ description = "Doer is a tool designed to help you organise your day to day"
 [dependencies]
 chrono = { version = "0.4.24", features = ["serde"] }
 clap = { version = "4.2.1", features = ["derive"] }
+dirs = "5.0.0"
 serde = { version = "1.0.160", features = ["derive"] }
+toml = "0.7.3"

@@ -1,4 +1,7 @@
+#![feature(once_cell)]
+
 mod cli;
+mod config;
 mod model;
 
 use crate::cli::Cli;

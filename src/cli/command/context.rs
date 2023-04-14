@@ -1,5 +1,8 @@
+use crate::config::CONFIG;
+
 pub fn show_context() {
-    todo!()
+    let config = &*CONFIG;
+    println!("{}", config.database.context)
 }
 
 pub fn set_context(_context: &str) {
