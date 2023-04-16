@@ -112,3 +112,43 @@ impl From<toml::de::Error> for Error {
         Self::Toml(value)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::env::temp_dir;
+
+    fn temp_database() -> Database {
+        let dir = temp_dir();
+        Database::new(dir).unwrap()
+    }
+
+    #[test]
+    fn context() {
+        let database = temp_database();
+        assert_eq!(database.context(), "default");
+    }
+
+    #[test]
+    fn set_context() {
+        let mut database = temp_database();
+        database.set_context("work".to_string());
+        assert_eq!(database.context(), "work");
+    }
+
+    #[test]
+    fn config_persists() {
+        let dir = temp_dir();
+
+        {
+            let mut database = Database::new(dir.clone()).unwrap();
+            assert_eq!(database.context(), "default");
+            database.set_context("play".to_string());
+        }
+
+        {
+            let database = Database::new(dir).unwrap();
+            assert_eq!(database.context(), "play");
+        }
+    }
+}
