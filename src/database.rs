@@ -45,34 +45,34 @@ impl Database {
     }
 
     fn load(&mut self) -> Result<(), Error> {
-        let config_str = match File::open(self.config_path()) {
-            Ok(mut file) => {
-                let mut config_str = String::new();
-                file.read_to_string(&mut config_str)?;
-                config_str
-            }
-            Err(_) => "".to_string(),
-        };
+        let config_path = self.config_path();
+        if !config_path.exists() {
+            return Ok(());
+        }
 
+        let mut config_file = File::open(config_path)?;
+        let mut config_str = String::new();
+        config_file.read_to_string(&mut config_str)?;
         self.config = toml::from_str(&config_str)?;
+        Ok(())
+    }
+
+    fn save(&self) -> Result<(), Error> {
+        let config_str = toml::to_string_pretty(&self.config)?;
+        let mut config_file = File::create(self.config_path())?;
+        config_file.write_all(config_str.as_ref())?;
         Ok(())
     }
 }
 
 impl Drop for Database {
     fn drop(&mut self) {
-        let config_str = toml::to_string_pretty(&self.config).expect("Failed to serialise data");
-        let mut config_file =
-            File::create(self.config_path()).expect("Failed to create config file");
-        config_file
-            .write_all(config_str.as_ref())
-            .expect("Failed to write to config file");
+        self.save().expect("Database failed to save");
     }
 }
 
 #[derive(Deserialize, Serialize)]
 struct Config {
-    #[serde(default)]
     pub context: String,
 }
 
@@ -87,14 +87,16 @@ impl Default for Config {
 #[derive(Debug)]
 pub enum Error {
     Io(io::Error),
-    Toml(toml::de::Error),
+    Deserialize(toml::de::Error),
+    Serialise(toml::ser::Error),
 }
 
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             Error::Io(err) => Display::fmt(&err, f),
-            Error::Toml(err) => Display::fmt(&err, f),
+            Error::Deserialize(err) => Display::fmt(&err, f),
+            Error::Serialise(err) => Display::fmt(&err, f),
         }
     }
 }
@@ -109,7 +111,13 @@ impl From<std::io::Error> for Error {
 
 impl From<toml::de::Error> for Error {
     fn from(value: toml::de::Error) -> Self {
-        Self::Toml(value)
+        Self::Deserialize(value)
+    }
+}
+
+impl From<toml::ser::Error> for Error {
+    fn from(value: toml::ser::Error) -> Self {
+        Self::Serialise(value)
     }
 }
 
