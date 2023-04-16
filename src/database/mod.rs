@@ -1,4 +1,8 @@
-use serde::{Deserialize, Serialize};
+mod context;
+mod data;
+
+use crate::database::context::Context;
+use crate::database::data::Data;
 use std::fmt::{Debug, Display, Formatter};
 use std::fs::File;
 use std::io::{Read, Write};
@@ -16,51 +20,53 @@ pub static DATABASE: LazyLock<Mutex<Database>> = LazyLock::new(|| {
 });
 
 pub struct Database {
-    config: Config,
-    location: PathBuf,
+    data: Data,
+    file_path: PathBuf,
 }
 
 impl Database {
-    pub fn new(location: PathBuf) -> Result<Self, Error> {
+    pub fn new(mut location: PathBuf) -> Result<Self, Error> {
+        location.push("database.json");
+
         let mut database = Self {
-            config: Config::default(),
-            location,
+            data: Data::default(),
+            file_path: location,
         };
         database.load()?;
         Ok(database)
     }
 
     pub fn context(&self) -> &String {
-        &self.config.context
+        &self.data.context
     }
 
     pub fn set_context(&mut self, context: String) {
-        self.config.context = context;
-    }
+        if !self.data.contexts.contains_key(&context) {
+            self.data
+                .contexts
+                .insert(context.clone(), Context::default());
+        }
 
-    fn config_path(&self) -> PathBuf {
-        let mut context_file = self.location.clone();
-        context_file.push("config.toml");
-        context_file
+        self.data.context = context;
     }
 
     fn load(&mut self) -> Result<(), Error> {
-        let config_path = self.config_path();
-        if !config_path.exists() {
+        if !self.file_path.exists() {
             return Ok(());
         }
 
-        let mut config_file = File::open(config_path)?;
-        let mut config_str = String::new();
-        config_file.read_to_string(&mut config_str)?;
-        self.config = toml::from_str(&config_str)?;
+        let mut file = File::open(&self.file_path)?;
+        let mut db_str = String::new();
+        file.read_to_string(&mut db_str)?;
+        self.data = serde_json::from_str(&db_str)?;
+
         Ok(())
     }
 
     fn save(&self) -> Result<(), Error> {
-        let config_str = toml::to_string_pretty(&self.config)?;
-        let mut config_file = File::create(self.config_path())?;
-        config_file.write_all(config_str.as_ref())?;
+        let db_str = serde_json::to_string_pretty(&self.data)?;
+        let mut file = File::create(&self.file_path)?;
+        file.write_all(db_str.as_ref())?;
         Ok(())
     }
 }
@@ -71,31 +77,16 @@ impl Drop for Database {
     }
 }
 
-#[derive(Deserialize, Serialize)]
-struct Config {
-    pub context: String,
-}
-
-impl Default for Config {
-    fn default() -> Self {
-        Self {
-            context: "default".to_string(),
-        }
-    }
-}
-
 #[derive(Debug)]
 pub enum Error {
     Io(io::Error),
-    Deserialize(toml::de::Error),
-    Serialise(toml::ser::Error),
+    Serialise(serde_json::Error),
 }
 
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             Error::Io(err) => Display::fmt(&err, f),
-            Error::Deserialize(err) => Display::fmt(&err, f),
             Error::Serialise(err) => Display::fmt(&err, f),
         }
     }
@@ -109,14 +100,8 @@ impl From<std::io::Error> for Error {
     }
 }
 
-impl From<toml::de::Error> for Error {
-    fn from(value: toml::de::Error) -> Self {
-        Self::Deserialize(value)
-    }
-}
-
-impl From<toml::ser::Error> for Error {
-    fn from(value: toml::ser::Error) -> Self {
+impl From<serde_json::Error> for Error {
+    fn from(value: serde_json::Error) -> Self {
         Self::Serialise(value)
     }
 }
