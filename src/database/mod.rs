@@ -49,6 +49,10 @@ impl Database {
         self.data.context = context;
     }
 
+    pub fn contexts(&self) -> Vec<&String> {
+        self.data.contexts.keys().collect()
+    }
+
     fn load(&mut self) -> Result<(), Error> {
         if !self.file_path.exists() {
             return Ok(());

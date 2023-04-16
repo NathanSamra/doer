@@ -11,5 +11,8 @@ pub fn set_context(context: String) {
 }
 
 pub fn list_contexts() {
-    todo!()
+    let database = DATABASE.lock().unwrap();
+    for context in database.contexts() {
+        println!("{}", context)
+    }
 }
