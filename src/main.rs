@@ -1,7 +1,6 @@
 #![feature(once_cell)]
 
 mod cli;
-mod config;
 mod database;
 mod model;
 
