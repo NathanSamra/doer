@@ -109,38 +109,39 @@ impl From<serde_json::Error> for Error {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::env::temp_dir;
+    use tempfile::{tempdir, TempDir};
 
-    fn temp_database() -> Database {
-        let dir = temp_dir();
-        Database::new(dir).unwrap()
+    fn temp_database() -> (Database, TempDir) {
+        let dir = tempdir().unwrap();
+        (Database::new(dir.path().to_path_buf()).unwrap(), dir)
     }
 
     #[test]
     fn context() {
-        let database = temp_database();
+        let (database, _dir) = temp_database();
         assert_eq!(database.context(), "default");
     }
 
     #[test]
     fn set_context() {
-        let mut database = temp_database();
+        let (mut database, _dir) = temp_database();
         database.set_context("work".to_string());
         assert_eq!(database.context(), "work");
     }
 
     #[test]
-    fn config_persists() {
-        let dir = temp_dir();
+    fn data_persists() {
+        let dir = tempdir().unwrap();
+        let dir_path = dir.path().to_path_buf();
 
         {
-            let mut database = Database::new(dir.clone()).unwrap();
+            let mut database = Database::new(dir_path.clone()).unwrap();
             assert_eq!(database.context(), "default");
             database.set_context("play".to_string());
         }
 
         {
-            let database = Database::new(dir).unwrap();
+            let database = Database::new(dir_path).unwrap();
             assert_eq!(database.context(), "play");
         }
     }
