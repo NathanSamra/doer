@@ -29,9 +29,11 @@ impl<T: for<'a> Deserialize<'a> + Serialize> Config<T> {
 
 impl<T: for<'a> Deserialize<'a> + Serialize> Drop for Config<T> {
     fn drop(&mut self) {
-        let config_str = toml::to_string_pretty(&self.data).unwrap();
-        let mut config_file = File::create(&self.file_path).unwrap();
-        config_file.write_all(config_str.as_ref()).unwrap();
+        let config_str = toml::to_string_pretty(&self.data).expect("Failed to serialise data");
+        let mut config_file = File::create(&self.file_path).expect("Failed to create config file");
+        config_file
+            .write_all(config_str.as_ref())
+            .expect("Failed to write to config file");
     }
 }
 
@@ -43,4 +45,39 @@ fn config_path(name: &str) -> PathBuf {
     }
     config_file.push(format!("{}.toml", name));
     config_file
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[derive(Deserialize, Serialize)]
+    struct TestData {
+        #[serde(default)]
+        pub value: String,
+    }
+
+    #[test]
+    fn config_drop() {
+        let name = "test_config";
+        let path = config_path(&name);
+        if path.exists() {
+            fs::remove_file(&path).unwrap();
+        }
+
+        {
+            let mut config = Config::<TestData>::new(&name);
+            assert_eq!(config.data.value, "");
+            config.data.value = "A value".to_string();
+        }
+
+        assert!(path.exists());
+
+        {
+            let config2 = Config::<TestData>::new(&name);
+            assert_eq!(config2.data.value, "A value");
+        }
+
+        fs::remove_file(path).unwrap();
+    }
 }
