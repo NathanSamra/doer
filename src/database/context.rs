@@ -1,5 +1,5 @@
 use crate::model::day::Day;
 use chrono::NaiveDate;
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
-pub type Context = HashMap<NaiveDate, Day>;
+pub type Context = BTreeMap<NaiveDate, Day>;

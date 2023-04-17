@@ -1,8 +1,5 @@
+use crate::today::today;
 use chrono::{Datelike, Days, Local, NaiveDate, ParseResult, Weekday};
-
-pub fn today() -> NaiveDate {
-    Local::now().naive_local().date()
-}
 
 fn date_from_weekday(weekday: Weekday) -> NaiveDate {
     let week = Local::now().iso_week();

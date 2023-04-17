@@ -4,6 +4,7 @@ pub mod edit_day_guard;
 
 use crate::database::data::Data;
 use crate::model::day::Day;
+use crate::today::today;
 use chrono::NaiveDate;
 use context::Context;
 use std::fmt::{Debug, Display, Formatter};
@@ -71,6 +72,17 @@ impl Database {
             .get_mut(&self.data.context)
             .unwrap()
             .insert(date, day);
+    }
+
+    pub fn most_recent_past(&self) -> Option<&NaiveDate> {
+        let today = today();
+
+        self.data
+            .contexts
+            .get(&self.data.context)
+            .unwrap()
+            .keys()
+            .rfind(|date| date <= &&today)
     }
 
     fn load(&mut self) -> Result<(), Error> {

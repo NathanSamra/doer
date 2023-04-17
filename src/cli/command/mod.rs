@@ -14,11 +14,12 @@ use crate::cli::command::plan::plan;
 use crate::cli::command::show::{show, show_last};
 use crate::cli::command::tick::{tick, un_tick};
 
-use crate::cli::date_parser::{parse_date, today};
+use crate::cli::date_parser::parse_date;
 
 use crate::model::focus::Focus;
 use crate::model::priority::PriorityId;
 
+use crate::today::today;
 use chrono::NaiveDate;
 use clap::{Args, Subcommand};
 

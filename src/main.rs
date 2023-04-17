@@ -3,6 +3,7 @@
 mod cli;
 mod database;
 mod model;
+mod today;
 
 use crate::cli::Cli;
 

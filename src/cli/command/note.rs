@@ -1,6 +1,6 @@
-use crate::cli::date_parser::today;
 use crate::database::edit_day_guard::EditDayGuard;
 use crate::database::DATABASE;
+use crate::today::today;
 use std::ops::DerefMut;
 
 pub fn note(note: String) {
