@@ -123,6 +123,7 @@ mod tests {
     fn context() {
         let (database, _dir) = temp_database();
         assert_eq!(database.context(), "default");
+        drop(database)
     }
 
     #[test]
@@ -130,6 +131,7 @@ mod tests {
         let (mut database, _dir) = temp_database();
         database.set_context("work".to_string());
         assert_eq!(database.context(), "work");
+        drop(database)
     }
 
     #[test]
