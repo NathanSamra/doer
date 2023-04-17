@@ -1,4 +1,4 @@
-use crate::model::context::Context;
+use crate::database::context::Context;
 use semver::Version;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;

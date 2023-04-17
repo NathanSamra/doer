@@ -1,9 +1,10 @@
+pub mod context;
 mod data;
 
 use crate::database::data::Data;
-use crate::model::context::Context;
 use crate::model::day::Day;
 use chrono::NaiveDate;
+use context::Context;
 use std::fmt::{Debug, Display, Formatter};
 use std::fs::File;
 use std::io::{Read, Write};
