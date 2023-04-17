@@ -70,7 +70,7 @@ impl Command {
                 FocusCommand::EndBreak => end_break(),
                 FocusCommand::EndDay => end_day(),
             },
-            Command::Note(args) => note(&args.note),
+            Command::Note(args) => note(args.note.clone()),
         }
     }
 }

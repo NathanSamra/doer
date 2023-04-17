@@ -1,4 +1,5 @@
-use serde::{Deserialize, Serialize};
+use crate::model::day::Day;
+use chrono::NaiveDate;
+use std::collections::HashMap;
 
-#[derive(Default, Deserialize, Serialize)]
-pub struct Context;
+pub type Context = HashMap<NaiveDate, Day>;

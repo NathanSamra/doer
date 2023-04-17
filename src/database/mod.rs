@@ -2,6 +2,8 @@ mod data;
 
 use crate::database::data::Data;
 use crate::model::context::Context;
+use crate::model::day::Day;
+use chrono::NaiveDate;
 use std::fmt::{Debug, Display, Formatter};
 use std::fs::File;
 use std::io::{Read, Write};
@@ -51,6 +53,22 @@ impl Database {
 
     pub fn contexts(&self) -> Vec<&String> {
         self.data.contexts.keys().collect()
+    }
+
+    pub fn get(&self, date: &NaiveDate) -> Option<&Day> {
+        self.data
+            .contexts
+            .get(&self.data.context)
+            .unwrap()
+            .get(date)
+    }
+
+    pub fn set(&mut self, date: NaiveDate, day: Day) {
+        self.data
+            .contexts
+            .get_mut(&self.data.context)
+            .unwrap()
+            .insert(date, day);
     }
 
     fn load(&mut self) -> Result<(), Error> {
@@ -149,5 +167,30 @@ mod tests {
             let database = Database::new(dir_path).unwrap();
             assert_eq!(database.context(), "play");
         }
+    }
+
+    #[test]
+    fn get_missing_day() {
+        let (database, _dir) = temp_database();
+        let day = database.get(&NaiveDate::default());
+        assert!(day.is_none());
+        drop(database)
+    }
+
+    #[test]
+    fn set_day() {
+        let (mut database, _dir) = temp_database();
+        let note = "A note";
+        let date = NaiveDate::default();
+
+        let mut day = Day::default();
+        day.note(note.to_string());
+
+        database.set(date.clone(), day.clone());
+        let day2 = database.get(&date).unwrap();
+
+        assert_eq!(day, *day2);
+
+        drop(database)
     }
 }
