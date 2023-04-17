@@ -1,5 +1,6 @@
 pub mod context;
 mod data;
+pub mod edit_day_guard;
 
 use crate::database::data::Data;
 use crate::model::day::Day;
