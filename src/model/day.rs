@@ -1,14 +1,26 @@
+use crate::model::priority::{Priority, PriorityId};
 use serde::{Deserialize, Serialize};
-use std::fmt::{Display, Formatter};
+use std::fmt::{Debug, Display, Formatter};
 
 #[derive(Clone, Debug, Default, Deserialize, PartialEq, Serialize)]
 pub struct Day {
+    priorities: Vec<Priority>,
     notes: Vec<String>,
 }
 
 impl Day {
     pub fn note(&mut self, note: String) {
         self.notes.push(note)
+    }
+
+    pub fn update_priority(&mut self, priority_id: PriorityId, is_done: bool) -> Result<(), Error> {
+        match self.priorities.get_mut(priority_id) {
+            None => Err(Error::default()),
+            Some(priority) => {
+                priority.is_done = is_done;
+                Ok(())
+            }
+        }
     }
 }
 
@@ -26,6 +38,17 @@ impl Display for Day {
         Ok(())
     }
 }
+
+#[derive(Debug, Default)]
+pub struct Error;
+
+impl Display for Error {
+    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
+        todo!()
+    }
+}
+
+impl std::error::Error for Error {}
 
 #[cfg(test)]
 mod tests {

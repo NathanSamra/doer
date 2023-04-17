@@ -12,7 +12,7 @@ use crate::cli::command::focus::{end_break, end_day, set_focus, show_focus, star
 use crate::cli::command::note::note;
 use crate::cli::command::plan::plan;
 use crate::cli::command::show::{show, show_last};
-use crate::cli::command::tick::{tick, un_tick};
+use crate::cli::command::tick::set_tick;
 
 use crate::cli::date_parser::parse_date;
 
@@ -52,12 +52,7 @@ impl Command {
             Command::ShowLast => show_last(),
             Command::Tick(args) => {
                 let date = args.date.unwrap_or_else(today);
-
-                if args.reset {
-                    un_tick(&date, &args.priority_id)
-                } else {
-                    tick(&date, &args.priority_id)
-                }
+                set_tick(date, args.priority_id, !args.reset);
             }
             Command::Context(args) => match &args.command {
                 ContextCommand::Show => show_context(),
