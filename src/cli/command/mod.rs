@@ -16,9 +16,9 @@ use crate::cli::command::tick::set_tick;
 
 use crate::cli::date_parser::parse_date;
 
-use crate::model::focus::Focus;
-use crate::model::priority::PriorityId;
+use crate::model::day::PriorityId;
 
+use crate::database::Database;
 use crate::today::today;
 use chrono::NaiveDate;
 use clap::{Args, Subcommand};
@@ -45,19 +45,21 @@ pub enum Command {
 
 impl Command {
     pub fn execute(&self) {
+        let mut database = Database::at_os().expect("Database initialisation failed");
+
         match &self {
             Command::Plan(args) => plan(&args.date),
             Command::Copy(args) => copy(&args.from, &args.to),
-            Command::Show(args) => show(&args.date),
-            Command::ShowLast => show_last(),
+            Command::Show(args) => show(&database, &args.date),
+            Command::ShowLast => show_last(&database),
             Command::Tick(args) => {
                 let date = args.date.unwrap_or_else(today);
-                set_tick(date, args.priority_id, !args.reset);
+                set_tick(&mut database, date, args.priority_id, !args.reset);
             }
             Command::Context(args) => match &args.command {
-                ContextCommand::Show => show_context(),
-                ContextCommand::List => list_contexts(),
-                ContextCommand::Set { context } => set_context(context.clone()),
+                ContextCommand::Show => show_context(&database),
+                ContextCommand::List => list_contexts(&database),
+                ContextCommand::Set { context } => set_context(&mut database, context.clone()),
             },
             Command::Focus(args) => match &args.command {
                 FocusCommand::Show => show_focus(),
@@ -66,7 +68,7 @@ impl Command {
                 FocusCommand::EndBreak => end_break(),
                 FocusCommand::EndDay => end_day(),
             },
-            Command::Note(args) => note(args.note.clone()),
+            Command::Note(args) => note(&mut database, args.note.clone()),
         }
     }
 }
@@ -136,7 +138,7 @@ pub enum FocusCommand {
     /// Show current context
     Show,
     /// Set context
-    Set { focus: Focus },
+    Set { focus: String },
     /// Start focus break
     StartBreak,
     /// End focus break

@@ -11,17 +11,7 @@ use std::fmt::{Debug, Display, Formatter};
 use std::fs::File;
 use std::io::{Read, Write};
 use std::path::PathBuf;
-use std::sync::{LazyLock, Mutex};
 use std::{fs, io};
-
-pub static DATABASE: LazyLock<Mutex<Database>> = LazyLock::new(|| {
-    let mut location = dirs::config_dir().expect("OS does not have a config directory");
-    location.push("doer");
-    if !location.exists() {
-        fs::create_dir(&location).unwrap();
-    }
-    Mutex::new(Database::new(location).expect("Database creation failed"))
-});
 
 pub struct Database {
     data: Data,
@@ -38,6 +28,15 @@ impl Database {
         };
         database.load()?;
         Ok(database)
+    }
+
+    pub fn at_os() -> Result<Self, Error> {
+        let mut location = dirs::config_dir().expect("OS does not have a config directory");
+        location.push("doer");
+        if !location.exists() {
+            fs::create_dir(&location)?;
+        }
+        Database::new(location)
     }
 
     pub fn context(&self) -> &String {

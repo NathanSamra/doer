@@ -1,10 +1,8 @@
 use crate::database::edit_day_guard::EditDayGuard;
-use crate::database::DATABASE;
+use crate::database::Database;
 use crate::today::today;
-use std::ops::DerefMut;
 
-pub fn note(note: String) {
-    let mut database = DATABASE.lock().unwrap();
-    let mut date_editor = EditDayGuard::new(database.deref_mut(), today());
+pub fn note(database: &mut Database, note: String) {
+    let mut date_editor = EditDayGuard::new(database, today());
     date_editor.day.note(note);
 }

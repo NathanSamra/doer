@@ -1,10 +1,8 @@
-use crate::model::focus::Focus;
-
 pub fn show_focus() {
     todo!()
 }
 
-pub fn set_focus(_focus: &Focus) {
+pub fn set_focus(_focus: &str) {
     todo!()
 }
 

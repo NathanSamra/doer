@@ -1,16 +1,7 @@
-use crate::model::priority::PriorityId;
+use crate::model::task::SharedTask;
 
 #[derive(Clone)]
-pub enum Focus {
-    Priority(PriorityId),
-    Other(String),
-}
-
-impl<'s> From<&'s str> for Focus {
-    fn from(value: &'s str) -> Self {
-        match value.parse::<PriorityId>() {
-            Ok(priority_id) => Focus::Priority(priority_id),
-            Err(_) => Focus::Other(value.to_string()),
-        }
-    }
+pub struct Focus {
+    #[allow(dead_code)]
+    task: SharedTask,
 }

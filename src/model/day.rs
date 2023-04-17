@@ -1,10 +1,12 @@
-use crate::model::priority::{Priority, PriorityId};
+use crate::model::task::SharedTask;
 use serde::{Deserialize, Serialize};
 use std::fmt::{Debug, Display, Formatter};
 
+pub type PriorityId = usize;
+
 #[derive(Clone, Debug, Default, Deserialize, PartialEq, Serialize)]
 pub struct Day {
-    priorities: Vec<Priority>,
+    priorities: Vec<SharedTask>,
     notes: Vec<String>,
 }
 
@@ -13,12 +15,15 @@ impl Day {
         self.notes.push(note)
     }
 
-    pub fn update_priority(&mut self, priority_id: PriorityId, is_done: bool) -> Result<(), Error> {
-        match self.priorities.get_mut(priority_id) {
+    pub fn update_priority(
+        &mut self,
+        priority_id: PriorityId,
+        _is_done: bool,
+    ) -> Result<(), Error> {
+        match self.priorities.get(priority_id) {
             None => Err(Error::default()),
-            Some(priority) => {
-                priority.is_done = is_done;
-                Ok(())
+            Some(_priority) => {
+                todo!();
             }
         }
     }

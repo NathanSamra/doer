@@ -1,8 +1,7 @@
-use crate::database::DATABASE;
+use crate::database::Database;
 use chrono::NaiveDate;
 
-pub fn show(date: &NaiveDate) {
-    let database = DATABASE.lock().unwrap();
+pub fn show(database: &Database, date: &NaiveDate) {
     match database.get(date) {
         None => {
             println!("No entry for {}", date)
@@ -14,12 +13,11 @@ pub fn show(date: &NaiveDate) {
     }
 }
 
-pub fn show_last() {
-    let database = DATABASE.lock().unwrap();
+pub fn show_last(database: &Database) {
     match database.most_recent_past() {
         None => {
             println!("No entries to show")
         }
-        Some(date) => show(date),
+        Some(date) => show(database, date),
     }
 }
