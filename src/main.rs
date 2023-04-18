@@ -9,7 +9,7 @@ use crate::cli::Cli;
 
 use clap::Parser;
 
-fn main() {
+fn main() -> Result<(), cli::Error> {
     let cli = Cli::parse();
-    cli.run();
+    cli.run()
 }

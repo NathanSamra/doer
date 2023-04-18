@@ -2,6 +2,7 @@ use crate::cli::date_parser::parse_date;
 
 use crate::model::day::PriorityId;
 
+use crate::cli::client;
 use crate::cli::client::Client;
 use crate::today::today;
 use chrono::NaiveDate;
@@ -28,12 +29,12 @@ pub enum Command {
 }
 
 impl Command {
-    pub fn execute(&self) {
+    pub fn execute(&self) -> Result<(), client::Error> {
         let mut client = Client::default();
 
         match &self {
             Command::Plan(args) => client.plan(&args.date),
-            Command::Copy(args) => client.copy(&args.from, &args.to),
+            Command::Copy(args) => client.copy(&args.from, args.to)?,
             Command::Show(args) => client.show(&args.date),
             Command::ShowLast => client.show_last(),
             Command::Tick(args) => {
@@ -54,6 +55,8 @@ impl Command {
             },
             Command::Note(args) => client.note(args.note.clone()),
         }
+
+        Ok(())
     }
 }
 

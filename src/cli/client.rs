@@ -3,6 +3,7 @@ use crate::database::Database;
 use crate::model::day::PriorityId;
 use crate::today::today;
 use chrono::NaiveDate;
+use std::fmt::{Display, Formatter};
 
 pub struct Client {
     database: Database,
@@ -31,8 +32,23 @@ impl Client {
         }
     }
 
-    pub fn copy(&mut self, _from: &NaiveDate, _to: &NaiveDate) {
-        todo!()
+    pub fn copy(&mut self, from: &NaiveDate, to: NaiveDate) -> Result<(), Error> {
+        let priorities = match self.database.get(from) {
+            None => {
+                println!("No entry to copy from at {}", from);
+                Err(Error::default())
+            }
+            Some(from_day) => Ok(from_day.priorities()),
+        }?;
+
+        let mut to_day_editor = self.edit_day_guard(to);
+        match to_day_editor.day.set_priorities(priorities) {
+            Ok(_) => Ok(()),
+            Err(err) => {
+                println!("Copy failed: {}", err);
+                Err(Error::default())
+            }
+        }
     }
 
     pub fn show_focus(&self) {
@@ -109,3 +125,14 @@ impl Client {
         EditDayGuard::new(&mut self.database, date)
     }
 }
+
+#[derive(Debug, Default)]
+pub struct Error;
+
+impl Display for Error {
+    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
+        todo!()
+    }
+}
+
+impl std::error::Error for Error {}

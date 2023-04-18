@@ -1,9 +1,13 @@
 use crate::model::focus::Focus;
-use crate::model::task::SharedTask;
+use crate::model::task::{SharedTask, Task};
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
+use std::cell::RefCell;
 use std::fmt::{Debug, Display, Formatter};
+use std::rc::Rc;
 
 pub type PriorityId = usize;
+
+const MAX_PRIORITIES: usize = 6;
 
 #[derive(Clone, Debug, Default)]
 pub struct Day {
@@ -22,6 +26,13 @@ impl Day {
         &self.notes
     }
 
+    pub fn priorities(&self) -> Vec<Task> {
+        self.priorities
+            .iter()
+            .map(|p| p.borrow().to_owned())
+            .collect()
+    }
+
     pub fn note(&mut self, note: String) {
         self.notes.push(note)
     }
@@ -32,11 +43,23 @@ impl Day {
         _is_done: bool,
     ) -> Result<(), Error> {
         match self.priorities.get(priority_id) {
-            None => Err(Error::default()),
+            None => Err(Error::InvalidPriorityId),
             Some(_priority) => {
                 todo!();
             }
         }
+    }
+
+    pub fn set_priorities(&mut self, priorities: Vec<Task>) -> Result<(), Error> {
+        if priorities.len() > MAX_PRIORITIES {
+            return Err(Error::TooManyPriorities);
+        }
+
+        self.priorities = priorities
+            .into_iter()
+            .map(|p| Rc::new(RefCell::new(p)))
+            .collect();
+        Ok(())
     }
 }
 
@@ -73,8 +96,11 @@ impl<'de> Deserialize<'de> for Day {
     }
 }
 
-#[derive(Debug, Default)]
-pub struct Error;
+#[derive(Debug)]
+pub enum Error {
+    TooManyPriorities,
+    InvalidPriorityId,
+}
 
 impl Display for Error {
     fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {

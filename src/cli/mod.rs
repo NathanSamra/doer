@@ -2,6 +2,8 @@ mod client;
 mod command;
 mod date_parser;
 
+pub use client::Error;
+
 use crate::cli::command::Command;
 
 use clap::Parser;
@@ -14,7 +16,7 @@ pub struct Cli {
 }
 
 impl Cli {
-    pub fn run(&self) {
+    pub fn run(&self) -> Result<(), client::Error> {
         self.command.execute()
     }
 }
