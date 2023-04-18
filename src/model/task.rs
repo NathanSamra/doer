@@ -1,6 +1,9 @@
-use serde::{Deserialize, Deserializer, Serialize, Serializer};
+use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
+use std::fmt::{Display, Formatter};
 use std::rc::Rc;
+
+pub type SharedTask = Rc<RefCell<Task>>;
 
 #[derive(Clone, Debug, Deserialize, PartialEq, Serialize)]
 pub struct Task {
@@ -8,23 +11,13 @@ pub struct Task {
     pub is_done: bool,
 }
 
-#[derive(Clone, Debug, PartialEq)]
-pub struct SharedTask(Rc<RefCell<Task>>);
+impl Display for Task {
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        let mut text = self.name.clone();
+        if self.is_done {
+            text += " - done"
+        }
 
-impl<'de> Deserialize<'de> for SharedTask {
-    fn deserialize<D>(_deserializer: D) -> Result<Self, D::Error>
-    where
-        D: Deserializer<'de>,
-    {
-        todo!()
-    }
-}
-
-impl Serialize for SharedTask {
-    fn serialize<S>(&self, _serializer: S) -> Result<S::Ok, S::Error>
-    where
-        S: Serializer,
-    {
-        todo!()
+        writeln!(f, "{}", text)
     }
 }

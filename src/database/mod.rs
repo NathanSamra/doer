@@ -202,7 +202,7 @@ mod tests {
         database.set(date.clone(), day.clone());
         let day2 = database.get(&date).unwrap();
 
-        assert_eq!(day, *day2);
+        assert_eq!(day.notes(), day2.notes());
 
         drop(database)
     }

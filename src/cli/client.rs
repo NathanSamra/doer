@@ -36,7 +36,19 @@ impl Client {
     }
 
     pub fn show_focus(&self) {
-        todo!()
+        match self.database.get(&today()) {
+            None => {
+                println!("No focus");
+            }
+            Some(day) => match day.focus() {
+                None => {
+                    println!("No focus");
+                }
+                Some(focus) => {
+                    println!("{}", focus)
+                }
+            },
+        }
     }
 
     pub fn set_focus(&mut self, _focus: &str) {

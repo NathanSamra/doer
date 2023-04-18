@@ -1,16 +1,27 @@
+use crate::model::focus::Focus;
 use crate::model::task::SharedTask;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::fmt::{Debug, Display, Formatter};
 
 pub type PriorityId = usize;
 
-#[derive(Clone, Debug, Default, Deserialize, PartialEq, Serialize)]
+#[derive(Clone, Debug, Default)]
 pub struct Day {
     priorities: Vec<SharedTask>,
+    focuses: Vec<Focus>,
     notes: Vec<String>,
 }
 
 impl Day {
+    pub fn focus(&self) -> Option<&Focus> {
+        self.focuses.last()
+    }
+
+    #[allow(dead_code)]
+    pub fn notes(&self) -> &Vec<String> {
+        &self.notes
+    }
+
     pub fn note(&mut self, note: String) {
         self.notes.push(note)
     }
@@ -41,6 +52,24 @@ impl Display for Day {
         }
 
         Ok(())
+    }
+}
+
+impl Serialize for Day {
+    fn serialize<S>(&self, _serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        todo!()
+    }
+}
+
+impl<'de> Deserialize<'de> for Day {
+    fn deserialize<D>(_deserializer: D) -> Result<Self, D::Error>
+    where
+        D: Deserializer<'de>,
+    {
+        todo!()
     }
 }
 
