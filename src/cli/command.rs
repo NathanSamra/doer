@@ -48,7 +48,7 @@ impl Command {
             },
             Command::Focus(args) => match &args.command {
                 FocusCommand::Show => client.show_focus(),
-                FocusCommand::Set { focus } => client.set_focus(focus),
+                FocusCommand::Set { focus } => client.set_focus(focus.clone())?,
                 FocusCommand::StartBreak => client.start_break(),
                 FocusCommand::EndBreak => client.end_break(),
                 FocusCommand::EndDay => client.end_day(),

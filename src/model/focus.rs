@@ -7,6 +7,12 @@ pub struct Focus {
     task: SharedTask,
 }
 
+impl Focus {
+    pub fn new(task: SharedTask) -> Self {
+        Self { task }
+    }
+}
+
 impl Display for Focus {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         let task = self.task.borrow();

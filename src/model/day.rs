@@ -1,5 +1,5 @@
 use crate::model::focus::Focus;
-use crate::model::task::{SharedTask, Task};
+use crate::model::task::{make_shared_task, SharedTask, Task};
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::cell::RefCell;
 use std::fmt::{Debug, Display, Formatter};
@@ -59,6 +59,23 @@ impl Day {
             .into_iter()
             .map(|p| Rc::new(RefCell::new(p)))
             .collect();
+        Ok(())
+    }
+
+    pub fn set_focus(&mut self, focus_str: String) {
+        let task = make_shared_task(Task::new(focus_str));
+        let focus = Focus::new(task);
+        self.focuses.push(focus);
+    }
+
+    pub fn set_focus_from_priority(&mut self, priority_id: &PriorityId) -> Result<(), Error> {
+        let task = match self.priorities.get(*priority_id) {
+            None => Err(Error::InvalidPriorityId),
+            Some(priority) => Ok(priority.clone()),
+        }?;
+
+        let focus = Focus::new(task);
+        self.focuses.push(focus);
         Ok(())
     }
 }

@@ -11,6 +11,15 @@ pub struct Task {
     pub is_done: bool,
 }
 
+impl Task {
+    pub fn new(name: String) -> Self {
+        Self {
+            name,
+            is_done: false,
+        }
+    }
+}
+
 impl Display for Task {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         let mut text = self.name.clone();
@@ -20,4 +29,8 @@ impl Display for Task {
 
         writeln!(f, "{}", text)
     }
+}
+
+pub fn make_shared_task(task: Task) -> SharedTask {
+    Rc::new(RefCell::new(task))
 }

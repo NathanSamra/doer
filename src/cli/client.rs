@@ -67,8 +67,22 @@ impl Client {
         }
     }
 
-    pub fn set_focus(&mut self, _focus: &str) {
-        todo!()
+    pub fn set_focus(&mut self, focus_str: String) -> Result<(), Error> {
+        let mut day_editor = self.edit_day_guard(today());
+
+        match focus_str.parse::<PriorityId>() {
+            Ok(priority_id) => match day_editor.day.set_focus_from_priority(&priority_id) {
+                Ok(_) => Ok(()),
+                Err(err) => {
+                    println!("{}", err);
+                    Err(Error::default())
+                }
+            },
+            Err(_) => {
+                day_editor.day.set_focus(focus_str);
+                Ok(())
+            }
+        }
     }
 
     pub fn start_break(&mut self) {
