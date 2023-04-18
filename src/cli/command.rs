@@ -1,24 +1,8 @@
-mod context;
-mod copy;
-mod focus;
-mod note;
-mod plan;
-mod show;
-mod tick;
-
-use crate::cli::command::context::{list_contexts, set_context, show_context};
-use crate::cli::command::copy::copy;
-use crate::cli::command::focus::{end_break, end_day, set_focus, show_focus, start_break};
-use crate::cli::command::note::note;
-use crate::cli::command::plan::plan;
-use crate::cli::command::show::{show, show_last};
-use crate::cli::command::tick::set_tick;
-
 use crate::cli::date_parser::parse_date;
 
 use crate::model::day::PriorityId;
 
-use crate::database::Database;
+use crate::cli::client::Client;
 use crate::today::today;
 use chrono::NaiveDate;
 use clap::{Args, Subcommand};
@@ -45,30 +29,30 @@ pub enum Command {
 
 impl Command {
     pub fn execute(&self) {
-        let mut database = Database::at_os().expect("Database initialisation failed");
+        let mut client = Client::default();
 
         match &self {
-            Command::Plan(args) => plan(&args.date),
-            Command::Copy(args) => copy(&args.from, &args.to),
-            Command::Show(args) => show(&database, &args.date),
-            Command::ShowLast => show_last(&database),
+            Command::Plan(args) => client.plan(&args.date),
+            Command::Copy(args) => client.copy(&args.from, &args.to),
+            Command::Show(args) => client.show(&args.date),
+            Command::ShowLast => client.show_last(),
             Command::Tick(args) => {
                 let date = args.date.unwrap_or_else(today);
-                set_tick(&mut database, date, args.priority_id, !args.reset);
+                client.set_tick(date, args.priority_id, !args.reset);
             }
             Command::Context(args) => match &args.command {
-                ContextCommand::Show => show_context(&database),
-                ContextCommand::List => list_contexts(&database),
-                ContextCommand::Set { context } => set_context(&mut database, context.clone()),
+                ContextCommand::Show => client.show_context(),
+                ContextCommand::List => client.list_contexts(),
+                ContextCommand::Set { context } => client.set_context(context.clone()),
             },
             Command::Focus(args) => match &args.command {
-                FocusCommand::Show => show_focus(),
-                FocusCommand::Set { focus } => set_focus(focus),
-                FocusCommand::StartBreak => start_break(),
-                FocusCommand::EndBreak => end_break(),
-                FocusCommand::EndDay => end_day(),
+                FocusCommand::Show => client.show_focus(),
+                FocusCommand::Set { focus } => client.set_focus(focus),
+                FocusCommand::StartBreak => client.start_break(),
+                FocusCommand::EndBreak => client.end_break(),
+                FocusCommand::EndDay => client.end_day(),
             },
-            Command::Note(args) => note(&mut database, args.note.clone()),
+            Command::Note(args) => client.note(args.note.clone()),
         }
     }
 }
