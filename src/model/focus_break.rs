@@ -43,3 +43,29 @@ impl Display for FocusBreak {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn is_not_over() {
+        let break_ = FocusBreak::start();
+        assert!(!break_.is_over());
+    }
+
+    #[test]
+    fn is_over() {
+        let mut break_ = FocusBreak::start();
+        break_.end().unwrap();
+        assert!(break_.is_over());
+    }
+
+    #[test]
+    fn ending_twice_fails() {
+        let mut break_ = FocusBreak::start();
+        break_.end().unwrap();
+        let result = break_.end();
+        assert!(result.is_err());
+    }
+}
