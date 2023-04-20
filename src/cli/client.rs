@@ -85,12 +85,26 @@ impl Client {
         }
     }
 
-    pub fn start_break(&mut self) {
-        todo!()
+    pub fn start_break(&mut self) -> Result<(), Error> {
+        let mut day_editor = self.edit_day_guard(today());
+        match day_editor.day.start_break() {
+            Ok(_) => Ok(()),
+            Err(err) => {
+                println!("{}", err);
+                Err(Error::default())
+            }
+        }
     }
 
-    pub fn end_break(&mut self) {
-        todo!()
+    pub fn end_break(&mut self) -> Result<(), Error> {
+        let mut day_editor = self.edit_day_guard(today());
+        match day_editor.day.end_break() {
+            Ok(_) => Ok(()),
+            Err(err) => {
+                println!("{}", err);
+                Err(Error::default())
+            }
+        }
     }
 
     pub fn end_day(&mut self) {

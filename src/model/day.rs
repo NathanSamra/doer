@@ -1,3 +1,4 @@
+use crate::model::focus;
 use crate::model::focus::Focus;
 use crate::model::task::{make_shared_task, SharedTask, Task};
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
@@ -78,6 +79,31 @@ impl Day {
         self.focuses.push(focus);
         Ok(())
     }
+
+    pub fn start_break(&mut self) -> Result<(), Error> {
+        let focus = self.cur_focus_mut()?;
+
+        match focus.start_break() {
+            Ok(_) => Ok(()),
+            Err(err) => Err(Error::Focus(err)),
+        }
+    }
+
+    pub fn end_break(&mut self) -> Result<(), Error> {
+        let focus = self.cur_focus_mut()?;
+
+        match focus.end_break() {
+            Ok(_) => Ok(()),
+            Err(err) => Err(Error::Focus(err)),
+        }
+    }
+
+    fn cur_focus_mut(&mut self) -> Result<&mut Focus, Error> {
+        match self.focuses.last_mut() {
+            None => Err(Error::NoFocusSet),
+            Some(focus) => Ok(focus),
+        }
+    }
 }
 
 impl Display for Day {
@@ -117,6 +143,8 @@ impl<'de> Deserialize<'de> for Day {
 pub enum Error {
     TooManyPriorities,
     InvalidPriorityId,
+    NoFocusSet,
+    Focus(focus::Error),
 }
 
 impl Display for Error {
