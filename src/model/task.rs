@@ -7,8 +7,8 @@ pub type SharedTask = Rc<RefCell<Task>>;
 
 #[derive(Clone, Debug, Deserialize, PartialEq, Serialize)]
 pub struct Task {
-    pub name: String,
-    pub is_done: bool,
+    name: String,
+    is_done: bool,
 }
 
 impl Task {
@@ -17,6 +17,10 @@ impl Task {
             name,
             is_done: false,
         }
+    }
+
+    pub fn set_done(&mut self, is_done: bool) {
+        self.is_done = is_done;
     }
 }
 
@@ -33,4 +37,21 @@ impl Display for Task {
 
 pub fn make_shared_task(task: Task) -> SharedTask {
     Rc::new(RefCell::new(task))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn set_done_true() {
+        let mut task = Task::new("A task".to_string());
+        task.set_done(true);
+    }
+
+    #[test]
+    fn set_done_false() {
+        let mut task = Task::new("A task".to_string());
+        task.set_done(true);
+    }
 }

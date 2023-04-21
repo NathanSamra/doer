@@ -38,15 +38,12 @@ impl Day {
         self.notes.push(note)
     }
 
-    pub fn update_priority(
-        &mut self,
-        priority_id: PriorityId,
-        _is_done: bool,
-    ) -> Result<(), Error> {
+    pub fn update_priority(&mut self, priority_id: PriorityId, is_done: bool) -> Result<(), Error> {
         match self.priorities.get(priority_id) {
             None => Err(Error::InvalidPriorityId),
-            Some(_priority) => {
-                todo!();
+            Some(priority) => {
+                priority.borrow_mut().set_done(is_done);
+                Ok(())
             }
         }
     }
