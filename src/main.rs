@@ -11,5 +11,11 @@ use clap::Parser;
 
 fn main() -> Result<(), cli::Error> {
     let cli = Cli::parse();
-    cli.run()
+    match cli.run() {
+        Ok(_) => Ok(()),
+        Err(err) => {
+            println!("ERROR: {}", err);
+            Err(err)
+        }
+    }
 }

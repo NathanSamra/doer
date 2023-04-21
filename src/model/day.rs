@@ -1,8 +1,7 @@
-use crate::model::focus;
 use crate::model::focus::Focus;
 use crate::model::task::{make_shared_task, SharedTask, Task};
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
-use std::cell::RefCell;
+use std::cell::{RefCell, RefMut};
 use std::fmt::{Debug, Display, Formatter};
 use std::rc::Rc;
 
@@ -22,37 +21,8 @@ impl Day {
         self.focuses.last()
     }
 
-    pub fn priorities(&self) -> Vec<Task> {
-        self.priorities
-            .iter()
-            .map(|p| p.borrow().to_owned())
-            .collect()
-    }
-
-    pub fn note(&mut self, note: String) {
-        self.notes.push(note)
-    }
-
-    pub fn update_priority(&mut self, priority_id: PriorityId, is_done: bool) -> Result<(), Error> {
-        match self.priorities.get(priority_id) {
-            None => Err(Error::InvalidPriorityId),
-            Some(priority) => {
-                priority.borrow_mut().set_done(is_done);
-                Ok(())
-            }
-        }
-    }
-
-    pub fn set_priorities(&mut self, priorities: Vec<Task>) -> Result<(), Error> {
-        if priorities.len() > MAX_PRIORITIES {
-            return Err(Error::TooManyPriorities);
-        }
-
-        self.priorities = priorities
-            .into_iter()
-            .map(|p| Rc::new(RefCell::new(p)))
-            .collect();
-        Ok(())
+    pub fn focus_mut(&mut self) -> Option<&mut Focus> {
+        self.focuses.last_mut()
     }
 
     pub fn set_focus(&mut self, focus_str: String) {
@@ -72,29 +42,34 @@ impl Day {
         Ok(())
     }
 
-    pub fn start_break(&mut self) -> Result<(), Error> {
-        let focus = self.cur_focus_mut()?;
-
-        match focus.start_break() {
-            Ok(_) => Ok(()),
-            Err(err) => Err(Error::Focus(err)),
+    pub fn priority_mut(&mut self, priority_id: PriorityId) -> Result<RefMut<Task>, Error> {
+        match self.priorities.get(priority_id) {
+            None => Err(Error::InvalidPriorityId),
+            Some(priority) => Ok(priority.borrow_mut()),
         }
     }
 
-    pub fn end_break(&mut self) -> Result<(), Error> {
-        let focus = self.cur_focus_mut()?;
-
-        match focus.end_break() {
-            Ok(_) => Ok(()),
-            Err(err) => Err(Error::Focus(err)),
-        }
+    pub fn priorities(&self) -> Vec<Task> {
+        self.priorities
+            .iter()
+            .map(|p| p.borrow().to_owned())
+            .collect()
     }
 
-    fn cur_focus_mut(&mut self) -> Result<&mut Focus, Error> {
-        match self.focuses.last_mut() {
-            None => Err(Error::NoFocusSet),
-            Some(focus) => Ok(focus),
+    pub fn set_priorities(&mut self, priorities: Vec<Task>) -> Result<(), Error> {
+        if priorities.len() > MAX_PRIORITIES {
+            return Err(Error::TooManyPriorities);
         }
+
+        self.priorities = priorities
+            .into_iter()
+            .map(|p| Rc::new(RefCell::new(p)))
+            .collect();
+        Ok(())
+    }
+
+    pub fn note(&mut self, note: String) {
+        self.notes.push(note)
     }
 }
 
@@ -135,8 +110,6 @@ impl<'de> Deserialize<'de> for Day {
 pub enum Error {
     TooManyPriorities,
     InvalidPriorityId,
-    NoFocusSet,
-    Focus(focus::Error),
 }
 
 impl Display for Error {

@@ -39,7 +39,7 @@ impl Command {
             Command::ShowLast => client.show_last(),
             Command::Tick(args) => {
                 let date = args.date.unwrap_or_else(today);
-                client.set_tick(date, args.priority_id, !args.reset);
+                client.set_tick(date, args.priority_id, !args.reset)?;
             }
             Command::Context(args) => match &args.command {
                 ContextCommand::Show => client.show_context(),
