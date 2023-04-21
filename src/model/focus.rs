@@ -59,3 +59,35 @@ impl Display for Error {
 }
 
 impl std::error::Error for Error {}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::model::task::{make_shared_task, Task};
+
+    fn new_focus() -> Focus {
+        Focus::new(make_shared_task(Task::new("A Task".to_string())))
+    }
+
+    #[test]
+    fn start_break() {
+        let mut focus = new_focus();
+        let result = focus.start_break();
+        assert!(result.is_ok());
+    }
+
+    #[test]
+    fn end_break() {
+        let mut focus = new_focus();
+        focus.start_break().unwrap();
+        let result = focus.end_break();
+        assert!(result.is_ok());
+    }
+
+    #[test]
+    fn end_break_without_start_fails() {
+        let mut focus = new_focus();
+        let result = focus.end_break();
+        assert!(result.is_err());
+    }
+}
