@@ -10,7 +10,7 @@ pub type PriorityId = usize;
 
 const MAX_PRIORITIES: usize = 6;
 
-#[derive(Clone, Debug, Default)]
+#[derive(Clone, Debug, Default, PartialEq)]
 pub struct Day {
     priorities: Vec<SharedTask>,
     focuses: Vec<Focus>,
@@ -20,11 +20,6 @@ pub struct Day {
 impl Day {
     pub fn focus(&self) -> Option<&Focus> {
         self.focuses.last()
-    }
-
-    #[allow(dead_code)]
-    pub fn notes(&self) -> &Vec<String> {
-        &self.notes
     }
 
     pub fn priorities(&self) -> Vec<Task> {

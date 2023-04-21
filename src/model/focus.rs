@@ -1,7 +1,7 @@
 use crate::model::{focus_break::FocusBreak, task::SharedTask};
 use std::fmt::{Display, Formatter};
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct Focus {
     task: SharedTask,
     breaks: Vec<FocusBreak>,

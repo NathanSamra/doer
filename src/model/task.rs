@@ -44,14 +44,22 @@ mod tests {
     use super::*;
 
     #[test]
+    fn new_task_not_done() {
+        let task = Task::new("A task".to_string());
+        assert!(!task.is_done);
+    }
+
+    #[test]
     fn set_done_true() {
         let mut task = Task::new("A task".to_string());
         task.set_done(true);
+        assert!(task.is_done);
     }
 
     #[test]
     fn set_done_false() {
         let mut task = Task::new("A task".to_string());
         task.set_done(true);
+        assert!(!task.is_done);
     }
 }
