@@ -42,11 +42,8 @@ impl Day {
         Ok(())
     }
 
-    pub fn priority_mut(&mut self, priority_id: PriorityId) -> Result<RefMut<Task>, Error> {
-        match self.priorities.get(priority_id) {
-            None => Err(Error::InvalidPriorityId),
-            Some(priority) => Ok(priority.borrow_mut()),
-        }
+    pub fn priority_mut(&mut self, priority_id: PriorityId) -> Option<RefMut<Task>> {
+        self.priorities.get(priority_id).map(|m| m.borrow_mut())
     }
 
     pub fn priorities(&self) -> Vec<Task> {

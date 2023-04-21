@@ -136,13 +136,18 @@ impl Client {
     pub fn set_tick(
         &mut self,
         date: NaiveDate,
-        priority: PriorityId,
+        priority_id: PriorityId,
         is_done: bool,
     ) -> Result<(), Error> {
         let mut date_editor = self.edit_day_guard(date);
-        let mut priority = date_editor.day.priority_mut(priority)?;
-        priority.set_done(is_done);
-        Ok(())
+        let maybe_priority = date_editor.day.priority_mut(priority_id);
+        match maybe_priority {
+            None => Err(Error::MissingPriority(priority_id)),
+            Some(mut priority) => {
+                priority.set_done(is_done);
+                Ok(())
+            }
+        }
     }
 
     fn edit_day_guard(&mut self, date: NaiveDate) -> EditDayGuard {
@@ -153,6 +158,7 @@ impl Client {
 #[derive(Debug)]
 pub enum Error {
     MissingDay(NaiveDate),
+    MissingPriority(PriorityId),
     NoFocus,
     Focus(focus::Error),
     Day(day::Error),
@@ -163,6 +169,9 @@ impl Display for Error {
         match self {
             Error::MissingDay(date) => {
                 writeln!(f, "No entry to copy from at {}", date)
+            }
+            Error::MissingPriority(priority_id) => {
+                writeln!(f, "No priority with ID {}", priority_id)
             }
             Error::NoFocus => {
                 writeln!(f, "No focus set")
