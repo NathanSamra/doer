@@ -62,6 +62,13 @@ mod tests {
     }
 
     #[test]
+    fn end() {
+        let mut break_ = FocusBreak::start();
+        let result = break_.end();
+        assert!(result.is_ok());
+    }
+
+    #[test]
     fn ending_twice_fails() {
         let mut break_ = FocusBreak::start();
         break_.end().unwrap();
