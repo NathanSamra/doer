@@ -1,6 +1,7 @@
 use crate::model::focus::Focus;
 use crate::model::focus_break::FocusBreak;
 use crate::model::task::{SharedTask, Task};
+use chrono::NaiveTime;
 use serde::de::MapAccess;
 use serde::ser::SerializeStruct;
 use serde::{de, Deserialize, Deserializer, Serialize, Serializer};
@@ -18,6 +19,7 @@ const MAX_PRIORITIES: usize = 6;
 pub struct Day {
     priorities: Vec<SharedTask>,
     focuses: Vec<Focus>,
+    end_time: Option<NaiveTime>,
     notes: Vec<String>,
 }
 
@@ -47,6 +49,16 @@ impl Day {
 
     pub fn priority_mut(&mut self, priority_id: PriorityId) -> Option<RefMut<Task>> {
         self.priorities.get(priority_id).map(|m| m.borrow_mut())
+    }
+
+    pub fn end_day(&mut self) -> Result<(), Error> {
+        match &self.end_time {
+            None => {
+                self.end_time = Some(chrono::Local::now().naive_local().time());
+                Ok(())
+            }
+            Some(time) => Err(Error::DayAlreadyOver(*time)),
+        }
     }
 
     pub fn priorities(&self) -> Vec<Task> {
@@ -92,6 +104,7 @@ const DAY_TAG: &str = "day";
 const TASKS_TAG: &str = "tasks";
 const PRIORITIES_TAG: &str = "priorities";
 const FOCUSES_TAG: &str = "focuses";
+const END_TAG: &str = "end_time";
 const NOTES_TAG: &str = "notes";
 
 impl Serialize for Day {
@@ -142,6 +155,7 @@ impl Serialize for Day {
             .collect();
 
         struct_ser.serialize_field(FOCUSES_TAG, &focuses)?;
+        struct_ser.serialize_field(END_TAG, &self.end_time)?;
         struct_ser.serialize_field(NOTES_TAG, &self.notes)?;
         struct_ser.end()
     }
@@ -176,6 +190,7 @@ impl<'de> de::Visitor<'de> for DeDayVisitor {
         let mut maybe_tasks: Option<Vec<Task>> = None;
         let mut maybe_priorities_ids: Option<Vec<usize>> = None;
         let mut maybe_focuses_ids: Option<HashMap<usize, Vec<FocusBreak>>> = None;
+        let mut maybe_end_time: Option<Option<NaiveTime>> = None;
         let mut maybe_notes: Option<Vec<String>> = None;
 
         while let Some(key) = map.next_key()? {
@@ -183,6 +198,7 @@ impl<'de> de::Visitor<'de> for DeDayVisitor {
                 TASKS_TAG => maybe_tasks = Some(map.next_value()?),
                 PRIORITIES_TAG => maybe_priorities_ids = Some(map.next_value()?),
                 FOCUSES_TAG => maybe_focuses_ids = Some(map.next_value()?),
+                END_TAG => maybe_end_time = Some(map.next_value()?),
                 NOTES_TAG => maybe_notes = Some(map.next_value()?),
                 &_ => panic!(),
             }
@@ -192,6 +208,7 @@ impl<'de> de::Visitor<'de> for DeDayVisitor {
         let priorities_ids =
             maybe_priorities_ids.ok_or(de::Error::missing_field(PRIORITIES_TAG))?;
         let focuses_ids = maybe_focuses_ids.ok_or(de::Error::missing_field(FOCUSES_TAG))?;
+        let end_time = maybe_end_time.ok_or(de::Error::missing_field(END_TAG))?;
         let notes = maybe_notes.ok_or(de::Error::missing_field(NOTES_TAG))?;
 
         let shared_tasks: Vec<SharedTask> = tasks
@@ -216,6 +233,7 @@ impl<'de> de::Visitor<'de> for DeDayVisitor {
         let day = Day {
             priorities,
             focuses,
+            end_time,
             notes,
         };
 
@@ -227,6 +245,7 @@ impl<'de> de::Visitor<'de> for DeDayVisitor {
 pub enum Error {
     TooManyPriorities,
     InvalidPriorityId,
+    DayAlreadyOver(NaiveTime),
 }
 
 impl Display for Error {
@@ -237,6 +256,9 @@ impl Display for Error {
             }
             Error::InvalidPriorityId => {
                 write!(f, "Invalid priority ID")
+            }
+            Error::DayAlreadyOver(time) => {
+                write!(f, "Day already ended at {}", time)
             }
         }
     }
@@ -302,6 +324,24 @@ mod tests {
         day.set_priorities(priorities).unwrap();
         let result = day.set_focus_from_priority(&2);
 
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn end_day() {
+        let mut day = Day::default();
+        assert_eq!(day.end_time, None);
+        day.end_day().unwrap();
+        assert_ne!(day.end_time, None);
+    }
+
+    #[test]
+    fn end_day_twice_fails() {
+        let mut day = Day::default();
+        assert_eq!(day.end_time, None);
+        day.end_day().unwrap();
+        assert_ne!(day.end_time, None);
+        let result = day.end_day();
         assert!(result.is_err());
     }
 

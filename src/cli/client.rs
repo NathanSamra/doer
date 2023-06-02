@@ -100,8 +100,10 @@ impl Client {
         }
     }
 
-    pub fn end_day(&mut self) {
-        todo!()
+    pub fn end_day(&mut self) -> Result<(), Error> {
+        let mut day_editor = self.edit_day_guard(today());
+        day_editor.day.end_day()?;
+        Ok(())
     }
 
     pub fn note(&mut self, note: String) {
