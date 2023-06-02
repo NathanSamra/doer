@@ -59,7 +59,7 @@ mod tests {
     #[test]
     fn set_done_false() {
         let mut task = Task::new("A task".to_string());
-        task.set_done(true);
+        task.set_done(false);
         assert!(!task.is_done);
     }
 }
