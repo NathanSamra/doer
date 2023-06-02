@@ -206,4 +206,26 @@ mod tests {
 
         drop(database)
     }
+
+    #[test]
+    fn day_persists() {
+        let note = "A note";
+        let date = NaiveDate::default();
+        let mut day = Day::default();
+        day.note(note.to_string());
+
+        let dir = tempdir().unwrap();
+        let dir_path = dir.path().to_path_buf();
+
+        {
+            let mut database = Database::new(dir_path.clone()).unwrap();
+            database.set(date.clone(), day.clone());
+        }
+
+        {
+            let database = Database::new(dir_path).unwrap();
+            let day2 = database.get(&date).unwrap();
+            assert_eq!(&day, day2);
+        }
+    }
 }

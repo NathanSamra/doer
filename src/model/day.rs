@@ -1,8 +1,9 @@
 use crate::model::focus::Focus;
 use crate::model::focus_break::FocusBreak;
 use crate::model::task::{SharedTask, Task};
+use serde::de::MapAccess;
 use serde::ser::SerializeStruct;
-use serde::{Deserialize, Deserializer, Serialize, Serializer};
+use serde::{de, Deserialize, Deserializer, Serialize, Serializer};
 use std::cell::{RefCell, RefMut};
 use std::collections::HashMap;
 use std::fmt::{Debug, Display, Formatter};
@@ -87,12 +88,18 @@ impl Display for Day {
     }
 }
 
+const DAY_TAG: &str = "day";
+const TASKS_TAG: &str = "tasks";
+const PRIORITIES_TAG: &str = "priorities";
+const FOCUSES_TAG: &str = "focuses";
+const NOTES_TAG: &str = "notes";
+
 impl Serialize for Day {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: Serializer,
     {
-        let mut struct_ser = serializer.serialize_struct("Day", 4)?;
+        let mut struct_ser = serializer.serialize_struct(DAY_TAG, 4)?;
 
         let mut tasks: Vec<Task> = self
             .priorities
@@ -107,7 +114,7 @@ impl Serialize for Day {
             }
         }
 
-        struct_ser.serialize_field("tasks", &tasks)?;
+        struct_ser.serialize_field(TASKS_TAG, &tasks)?;
 
         let priorities: Vec<usize> = self
             .priorities
@@ -120,7 +127,7 @@ impl Serialize for Day {
             })
             .collect();
 
-        struct_ser.serialize_field("priorities", &priorities)?;
+        struct_ser.serialize_field(PRIORITIES_TAG, &priorities)?;
 
         let focuses: HashMap<usize, Vec<FocusBreak>> = self
             .focuses
@@ -134,18 +141,85 @@ impl Serialize for Day {
             })
             .collect();
 
-        struct_ser.serialize_field("focuses", &focuses)?;
-        struct_ser.serialize_field("notes", &self.notes)?;
+        struct_ser.serialize_field(FOCUSES_TAG, &focuses)?;
+        struct_ser.serialize_field(NOTES_TAG, &self.notes)?;
         struct_ser.end()
     }
 }
 
 impl<'de> Deserialize<'de> for Day {
-    fn deserialize<D>(_deserializer: D) -> Result<Self, D::Error>
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
     where
         D: Deserializer<'de>,
     {
-        todo!()
+        deserializer.deserialize_struct(
+            DAY_TAG,
+            &[TASKS_TAG, PRIORITIES_TAG, FOCUSES_TAG, NOTES_TAG],
+            DeDayVisitor,
+        )
+    }
+}
+
+struct DeDayVisitor;
+
+impl<'de> de::Visitor<'de> for DeDayVisitor {
+    type Value = Day;
+
+    fn expecting(&self, formatter: &mut Formatter) -> std::fmt::Result {
+        formatter.write_str("struct Day")
+    }
+
+    fn visit_map<A>(self, mut map: A) -> Result<Self::Value, A::Error>
+    where
+        A: MapAccess<'de>,
+    {
+        let mut maybe_tasks: Option<Vec<Task>> = None;
+        let mut maybe_priorities_ids: Option<Vec<usize>> = None;
+        let mut maybe_focuses_ids: Option<HashMap<usize, Vec<FocusBreak>>> = None;
+        let mut maybe_notes: Option<Vec<String>> = None;
+
+        while let Some(key) = map.next_key()? {
+            match key {
+                TASKS_TAG => maybe_tasks = Some(map.next_value()?),
+                PRIORITIES_TAG => maybe_priorities_ids = Some(map.next_value()?),
+                FOCUSES_TAG => maybe_focuses_ids = Some(map.next_value()?),
+                NOTES_TAG => maybe_notes = Some(map.next_value()?),
+                &_ => panic!(),
+            }
+        }
+
+        let tasks = maybe_tasks.ok_or(de::Error::missing_field(TASKS_TAG))?;
+        let priorities_ids =
+            maybe_priorities_ids.ok_or(de::Error::missing_field(PRIORITIES_TAG))?;
+        let focuses_ids = maybe_focuses_ids.ok_or(de::Error::missing_field(FOCUSES_TAG))?;
+        let notes = maybe_notes.ok_or(de::Error::missing_field(NOTES_TAG))?;
+
+        let shared_tasks: Vec<SharedTask> = tasks
+            .into_iter()
+            .map(|task| Rc::new(RefCell::new(task)))
+            .collect();
+
+        let priorities: Vec<SharedTask> = priorities_ids
+            .iter()
+            .map(|i| shared_tasks[*i].clone())
+            .collect();
+
+        let focuses: Vec<Focus> = focuses_ids
+            .into_iter()
+            .map(|(i, breaks)| {
+                let mut focus = Focus::new(shared_tasks[i].clone());
+                focus.set_breaks(breaks);
+                focus
+            })
+            .collect();
+
+        let day = Day {
+            priorities,
+            focuses,
+            notes,
+        };
+
+        Ok(day)
     }
 }
 

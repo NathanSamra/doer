@@ -24,6 +24,10 @@ impl Focus {
         &self.breaks
     }
 
+    pub fn set_breaks(&mut self, breaks: Vec<FocusBreak>) {
+        self.breaks = breaks;
+    }
+
     pub fn start_break(&mut self) -> Result<(), Error> {
         match self.breaks.last() {
             None => Ok(()),
