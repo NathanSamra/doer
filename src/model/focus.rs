@@ -73,8 +73,11 @@ pub enum Error {
 }
 
 impl Display for Error {
-    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
-        todo!()
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Error::BreakStillOngoing => write!(f, "Break in progress"),
+            Error::NotInBreak => write!(f, "Not in a break"),
+        }
     }
 }
 
