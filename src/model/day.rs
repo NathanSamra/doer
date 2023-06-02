@@ -1,5 +1,5 @@
 use crate::model::focus::Focus;
-use crate::model::task::{make_shared_task, SharedTask, Task};
+use crate::model::task::{SharedTask, Task};
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::cell::{RefCell, RefMut};
 use std::fmt::{Debug, Display, Formatter};
@@ -25,9 +25,7 @@ impl Day {
         self.focuses.last_mut()
     }
 
-    pub fn set_focus(&mut self, focus_str: String) {
-        let task = make_shared_task(Task::new(focus_str));
-        let focus = Focus::new(task);
+    pub fn set_focus(&mut self, focus: Focus) {
         self.focuses.push(focus);
     }
 

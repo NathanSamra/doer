@@ -1,3 +1,4 @@
+use crate::model::task::{make_shared_task, Task};
 use crate::model::{focus_break::FocusBreak, task::SharedTask};
 use std::fmt::{Display, Formatter};
 
@@ -43,6 +44,13 @@ impl Display for Focus {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         let task = self.task.borrow();
         writeln!(f, "{}", task)
+    }
+}
+
+impl From<String> for Focus {
+    fn from(value: String) -> Self {
+        let task = make_shared_task(Task::new(value));
+        Focus::new(task)
     }
 }
 

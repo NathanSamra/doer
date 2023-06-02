@@ -1,6 +1,7 @@
 use crate::database::edit_day_guard::EditDayGuard;
 use crate::database::Database;
 use crate::model::day::PriorityId;
+use crate::model::focus::Focus;
 use crate::model::{day, focus};
 use crate::today::today;
 use chrono::NaiveDate;
@@ -69,7 +70,7 @@ impl Client {
                 Ok(())
             }
             Err(_) => {
-                day_editor.day.set_focus(focus_str);
+                day_editor.day.set_focus(Focus::from(focus_str));
                 Ok(())
             }
         }
