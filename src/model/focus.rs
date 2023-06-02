@@ -16,6 +16,14 @@ impl Focus {
         }
     }
 
+    pub fn task(&self) -> &SharedTask {
+        &self.task
+    }
+
+    pub fn breaks(&self) -> &Vec<FocusBreak> {
+        &self.breaks
+    }
+
     pub fn start_break(&mut self) -> Result<(), Error> {
         match self.breaks.last() {
             None => Ok(()),

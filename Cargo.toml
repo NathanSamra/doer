@@ -11,6 +11,7 @@ description = "Doer is a tool designed to help you organise your day to day"
 chrono = { version = "0.4.24", features = ["serde"] }
 clap = { version = "4.2.1", features = ["derive"] }
 dirs = "5.0.0"
+itertools = "0.10.5"
 semver = { version = "1.0.17", features = ["serde"] }
 serde = { version = "1.0.160", features = ["derive"] }
 serde_json = "1.0.96"

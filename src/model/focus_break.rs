@@ -1,8 +1,9 @@
 use crate::model::focus::Error;
 use chrono::NaiveTime;
+use serde::{Deserialize, Serialize};
 use std::fmt::{Display, Formatter};
 
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, Deserialize, PartialEq, Serialize)]
 pub struct FocusBreak {
     start: NaiveTime,
     end: Option<NaiveTime>,

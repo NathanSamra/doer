@@ -1,8 +1,12 @@
 use crate::model::focus::Focus;
+use crate::model::focus_break::FocusBreak;
 use crate::model::task::{SharedTask, Task};
+use serde::ser::SerializeStruct;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::cell::{RefCell, RefMut};
+use std::collections::HashMap;
 use std::fmt::{Debug, Display, Formatter};
+use std::ops::Deref;
 use std::rc::Rc;
 
 pub type PriorityId = usize;
@@ -84,11 +88,55 @@ impl Display for Day {
 }
 
 impl Serialize for Day {
-    fn serialize<S>(&self, _serializer: S) -> Result<S::Ok, S::Error>
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: Serializer,
     {
-        todo!()
+        let mut struct_ser = serializer.serialize_struct("Day", 4)?;
+
+        let mut tasks: Vec<Task> = self
+            .priorities
+            .iter()
+            .map(|priority| priority.borrow().deref().clone())
+            .collect();
+
+        for focus in &self.focuses {
+            let task = focus.task().borrow().deref().clone();
+            if !tasks.contains(&task) {
+                tasks.push(task);
+            }
+        }
+
+        struct_ser.serialize_field("tasks", &tasks)?;
+
+        let priorities: Vec<usize> = self
+            .priorities
+            .iter()
+            .map(|priority| {
+                tasks
+                    .iter()
+                    .position(|task| task == priority.borrow().deref())
+                    .unwrap()
+            })
+            .collect();
+
+        struct_ser.serialize_field("priorities", &priorities)?;
+
+        let focuses: HashMap<usize, Vec<FocusBreak>> = self
+            .focuses
+            .iter()
+            .map(|focus| {
+                let index = tasks
+                    .iter()
+                    .position(|task| task == focus.task().borrow().deref())
+                    .unwrap();
+                (index, focus.breaks().clone())
+            })
+            .collect();
+
+        struct_ser.serialize_field("focuses", &focuses)?;
+        struct_ser.serialize_field("notes", &self.notes)?;
+        struct_ser.end()
     }
 }
 
@@ -118,6 +166,63 @@ impl std::error::Error for Error {}
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn focus_is_none_when_empty() {
+        let day = Day::default();
+        assert!(day.focus().is_none());
+    }
+
+    #[test]
+    fn set_one_focus() {
+        let mut day = Day::default();
+        let focus = Focus::from("A focus".to_string());
+
+        day.set_focus(focus.clone());
+
+        assert_eq!(day.focus().unwrap(), &focus);
+    }
+
+    #[test]
+    fn set_two_focuses() {
+        let mut day = Day::default();
+        let focus = Focus::from("A focus".to_string());
+
+        day.set_focus(Focus::from("First focus".to_string()));
+        day.set_focus(focus.clone());
+
+        assert_eq!(day.focus().unwrap(), &focus);
+    }
+
+    #[test]
+    fn set_priority_from_focus() {
+        let focus_str = "A focus".to_string();
+        let priorities = vec![
+            Task::new(focus_str.clone()),
+            Task::new("A different task".to_string()),
+        ];
+
+        let mut day = Day::default();
+        day.set_priorities(priorities).unwrap();
+        day.set_focus_from_priority(&0).unwrap();
+
+        assert_eq!(day.focus().unwrap(), &Focus::from(focus_str));
+    }
+
+    #[test]
+    fn set_priority_from_missing_focus_fails() {
+        let focus_str = "A focus".to_string();
+        let priorities = vec![
+            Task::new(focus_str.clone()),
+            Task::new("A different task".to_string()),
+        ];
+
+        let mut day = Day::default();
+        day.set_priorities(priorities).unwrap();
+        let result = day.set_focus_from_priority(&2);
+
+        assert!(result.is_err());
+    }
 
     #[test]
     fn note() {
