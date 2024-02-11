@@ -8,4 +8,5 @@ setup(
     version=metadata.__version__,
     packages=find_packages(),
     entry_points={'console_scripts': ['doer=doer.console:enter']},
+    install_requires=['appdirs>=1.4', 'semantic_version>=2.10']
 )
