@@ -1,5 +1,5 @@
 use crate::console::client::{Client, PriorityId};
-use chrono::NaiveDate;
+use chrono::{Days, Local, NaiveDate, ParseError, ParseResult, Weekday};
 use clap::{Parser, Subcommand};
 
 #[derive(Parser, Debug)]
@@ -56,24 +56,40 @@ enum Command {
     },
 }
 
-fn date_from_arg(_arg: &str) -> NaiveDate {
-    todo!()
+fn date_from_arg(arg: &str) -> ParseResult<NaiveDate> {
+    let today = Local::now().date_naive();
+    let day = Days::new(1);
+    let first_week_day = today.week(Weekday::Mon).first_day();
+
+    match arg {
+        "yesterday" => Ok(today - day),
+        "today" => Ok(today),
+        "tomorrow" => Ok(today + day),
+        "monday" => Ok(first_week_day),
+        "tuesday" => Ok(first_week_day + day),
+        "wednesday" => Ok(first_week_day + day + day),
+        "thursday" => Ok(first_week_day + day + day + day),
+        "friday" => Ok(first_week_day + day + day + day + day),
+        "saturday" => Ok(first_week_day + day + day + day + day + day),
+        "sunday" => Ok(first_week_day + day + day + day + day + day + day),
+        _ => NaiveDate::parse_from_str(arg, "%Y-%m-%d"),
+    }
 }
 
-pub fn enter() {
+pub fn enter() -> Result<(), ParseError> {
     let args = Cli::parse();
     match &args.command {
         Command::Plan { date } => {
             let mut client = Client::new();
-            client.plan_priorities(&date_from_arg(date))
+            client.plan_priorities(&date_from_arg(date)?)
         }
         Command::Copy { from, to } => {
             let mut client = Client::new();
-            client.copy_priorities(&date_from_arg(from), &date_from_arg(to))
+            client.copy_priorities(&date_from_arg(from)?, &date_from_arg(to)?)
         }
         Command::Show { date } => {
             let client = Client::new();
-            client.show(&date_from_arg(date))
+            client.show(&date_from_arg(date)?)
         }
         Command::ShowLast {} => {
             let client = Client::new();
@@ -124,4 +140,6 @@ pub fn enter() {
             client.note(note)
         }
     }
+
+    Ok(())
 }
