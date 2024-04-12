@@ -1,6 +1,6 @@
+use crate::console::client::{Client, PriorityId};
+use chrono::NaiveDate;
 use clap::{Parser, Subcommand};
-
-type PriorityId = i32;
 
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
@@ -56,6 +56,72 @@ enum Command {
     },
 }
 
+fn date_from_arg(_arg: &str) -> NaiveDate {
+    todo!()
+}
+
 pub fn enter() {
-    let _args = Cli::parse();
+    let args = Cli::parse();
+    match &args.command {
+        Command::Plan { date } => {
+            let mut client = Client::new();
+            client.plan_priorities(&date_from_arg(date))
+        }
+        Command::Copy { from, to } => {
+            let mut client = Client::new();
+            client.copy_priorities(&date_from_arg(from), &date_from_arg(to))
+        }
+        Command::Show { date } => {
+            let client = Client::new();
+            client.show(&date_from_arg(date))
+        }
+        Command::ShowLast {} => {
+            let client = Client::new();
+            let date = client.last_date();
+            client.show(&date)
+        }
+        Command::Tick { id } => {
+            let mut client = Client::new();
+            client.tick(&(id - 1))
+        }
+        Command::UnTick { id } => {
+            let mut client = Client::new();
+            client.un_tick(&(id - 1))
+        }
+        Command::Context {} => {
+            let client = Client::new();
+            client.context()
+        }
+        Command::Contexts {} => {
+            let client = Client::new();
+            client.contexts()
+        }
+        Command::SetContext { context } => {
+            let mut client = Client::new();
+            client.set_context(context)
+        }
+        Command::SetFocus { focus } => {
+            let mut client = Client::new();
+            match focus.parse::<PriorityId>() {
+                Ok(id) => client.set_focus_to_priority(id - 1),
+                Err(_) => client.set_focus(focus),
+            }
+        }
+        Command::StartBreak {} => {
+            let mut client = Client::new();
+            client.start_break()
+        }
+        Command::EndBreak {} => {
+            let mut client = Client::new();
+            client.end_break()
+        }
+        Command::EndDay {} => {
+            let mut client = Client::new();
+            client.end_day()
+        }
+        Command::Note { note } => {
+            let mut client = Client::new();
+            client.note(note)
+        }
+    }
 }
