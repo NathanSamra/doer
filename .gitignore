@@ -6,4 +6,6 @@
 /venv/
 /static/
 
-/cli/build/
+/legacy/cli/build/
+
+
