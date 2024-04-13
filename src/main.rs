@@ -1,5 +1,7 @@
+mod config;
 mod console;
 mod model;
+mod storage;
 
 use console::enter::enter;
 

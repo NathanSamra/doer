@@ -1,13 +1,19 @@
+use crate::config::context;
+use crate::model::data::Data;
+use crate::storage::database;
 use chrono::NaiveDate;
 
 pub type PriorityId = i32;
 
 // TODO: This was designed when I was considering web. Maybe remove the 'client-ness' of it.
-pub struct Client {}
+pub struct Client {
+    data: Data,
+}
 
 impl Client {
     pub fn new() -> Self {
-        todo!()
+        let data = Data::new(database(), context());
+        Self { data }
     }
 
     pub fn plan_priorities(&mut self, _date: &NaiveDate) {
