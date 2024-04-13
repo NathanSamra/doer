@@ -78,18 +78,18 @@ fn date_from_arg(arg: &str) -> ParseResult<NaiveDate> {
 
 pub fn enter() -> Result<(), ParseError> {
     let args = Cli::parse();
-    match &args.command {
+    match args.command {
         Command::Plan { date } => {
             let mut client = Client::new();
-            client.plan_priorities(&date_from_arg(date)?)
+            client.plan_priorities(date_from_arg(date.as_str())?)
         }
         Command::Copy { from, to } => {
             let mut client = Client::new();
-            client.copy_priorities(&date_from_arg(from)?, &date_from_arg(to)?)
+            client.copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
         }
         Command::Show { date } => {
             let client = Client::new();
-            client.show(&date_from_arg(date)?)
+            client.show(&date_from_arg(date.as_str())?)
         }
         Command::ShowLast {} => {
             let client = Client::new();
@@ -114,13 +114,13 @@ pub fn enter() -> Result<(), ParseError> {
         }
         Command::SetContext { context } => {
             let mut client = Client::new();
-            client.set_context(context)
+            client.set_context(context.as_str())
         }
         Command::SetFocus { focus } => {
             let mut client = Client::new();
             match focus.parse::<PriorityId>() {
                 Ok(id) => client.set_focus_to_priority(id - 1),
-                Err(_) => client.set_focus(focus),
+                Err(_) => client.set_focus(focus.as_str()),
             }
         }
         Command::StartBreak {} => {

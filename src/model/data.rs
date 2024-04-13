@@ -28,4 +28,8 @@ impl Data {
     pub fn set_day(&mut self, _date: &NaiveDate, _day: &Day) {
         todo!()
     }
+
+    pub fn last_date(&self) -> NaiveDate {
+        todo!()
+    }
 }
