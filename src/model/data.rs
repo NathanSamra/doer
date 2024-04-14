@@ -7,8 +7,6 @@ use std::fs::File;
 use std::io::{BufReader, BufWriter};
 use std::path::PathBuf;
 
-const VERSION: &str = env!("CARGO_PKG_VERSION");
-
 type YearNum = i32;
 
 pub struct Data {
@@ -48,7 +46,7 @@ impl Data {
 
     fn set_year(&mut self, year_num: &YearNum, year: Year) {
         let year_file = self.year_file(year_num);
-        let year_data = YearDataFile::new(VERSION.to_string(), year);
+        let year_data = YearDataFile::new(year);
 
         // TODO: Handle errors
         let f = fs::OpenOptions::new()

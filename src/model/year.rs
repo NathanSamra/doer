@@ -3,6 +3,8 @@ use chrono::NaiveDate;
 use serde::{Deserialize, Deserializer, Serialize};
 use std::collections::HashMap;
 
+const VERSION: &str = env!("CARGO_PKG_VERSION");
+
 pub type Year = HashMap<NaiveDate, Day>;
 
 #[derive(Serialize)]
@@ -12,9 +14,9 @@ pub struct YearDataFile {
 }
 
 impl YearDataFile {
-    pub fn new(version: String, year: Year) -> Self {
+    pub fn new(year: Year) -> Self {
         Self {
-            version,
+            version: VERSION.to_string(),
             days: year,
         }
     }
@@ -22,7 +24,10 @@ impl YearDataFile {
 
 impl Default for YearDataFile {
     fn default() -> Self {
-        todo!()
+        Self {
+            version: VERSION.to_string(),
+            days: Year::new(),
+        }
     }
 }
 
