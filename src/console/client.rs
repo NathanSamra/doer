@@ -118,17 +118,27 @@ impl Client {
 
     pub fn start_break(&mut self) {
         let mut edit_guard = self.build_edit_guard(today());
-        edit_guard.day().start_break();
+        match edit_guard.day().start_break() {
+            Ok(_) => {}
+            Err(err) => {
+                println!("{err}")
+            }
+        }
     }
 
     pub fn end_break(&mut self) {
         let mut edit_guard = self.build_edit_guard(today());
-        edit_guard.day().end_break();
+        match edit_guard.day().end_break() {
+            Ok(_) => {}
+            Err(err) => {
+                println!("{err}")
+            }
+        }
     }
 
     pub fn end_day(&mut self) {
         let mut edit_guard = self.build_edit_guard(today());
-        edit_guard.day().end_day();
+        edit_guard.day().end();
     }
 
     pub fn note(&mut self, note: String) {
@@ -225,6 +235,7 @@ fn show_day(day: &Day) {
     show_notes(day);
 }
 
+// TODO: Put all of this string formatting into impl Display for Day
 fn show_priorities(day: &Day) {
     if day.priorities.is_empty() {
         println!("No priorities");
