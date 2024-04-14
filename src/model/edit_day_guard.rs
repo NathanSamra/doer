@@ -21,6 +21,6 @@ impl<'a> EditDayGuard<'a> {
 
 impl<'a> Drop for EditDayGuard<'a> {
     fn drop(&mut self) {
-        self.data.set_day(&self.date, &self.day)
+        self.data.set_day(self.date, self.day.clone())
     }
 }

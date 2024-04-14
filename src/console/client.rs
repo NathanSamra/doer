@@ -47,13 +47,22 @@ impl Client {
     }
 
     pub fn show(&self, date: &NaiveDate) {
-        let day = self.data.day(date);
-        show_priorities(&day);
-        show_log(&day);
-        show_notes(&day);
+        show_day(&self.data.day(date));
     }
 
-    pub fn last_date(&self) -> NaiveDate {
+    pub fn show_last(&self) {
+        match self.last_date() {
+            None => {
+                println!("No data to show")
+            }
+            Some(date) => {
+                println!("Last day was {date}:");
+                show_day(&self.data.day(&date));
+            }
+        }
+    }
+
+    pub fn last_date(&self) -> Option<NaiveDate> {
         self.data.last_date()
     }
 
@@ -208,6 +217,12 @@ fn get_item_id(max_id: usize) -> Option<usize> {
 
 fn today() -> NaiveDate {
     Local::now().date_naive()
+}
+
+fn show_day(day: &Day) {
+    show_priorities(day);
+    show_log(day);
+    show_notes(day);
 }
 
 fn show_priorities(day: &Day) {

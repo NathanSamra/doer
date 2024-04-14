@@ -1,6 +1,10 @@
 use chrono::{Local, NaiveDateTime};
+use serde::Serialize;
 
+// TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
+#[derive(Clone, Serialize)]
 pub struct Day {
+    // TODO: Actually I don't think any data in Day should be public. It has too much logic going on.
     pub priorities: Vec<Priority>,
 }
 
@@ -38,7 +42,13 @@ impl Day {
     }
 }
 
-#[derive(Clone)]
+impl Default for Day {
+    fn default() -> Self {
+        todo!()
+    }
+}
+
+#[derive(Clone, Serialize)]
 pub struct Priority {
     pub name: String,
     pub done: bool,

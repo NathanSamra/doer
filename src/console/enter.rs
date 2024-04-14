@@ -93,8 +93,7 @@ pub fn enter() -> Result<(), ParseError> {
         }
         Command::ShowLast {} => {
             let client = Client::new();
-            let date = client.last_date();
-            client.show(&date)
+            client.show_last();
         }
         Command::Tick { id } => {
             let mut client = Client::new();
