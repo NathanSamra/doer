@@ -1,2 +1,2 @@
-mod client;
+mod commands;
 pub mod enter;

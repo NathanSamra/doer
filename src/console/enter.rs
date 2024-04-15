@@ -1,4 +1,7 @@
-use crate::console::client::{Client, PriorityId};
+use crate::console::commands::{
+    add_note, context, contexts, copy_priorities, end_break, end_day, plan_priorities, set_context,
+    set_focus, set_focus_to_priority, show, show_last, start_break, tick, un_tick, PriorityId,
+};
 use chrono::{Days, Local, NaiveDate, ParseError, ParseResult, Weekday};
 use clap::{Parser, Subcommand};
 
@@ -79,65 +82,27 @@ fn date_from_arg(arg: &str) -> ParseResult<NaiveDate> {
 pub fn enter() -> Result<(), ParseError> {
     let args = Cli::parse();
     match args.command {
-        Command::Plan { date } => {
-            let mut client = Client::new();
-            client.plan_priorities(date_from_arg(date.as_str())?)
-        }
+        Command::Plan { date } => plan_priorities(date_from_arg(date.as_str())?),
         Command::Copy { from, to } => {
-            let mut client = Client::new();
-            client.copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
+            copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
         }
-        Command::Show { date } => {
-            let client = Client::new();
-            client.show(&date_from_arg(date.as_str())?)
-        }
+        Command::Show { date } => show(&date_from_arg(date.as_str())?),
         Command::ShowLast {} => {
-            let client = Client::new();
-            client.show_last();
+            show_last();
         }
-        Command::Tick { id } => {
-            let mut client = Client::new();
-            client.tick(&(id - 1))
-        }
-        Command::UnTick { id } => {
-            let mut client = Client::new();
-            client.un_tick(&(id - 1))
-        }
-        Command::Context {} => {
-            let client = Client::new();
-            client.context()
-        }
-        Command::Contexts {} => {
-            let client = Client::new();
-            client.contexts()
-        }
-        Command::SetContext { context } => {
-            let mut client = Client::new();
-            client.set_context(context)
-        }
-        Command::SetFocus { focus } => {
-            let mut client = Client::new();
-            match focus.parse::<PriorityId>() {
-                Ok(id) => client.set_focus_to_priority(id - 1),
-                Err(_) => client.set_focus(focus.as_str()),
-            }
-        }
-        Command::StartBreak {} => {
-            let mut client = Client::new();
-            client.start_break()
-        }
-        Command::EndBreak {} => {
-            let mut client = Client::new();
-            client.end_break()
-        }
-        Command::EndDay {} => {
-            let mut client = Client::new();
-            client.end_day()
-        }
-        Command::Note { note } => {
-            let mut client = Client::new();
-            client.note(note)
-        }
+        Command::Tick { id } => tick(&(id - 1)),
+        Command::UnTick { id } => un_tick(&(id - 1)),
+        Command::Context {} => context(),
+        Command::Contexts {} => contexts(),
+        Command::SetContext { context } => set_context(context),
+        Command::SetFocus { focus } => match focus.parse::<PriorityId>() {
+            Ok(id) => set_focus_to_priority(id - 1),
+            Err(_) => set_focus(focus.as_str()),
+        },
+        Command::StartBreak {} => start_break(),
+        Command::EndBreak {} => end_break(),
+        Command::EndDay {} => end_day(),
+        Command::Note { note } => add_note(note),
     }
 
     Ok(())
