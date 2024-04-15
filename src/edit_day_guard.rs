@@ -1,4 +1,4 @@
-use crate::model::data::Data;
+use crate::data::Data;
 use crate::model::day::Day;
 use chrono::NaiveDate;
 

@@ -1,6 +1,7 @@
-use crate::model::data::Data;
-use crate::model::day::{Day, Priority};
-use crate::model::edit_day_guard::EditDayGuard;
+use crate::data::Data;
+use crate::edit_day_guard::EditDayGuard;
+use crate::model::day::Day;
+use crate::model::priority::Priority;
 use crate::storage::Storage;
 use chrono::{Local, NaiveDate};
 use std::io::stdin;

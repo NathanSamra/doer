@@ -1,4 +1,6 @@
 mod cli;
+mod data;
+pub mod edit_day_guard;
 mod metadata;
 mod model;
 mod storage;

@@ -1,8 +1,10 @@
+use crate::model::focus::Focus;
+use crate::model::priority::Priority;
+use crate::model::r#break::BreakError;
 use chrono::{Local, NaiveDateTime};
 use serde::{Deserialize, Serialize};
 #[allow(unused_imports)]
 use std::fmt::{Debug, Display};
-use thiserror::Error;
 
 // TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
 #[derive(Clone, Default, Deserialize, Serialize)]
@@ -70,92 +72,5 @@ impl Day {
 
     pub fn add_note(&mut self, note: String) {
         self.notes.push(note)
-    }
-}
-
-// TODO: Far too many structs in this file. Should move them all out to their own files.
-#[derive(Clone, PartialEq, Deserialize, Serialize)]
-pub struct Priority {
-    pub name: String,
-    pub done: bool,
-}
-
-impl Priority {
-    pub fn new(name: String) -> Self {
-        Self { name, done: false }
-    }
-}
-
-// TODO: Should probably log the end time here also
-#[derive(Clone, Deserialize, Serialize)]
-pub struct Focus {
-    pub name: String,
-    pub start: NaiveDateTime,
-    pub breaks: Vec<Break>,
-}
-
-#[derive(Error, Debug)]
-pub enum BreakError {
-    #[error("No break started")]
-    NoBreak,
-    #[error("Break already ended")]
-    BreakAlreadyEnded,
-    #[error("Last break is still going")]
-    LastBreakNotEnded,
-    #[error("No focus exists")]
-    NoFocus,
-}
-
-// TODO: I feel like a now() constructor would be useful to say Starting new focus NOW
-impl Focus {
-    pub fn now(name: String) -> Self {
-        Self {
-            name,
-            start: Local::now().naive_local(),
-            breaks: vec![],
-        }
-    }
-
-    pub fn start_break(&mut self) -> Result<(), BreakError> {
-        match self.breaks.last() {
-            None => {}
-            Some(last_break) => {
-                if last_break.end.is_none() {
-                    return Err(BreakError::LastBreakNotEnded);
-                }
-            }
-        };
-
-        self.breaks.push(Break::new(Local::now().naive_local()));
-        Ok(())
-    }
-
-    pub fn end_break(&mut self) -> Result<(), BreakError> {
-        match self.breaks.last_mut() {
-            Some(break_) => break_.end(),
-            None => Err(BreakError::NoBreak),
-        }
-    }
-}
-
-#[derive(Clone, Deserialize, Serialize)]
-pub struct Break {
-    pub start: NaiveDateTime,
-    pub end: Option<NaiveDateTime>,
-}
-
-impl Break {
-    pub fn new(start: NaiveDateTime) -> Self {
-        Self { start, end: None }
-    }
-
-    pub fn end(&mut self) -> Result<(), BreakError> {
-        match &mut self.end {
-            Some(_) => {
-                self.end = Some(Local::now().naive_local());
-                Ok(())
-            }
-            None => Err(BreakError::BreakAlreadyEnded),
-        }
     }
 }
