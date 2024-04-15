@@ -1,7 +1,8 @@
 use chrono::{Local, NaiveDateTime};
 use serde::{Deserialize, Serialize};
-use std::error::Error;
-use std::fmt::{Debug, Display, Formatter};
+#[allow(unused_imports)]
+use std::fmt::{Debug, Display};
+use thiserror::Error;
 
 // TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
 #[derive(Clone, Default, Deserialize, Serialize)]
@@ -93,27 +94,17 @@ pub struct Focus {
     pub breaks: Vec<Break>,
 }
 
-// TODO: Use crate thiserror to reduce boilerplate
+#[derive(Error, Debug)]
 pub enum BreakError {
+    #[error("No break started")]
     NoBreak,
+    #[error("Break already ended")]
     BreakAlreadyEnded,
+    #[error("Last break is still going")]
     LastBreakNotEnded,
+    #[error("No focus exists")]
     NoFocus,
 }
-
-impl Debug for BreakError {
-    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
-        todo!()
-    }
-}
-
-impl Display for BreakError {
-    fn fmt(&self, _f: &mut Formatter<'_>) -> std::fmt::Result {
-        todo!()
-    }
-}
-
-impl Error for BreakError {}
 
 // TODO: I feel like a now() constructor would be useful to say Starting new focus NOW
 impl Focus {
