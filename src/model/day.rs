@@ -11,7 +11,6 @@ use std::fmt::{Debug, Display};
 // TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
 #[derive(Clone, Default, Deserialize, Serialize)]
 pub struct Day {
-    // TODO: Actually I don't think any data in Day should be public. It has too much logic going on.
     priorities: Vec<Task>,
     log: Vec<Focus>,
     // TODO: I think the end time system doesn't work, especially with the focuses and breaks system.

@@ -75,7 +75,6 @@ fn set_tick(id: PriorityId, state: bool) {
 }
 
 pub fn context() {
-    // TODO: It doesn't make sense that database is an object but context is a global function
     println!("{}", storage().context())
 }
 
