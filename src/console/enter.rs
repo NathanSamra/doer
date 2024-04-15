@@ -113,7 +113,7 @@ pub fn enter() -> Result<(), ParseError> {
         }
         Command::SetContext { context } => {
             let mut client = Client::new();
-            client.set_context(context.as_str())
+            client.set_context(context)
         }
         Command::SetFocus { focus } => {
             let mut client = Client::new();

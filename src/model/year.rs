@@ -1,9 +1,8 @@
+use crate::metadata::app_version;
 use crate::model::day::Day;
 use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-
-const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 pub type Year = HashMap<NaiveDate, Day>;
 
@@ -18,7 +17,7 @@ pub struct YearDataFile {
 impl YearDataFile {
     pub fn new(year: Year) -> Self {
         Self {
-            version: VERSION.to_string(),
+            version: app_version().to_string(),
             days: year,
         }
     }
@@ -27,7 +26,7 @@ impl YearDataFile {
 impl Default for YearDataFile {
     fn default() -> Self {
         Self {
-            version: VERSION.to_string(),
+            version: app_version().to_string(),
             days: Year::new(),
         }
     }

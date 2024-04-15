@@ -1,8 +1,7 @@
-use crate::config::{context, contexts, set_context};
 use crate::model::data::Data;
 use crate::model::day::{Day, Priority};
 use crate::model::edit_day_guard::EditDayGuard;
-use crate::storage::database;
+use crate::storage::Storage;
 use chrono::{Local, NaiveDate};
 use std::io::stdin;
 
@@ -11,15 +10,19 @@ const MAX_NUM_PRIORITIES: usize = 6;
 pub type PriorityId = usize;
 
 // TODO: This was designed when I was considering web. Maybe remove the 'client-ness' of it.
+// TODO: Tbh this should be functional. It doesn't make sense to store these when they're only used
+// once per instance
 pub struct Client {
+    storage: Storage,
     data: Data,
 }
 
 // TODO: Could use termcolor crate to make the output prettier
 impl Client {
     pub fn new() -> Self {
-        let data = Data::new(database(), context());
-        Self { data }
+        let storage = Storage::default();
+        let data = Data::new(storage.database_dir());
+        Self { storage, data }
     }
 
     pub fn plan_priorities(&mut self, date: NaiveDate) {
@@ -87,17 +90,18 @@ impl Client {
 
     pub fn context(&self) {
         // TODO: It doesn't make sense that database is an object but context is a global function
-        println!("{}", context())
+        println!("{}", self.storage.context())
     }
 
     pub fn contexts(&self) {
-        for context in contexts() {
+        // TODO: Try the default print of a vector, or implement Display for Contexts
+        for context in self.storage.contexts() {
             println!("{}", context)
         }
     }
 
-    pub fn set_context(&mut self, context: &str) {
-        set_context(context)
+    pub fn set_context(&mut self, context: String) {
+        self.storage.set_context(context)
     }
 
     pub fn set_focus(&mut self, focus: &str) {

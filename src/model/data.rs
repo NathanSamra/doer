@@ -10,21 +10,12 @@ use std::path::PathBuf;
 type YearNum = i32;
 
 pub struct Data {
-    root: PathBuf,
-    context: String,
+    database: PathBuf,
 }
 
 impl Data {
-    pub fn new(database: PathBuf, context: String) -> Self {
-        if !database.exists() {
-            // TODO: May have to handle this error correctly if it becomes a problem
-            fs::create_dir_all(&database).unwrap();
-        }
-
-        Self {
-            root: database,
-            context,
-        }
+    pub fn new(database: PathBuf) -> Self {
+        Self { database }
     }
 
     pub fn day(&self, date: &NaiveDate) -> Day {
@@ -90,7 +81,7 @@ impl Data {
     // TODO: Look at globset or walkdir crates for better file globbing
     fn last_year(&self) -> Option<YearNum> {
         // TODO: Handle errors
-        let years = fs::read_dir(self.database_dir())
+        let years = fs::read_dir(&self.database)
             .unwrap()
             .filter_map(|entry| {
                 let entry = entry.unwrap();
@@ -106,11 +97,7 @@ impl Data {
         years.into_iter().max()
     }
 
-    fn database_dir(&self) -> PathBuf {
-        self.root.join(&self.context)
-    }
-
     fn year_file(&self, year: &YearNum) -> PathBuf {
-        self.database_dir().join(format!("{year}.json"))
+        self.database.join(format!("{year}.json"))
     }
 }
