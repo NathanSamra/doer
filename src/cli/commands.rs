@@ -1,6 +1,5 @@
 use crate::data::Data;
 use crate::edit_day_guard::EditDayGuard;
-use crate::model::day::Day;
 use crate::model::task::Task;
 use crate::storage::Storage;
 use chrono::{Local, NaiveDate};
@@ -20,34 +19,29 @@ fn storage() -> Storage {
 }
 
 pub fn plan_priorities(date: NaiveDate) {
-    {
-        let mut data = data();
-        let mut edit_guard = EditDayGuard::new(date, &mut data);
-        let mut items = vec![];
+    let mut data = data();
+    let mut edit_guard = EditDayGuard::new(date, &mut data);
+    let mut tasks = vec![];
 
-        if !edit_guard.day().priorities.is_empty() {
-            show_priorities(edit_guard.day());
-            items.extend(edit_guard.day().priorities.clone())
-        }
-
-        items.extend(collect_items());
-        edit_guard.day().priorities = order_items(&items);
+    if !edit_guard.day().priorities.is_empty() {
+        tasks.extend(edit_guard.day().priorities.clone())
     }
-    show_priorities(&data().day(&date));
+
+    collect_tasks(&mut tasks);
+    edit_guard.day().priorities = order_tasks(&tasks);
+    println!("Planning complete")
 }
 
 pub fn copy_priorities(date_from: &NaiveDate, date_to: &NaiveDate) {
-    {
-        let from = data().day(date_from);
-        let mut data = data();
-        let mut edit_guard = EditDayGuard::new(*date_to, &mut data);
-        edit_guard.day().priorities = from.priorities.clone();
-    }
-    show_priorities(&data().day(date_to));
+    let from = data().day(date_from);
+    let mut data = data();
+    let mut edit_guard = EditDayGuard::new(*date_to, &mut data);
+    edit_guard.day().priorities = from.priorities.clone();
 }
 
 pub fn show(date: &NaiveDate) {
-    show_day(&data().day(date));
+    let day = &data().day(date);
+    println!("{}", day);
 }
 
 pub fn show_last() {
@@ -57,7 +51,7 @@ pub fn show_last() {
         }
         Some(date) => {
             println!("Last day was {date}:");
-            show_day(&data().day(&date));
+            show(&date);
         }
     }
 }
@@ -156,9 +150,17 @@ pub fn add_note(note: String) {
 
 // TODO: Use inquire crate for better user input collecting.
 // TODO: Have the unfinished items from the previous day (handle weekends? Last day with items?) be added automatically
-fn collect_items() -> Vec<Task> {
-    println!("List items:");
-    let mut items = vec![];
+fn collect_tasks(tasks: &mut Vec<Task>) {
+    if !tasks.is_empty() {
+        println!("Existing tasks:");
+        for (i, task) in tasks.iter().enumerate() {
+            let index = i + 1;
+            let task_name = &task.name;
+            println!("{index}. {task_name}");
+        }
+    }
+
+    println!("\nList items:");
     loop {
         let mut line = String::new();
         // TODO: Should handle this potential error
@@ -166,14 +168,12 @@ fn collect_items() -> Vec<Task> {
         if line.is_empty() {
             break;
         }
-        items.push(Task::new(line));
+        tasks.push(Task::new(line));
         println!("Anymore?")
     }
-
-    items
 }
 
-fn order_items(items: &[Task]) -> Vec<Task> {
+fn order_tasks(items: &[Task]) -> Vec<Task> {
     let mut result = vec![];
     let mut remaining = items.to_owned();
 
@@ -231,88 +231,4 @@ fn get_item_id(max_id: usize) -> Option<usize> {
 
 fn today() -> NaiveDate {
     Local::now().date_naive()
-}
-
-fn show_day(day: &Day) {
-    show_priorities(day);
-    show_log(day);
-    show_notes(day);
-}
-
-// TODO: Put all of this string formatting into impl Display for Day
-fn show_priorities(day: &Day) {
-    if day.priorities.is_empty() {
-        println!("No priorities");
-        return;
-    }
-
-    let focus = match day.focus() {
-        None => "",
-        Some(focus) => focus.name.as_str(),
-    };
-
-    println!("Priorities:");
-    for (i, priority) in day.priorities.iter().enumerate() {
-        let priority_name = priority.name.as_str();
-        let mut line = format!("{i}. {priority_name}");
-
-        if focus == priority_name {
-            line += "*";
-        }
-
-        if priority.done {
-            line += " - done";
-        }
-
-        println!("{}", line);
-    }
-
-    if !focus.is_empty() {
-        println!("\nFocus: {focus}");
-    }
-
-    println!();
-}
-
-fn show_log(day: &Day) {
-    if day.log().is_empty() {
-        println!("No log");
-        return;
-    }
-
-    println!("Log:");
-    for focus in day.log() {
-        let start = focus.start.format("%H:%M");
-        let focus_name = &focus.name;
-        // TODO: Instead of putting the formatting in here, why not impl Display for Focus.
-        // This could apply to all the other structs as well.
-        println!("{start} - {focus_name}");
-
-        for break_ in focus.breaks.iter() {
-            let break_start = break_.start.format("%H:%M");
-
-            let break_end = match break_.end {
-                None => "N/A".to_string(),
-                Some(end) => end.format("%H:%M").to_string(),
-            };
-
-            println!("\t{break_start} - {break_end}");
-        }
-    }
-
-    println!();
-}
-
-fn show_notes(day: &Day) {
-    if day.notes().is_empty() {
-        println!("No notes");
-        return;
-    }
-
-    println!("Notes:");
-    for (i, note) in day.notes().iter().enumerate() {
-        println!("{i}. {note}");
-    }
-
-    println!();
 }

@@ -3,6 +3,7 @@ use crate::model::r#break::BreakError;
 use crate::model::task::Task;
 use chrono::{Local, NaiveDateTime};
 use serde::{Deserialize, Serialize};
+use std::fmt::Formatter;
 #[allow(unused_imports)]
 use std::fmt::{Debug, Display};
 
@@ -72,5 +73,93 @@ impl Day {
 
     pub fn add_note(&mut self, note: String) {
         self.notes.push(note)
+    }
+
+    fn display_priorities(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        if self.priorities.is_empty() {
+            writeln!(f, "No priorities")?;
+            return Ok(());
+        }
+
+        let focus = match self.focus() {
+            None => "",
+            Some(focus) => focus.name.as_str(),
+        };
+
+        writeln!(f, "Priorities:")?;
+        for (i, priority) in self.priorities.iter().enumerate() {
+            let priority_name = priority.name.as_str();
+            let mut line = format!("{i}. {priority_name}");
+
+            if focus == priority_name {
+                line += "*";
+            }
+
+            if priority.done {
+                line += " - done";
+            }
+
+            writeln!(f, "{}", line)?;
+        }
+
+        if !focus.is_empty() {
+            writeln!(f, "\nFocus: {focus}")?;
+        }
+
+        Ok(())
+    }
+
+    fn display_log(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        if self.log().is_empty() {
+            writeln!(f, "No log")?;
+            return Ok(());
+        }
+
+        writeln!(f, "Log:")?;
+        for focus in self.log() {
+            let start = focus.start.format("%H:%M");
+            let focus_name = &focus.name;
+            // TODO: Instead of putting the formatting in here, why not impl Display for Focus.
+            // This could apply to all the other structs as well.
+            writeln!(f, "{start} - {focus_name}")?;
+
+            for break_ in focus.breaks.iter() {
+                let break_start = break_.start.format("%H:%M");
+
+                let break_end = match break_.end {
+                    None => "N/A".to_string(),
+                    Some(end) => end.format("%H:%M").to_string(),
+                };
+
+                writeln!(f, "\t{break_start} - {break_end}")?;
+            }
+        }
+
+        Ok(())
+    }
+
+    fn display_notes(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        if self.notes().is_empty() {
+            writeln!(f, "No notes")?;
+            return Ok(());
+        }
+
+        writeln!(f, "Notes:")?;
+        for (i, note) in self.notes().iter().enumerate() {
+            writeln!(f, "{i}. {note}")?;
+        }
+
+        Ok(())
+    }
+}
+
+impl Display for Day {
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
+        self.display_priorities(f)?;
+        writeln!(f)?;
+        self.display_log(f)?;
+        writeln!(f)?;
+        self.display_notes(f)?;
+        Ok(())
     }
 }
