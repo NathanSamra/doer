@@ -1,6 +1,6 @@
 use crate::model::focus::Focus;
-use crate::model::priority::Priority;
 use crate::model::r#break::BreakError;
+use crate::model::task::Task;
 use chrono::{Local, NaiveDateTime};
 use serde::{Deserialize, Serialize};
 #[allow(unused_imports)]
@@ -10,7 +10,7 @@ use std::fmt::{Debug, Display};
 #[derive(Clone, Default, Deserialize, Serialize)]
 pub struct Day {
     // TODO: Actually I don't think any data in Day should be public. It has too much logic going on.
-    pub priorities: Vec<Priority>,
+    pub priorities: Vec<Task>,
     log: Vec<Focus>,
     // TODO: I think the end time system doesn't work, especially with the focuses and breaks system.
     // Maybe the schedule should be independent from Focus and instead reference relevant Focuses and Breaks.

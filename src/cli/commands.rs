@@ -1,7 +1,7 @@
 use crate::data::Data;
 use crate::edit_day_guard::EditDayGuard;
 use crate::model::day::Day;
-use crate::model::priority::Priority;
+use crate::model::task::Task;
 use crate::storage::Storage;
 use chrono::{Local, NaiveDate};
 use std::io::stdin;
@@ -156,7 +156,7 @@ pub fn add_note(note: String) {
 
 // TODO: Use inquire crate for better user input collecting.
 // TODO: Have the unfinished items from the previous day (handle weekends? Last day with items?) be added automatically
-fn collect_items() -> Vec<Priority> {
+fn collect_items() -> Vec<Task> {
     println!("List items:");
     let mut items = vec![];
     loop {
@@ -166,14 +166,14 @@ fn collect_items() -> Vec<Priority> {
         if line.is_empty() {
             break;
         }
-        items.push(Priority::new(line));
+        items.push(Task::new(line));
         println!("Anymore?")
     }
 
     items
 }
 
-fn order_items(items: &[Priority]) -> Vec<Priority> {
+fn order_items(items: &[Task]) -> Vec<Task> {
     let mut result = vec![];
     let mut remaining = items.to_owned();
 
