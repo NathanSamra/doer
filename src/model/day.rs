@@ -1,10 +1,10 @@
 use chrono::{Local, NaiveDateTime};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use std::error::Error;
 use std::fmt::{Debug, Display, Formatter};
 
 // TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
-#[derive(Clone, Default, Serialize)]
+#[derive(Clone, Default, Deserialize, Serialize)]
 pub struct Day {
     // TODO: Actually I don't think any data in Day should be public. It has too much logic going on.
     pub priorities: Vec<Priority>,
@@ -73,7 +73,7 @@ impl Day {
 }
 
 // TODO: Far too many structs in this file. Should move them all out to their own files.
-#[derive(Clone, PartialEq, Serialize)]
+#[derive(Clone, PartialEq, Deserialize, Serialize)]
 pub struct Priority {
     pub name: String,
     pub done: bool,
@@ -86,7 +86,7 @@ impl Priority {
 }
 
 // TODO: Should probably log the end time here also
-#[derive(Clone, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Focus {
     pub name: String,
     pub start: NaiveDateTime,
@@ -146,7 +146,7 @@ impl Focus {
     }
 }
 
-#[derive(Clone, Serialize)]
+#[derive(Clone, Deserialize, Serialize)]
 pub struct Break {
     pub start: NaiveDateTime,
     pub end: Option<NaiveDateTime>,
