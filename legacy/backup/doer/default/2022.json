@@ -1,0 +1,7755 @@
+{
+  "days": {
+    "2022-03-18": {
+      "priorities": [
+        {
+          "name": "spiros review",
+          "done": false
+        },
+        {
+          "name": "gopython script",
+          "done": false
+        },
+        {
+          "name": "dovico",
+          "done": false
+        },
+        {
+          "name": "parsing errors",
+          "done": false
+        },
+        {
+          "name": "database downgrade",
+          "done": false
+        },
+        {
+          "name": "build fixes",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-19": {
+      "priorities": [],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-21": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Parsing",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Output streams",
+          "done": false
+        },
+        {
+          "name": "Fix DO console script",
+          "done": false
+        },
+        {
+          "name": "Broken builds",
+          "done": false
+        },
+        {
+          "name": "Downgrade database creator",
+          "done": false
+        },
+        {
+          "name": "QMTest refactor",
+          "done": false
+        },
+        {
+          "name": "Transfer of technology training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-28": {
+      "priorities": [
+        {
+          "name": "Do laundry",
+          "done": false
+        },
+        {
+          "name": "Sign Matt's leaving card",
+          "done": false
+        },
+        {
+          "name": "Downgrade database tool",
+          "done": false
+        },
+        {
+          "name": "Review Spiros",
+          "done": false
+        },
+        {
+          "name": "Siemens Export Control Essentials",
+          "done": false
+        },
+        {
+          "name": "Transfer of Technology, Information and Software",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-29": {
+      "priorities": [
+        {
+          "name": "Review Spiros",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Siemens Export Control Essentials",
+          "done": false
+        },
+        {
+          "name": "Siemens onboarding",
+          "done": false
+        },
+        {
+          "name": "Transfer of Technology, Information and Software",
+          "done": false
+        },
+        {
+          "name": "Tidy room",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-30": {
+      "priorities": [
+        {
+          "name": "Review Spiros",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Siemens Export Control Essentials",
+          "done": false
+        },
+        {
+          "name": "Siemens onboarding",
+          "done": false
+        },
+        {
+          "name": "Transfer of Technology, Information and Software",
+          "done": false
+        },
+        {
+          "name": "Tidy room",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-03-31": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Review Spiros",
+          "done": false
+        },
+        {
+          "name": "Parsing for AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Checkout courses",
+          "done": false
+        },
+        {
+          "name": "IO for AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Siemens Export Control Essentials",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-01": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Review Spiros",
+          "done": false
+        },
+        {
+          "name": "Parsing for AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Checkout courses",
+          "done": false
+        },
+        {
+          "name": "IO for AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Siemens Export Control Essentials",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-04": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Sign benefits letter",
+          "done": false
+        },
+        {
+          "name": "Organise Doughnut",
+          "done": false
+        },
+        {
+          "name": "Parsing to Gerrit",
+          "done": false
+        },
+        {
+          "name": "Std gORun",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-05": {
+      "priorities": [
+        {
+          "name": "call landlord",
+          "done": false
+        },
+        {
+          "name": "Parsing to Gerrit",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Sign benefits letter",
+          "done": false
+        },
+        {
+          "name": "Organise Doughnut",
+          "done": false
+        },
+        {
+          "name": "std gORun",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-06": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Sign benefits letter",
+          "done": false
+        },
+        {
+          "name": "Organise Doughnut",
+          "done": false
+        },
+        {
+          "name": "Parsing to Gerrit",
+          "done": false
+        },
+        {
+          "name": "call landlord",
+          "done": false
+        },
+        {
+          "name": "Email Trudie about charity work",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-07": {
+      "priorities": [
+        {
+          "name": "email landlord",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "std to Gerrit",
+          "done": false
+        },
+        {
+          "name": "Sign benefits letter",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        },
+        {
+          "name": "Spiros review",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-08": {
+      "priorities": [
+        {
+          "name": "Sign benefits",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "incredibuild",
+          "done": true
+        },
+        {
+          "name": "email landlord",
+          "done": false
+        },
+        {
+          "name": "Make parsing pass",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-09": {
+      "priorities": [
+        {
+          "name": "Review Spiros performance",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-11": {
+      "priorities": [
+        {
+          "name": "Parsing Gerrit",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Review Spiros performance",
+          "done": false
+        },
+        {
+          "name": "Call Virgin Media",
+          "done": false
+        },
+        {
+          "name": "Std",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-12": {
+      "priorities": [
+        {
+          "name": "Parsing Gerrit",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Review Spiros performance",
+          "done": true
+        },
+        {
+          "name": "Call Virgin Media",
+          "done": false
+        },
+        {
+          "name": "Std",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-13": {
+      "priorities": [
+        {
+          "name": "Parsing Jenkins",
+          "done": false
+        },
+        {
+          "name": "Std output",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Call virgin media",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-14": {
+      "priorities": [
+        {
+          "name": "Parsing Jenkins",
+          "done": false
+        },
+        {
+          "name": "Std output",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Call virgin media",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-19": {
+      "priorities": [
+        {
+          "name": "std output",
+          "done": false
+        },
+        {
+          "name": "email landlord",
+          "done": false
+        },
+        {
+          "name": "dovico",
+          "done": false
+        },
+        {
+          "name": "virgin media",
+          "done": false
+        },
+        {
+          "name": "database",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-21": {
+      "priorities": [
+        {
+          "name": "parsing gerrit",
+          "done": false
+        },
+        {
+          "name": "remove abbreviations",
+          "done": false
+        },
+        {
+          "name": "incorrect error message",
+          "done": false
+        },
+        {
+          "name": "database bug",
+          "done": false
+        },
+        {
+          "name": "email landlord",
+          "done": false
+        },
+        {
+          "name": "dovico",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-25": {
+      "priorities": [
+        {
+          "name": "parsing Gerrit",
+          "done": false
+        },
+        {
+          "name": "remove abbreviations",
+          "done": false
+        },
+        {
+          "name": "incorrect error message",
+          "done": false
+        },
+        {
+          "name": "FP database",
+          "done": false
+        },
+        {
+          "name": "email landlord",
+          "done": false
+        },
+        {
+          "name": "bathrooms",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-26": {
+      "priorities": [
+        {
+          "name": "Parsing Gerrit",
+          "done": true
+        },
+        {
+          "name": "FP database",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Mohammad feedback",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Internet",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-04-27": {
+      "priorities": [
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Parsing Jenkins",
+          "done": false
+        },
+        {
+          "name": "Internet",
+          "done": false
+        },
+        {
+          "name": "Indefinite hang",
+          "done": false
+        },
+        {
+          "name": "Mohammad feedback",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "test",
+          "start": "14:05:36.941620",
+          "breaks": []
+        },
+        {
+          "name": "Parsing Jenkins",
+          "start": "14:05:54.205851",
+          "breaks": []
+        },
+        {
+          "name": "Email landlord",
+          "start": "14:09:19.243748",
+          "breaks": []
+        },
+        {
+          "name": "Parsing Jenkins",
+          "start": "14:10:18.812610",
+          "breaks": []
+        },
+        {
+          "name": "test",
+          "start": "14:10:32.199218",
+          "breaks": [
+            {
+              "start": "14:11:14.872705",
+              "end": "14:11:23.573361"
+            }
+          ]
+        }
+      ],
+      "notes": [],
+      "end_time": "14:11:50.523115"
+    },
+    "2022-04-28": {
+      "priorities": [
+        {
+          "name": "pluginconsumer",
+          "done": false
+        },
+        {
+          "name": "Parsing Jenkins",
+          "done": false
+        },
+        {
+          "name": "Email landlord",
+          "done": false
+        },
+        {
+          "name": "Mohammad feedback",
+          "done": false
+        },
+        {
+          "name": "Internet",
+          "done": false
+        },
+        {
+          "name": "Indefinite hang",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "pluginconsumer",
+          "start": "10:15:50.804398",
+          "breaks": []
+        },
+        {
+          "name": "Email landlord",
+          "start": "13:51:01.329170",
+          "breaks": [
+            {
+              "start": "14:02:44.776223",
+              "end": "23:59:59.999999"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "2022-04-29": {
+      "priorities": [
+        {
+          "name": "Make DevCI tickets",
+          "done": true
+        },
+        {
+          "name": "Parsing Jenkins",
+          "done": true
+        },
+        {
+          "name": "Internet",
+          "done": true
+        },
+        {
+          "name": "Database bug",
+          "done": true
+        },
+        {
+          "name": "Nexus rules",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make DevCI tickets",
+          "start": "11:12:26.119293",
+          "breaks": []
+        },
+        {
+          "name": "Parsing Jenkins",
+          "start": "11:42:25.024245",
+          "breaks": []
+        },
+        {
+          "name": "Internet",
+          "start": "11:56:54.068820",
+          "breaks": []
+        },
+        {
+          "name": "Database bug",
+          "start": "12:08:12.683644",
+          "breaks": []
+        },
+        {
+          "name": "Nexus rules",
+          "start": "15:06:48.608086",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:51:07.080560"
+    },
+    "2022-05-03": {
+      "priorities": [
+        {
+          "name": "call landlord",
+          "done": true
+        },
+        {
+          "name": "chase parsing review",
+          "done": true
+        },
+        {
+          "name": "nexus rules",
+          "done": true
+        },
+        {
+          "name": "training",
+          "done": false
+        },
+        {
+          "name": "prove hanging not bug",
+          "done": false
+        },
+        {
+          "name": "QMTest error message when no output",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "nexus rules",
+          "start": "13:16:23.395915",
+          "breaks": []
+        },
+        {
+          "name": "prove hanging not bug",
+          "start": "17:07:19.275887",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-04": {
+      "priorities": [
+        {
+          "name": "Mohammad performance review",
+          "done": false
+        },
+        {
+          "name": "Prove hanging not a bug",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP in 7.1 but not 7.0",
+          "done": false
+        },
+        {
+          "name": "QMTest error message no output",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "review Spiros magic numbers",
+          "start": "10:53:47.079183",
+          "breaks": [
+            {
+              "start": "11:39:52.201159",
+              "end": "13:12:36.991102"
+            }
+          ]
+        },
+        {
+          "name": "Prove hanging not a bug",
+          "start": "13:12:53.527566",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-05": {
+      "priorities": [
+        {
+          "name": "Mohammad performance review",
+          "done": true
+        },
+        {
+          "name": "Parsing document",
+          "done": false
+        },
+        {
+          "name": "Parsing Gerrit",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP in 7.1 but not 7.0",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Mohammad performance review",
+          "start": "08:51:09.638450",
+          "breaks": []
+        },
+        {
+          "name": "Parsing Gerrit",
+          "start": "10:43:30.294949",
+          "breaks": [
+            {
+              "start": "10:44:42.828615",
+              "end": "12:20:23.635982"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-06": {
+      "priorities": [
+        {
+          "name": "Parsing improvements",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "QMTest better error message",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP in 7.1 but not 7.0",
+          "done": false
+        },
+        {
+          "name": "Sonar tool fix",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Mohammad performance review",
+          "start": "08:51:09.638450",
+          "breaks": []
+        },
+        {
+          "name": "Parsing Gerrit",
+          "start": "10:43:30.294949",
+          "breaks": [
+            {
+              "start": "10:44:42.828615",
+              "end": "12:20:23.635982"
+            }
+          ]
+        },
+        {
+          "name": "Parsing improvements",
+          "start": "09:37:01.484500",
+          "breaks": [
+            {
+              "start": "11:16:45.387345",
+              "end": "14:21:02.438631"
+            }
+          ]
+        },
+        {
+          "name": "Training",
+          "start": "15:35:34.776674",
+          "breaks": []
+        },
+        {
+          "name": "QMTest better error message",
+          "start": "15:36:03.565209",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-09": {
+      "priorities": [
+        {
+          "name": "Test parsing",
+          "done": true
+        },
+        {
+          "name": "QMTest error message",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP in 7.1 but not 7.0",
+          "done": false
+        },
+        {
+          "name": "Sonar tool fix",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Test parsing",
+          "start": "09:43:47.848892",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:39:08.527715"
+    },
+    "2022-05-10": {
+      "priorities": [
+        {
+          "name": "training",
+          "done": false
+        },
+        {
+          "name": "parsing gerrit",
+          "done": true
+        },
+        {
+          "name": "Spare fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP",
+          "done": false
+        },
+        {
+          "name": "QMTest error message",
+          "done": false
+        },
+        {
+          "name": "Sonar tool fix",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "parsing gerrit",
+          "start": "10:11:12.677088",
+          "breaks": []
+        },
+        {
+          "name": "training",
+          "start": "16:03:51.117717",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-11": {
+      "priorities": [
+        {
+          "name": "Parsing pass Jenkins",
+          "done": true
+        },
+        {
+          "name": "Parsing talk with Ed",
+          "done": true
+        },
+        {
+          "name": "Afo IO investigation",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Parsing pass Jenkins",
+          "start": "10:15:46.311966",
+          "breaks": []
+        },
+        {
+          "name": "Parsing talk with Ed",
+          "start": "13:21:04.590934",
+          "breaks": []
+        },
+        {
+          "name": "Improve doer action names",
+          "start": "13:21:56.180866",
+          "breaks": [
+            {
+              "start": "15:29:08.760530",
+              "end": "15:29:12.959948"
+            }
+          ]
+        },
+        {
+          "name": "Afo IO investigation",
+          "start": "15:40:08.234522",
+          "breaks": []
+        },
+        {
+          "name": "Responding to parsing review",
+          "start": "15:48:19.848194",
+          "breaks": []
+        }
+      ],
+      "notes": ["Quite a lot of meetings today"]
+    },
+    "2022-05-12": {
+      "priorities": [
+        {
+          "name": "Parsing respond to Gerrit",
+          "done": true
+        },
+        {
+          "name": "afo IO investigation",
+          "done": true
+        },
+        {
+          "name": "QMTest error message",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Parsing respond to Gerrit",
+          "start": "10:18:51.453220",
+          "breaks": []
+        },
+        {
+          "name": "afo IO investigation",
+          "start": "14:11:48.933858",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:40:11.375737"
+    },
+    "2022-05-13": {
+      "priorities": [
+        {
+          "name": "Fix read-data-fo unit test",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "QMTest error message",
+          "done": false
+        },
+        {
+          "name": "QMTest timeouts",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix read-data-fo unit test",
+          "start": "10:28:43.663337",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "spent a lot of time reviewing Ben and looking into creating a py_common repo"
+      ]
+    },
+    "2022-05-14": {
+      "priorities": [],
+      "log": [],
+      "notes": []
+    },
+    "2022-05-16": {
+      "priorities": [
+        {
+          "name": "Test cases for QA",
+          "done": true
+        },
+        {
+          "name": "AFO Init commit",
+          "done": true
+        },
+        {
+          "name": "read-data-fo unit test",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "Sparse fails but case succesful",
+          "done": false
+        },
+        {
+          "name": "Fails IP",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Test cases for QA",
+          "start": "10:12:02.491234",
+          "breaks": []
+        },
+        {
+          "name": "AFO Init commit",
+          "start": "10:12:25.740938",
+          "breaks": []
+        },
+        {
+          "name": "Test cases for QA",
+          "start": "10:37:53.804386",
+          "breaks": [
+            {
+              "start": "12:13:14.430144",
+              "end": "13:39:28.843624"
+            }
+          ]
+        },
+        {
+          "name": "AdaptorFO QMTests",
+          "start": "14:47:58.652135",
+          "breaks": []
+        },
+        {
+          "name": "Test cases for QA",
+          "start": "14:57:54.145242",
+          "breaks": []
+        },
+        {
+          "name": "Fails IP",
+          "start": "15:27:32.417058",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:12:33.353223"
+    },
+    "2022-05-17": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "check read-data-fo test",
+          "done": true
+        },
+        {
+          "name": "QMTest variables mix up",
+          "done": false
+        },
+        {
+          "name": "QMTest timeouts",
+          "done": false
+        },
+        {
+          "name": "AFO integration tests",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "close all 2022.1 tickets",
+          "start": "10:54:49.584264",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "13:31:04.635743",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben",
+          "start": "14:10:54.226961",
+          "breaks": [
+            {
+              "start": "14:10:59.768014",
+              "end": "23:59:59.999999"
+            }
+          ]
+        }
+      ],
+      "notes": ["violation blocker in AdaptorFO test?"],
+      "end_time": "17:19:16.096934"
+    },
+    "2022-05-23": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "Fix failing 2022.1 FP tests",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "Exclude AdaptorFO from Debug",
+          "done": false
+        },
+        {
+          "name": "QMTest variables mixup",
+          "done": false
+        },
+        {
+          "name": "QMTest timeouts",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Dovico",
+          "start": "09:38:22.591950",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben",
+          "start": "09:45:56.422069",
+          "breaks": [
+            {
+              "start": "09:46:01.911862",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "Fix failing 2022.1 FP tests",
+          "start": "10:22:12.886589",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-05-25": {
+      "priorities": [
+        {
+          "name": "Help Spiros fix bug with SPARSE",
+          "done": false
+        },
+        {
+          "name": "Have Jenkins check Python unit tests",
+          "done": false
+        },
+        {
+          "name": "Marco Jira",
+          "done": false
+        },
+        {
+          "name": "Fix QMTest unit tests",
+          "done": false
+        },
+        {
+          "name": "QMTest refactor",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Help Spiros fix bug with SPARSE",
+          "start": "10:46:06.120221",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:00:39.751192"
+    },
+    "2022-05-26": {
+      "priorities": [
+        {
+          "name": "Check SPARSE fix has worked",
+          "done": true
+        },
+        {
+          "name": "Marco Jira",
+          "done": true
+        },
+        {
+          "name": "Jenkins Python unit tests pipeline",
+          "done": false
+        },
+        {
+          "name": "Lucy and Yak return",
+          "done": false
+        },
+        {
+          "name": "QMTest refactor",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check SPARSE fix has worked",
+          "start": "10:24:48.907792",
+          "breaks": []
+        },
+        {
+          "name": "Marco Jira",
+          "start": "10:25:01.408401",
+          "breaks": []
+        },
+        {
+          "name": "QMTest refactor",
+          "start": "10:25:19.659241",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-06": {
+      "priorities": [
+        {
+          "name": "Laundry",
+          "done": false
+        },
+        {
+          "name": "Jenkins unit tests pipeline",
+          "done": false
+        },
+        {
+          "name": "Catch up on Trac",
+          "done": true
+        },
+        {
+          "name": "Lucy and Yak return",
+          "done": false
+        },
+        {
+          "name": "QMTest refactor",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Catch up on Trac",
+          "start": "09:05:25.133829",
+          "breaks": []
+        },
+        {
+          "name": "Laundry",
+          "start": "09:08:50.999191",
+          "breaks": []
+        },
+        {
+          "name": "Jenkins unit tests pipeline",
+          "start": "10:16:26.503095",
+          "breaks": []
+        },
+        {
+          "name": "QMTest refactor",
+          "start": "10:16:32.686293",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:18:23.195982"
+    },
+    "2022-06-07": {
+      "priorities": [
+        {
+          "name": "Jenkins unit tests",
+          "done": false
+        },
+        {
+          "name": "QMTest refactor catch up with recent changes",
+          "done": true
+        },
+        {
+          "name": "Book holiday",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "training",
+          "done": false
+        },
+        {
+          "name": "Lucy and Yak return",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest refactor catch up with recent changes",
+          "start": "10:14:55.966609",
+          "breaks": []
+        },
+        {
+          "name": "Jenkins unit tests",
+          "start": "14:02:04.707137",
+          "breaks": []
+        },
+        {
+          "name": "Book holiday",
+          "start": "14:02:11.562796",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-08": {
+      "priorities": [
+        {
+          "name": "Jenkins unit tests",
+          "done": true
+        },
+        {
+          "name": "Book holiday",
+          "done": true
+        },
+        {
+          "name": "Lucy and Yak return",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "Emails",
+          "done": false
+        },
+        {
+          "name": "refactor Jenkins",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Jenkins unit tests",
+          "start": "08:54:57.893748",
+          "breaks": []
+        },
+        {
+          "name": "Lucy and Yak return",
+          "start": "14:04:40.506689",
+          "breaks": []
+        },
+        {
+          "name": "Book holiday",
+          "start": "14:04:50.897866",
+          "breaks": []
+        },
+        {
+          "name": "refactor Jenkins",
+          "start": "14:37:05.925462",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-09": {
+      "priorities": [
+        {
+          "name": "QMTest Jenkins",
+          "done": false
+        },
+        {
+          "name": "Lucy and Yak",
+          "done": true
+        },
+        {
+          "name": "Emails",
+          "done": true
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "Spiros review",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest Jenkins",
+          "start": "08:46:22.488328",
+          "breaks": []
+        },
+        {
+          "name": "Lucy and Yak",
+          "start": "09:04:48.166649",
+          "breaks": []
+        },
+        {
+          "name": "Emails",
+          "start": "09:45:02.047278",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben",
+          "start": "11:41:42.998043",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-10": {
+      "priorities": [
+        {
+          "name": "Unit test running",
+          "done": true
+        },
+        {
+          "name": "Review Ben",
+          "done": true
+        },
+        {
+          "name": "QMtest review",
+          "done": false
+        },
+        {
+          "name": "Health benefits",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Review Spiros",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Ben",
+          "start": "10:38:04.386319",
+          "breaks": []
+        },
+        {
+          "name": "Health benefits",
+          "start": "15:06:00.474417",
+          "breaks": []
+        },
+        {
+          "name": "Lucy and Yak",
+          "start": "15:48:38.561440",
+          "breaks": []
+        },
+        {
+          "name": "QMtest review",
+          "start": "17:50:37.726804",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:56:50.757875"
+    },
+    "2022-06-11": {
+      "priorities": [],
+      "log": [],
+      "notes": []
+    },
+    "2022-06-13": {
+      "priorities": [
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "QMTest respond to review",
+          "done": false
+        },
+        {
+          "name": "Message Henrique about QMTest repo",
+          "done": false
+        },
+        {
+          "name": "Health plan access",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "QMTest queried variables",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest respond to review",
+          "start": "10:09:39.098104",
+          "breaks": []
+        },
+        {
+          "name": "Investigate Maria access error",
+          "start": "15:40:42.460353",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-14": {
+      "priorities": [
+        {
+          "name": "QMTest pass Jenkins",
+          "done": true
+        },
+        {
+          "name": "Review Ben",
+          "done": false
+        },
+        {
+          "name": "Make QMTest repo ticket",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO bug",
+          "done": false
+        },
+        {
+          "name": "Health plan access",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pass Jenkins",
+          "start": "11:09:20.458748",
+          "breaks": []
+        },
+        {
+          "name": "Training",
+          "start": "13:07:47.748390",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pass Jenkins",
+          "start": "13:47:44.757498",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:00:35.002274"
+    },
+    "2022-06-15": {
+      "priorities": [
+        {
+          "name": "QMTest respond to review",
+          "done": true
+        },
+        {
+          "name": "Ben review",
+          "done": true
+        },
+        {
+          "name": "Parralelise unit test pipeline",
+          "done": true
+        },
+        {
+          "name": "Health plan access",
+          "done": false
+        },
+        {
+          "name": "Create tickets for moving pip installation to gproms-core",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO bug",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest respond to review",
+          "start": "10:50:16.368022",
+          "breaks": []
+        },
+        {
+          "name": "requirements commit",
+          "start": "12:16:00.885329",
+          "breaks": []
+        },
+        {
+          "name": "Parralelise unit test pipeline",
+          "start": "12:16:09.755146",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO bug",
+          "start": "12:38:37.153960",
+          "breaks": [
+            {
+              "start": "12:38:41.102487",
+              "end": "13:33:22.516462"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Had a 1h40m discussion with Trung about IP",
+        "Also setup a worktree for qmtest work"
+      ]
+    },
+    "2022-06-16": {
+      "priorities": [
+        {
+          "name": "documentation",
+          "done": false
+        },
+        {
+          "name": "Send Constantin workflow things",
+          "done": false
+        },
+        {
+          "name": "Create pip installation tickets",
+          "done": true
+        },
+        {
+          "name": "Health plan access",
+          "done": true
+        },
+        {
+          "name": "Email about charity matching",
+          "done": false
+        },
+        {
+          "name": "Probation review Spyros",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "28822 merging and closing",
+          "start": "10:31:38.975332",
+          "breaks": []
+        },
+        {
+          "name": "QMTest failed final check",
+          "start": "10:31:53.634505",
+          "breaks": []
+        },
+        {
+          "name": "Create pip installation tickets",
+          "start": "11:17:49.128857",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-17": {
+      "priorities": [
+        {
+          "name": "Documentation",
+          "done": false
+        },
+        {
+          "name": "Constantin workflow stuff",
+          "done": false
+        },
+        {
+          "name": "Charity matching email",
+          "done": false
+        },
+        {
+          "name": "QMTest timeout bug",
+          "done": false
+        },
+        {
+          "name": "Onboarding training",
+          "done": false
+        },
+        {
+          "name": "Spyros probation review",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Documentation",
+          "start": "10:22:21.984030",
+          "breaks": []
+        },
+        {
+          "name": "review ben Nuitka",
+          "start": "14:25:35.095473",
+          "breaks": []
+        },
+        {
+          "name": "Documentation",
+          "start": "14:37:56.309235",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-20": {
+      "priorities": [
+        {
+          "name": "Charity email",
+          "done": true
+        },
+        {
+          "name": "gOPython documentation",
+          "done": true
+        },
+        {
+          "name": "Constantin workflow",
+          "done": true
+        },
+        {
+          "name": "QMTest refactor Jenkins",
+          "done": false
+        },
+        {
+          "name": "Spyros probation review",
+          "done": false
+        },
+        {
+          "name": "Onboarding training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "IP slide read",
+          "start": "10:54:54.179396",
+          "breaks": [
+            {
+              "start": "11:53:36.213430",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "Charity email",
+          "start": "13:28:21.738635",
+          "breaks": []
+        },
+        {
+          "name": "gOPython documentation",
+          "start": "14:31:52.891839",
+          "breaks": []
+        },
+        {
+          "name": "Constantin workflow",
+          "start": "14:41:55.527234",
+          "breaks": []
+        },
+        {
+          "name": "Onboarding training",
+          "start": "14:57:19.058818",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-21": {
+      "priorities": [
+        {
+          "name": "QMTest refactor pass Jenkins",
+          "done": false
+        },
+        {
+          "name": "Follow up charity email",
+          "done": false
+        },
+        {
+          "name": "Spyros probation review",
+          "done": false
+        },
+        {
+          "name": "QMTest timeout bug",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "IP meeting",
+          "start": "10:30:02.135023",
+          "breaks": []
+        },
+        {
+          "name": "QMTest refactor pass Jenkins",
+          "start": "15:16:30.871949",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-22": {
+      "priorities": [
+        {
+          "name": "Review Nuitka change",
+          "done": true
+        },
+        {
+          "name": "QMTest refactor fix parsing error",
+          "done": true
+        },
+        {
+          "name": "Follow up charity email",
+          "done": false
+        },
+        {
+          "name": "Spyros probation revuew",
+          "done": false
+        },
+        {
+          "name": "QMTest timeout bug",
+          "done": false
+        },
+        {
+          "name": "QMTest mixed up variables bug",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Nuitka change",
+          "start": "09:05:27.723984",
+          "breaks": []
+        },
+        {
+          "name": "QMTest refactor fix parsing error",
+          "start": "10:20:31.714344",
+          "breaks": []
+        },
+        {
+          "name": "QMTest timeout bug",
+          "start": "11:23:22.496229",
+          "breaks": [
+            {
+              "start": "11:23:35.665545",
+              "end": "23:59:59.999999"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-23": {
+      "priorities": [
+        {
+          "name": "Follow up charity email",
+          "done": true
+        },
+        {
+          "name": "Merge QMTest refactor",
+          "done": true
+        },
+        {
+          "name": "Spyros probation review",
+          "done": true
+        },
+        {
+          "name": "Crop and share IP recording",
+          "done": true
+        },
+        {
+          "name": "QMTest timeout bug",
+          "done": false
+        },
+        {
+          "name": "close Irish bank account",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Follow up charity email",
+          "start": "09:38:36.712185",
+          "breaks": []
+        },
+        {
+          "name": "Merge QMTest refactor",
+          "start": "09:38:46.008242",
+          "breaks": []
+        },
+        {
+          "name": "Check Ben's change works",
+          "start": "09:41:08.076981",
+          "breaks": []
+        },
+        {
+          "name": "Crop and share IP recording",
+          "start": "10:01:07.812171",
+          "breaks": []
+        },
+        {
+          "name": "Spyros probation review",
+          "start": "10:27:43.147309",
+          "breaks": []
+        },
+        {
+          "name": "QMTest timeout bug",
+          "start": "11:36:29.773695",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:06:39.220501"
+    },
+    "2022-06-24": {
+      "priorities": [
+        {
+          "name": "QMTest timeout on QMTest side",
+          "done": false
+        },
+        {
+          "name": "Investigate timeout on extensions side",
+          "done": false
+        },
+        {
+          "name": "Review Ben",
+          "done": true
+        },
+        {
+          "name": "Close Irish account",
+          "done": false
+        },
+        {
+          "name": "Mix up queried variables",
+          "done": false
+        },
+        {
+          "name": "Investigate huge files in repo",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Ben",
+          "start": "10:47:50.474298",
+          "breaks": []
+        },
+        {
+          "name": "QMTest timeout on QMTest side",
+          "start": "11:42:47.146613",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:17:18.967365"
+    },
+    "2022-06-27": {
+      "priorities": [
+        {
+          "name": "QMTest 3 Jenkins test setup",
+          "done": false
+        },
+        {
+          "name": "Test QMTest timeout on Jenkins",
+          "done": false
+        },
+        {
+          "name": "Close Irish account",
+          "done": false
+        },
+        {
+          "name": "Better error when no output",
+          "done": false
+        },
+        {
+          "name": "QMTest 3 exit code logic",
+          "done": false
+        },
+        {
+          "name": "Plan Trac tickets for 2022.2",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest 3 Jenkins test setup",
+          "start": "10:47:03.159309",
+          "breaks": []
+        },
+        {
+          "name": "QMTest 3 exit code logic",
+          "start": "15:40:16.118759",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-28": {
+      "priorities": [
+        {
+          "name": "Make qmtest pipeline",
+          "done": false
+        },
+        {
+          "name": "Chase dragon boat funding",
+          "done": false
+        },
+        {
+          "name": "Test QMTest 3 at present state",
+          "done": false
+        },
+        {
+          "name": "Better error message when no output",
+          "done": false
+        },
+        {
+          "name": "venv for Python unit tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make qmtest pipeline",
+          "start": "11:42:00.750426",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-06-29": {
+      "priorities": [
+        {
+          "name": "Make QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Chase dragon boat funding",
+          "done": true
+        },
+        {
+          "name": "Test QMTest 3",
+          "done": false
+        },
+        {
+          "name": "venv for Python unit tests",
+          "done": false
+        },
+        {
+          "name": "Better error messages when no output",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make QMTest pipeline",
+          "start": "09:55:40.528826",
+          "breaks": []
+        },
+        {
+          "name": "doing something else",
+          "start": "12:29:21.783488",
+          "breaks": []
+        },
+        {
+          "name": "Make QMTest pipeline",
+          "start": "12:31:17.462465",
+          "breaks": []
+        }
+      ],
+      "notes": ["doing something else was showing Spyros Doer"]
+    },
+    "2022-06-30": {
+      "priorities": [
+        {
+          "name": "Make QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Spread dragon boat link",
+          "done": false
+        },
+        {
+          "name": "venv for Python unit tests",
+          "done": true
+        },
+        {
+          "name": "Better error messages when no output",
+          "done": false
+        },
+        {
+          "name": "Parameter estimation fails without MONITOR all",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make QMTest pipeline",
+          "start": "10:25:13.930897",
+          "breaks": []
+        },
+        {
+          "name": "venv for Python unit tests",
+          "start": "12:09:30.621363",
+          "breaks": []
+        },
+        {
+          "name": "Parameter estimation fails without MONITOR all",
+          "start": "14:47:23.361443",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-01": {
+      "priorities": [
+        {
+          "name": "Parameter estimation fails without MONITOR all",
+          "done": false
+        },
+        {
+          "name": "Plan month budgeting",
+          "done": true
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "NS and I call",
+          "done": true
+        },
+        {
+          "name": "Better error messages when no output",
+          "done": false
+        },
+        {
+          "name": "QMTest Pipeline",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Parameter estimation fails without MONITOR all",
+          "start": "10:31:25.192147",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-04": {
+      "priorities": [
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Review Ben feeds bug",
+          "done": false
+        },
+        {
+          "name": "MONITOR ALL parameter estimation",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Better error messages when no output",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Dovico",
+          "start": "10:37:47.148998",
+          "breaks": []
+        },
+        {
+          "name": "MONITOR ALL parameter estimation",
+          "start": "11:28:46.598911",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "17:16:11.495979",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-05": {
+      "priorities": [
+        {
+          "name": "Review Ben feeds",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "Sign up for AMEX card",
+          "done": true
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "improve enable_env",
+          "start": "10:33:29.503893",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben feeds",
+          "start": "14:18:47.644575",
+          "breaks": []
+        },
+        {
+          "name": "black formatter to commit",
+          "start": "14:23:06.717405",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben feeds",
+          "start": "15:04:33.145856",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "15:04:47.712046",
+          "breaks": []
+        },
+        {
+          "name": "Sign up for AMEX card",
+          "start": "15:49:11.042580",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "15:57:57.758836",
+          "breaks": []
+        },
+        {
+          "name": "requesting monitor stands",
+          "start": "16:12:27.642493",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "16:12:35.379755",
+          "breaks": []
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "start": "16:14:51.139400",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:52:01.103769"
+    },
+    "2022-07-06": {
+      "priorities": [
+        {
+          "name": "Respond to pipeline review",
+          "done": true
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "done": false
+        },
+        {
+          "name": "Chase pipeline review",
+          "done": true
+        },
+        {
+          "name": "Python 3 warnings check",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Better error message if no output",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Respond to pipeline review",
+          "start": "10:24:23.541864",
+          "breaks": []
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "start": "10:37:05.817229",
+          "breaks": []
+        },
+        {
+          "name": "Python 3 warnings check",
+          "start": "11:04:22.338382",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-07": {
+      "priorities": [
+        {
+          "name": "Python 3 entry point",
+          "done": false
+        },
+        {
+          "name": "Python 3 warnings",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Python 3 entry point",
+          "start": "09:50:34.788625",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-12": {
+      "priorities": [
+        {
+          "name": "Review Oliver",
+          "done": true
+        },
+        {
+          "name": "GProms-core pipeline",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Python 3 warnings finished",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "MONITOR ALL model pruning",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Oliver",
+          "start": "12:43:11.943712",
+          "breaks": []
+        },
+        {
+          "name": "GProms-core pipeline",
+          "start": "12:51:12.036383",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "12:58:14.639901",
+          "breaks": []
+        },
+        {
+          "name": "Python 3 warnings finished",
+          "start": "12:58:26.136226",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-13": {
+      "priorities": [
+        {
+          "name": "Xenia cherry pick",
+          "done": true
+        },
+        {
+          "name": "Hugo help",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Python warnings",
+          "done": true
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Printing game",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Xenia cherry pick",
+          "start": "15:28:59.128971",
+          "breaks": []
+        },
+        {
+          "name": "Hugo help",
+          "start": "15:37:25.882375",
+          "breaks": []
+        },
+        {
+          "name": "Python warnings",
+          "start": "16:41:13.138632",
+          "breaks": []
+        },
+        {
+          "name": "Printing game",
+          "start": "17:57:10.548356",
+          "breaks": []
+        }
+      ],
+      "notes": ["Have been in meetings from when I arrived to 3:30"]
+    },
+    "2022-07-14": {
+      "priorities": [
+        {
+          "name": "Help Mohammad",
+          "done": false
+        },
+        {
+          "name": "Laundry",
+          "done": false
+        },
+        {
+          "name": "Hugo bug",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Buy cards",
+          "done": false
+        },
+        {
+          "name": "Exit codes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Buy cards",
+          "start": "09:06:17.264345",
+          "breaks": []
+        },
+        {
+          "name": "merge stable to develop for Xenia",
+          "start": "09:57:59.242560",
+          "breaks": []
+        },
+        {
+          "name": "Buy cards",
+          "start": "10:26:38.613600",
+          "breaks": []
+        },
+        {
+          "name": "Hugo bug",
+          "start": "14:04:56.155880",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-15": {
+      "priorities": [
+        {
+          "name": "Hugo bug",
+          "done": false
+        },
+        {
+          "name": "Debug with Mohammad",
+          "done": true
+        },
+        {
+          "name": "XOut files",
+          "done": true
+        },
+        {
+          "name": "Laundry",
+          "done": true
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Hugo bug",
+          "start": "09:31:45.939433",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-18": {
+      "priorities": [
+        {
+          "name": "Disable AdaptorFO for debug",
+          "done": false
+        },
+        {
+          "name": "Find hugo work around",
+          "done": false
+        },
+        {
+          "name": "Look at P and G problem",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Key variables bug",
+          "done": false
+        },
+        {
+          "name": "exit codes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Disable AdaptorFO for debug",
+          "start": "10:23:33.942406",
+          "breaks": []
+        },
+        {
+          "name": "Helping spyros with linking",
+          "start": "17:47:44.821022",
+          "breaks": []
+        }
+      ],
+      "notes": ["Meeting with Ying and Costas about IP"],
+      "end_time": "17:51:46.165898"
+    },
+    "2022-07-19": {
+      "priorities": [
+        {
+          "name": "P and G problem",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Debug fix",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Hugo work around",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest imports",
+          "start": "10:38:21.394740",
+          "breaks": []
+        },
+        {
+          "name": "P and G problem",
+          "start": "10:46:22.044818",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "11:23:32.301218",
+          "breaks": []
+        },
+        {
+          "name": "Hugo work around",
+          "start": "11:53:26.983568",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "11:57:30.976616",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-20": {
+      "priorities": [
+        {
+          "name": "Hugo work around",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Debug",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Key variables ticket",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Hugo work around",
+          "start": "10:08:24.018508",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline",
+          "start": "18:09:09.795512",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-21": {
+      "priorities": [
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Ed QMTest setup",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Debug",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipeline",
+          "start": "11:26:08.544025",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-25": {
+      "priorities": [
+        {
+          "name": "check 29159 has an owner",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO debug",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipeline",
+          "start": "11:09:59.958315",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-26": {
+      "priorities": [
+        {
+          "name": "QMTest pipeline Linux",
+          "done": false
+        },
+        {
+          "name": "Mohammad probation",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO debug",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipeline Linux",
+          "start": "09:54:28.901796",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO debug",
+          "start": "10:56:14.167941",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-27": {
+      "priorities": [
+        {
+          "name": "Mohammad unit testing review",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline linux",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Debug test message",
+          "done": false
+        },
+        {
+          "name": "HR and AMEX forms",
+          "done": false
+        },
+        {
+          "name": "Mohammad probation",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Mohammad unit testing review",
+          "start": "10:54:58.558554",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline linux",
+          "start": "14:31:58.294768",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-07-28": {
+      "priorities": [
+        {
+          "name": "QMTest pipeline linux",
+          "done": true
+        },
+        {
+          "name": "HR and AMEX forms",
+          "done": false
+        },
+        {
+          "name": "Mohammad probation",
+          "done": false
+        },
+        {
+          "name": "Bethnal Green road response",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO Debug test message",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipeline linux",
+          "start": "10:43:36.386429",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO Debug test message",
+          "start": "13:38:53.887734",
+          "breaks": []
+        },
+        {
+          "name": "Bethnal Green road response",
+          "start": "17:35:00.912532",
+          "breaks": []
+        },
+        {
+          "name": "HR and AMEX forms",
+          "start": "18:01:51.393027",
+          "breaks": []
+        },
+        {
+          "name": "Mohammad unit testing review",
+          "start": "18:41:22.592142",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:48:11.120429"
+    },
+    "2022-07-29": {
+      "priorities": [
+        {
+          "name": "AMEX, HR, and Simply Health forms",
+          "done": false
+        },
+        {
+          "name": "Mohammad probation review",
+          "done": true
+        },
+        {
+          "name": "Contact Jira admin for 292",
+          "done": true
+        },
+        {
+          "name": "Test Mohammad inheritance plan",
+          "done": true
+        },
+        {
+          "name": "Disable AdaptorFO Debug",
+          "done": false
+        },
+        {
+          "name": "Pipeline relative paths",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Test Mohammad inheritance plan",
+          "start": "08:55:49.225512",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S end to end tests",
+          "start": "11:35:27.221205",
+          "breaks": []
+        },
+        {
+          "name": "Pipeline relative paths",
+          "start": "11:35:59.786399",
+          "breaks": []
+        },
+        {
+          "name": "Disable AdaptorFO Debug",
+          "start": "11:36:11.855503",
+          "breaks": []
+        },
+        {
+          "name": "Mohammad probation review",
+          "start": "13:29:38.416202",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-01": {
+      "priorities": [
+        {
+          "name": "Test trac2jira locally",
+          "done": true
+        },
+        {
+          "name": "Disable AdaptorFO debug",
+          "done": false
+        },
+        {
+          "name": "Leave comment on gSERVER ticket",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Review Jira trac wiki",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Disable AdaptorFO debug",
+          "start": "10:36:25.196451",
+          "breaks": []
+        },
+        {
+          "name": "Test trac2jira locally",
+          "start": "15:05:42.861495",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-02": {
+      "priorities": [
+        {
+          "name": "Review Mohammad",
+          "done": true
+        },
+        {
+          "name": "Disable Python projects in debug",
+          "done": true
+        },
+        {
+          "name": "Leave comment on GSERVER ticket",
+          "done": true
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Come up with employee forum items",
+          "done": false
+        },
+        {
+          "name": "Review Jira trac wiki",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Mohammad",
+          "start": "10:29:51.049269",
+          "breaks": []
+        },
+        {
+          "name": "Disable Python projects in debug",
+          "start": "11:12:24.296269",
+          "breaks": []
+        },
+        {
+          "name": "Test new QMTest pipeline",
+          "start": "11:12:47.330643",
+          "breaks": []
+        },
+        {
+          "name": "Disable Python projects in debug",
+          "start": "11:13:45.925487",
+          "breaks": []
+        },
+        {
+          "name": "Leave comment on GSERVER ticket",
+          "start": "13:51:11.823283",
+          "breaks": []
+        },
+        {
+          "name": "Come up with employee forum items",
+          "start": "14:59:20.085875",
+          "breaks": []
+        },
+        {
+          "name": "clean up repos",
+          "start": "15:10:30.378815",
+          "breaks": []
+        },
+        {
+          "name": "Add AdaptorFO QMTests",
+          "start": "15:20:13.406072",
+          "breaks": []
+        }
+      ],
+      "notes": ["Mohammad review 28939"],
+      "end_time": "17:18:50.353720"
+    },
+    "2022-08-03": {
+      "priorities": [
+        {
+          "name": "Review Oliver's core snapshot commit",
+          "done": true
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Add AdaptorFO QMTests",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline failing",
+          "done": false
+        },
+        {
+          "name": "Review Jira trac wiki",
+          "done": false
+        },
+        {
+          "name": "Employee forum items",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Oliver's core snapshot commit",
+          "start": "10:15:15.330148",
+          "breaks": []
+        },
+        {
+          "name": "Employee forum items",
+          "start": "10:37:51.119070",
+          "breaks": []
+        },
+        {
+          "name": "Add AdaptorFO QMTests",
+          "start": "10:43:09.161389",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline failing",
+          "start": "13:00:32.063082",
+          "breaks": []
+        },
+        {
+          "name": "Exit code logic",
+          "start": "13:46:23.025973",
+          "breaks": []
+        },
+        {
+          "name": "Hugo fix for matplotlib",
+          "start": "16:27:00.480696",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO debug build",
+          "start": "17:18:03.247346",
+          "breaks": []
+        },
+        {
+          "name": "Exit code logic",
+          "start": "17:19:51.123373",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-04": {
+      "priorities": [
+        {
+          "name": "QMtest exit code logic and brance rebase",
+          "done": false
+        },
+        {
+          "name": "Employee forum items",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Review Jira Trac wiki",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Read parameters file during AFO initialisation",
+          "start": "11:22:48.617030",
+          "breaks": []
+        },
+        {
+          "name": "Fix init bug for AdaptorFO",
+          "start": "17:28:40.110187",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:30:03.152578"
+    },
+    "2022-08-05": {
+      "priorities": [
+        {
+          "name": "AdaptorFO read parameters file lengths example",
+          "done": false
+        },
+        {
+          "name": "Employee forum items",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Review Jira Trac wiki",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Exit code logic and qmtest rebase",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "AdaptorFO read parameters file lengths example",
+          "start": "09:55:45.673475",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-08": {
+      "priorities": [
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Employee forum items",
+          "done": true
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Jira Trac wiki",
+          "done": false
+        },
+        {
+          "name": "Exit code logic",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Work audit and admin",
+          "start": "11:44:53.530213",
+          "breaks": []
+        },
+        {
+          "name": "init adaptorfo parameter",
+          "start": "12:39:00.444246",
+          "breaks": []
+        },
+        {
+          "name": "Employee forum items",
+          "start": "16:53:15.093500",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:03:22.917810"
+    },
+    "2022-08-09": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "QMTest pipeline buffer and use qmtest3 branch",
+          "done": true
+        },
+        {
+          "name": "Jira Trac wiki",
+          "done": true
+        },
+        {
+          "name": "Make AdaptorFO input lengths variable",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "12:10:14.143947",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipeline buffer and use qmtest3 branch",
+          "start": "13:14:28.515177",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "13:36:22.236880",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "15:51:39.636047",
+          "breaks": []
+        },
+        {
+          "name": "Make AdaptorFO input lengths variable",
+          "start": "17:40:32.667329",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:42:08.857430"
+    },
+    "2022-08-10": {
+      "priorities": [
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests linux",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO variable input lengths",
+          "done": true
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "AdaptorFO variable input lengths",
+          "start": "10:52:58.175485",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests linux",
+          "start": "14:00:54.140817",
+          "breaks": []
+        },
+        {
+          "name": "Audit tickets for 2022.2",
+          "start": "16:29:52.935742",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests linux",
+          "start": "16:47:29.812422",
+          "breaks": []
+        },
+        {
+          "name": "Plan walk",
+          "start": "17:38:35.909547",
+          "breaks": []
+        },
+        {
+          "name": "making QMTest releases",
+          "start": "18:44:30.530417",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:51:46.279847"
+    },
+    "2022-08-11": {
+      "priorities": [
+        {
+          "name": "QMTest pipelines",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO integration tests linux",
+          "done": false
+        },
+        {
+          "name": "AMEX, HR forms",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "Negative ref count error",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipelines",
+          "start": "10:35:42.393906",
+          "breaks": []
+        },
+        {
+          "name": "AMEX, HR forms",
+          "start": "11:40:07.950157",
+          "breaks": []
+        },
+        {
+          "name": "check_connectivity script",
+          "start": "12:41:56.602519",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-12": {
+      "priorities": [
+        {
+          "name": "Pipelines ready for review",
+          "done": true
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Pipelines ready for review",
+          "start": "10:09:00.617372",
+          "breaks": []
+        },
+        {
+          "name": "HR forms",
+          "start": "10:19:02.936756",
+          "breaks": []
+        },
+        {
+          "name": "review Ben S",
+          "start": "14:01:30.387690",
+          "breaks": []
+        },
+        {
+          "name": "Finish QMTest pipeline setup",
+          "start": "15:41:41.061290",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-15": {
+      "priorities": [
+        {
+          "name": "AdaptorFO input lengths",
+          "done": true
+        },
+        {
+          "name": "Review Oliver gFP pipeline",
+          "done": false
+        },
+        {
+          "name": "Amex form",
+          "done": false
+        },
+        {
+          "name": "HR forms",
+          "done": false
+        },
+        {
+          "name": "Training",
+          "done": true
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Dovico",
+          "start": "11:40:33.680272",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO input lengths",
+          "start": "12:19:02.024282",
+          "breaks": []
+        },
+        {
+          "name": "Training",
+          "start": "13:23:36.542872",
+          "breaks": []
+        },
+        {
+          "name": "Amex form",
+          "start": "13:47:57.346598",
+          "breaks": []
+        },
+        {
+          "name": "HR forms",
+          "start": "14:11:32.885864",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO debug crash",
+          "start": "15:21:56.036748",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-16": {
+      "priorities": [
+        {
+          "name": "Review Oliver pipeline",
+          "done": true
+        },
+        {
+          "name": "Review A2G UI",
+          "done": true
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "Aviva form",
+          "done": false
+        },
+        {
+          "name": "Review result of pipeline test",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "responding to AdaptorFO reference counting review",
+          "start": "11:27:45.187777",
+          "breaks": []
+        },
+        {
+          "name": "Review A2G UI",
+          "start": "11:31:29.884916",
+          "breaks": []
+        },
+        {
+          "name": "Review Oliver pipeline",
+          "start": "11:44:28.068336",
+          "breaks": []
+        },
+        {
+          "name": "Review result of pipeline test",
+          "start": "12:04:59.765293",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "15:44:07.944727",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:36:33.128577"
+    },
+    "2022-08-17": {
+      "priorities": [
+        {
+          "name": "Plan walk",
+          "done": true
+        },
+        {
+          "name": "Respond to QMTest review",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        },
+        {
+          "name": "Evaluate pipeline results",
+          "done": false
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Plan walk",
+          "start": "10:50:38.738105",
+          "breaks": []
+        },
+        {
+          "name": "Respond to QMTest review",
+          "start": "13:07:13.234794",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S UI",
+          "start": "13:37:51.565707",
+          "breaks": []
+        },
+        {
+          "name": "Respond to QMTest review",
+          "start": "15:39:38.229985",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-08-31": {
+      "priorities": [
+        {
+          "name": "AMEX form",
+          "done": true
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        },
+        {
+          "name": "Make all gerrit QMTest changes ready for review",
+          "done": true
+        },
+        {
+          "name": "Fix QMTest windows bugs",
+          "done": false
+        },
+        {
+          "name": "Review work for 2022.2",
+          "done": true
+        },
+        {
+          "name": "Find QMTest Linux bugs",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make all gerrit QMTest changes ready for review",
+          "start": "09:43:22.148769",
+          "breaks": []
+        },
+        {
+          "name": "Review work for 2022.2",
+          "start": "13:12:45.096038",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "13:40:11.386617",
+          "breaks": []
+        },
+        {
+          "name": "AMEX form",
+          "start": "14:56:24.956258",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S icon and template a2g work",
+          "start": "15:31:27.993868",
+          "breaks": []
+        },
+        {
+          "name": "Review Spiros scaling factor calculation",
+          "start": "15:41:44.729885",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:11:28.541600"
+    },
+    "2022-08-30": {
+      "priorities": [
+        {
+          "name": "Catch up on all emails, etc",
+          "done": true
+        },
+        {
+          "name": "Heighten screens",
+          "done": true
+        },
+        {
+          "name": "Reply to Andrew about social events",
+          "done": true
+        },
+        {
+          "name": "Siemens integration survery",
+          "done": true
+        },
+        {
+          "name": "Employee forum priorities",
+          "done": true
+        },
+        {
+          "name": "Evaluate state of QMTest",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Heighten screens",
+          "start": "11:53:51.386224",
+          "breaks": []
+        },
+        {
+          "name": "Catch up on all emails, etc",
+          "start": "11:53:55.418520",
+          "breaks": []
+        },
+        {
+          "name": "Heighten screens",
+          "start": "11:54:00.939971",
+          "breaks": []
+        },
+        {
+          "name": "Reply to Andrew about social events",
+          "start": "12:02:57.834582",
+          "breaks": []
+        },
+        {
+          "name": "Siemens integration survery",
+          "start": "12:10:33.888396",
+          "breaks": []
+        },
+        {
+          "name": "Employee forum priorities",
+          "start": "12:19:24.220084",
+          "breaks": []
+        },
+        {
+          "name": "Evaluate state of QMTest",
+          "start": "12:22:47.812401",
+          "breaks": [
+            {
+              "start": "12:22:54.717619",
+              "end": "13:49:13.766041"
+            }
+          ]
+        },
+        {
+          "name": "Help Ben S build a2g on Centos 7!\n",
+          "start": "13:49:30.745752",
+          "breaks": []
+        },
+        {
+          "name": "Evaluate state of QMTest",
+          "start": "16:03:07.206068",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent a decent amount of time looking for and setting up my learning courses"
+      ]
+    },
+    "2022-09-01": {
+      "priorities": [
+        {
+          "name": "Review result of QMTest pipeline changes",
+          "done": true
+        },
+        {
+          "name": "AMEX form",
+          "done": false
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        },
+        {
+          "name": "Simply Health form",
+          "done": false
+        },
+        {
+          "name": "Add integration tests for AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Fix outstanding QMTest issues",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review result of QMTest pipeline changes",
+          "start": "10:27:25.189083",
+          "breaks": []
+        },
+        {
+          "name": "Broke pipelines with relative paths change",
+          "start": "10:34:03.824114",
+          "breaks": []
+        },
+        {
+          "name": "Review result of QMTest pipeline changes",
+          "start": "11:23:19.494698",
+          "breaks": []
+        },
+        {
+          "name": "Review a2g template",
+          "start": "12:22:06.610323",
+          "breaks": []
+        },
+        {
+          "name": "Fix outstanding QMTest issues",
+          "start": "12:24:10.442225",
+          "breaks": []
+        },
+        {
+          "name": "Relative paths in cmake.groovy",
+          "start": "15:34:08.742916",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:27:46.387962"
+    },
+    "2022-09-02": {
+      "priorities": [
+        {
+          "name": "Check integration-el7",
+          "done": true
+        },
+        {
+          "name": "AMEX form",
+          "done": true
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        },
+        {
+          "name": "Simply Health form",
+          "done": false
+        },
+        {
+          "name": "Keep fxing linux QMTest",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check integration-el7",
+          "start": "08:38:48.275479",
+          "breaks": []
+        },
+        {
+          "name": "AMEX form",
+          "start": "08:40:07.420678",
+          "breaks": []
+        },
+        {
+          "name": "Simply Health form",
+          "start": "09:17:10.472875",
+          "breaks": []
+        },
+        {
+          "name": "Keep fxing linux QMTest",
+          "start": "09:31:45.025237",
+          "breaks": []
+        },
+        {
+          "name": "Review A2G",
+          "start": "15:37:03.858731",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-05": {
+      "priorities": [
+        {
+          "name": "Review Ben A2G",
+          "done": true
+        },
+        {
+          "name": "Find Linux QMTest issues",
+          "done": false
+        },
+        {
+          "name": "Test AdaptorFO integration tests",
+          "done": true
+        },
+        {
+          "name": "Simply Health form",
+          "done": false
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Ben A2G",
+          "start": "10:36:26.825484",
+          "breaks": []
+        },
+        {
+          "name": "Find Linux QMTest issues",
+          "start": "11:27:19.072002",
+          "breaks": []
+        },
+        {
+          "name": "Test AdaptorFO integration tests",
+          "start": "15:56:45.822313",
+          "breaks": []
+        },
+        {
+          "name": "Simply Health form",
+          "start": "15:58:24.270481",
+          "breaks": []
+        },
+        {
+          "name": "Find Linux QMTest issues",
+          "start": "16:22:39.419744",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-06": {
+      "priorities": [
+        {
+          "name": "X11 pipeline",
+          "done": true
+        },
+        {
+          "name": "X11 local",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        },
+        {
+          "name": "Find more Linux issues",
+          "done": false
+        },
+        {
+          "name": "Start trac ticket",
+          "done": true
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "10:19:50.099069",
+          "breaks": []
+        },
+        {
+          "name": "X11 pipeline",
+          "start": "10:21:52.875114",
+          "breaks": []
+        },
+        {
+          "name": "X11 local",
+          "start": "11:06:47.573446",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "start": "11:22:20.040657",
+          "breaks": []
+        },
+        {
+          "name": "Start trac ticket",
+          "start": "11:30:26.134790",
+          "breaks": []
+        },
+        {
+          "name": "log afo  from gORUN",
+          "start": "11:31:19.410051",
+          "breaks": []
+        },
+        {
+          "name": "print error messages from AdaptorFO",
+          "start": "13:53:12.258218",
+          "breaks": []
+        },
+        {
+          "name": "review last bits of A2G",
+          "start": "14:44:14.351354",
+          "breaks": []
+        },
+        {
+          "name": "log AdaptorFO to gORun",
+          "start": "15:53:36.544447",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-07": {
+      "priorities": [
+        {
+          "name": "QMTest 3 audit results and fix errors",
+          "done": false
+        },
+        {
+          "name": "Split AdaptorFO into libraries",
+          "done": false
+        },
+        {
+          "name": "Route Python output to C++",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "AVIVA form",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Split AdaptorFO into libraries",
+          "start": "09:59:47.864512",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Presentation ideas: Doxygen, modules, PyBind11, CMake",
+        "Need to keep working on mail plugin"
+      ],
+      "end_time": "16:36:23.420021"
+    },
+    "2022-09-08": {
+      "priorities": [
+        {
+          "name": "QMTest 3 get help with environment",
+          "done": false
+        },
+        {
+          "name": "Get review for printing and update ticket",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO integration tests",
+          "done": false
+        },
+        {
+          "name": "Add Doxygen comments to AdaptorFO",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Get review for printing and update ticket",
+          "start": "11:02:18.099581",
+          "breaks": []
+        },
+        {
+          "name": "Review Mohammad CSV tightening",
+          "start": "11:56:37.313652",
+          "breaks": []
+        },
+        {
+          "name": "Get review for printing and update ticket",
+          "start": "15:53:30.505142",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:18:39.261571"
+    },
+    "2022-09-09": {
+      "priorities": [
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Printing to log ticket",
+          "done": false
+        },
+        {
+          "name": "Disable failing Linux AFO test",
+          "done": false
+        },
+        {
+          "name": "Add Doxygen to AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "QMTest 3 get help with environment",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Printing to log ticket",
+          "start": "10:40:04.839641",
+          "breaks": []
+        },
+        {
+          "name": "Send triage email plugin",
+          "start": "14:11:45.021845",
+          "breaks": []
+        },
+        {
+          "name": "Review Mohammad CSV tightening",
+          "start": "16:14:09.473146",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:21:28.239204"
+    },
+    "2022-09-10": {
+      "priorities": [
+        {
+          "name": "Review and +2 CSV tightening commit",
+          "done": false
+        },
+        {
+          "name": "Disable failing AFO Linux test",
+          "done": false
+        },
+        {
+          "name": "Try out Yuzhao's QMTest 3 pipeline change",
+          "done": false
+        },
+        {
+          "name": "Make std routing ticket compile",
+          "done": false
+        },
+        {
+          "name": "Doxygen to AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Aviva and Simply Health",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-09-12": {
+      "priorities": [
+        {
+          "name": "Review and +2 CSV tightening commit",
+          "done": true
+        },
+        {
+          "name": "Disable failing AFO Linux test",
+          "done": true
+        },
+        {
+          "name": "Try out Yuzhao's QMTest 3 pipeline change",
+          "done": true
+        },
+        {
+          "name": "Make std routing ticket compile",
+          "done": false
+        },
+        {
+          "name": "Doxygen to AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Aviva and Simply Health",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review and +2 CSV tightening commit",
+          "start": "10:49:05.895055",
+          "breaks": []
+        },
+        {
+          "name": "Disable failing AFO Linux test",
+          "start": "10:55:56.259162",
+          "breaks": []
+        },
+        {
+          "name": "Try out Yuzhao's QMTest 3 pipeline change",
+          "start": "11:08:13.239775",
+          "breaks": []
+        },
+        {
+          "name": "Make std routing ticket compile",
+          "start": "11:41:38.847664",
+          "breaks": []
+        },
+        {
+          "name": "Review Spiros scaling factor",
+          "start": "11:42:26.855620",
+          "breaks": []
+        },
+        {
+          "name": "Make std routing ticket compile",
+          "start": "16:14:48.367204",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:55:45.171172"
+    },
+    "2022-09-13": {
+      "priorities": [
+        {
+          "name": "Pick meal for STG lunch",
+          "done": true
+        },
+        {
+          "name": "Improve AdaptorFO CMake",
+          "done": false
+        },
+        {
+          "name": "Compile logging change",
+          "done": false
+        },
+        {
+          "name": "Doxygen to AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "SimplyHealth",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Pick meal for STG lunch",
+          "start": "10:22:16.332728",
+          "breaks": []
+        },
+        {
+          "name": "Compile logging change",
+          "start": "10:29:00.657663",
+          "breaks": []
+        },
+        {
+          "name": "Improve AdaptorFO CMake",
+          "start": "10:31:07.876524",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-14": {
+      "priorities": [
+        {
+          "name": "Compile logging change",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "Last AdaptorFO ticket",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Make C++ presentation",
+          "done": false
+        },
+        {
+          "name": "Aviva and Simplyhealth",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Compile logging change",
+          "start": "10:09:41.436183",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "13:24:08.646129",
+          "breaks": []
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "start": "14:30:51.766203",
+          "breaks": []
+        },
+        {
+          "name": "Make C++ presentation",
+          "start": "14:46:37.585925",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-15": {
+      "priorities": [
+        {
+          "name": "Doxygen presentation",
+          "done": true
+        },
+        {
+          "name": "Respond to Integration review",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Triage email tool",
+          "done": false
+        },
+        {
+          "name": "Aviva and SimplyHealth",
+          "done": false
+        },
+        {
+          "name": "Make plan for QMTest to end",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Doxygen presentation",
+          "start": "09:47:02.671244",
+          "breaks": []
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "start": "13:14:54.607997",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-20": {
+      "priorities": [
+        {
+          "name": "Join triage team",
+          "done": false
+        },
+        {
+          "name": "Doxygen presentation",
+          "done": false
+        },
+        {
+          "name": "Respond to integration review",
+          "done": false
+        },
+        {
+          "name": "Make plan for QMTest to end",
+          "done": false
+        },
+        {
+          "name": "Traige email tool",
+          "done": false
+        },
+        {
+          "name": "Aviva and Simply Health",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2022-09-22": {
+      "priorities": [
+        {
+          "name": "Respond to all messages",
+          "done": true
+        },
+        {
+          "name": "Aviva & Simply Health",
+          "done": false
+        },
+        {
+          "name": "Integration review response",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Join triage team",
+          "done": true
+        },
+        {
+          "name": "Make QMTest project plan",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Move NameType to own file",
+          "start": "10:47:24.969258",
+          "breaks": []
+        },
+        {
+          "name": "Respond to all messages",
+          "start": "12:17:47.757414",
+          "breaks": []
+        },
+        {
+          "name": "Help Silvia with double QMTest names",
+          "start": "15:23:48.594352",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:40:59.463474"
+    },
+    "2022-09-23": {
+      "priorities": [
+        {
+          "name": "Fix Silvia double test issue",
+          "done": true
+        },
+        {
+          "name": "Aviva and Simply Health",
+          "done": false
+        },
+        {
+          "name": "Respond to Integration review",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Make QMTest project plan",
+          "done": false
+        },
+        {
+          "name": "Company Directives training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix Silvia double test issue",
+          "start": "10:28:09.705155",
+          "breaks": []
+        },
+        {
+          "name": "Respond to Integration review",
+          "start": "15:01:27.667317",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-26": {
+      "priorities": [
+        {
+          "name": "Integration review response",
+          "done": true
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "QMTest project plan",
+          "done": false
+        },
+        {
+          "name": "Company Directives training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Ben A2G UI",
+          "start": "13:20:00.359312",
+          "breaks": []
+        },
+        {
+          "name": "Final deriv AdaptorFO ticket",
+          "start": "13:48:08.133296",
+          "breaks": []
+        },
+        {
+          "name": "ticket triage",
+          "start": "16:19:58.703137",
+          "breaks": []
+        },
+        {
+          "name": "Integration review response",
+          "start": "17:09:54.852808",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-27": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "QMTest project plan",
+          "done": false
+        },
+        {
+          "name": "Company Directives training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Triage",
+          "start": "10:40:25.346148",
+          "breaks": []
+        },
+        {
+          "name": "Doxygen AdaptorFO",
+          "start": "13:27:42.063243",
+          "breaks": []
+        },
+        {
+          "name": "Review A2G",
+          "start": "16:11:02.999797",
+          "breaks": []
+        }
+      ],
+      "notes": ["ad comment to say this could be done in a unit testing month"]
+    },
+    "2022-09-28": {
+      "priorities": [
+        {
+          "name": "Doxygen presentation",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "QMTest project plan",
+          "done": false
+        },
+        {
+          "name": "Company Directives training",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Triage",
+          "start": "11:17:40.127550",
+          "breaks": []
+        },
+        {
+          "name": "Doxygen presentation",
+          "start": "12:33:27.531462",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO routing fix build",
+          "start": "15:03:37.005871",
+          "breaks": []
+        },
+        {
+          "name": "QMtest pipeline",
+          "start": "16:13:09.025060",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "16:25:26.986006",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-29": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Prepare for Laptop migration",
+          "done": false
+        },
+        {
+          "name": "QMTest project plan",
+          "done": false
+        },
+        {
+          "name": "Review Spiros",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Spiros",
+          "start": "11:29:35.070731",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "13:57:29.719062",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-09-30": {
+      "priorities": [
+        {
+          "name": "Review",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Prepare for laptop migration",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "QMTest project plan",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review",
+          "start": "09:56:55.135653",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "13:24:17.348609",
+          "breaks": []
+        },
+        {
+          "name": "Logging from afo",
+          "start": "16:33:31.867939",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-03": {
+      "priorities": [
+        {
+          "name": "Prepare laptop for migration",
+          "done": true
+        },
+        {
+          "name": "Review Istvan",
+          "done": true
+        },
+        {
+          "name": "Company directives training",
+          "done": true
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO logging stdout",
+          "done": true
+        },
+        {
+          "name": "QMTest project plan",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Prepare laptop for migration",
+          "start": "12:06:27.848807",
+          "breaks": []
+        },
+        {
+          "name": "Review Istvan",
+          "start": "14:52:58.882875",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO logging stdout",
+          "start": "14:53:25.608432",
+          "breaks": []
+        },
+        {
+          "name": "Company directives training",
+          "start": "15:49:06.027220",
+          "breaks": []
+        },
+        {
+          "name": "QMTest project plan",
+          "start": "17:10:50.505159",
+          "breaks": []
+        },
+        {
+          "name": "merge qmtest3 branch to point with no failures",
+          "start": "18:05:58.364236",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO logging stdout",
+          "start": "18:38:20.542198",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-04": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "29659 test with accurate versions",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Daren survey",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO logging to stdout make compile",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Doer to cloud",
+          "start": "10:11:10.671338",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-10": {
+      "priorities": [
+        {
+          "name": "Catch up on emails",
+          "done": true
+        },
+        {
+          "name": "Daren skills email",
+          "done": true
+        },
+        {
+          "name": "29659 test with accurate version",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO logging to stdout compile",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Catch up on emails",
+          "start": "10:36:32.457156",
+          "breaks": []
+        },
+        {
+          "name": "introduce Ash to Madcap Flare",
+          "start": "11:22:15.387957",
+          "breaks": []
+        },
+        {
+          "name": "Daren skills email",
+          "start": "11:23:28.222070",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "12:13:12.164115",
+          "breaks": [
+            {
+              "start": "12:13:18.038860",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "Update triage flowchart",
+          "start": "13:21:57.208952",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "13:34:11.323079",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO logging to stdout compile",
+          "start": "13:34:48.833332",
+          "breaks": []
+        },
+        {
+          "name": "QMTest minor change to see improvements",
+          "start": "15:11:53.583502",
+          "breaks": []
+        },
+        {
+          "name": "Case fails IP",
+          "start": "15:38:24.092964",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "16:22:01.799229",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO logging to stdout compile",
+          "start": "17:09:42.684579",
+          "breaks": []
+        },
+        {
+          "name": "Fix debug build with Python debug binaries",
+          "start": "17:12:04.651423",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:27:42.063695"
+    },
+    "2022-10-12": {
+      "priorities": [
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Fix platform independent QMTest issues",
+          "done": false
+        },
+        {
+          "name": "Respond to Istvan CI review",
+          "done": false
+        },
+        {
+          "name": "Make AdaptorFO logging ticket compile",
+          "done": false
+        },
+        {
+          "name": "Fix IP failure",
+          "done": false
+        },
+        {
+          "name": "Fix Windows QMTest issues",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix platform independent QMTest issues",
+          "start": "09:58:34.078292",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-11": {
+      "priorities": [
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "EHS certification thing",
+          "done": false
+        },
+        {
+          "name": "Address QMTest failures",
+          "done": false
+        },
+        {
+          "name": "Fix IP failure",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO logging ticket compile",
+          "done": false
+        },
+        {
+          "name": "Finish Python packages as code",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Help Daren setup Python environment for building",
+          "start": "09:50:17.326986",
+          "breaks": []
+        },
+        {
+          "name": "Address QMTest failures",
+          "start": "10:41:25.572406",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:24:48.300616"
+    },
+    "2022-10-13": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Write up AdaptorFO std compile issue",
+          "done": true
+        },
+        {
+          "name": "Address windows QMTest issues",
+          "done": true
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        },
+        {
+          "name": "Pick up unowned 2022.2.0 defects",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Write up AdaptorFO std compile issue",
+          "start": "09:57:39.051154",
+          "breaks": []
+        },
+        {
+          "name": "Address windows QMTest issues",
+          "start": "11:37:27.302177",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:06:50.028699"
+    },
+    "2022-10-14": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": false
+        },
+        {
+          "name": "Verify AdaptorFO and Env QMTest issues have been resolved",
+          "done": false
+        },
+        {
+          "name": "Fix modelbuilder consultancy QMTest issue",
+          "done": false
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        },
+        {
+          "name": "Pick up 2022.2.0 defect tickets",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix missing gcommon dependency",
+          "start": "10:52:58.191734",
+          "breaks": []
+        },
+        {
+          "name": "Compile AdaptorFO debug fix",
+          "start": "13:45:38.177832",
+          "breaks": []
+        },
+        {
+          "name": "Fix AdaptorFO LTO Linux Release issue",
+          "start": "16:09:36.265121",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:05:04.908783"
+    },
+    "2022-10-17": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Aviva",
+          "done": true
+        },
+        {
+          "name": "Fix Linux Release build",
+          "done": true
+        },
+        {
+          "name": "Fix enabling Python for QMTest 3",
+          "done": false
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        },
+        {
+          "name": "Fix debug build with debug binaries",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix Linux Release build",
+          "start": "10:01:34.734317",
+          "breaks": []
+        },
+        {
+          "name": "Review istvan jenkins compilers",
+          "start": "10:52:35.249578",
+          "breaks": []
+        },
+        {
+          "name": "Rename MakeTuple",
+          "start": "11:14:57.730486",
+          "breaks": []
+        },
+        {
+          "name": "Fix Linux Release build",
+          "start": "13:35:58.098211",
+          "breaks": [
+            {
+              "start": "14:13:49.496131",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "Fix enabling Python for QMTest 3",
+          "start": "15:30:43.921224",
+          "breaks": []
+        },
+        {
+          "name": "EHS induction",
+          "start": "16:34:40.167886",
+          "breaks": []
+        },
+        {
+          "name": "Aviva",
+          "start": "16:39:05.326465",
+          "breaks": []
+        },
+        {
+          "name": "Fix enabling Python for QMTest 3",
+          "start": "16:44:06.811559",
+          "breaks": []
+        },
+        {
+          "name": "Aviva",
+          "start": "16:48:29.515150",
+          "breaks": []
+        },
+        {
+          "name": "claim 2022.2.0 tickets",
+          "start": "17:22:25.596892",
+          "breaks": []
+        },
+        {
+          "name": "Fix IP crash",
+          "start": "17:28:41.919354",
+          "breaks": []
+        },
+        {
+          "name": "Aviva",
+          "start": "17:41:40.229167",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:51:28.690390"
+    },
+    "2022-10-18": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Review QMTest 3 run",
+          "done": true
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        },
+        {
+          "name": "Request bots for IaC QMTest 3 testing",
+          "done": false
+        },
+        {
+          "name": "Work on 2022.2.0 tickets",
+          "done": false
+        },
+        {
+          "name": "Finish trac plugin for sending Triage email",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "investigate check_python failing with no error",
+          "start": "11:21:38.404232",
+          "breaks": []
+        },
+        {
+          "name": "Make release IPO build",
+          "start": "16:35:23.326975",
+          "breaks": []
+        },
+        {
+          "name": "Fix final QMTest 3 issue",
+          "start": "16:57:35.634308",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-19": {
+      "priorities": [
+        {
+          "name": "Improve Python project pipeline triggering",
+          "done": false
+        },
+        {
+          "name": "Investigate changing conan recipe for Pybind",
+          "done": true
+        },
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Fix last QMTest 3 windows issue",
+          "done": false
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        },
+        {
+          "name": "Request bots for testing IaC QMTest 3",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Release fix minor changes and discussion",
+          "start": "10:16:26.131545",
+          "breaks": []
+        },
+        {
+          "name": "Improve Python project pipeline triggering",
+          "start": "10:25:10.218389",
+          "breaks": []
+        },
+        {
+          "name": "Investigate changing conan recipe for Pybind",
+          "start": "15:16:59.891422",
+          "breaks": []
+        },
+        {
+          "name": "Haithem migration fix",
+          "start": "15:42:17.196283",
+          "breaks": []
+        },
+        {
+          "name": "review a2g",
+          "start": "16:01:20.670010",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-24": {
+      "priorities": [
+        {
+          "name": "Catch up on emails",
+          "done": true
+        },
+        {
+          "name": "EHS induction",
+          "done": true
+        },
+        {
+          "name": "QMTest windows",
+          "done": false
+        },
+        {
+          "name": "Make stdout compile",
+          "done": false
+        },
+        {
+          "name": "IaC testing bots",
+          "done": false
+        },
+        {
+          "name": "IP crash",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Catch up on emails",
+          "start": "10:08:57.013460",
+          "breaks": []
+        },
+        {
+          "name": "Make stdout compile",
+          "start": "11:14:59.003386",
+          "breaks": []
+        },
+        {
+          "name": "EHS induction",
+          "start": "11:15:43.865296",
+          "breaks": []
+        },
+        {
+          "name": "QMTest windows",
+          "start": "15:07:10.948089",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-25": {
+      "priorities": [
+        {
+          "name": "Test AdaptorFO on latest develop",
+          "done": true
+        },
+        {
+          "name": "Make stdout compile",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO AUTORUN example",
+          "done": false
+        },
+        {
+          "name": "QMTest method of delivery",
+          "done": false
+        },
+        {
+          "name": "QMTest convert main pipeline",
+          "done": false
+        },
+        {
+          "name": "IP crash",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Test AdaptorFO on latest develop",
+          "start": "10:43:43.594614",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO AUTORUN example",
+          "start": "11:24:06.065104",
+          "breaks": []
+        },
+        {
+          "name": "Make stdout compile",
+          "start": "11:58:01.408563",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO fails to run from IME",
+          "start": "12:05:08.784900",
+          "breaks": []
+        },
+        {
+          "name": "QMTest method of delivery",
+          "start": "15:54:10.959577",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-10-27": {
+      "priorities": [
+        {
+          "name": "Update tasks on Kernel triage flowsheet",
+          "done": true
+        },
+        {
+          "name": "Updated EHS induction photos",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "Make stdout compile",
+          "done": true
+        },
+        {
+          "name": "Update QMTest gSTORE parser",
+          "done": false
+        },
+        {
+          "name": "Pick up 2022.2.0 tickets",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Update tasks on Kernel triage flowsheet",
+          "start": "09:39:17.783996",
+          "breaks": []
+        },
+        {
+          "name": "Make stdout compile",
+          "start": "10:40:50.421123",
+          "breaks": []
+        },
+        {
+          "name": "Pick up 2022.2.0 tickets",
+          "start": "11:00:40.879538",
+          "breaks": []
+        },
+        {
+          "name": "Verify Yuzhao Release fix works",
+          "start": "11:03:57.706126",
+          "breaks": []
+        },
+        {
+          "name": "Investigate replacing twofish",
+          "start": "11:23:16.261487",
+          "breaks": []
+        },
+        {
+          "name": "Fixing QMTest changes",
+          "start": "13:44:27.249843",
+          "breaks": []
+        },
+        {
+          "name": "Make stdout compile",
+          "start": "16:16:56.249624",
+          "breaks": []
+        },
+        {
+          "name": "Update QMTest gSTORE parser",
+          "start": "17:13:27.086761",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:05:09.702463"
+    },
+    "2022-10-26": {
+      "priorities": [
+        {
+          "name": "Investigate AdaptorFO Debug IME failure",
+          "done": false
+        },
+        {
+          "name": "QMTest delivery",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "Make stdout compile",
+          "done": false
+        },
+        {
+          "name": "Book bupa appointment",
+          "done": false
+        },
+        {
+          "name": "IP crash",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Investigate AdaptorFO Debug IME failure",
+          "start": "10:37:03.059037",
+          "breaks": [
+            {
+              "start": "10:59:08.129836",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "QMTest delivery",
+          "start": "13:34:53.085053",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:56:33.015255"
+    },
+    "2022-10-28": {
+      "priorities": [
+        {
+          "name": "Updated EHS induction photos",
+          "done": false
+        },
+        {
+          "name": "Verify stdout compiled and update ticket",
+          "done": true
+        },
+        {
+          "name": "Verify move parser to gparser change and maybe move to qmtest3",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "Swap out Twofish. Check with QA first",
+          "done": false
+        },
+        {
+          "name": "Fix IP crash",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Verify stdout compiled and update ticket",
+          "start": "10:27:15.745988",
+          "breaks": []
+        },
+        {
+          "name": "Verify move parser to gparser change and maybe move to qmtest3",
+          "start": "10:32:39.249632",
+          "breaks": []
+        },
+        {
+          "name": "Respond to logger review",
+          "start": "11:49:13.875512",
+          "breaks": []
+        },
+        {
+          "name": "debug binaries python",
+          "start": "16:43:37.043082",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:24:56.370872"
+    },
+    "2022-10-31": {
+      "priorities": [
+        {
+          "name": "Update EHS induction",
+          "done": false
+        },
+        {
+          "name": "Respond to stdout review",
+          "done": false
+        },
+        {
+          "name": "Respond to qmtest review",
+          "done": false
+        },
+        {
+          "name": "Review Mohammad",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO documentation review for release",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Mohammad",
+          "start": "10:47:57.755009",
+          "breaks": []
+        },
+        {
+          "name": "Respond to stdout review",
+          "start": "14:35:56.919270",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:58:25.704366"
+    },
+    "2022-11-01": {
+      "priorities": [
+        {
+          "name": "put pse-fo-common into namespace",
+          "done": true
+        },
+        {
+          "name": "Respond to qmtest review",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Update EHS induction",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO documentation for release",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "put pse-fo-common into namespace",
+          "start": "08:51:02.373041",
+          "breaks": []
+        },
+        {
+          "name": "Respond to qmtest review",
+          "start": "09:37:14.976856",
+          "breaks": []
+        },
+        {
+          "name": "Review Spiros diagnostics",
+          "start": "11:17:20.475508",
+          "breaks": []
+        },
+        {
+          "name": "install QMTest beta",
+          "start": "11:55:39.024371",
+          "breaks": []
+        },
+        {
+          "name": "Split up converters to new repo",
+          "start": "11:56:01.692527",
+          "breaks": []
+        },
+        {
+          "name": "Buffer std_router",
+          "start": "11:56:19.660186",
+          "breaks": []
+        },
+        {
+          "name": "split converters repo",
+          "start": "13:58:56.922584",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:40:36.598269"
+    },
+    "2022-11-02": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "pre commit",
+          "done": true
+        },
+        {
+          "name": "Make stdout pass",
+          "done": true
+        },
+        {
+          "name": "Update EHS induction",
+          "done": false
+        },
+        {
+          "name": "qmtest beta delivery",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO documentation",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "pre commit",
+          "start": "09:09:30.894973",
+          "breaks": [
+            {
+              "start": "12:38:26.549603",
+              "end": "13:09:13.897293"
+            }
+          ]
+        },
+        {
+          "name": "Make stdout pass",
+          "start": "13:49:13.470511",
+          "breaks": []
+        },
+        {
+          "name": "qmtest beta delivery",
+          "start": "14:29:45.344499",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "14:54:05.715766",
+          "breaks": [
+            {
+              "start": "15:27:56.627567",
+              "end": "23:59:59.999999"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-03": {
+      "priorities": [
+        {
+          "name": "Update EHS induction",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO debug",
+          "done": false
+        },
+        {
+          "name": "QMTest pipeline",
+          "done": false
+        },
+        {
+          "name": "Simply Health",
+          "done": false
+        },
+        {
+          "name": "Bupa physio",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest pipeline",
+          "start": "09:56:51.725299",
+          "breaks": []
+        },
+        {
+          "name": "Move converters out of repo",
+          "start": "14:19:42.990040",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-04": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "gproms converters pipeline",
+          "done": true
+        },
+        {
+          "name": "autorun AdaptorFO test",
+          "done": false
+        },
+        {
+          "name": "Update EHS induction",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gproms converters pipeline",
+          "start": "10:29:11.042350",
+          "breaks": []
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "start": "10:59:58.878394",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "13:29:58.265345",
+          "breaks": []
+        },
+        {
+          "name": "update triage flowsheet",
+          "start": "13:35:04.750885",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "15:35:53.326952",
+          "breaks": []
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "start": "16:56:52.473068",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:15:36.059810"
+    },
+    "2022-11-07": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Update EHS induction",
+          "done": false
+        },
+        {
+          "name": "Deliver QMTest 3 beta to people",
+          "done": false
+        },
+        {
+          "name": "gproms-converters pipeline",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "autorun AdaptorFO test",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "start": "09:01:45.522812",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "09:04:01.051559",
+          "breaks": []
+        },
+        {
+          "name": "gproms-converters pipeline",
+          "start": "11:19:22.008498",
+          "breaks": []
+        },
+        {
+          "name": "Deliver QMTest 3 beta to people",
+          "start": "11:38:25.900923",
+          "breaks": []
+        },
+        {
+          "name": "Review Mohammad",
+          "start": "11:46:41.851128",
+          "breaks": []
+        },
+        {
+          "name": "Investigate Ed Clang afo error",
+          "start": "13:57:16.073290",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:41:40.736514"
+    },
+    "2022-11-08": {
+      "priorities": [
+        {
+          "name": "Review Mohammad constructor refactor",
+          "done": true
+        },
+        {
+          "name": "Look at Maria email chain",
+          "done": true
+        },
+        {
+          "name": "Investigate Ed Clang error",
+          "done": false
+        },
+        {
+          "name": "Remove converters from gproms-core",
+          "done": false
+        },
+        {
+          "name": "Deliver QMTest 3 beta",
+          "done": false
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Mohammad constructor refactor",
+          "start": "10:20:16.292822",
+          "breaks": []
+        },
+        {
+          "name": "Look at Maria email chain",
+          "start": "13:55:51.237009",
+          "breaks": []
+        },
+        {
+          "name": "Review Mohammad constructor refactor",
+          "start": "14:54:12.830271",
+          "breaks": []
+        },
+        {
+          "name": "Look at Maria email chain",
+          "start": "15:27:09.371181",
+          "breaks": []
+        },
+        {
+          "name": "Remove converters from gproms-core",
+          "start": "16:32:03.474627",
+          "breaks": []
+        }
+      ],
+      "notes": ["Should also remove the message hook from dev on windows"],
+      "end_time": "17:45:59.659536"
+    },
+    "2022-11-10": {
+      "priorities": [
+        {
+          "name": "EHS induction update",
+          "done": false
+        },
+        {
+          "name": "Listen to pre-recorded growth talks presentation",
+          "done": false
+        },
+        {
+          "name": "Start end of year review",
+          "done": false
+        },
+        {
+          "name": "Update Trac and team with QMTest installation instructions",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Update Trac and team with QMTest installation instructions",
+          "start": "09:30:41.633871",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "I spent a lot of time debugging and checking using rhodecode as a delivery method works"
+      ],
+      "end_time": "17:09:51.859130"
+    },
+    "2022-11-09": {
+      "priorities": [
+        {
+          "name": "Review Spiros overgence type",
+          "done": true
+        },
+        {
+          "name": "Improve pre-commit and commit-msg",
+          "done": true
+        },
+        {
+          "name": "Investigate Ed Clang error",
+          "done": false
+        },
+        {
+          "name": "Deliver QMTest 3 beta",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Spiros overgence type",
+          "start": "10:14:40.310899",
+          "breaks": []
+        },
+        {
+          "name": "Improve pre-commit and commit-msg",
+          "start": "10:38:17.632128",
+          "breaks": []
+        },
+        {
+          "name": "Deliver QMTest 3 beta",
+          "start": "16:16:51.438573",
+          "breaks": []
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "start": "16:40:33.706279",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-11": {
+      "priorities": [
+        {
+          "name": "EHS induction update",
+          "done": false
+        },
+        {
+          "name": "Plan growth talks watching and writing",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "Update documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "TwoFish",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Plan growth talks watching and writing",
+          "start": "09:07:10.472964",
+          "breaks": []
+        },
+        {
+          "name": "EHS induction update",
+          "start": "09:12:16.373256",
+          "breaks": []
+        },
+        {
+          "name": "Watch Growth talks vids",
+          "start": "10:11:37.400050",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:52:06.012001"
+    },
+    "2022-11-14": {
+      "priorities": [
+        {
+          "name": "Request 360 feedback",
+          "done": false
+        },
+        {
+          "name": "EHS induction update",
+          "done": false
+        },
+        {
+          "name": "Watch Growth talks Q7A",
+          "done": false
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "Update documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "training",
+          "start": "10:55:49.055579",
+          "breaks": []
+        },
+        {
+          "name": "Only apply clang format to staged lines",
+          "start": "11:40:00.974881",
+          "breaks": []
+        },
+        {
+          "name": "anti-trust essentials training",
+          "start": "20:11:46.218865",
+          "breaks": []
+        },
+        {
+          "name": "Watch Growth talks Q7A",
+          "start": "20:31:56.307402",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "20:42:08.157976"
+    },
+    "2022-11-15": {
+      "priorities": [
+        {
+          "name": "Respond IT emails",
+          "done": false
+        },
+        {
+          "name": "Request 360 feedback",
+          "done": true
+        },
+        {
+          "name": "Release build failing on Oak",
+          "done": true
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        },
+        {
+          "name": "Update documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Request 360 feedback",
+          "start": "11:00:58.532450",
+          "breaks": []
+        },
+        {
+          "name": "Release build failing on Oak",
+          "start": "13:58:13.151728",
+          "breaks": []
+        }
+      ],
+      "notes": ["ask for FP feedback email"],
+      "end_time": "17:07:18.044438"
+    },
+    "2022-11-17": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Review Spyros QMTest changes",
+          "done": true
+        },
+        {
+          "name": "Make Growth plan",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "Create AaptorFO Trac page",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun integration test",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Spyros QMTest changes",
+          "start": "08:33:35.489817",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "18:39:17.851272"
+    },
+    "2022-11-18": {
+      "priorities": [
+        {
+          "name": "EHS induction",
+          "done": false
+        },
+        {
+          "name": "Watch Growth talks Q&A",
+          "done": true
+        },
+        {
+          "name": "Make growth talks plan",
+          "done": true
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun integration",
+          "done": false
+        },
+        {
+          "name": "Create AdaptorFO Trac page",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Watch Growth talks Q&A",
+          "start": "11:30:08.037857",
+          "breaks": []
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "start": "13:34:40.839459",
+          "breaks": []
+        },
+        {
+          "name": "Make growth talks plan",
+          "start": "13:42:12.052428",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-16": {
+      "priorities": [
+        {
+          "name": "Respond IT emails",
+          "done": true
+        },
+        {
+          "name": "Request WorkDay add FP members",
+          "done": true
+        },
+        {
+          "name": "TwoFish",
+          "done": true
+        },
+        {
+          "name": "Update documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun example",
+          "done": false
+        },
+        {
+          "name": "QMTest 3 pipeline conversion",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Closing 30062",
+          "start": "10:52:10.520765",
+          "breaks": []
+        },
+        {
+          "name": "TwoFish",
+          "start": "12:27:48.771935",
+          "breaks": []
+        },
+        {
+          "name": "Request WorkDay add FP members",
+          "start": "15:10:09.817720",
+          "breaks": []
+        },
+        {
+          "name": "Respond IT emails",
+          "start": "15:24:43.279611",
+          "breaks": []
+        },
+        {
+          "name": "Watch workstream overview video",
+          "start": "15:38:14.852614",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:13:33.388809"
+    },
+    "2022-11-21": {
+      "priorities": [
+        {
+          "name": "Set goals in workday",
+          "done": false
+        },
+        {
+          "name": "EHS induction",
+          "done": true
+        },
+        {
+          "name": "respond to Jo on Contingent workers",
+          "done": true
+        },
+        {
+          "name": "check for files existence in test",
+          "done": true
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "End of year review Ben Stokes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "respond to Jo on Contingent workers",
+          "start": "10:13:03.466498",
+          "breaks": []
+        },
+        {
+          "name": "EHS induction",
+          "start": "10:17:34.336674",
+          "breaks": []
+        },
+        {
+          "name": "Set goals in workday",
+          "start": "13:57:53.553475",
+          "breaks": []
+        },
+        {
+          "name": "check for files existence in test",
+          "start": "16:24:59.132216",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:07:20.386716"
+    },
+    "2022-11-22": {
+      "priorities": [
+        {
+          "name": "End of year review Ben S",
+          "done": true
+        },
+        {
+          "name": "End of year review Spiros",
+          "done": false
+        },
+        {
+          "name": "Set goals in workday",
+          "done": false
+        },
+        {
+          "name": "Review Spiros SPARSE change",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO autorun integration test",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Set goals in workday",
+          "start": "10:25:31.722204",
+          "breaks": []
+        },
+        {
+          "name": "Missing file review",
+          "start": "10:27:40.090238",
+          "breaks": []
+        },
+        {
+          "name": "pre-commit clang-format serial",
+          "start": "14:12:49.454116",
+          "breaks": []
+        },
+        {
+          "name": "Watch xxelerator talk",
+          "start": "14:13:06.608955",
+          "breaks": []
+        },
+        {
+          "name": "improve gqm messaging",
+          "start": "17:01:55.419930",
+          "breaks": []
+        },
+        {
+          "name": "End of year review Ben S",
+          "start": "17:02:06.043758",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:58:57.384097"
+    },
+    "2022-11-23": {
+      "priorities": [
+        {
+          "name": "\"Respond to both christmas party invites\"",
+          "done": true
+        },
+        {
+          "name": "Set goals in workday",
+          "done": true
+        },
+        {
+          "name": "Review Spiros SPARSE change",
+          "done": true
+        },
+        {
+          "name": "End of year review Spiros",
+          "done": false
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Add AdaptorFO to FO trac page",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "\"Respond to both christmas party invites\"",
+          "start": "14:05:42.498496",
+          "breaks": []
+        },
+        {
+          "name": "Set goals in workday",
+          "start": "14:11:29.470455",
+          "breaks": []
+        },
+        {
+          "name": "Review Spiros SPARSE change",
+          "start": "16:29:35.032437",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:03:35.515609"
+    },
+    "2022-11-24": {
+      "priorities": [
+        {
+          "name": "End of year review Spiros",
+          "done": true
+        },
+        {
+          "name": "Add AdaptorFO to FO Trac page",
+          "done": true
+        },
+        {
+          "name": "Growth talks developmental goals",
+          "done": false
+        },
+        {
+          "name": "Do personality test",
+          "done": true
+        },
+        {
+          "name": "Siemens economic survey",
+          "done": false
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "End of year review Spiros",
+          "start": "09:24:26.915979",
+          "breaks": []
+        },
+        {
+          "name": "Add AdaptorFO to FO Trac page",
+          "start": "10:25:27.461619",
+          "breaks": []
+        },
+        {
+          "name": "Growth talks developmental goals",
+          "start": "10:57:12.136982",
+          "breaks": [
+            {
+              "start": "11:26:12.193116",
+              "end": "13:47:14.390902"
+            }
+          ]
+        },
+        {
+          "name": "Do personality test",
+          "start": "13:53:16.866519",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:48:34.338457"
+    },
+    "2022-11-25": {
+      "priorities": [
+        {
+          "name": "Fix file existence check",
+          "done": false
+        },
+        {
+          "name": "Siemens economic survey",
+          "done": false
+        },
+        {
+          "name": "End of year summary",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Case fails IP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "End of year summary",
+          "start": "08:40:49.970798",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-28": {
+      "priorities": [
+        {
+          "name": "Mohammad end of year review",
+          "done": true
+        },
+        {
+          "name": "End of year summary",
+          "done": false
+        },
+        {
+          "name": "Review Spiros overriden EquationScaling",
+          "done": true
+        },
+        {
+          "name": "Fix file existence check",
+          "done": false
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Spiros overriden EquationScaling",
+          "start": "11:06:08.905604",
+          "breaks": []
+        },
+        {
+          "name": "Mohammad end of year review",
+          "start": "11:26:19.727968",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-29": {
+      "priorities": [
+        {
+          "name": "End of Year summary",
+          "done": true
+        },
+        {
+          "name": "Siemens economic survey",
+          "done": true
+        },
+        {
+          "name": "Move 2022.2 tickets out of milestone",
+          "done": true
+        },
+        {
+          "name": "Fix file existence check",
+          "done": true
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "done": true
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "End of Year summary",
+          "start": "10:53:32.284901",
+          "breaks": []
+        },
+        {
+          "name": "Siemens economic survey",
+          "start": "14:31:28.862909",
+          "breaks": []
+        },
+        {
+          "name": "Fix file existence check",
+          "start": "14:40:30.602549",
+          "breaks": []
+        },
+        {
+          "name": "Move 2022.2 tickets out of milestone",
+          "start": "14:52:35.408076",
+          "breaks": []
+        },
+        {
+          "name": "Fix file existence check",
+          "start": "14:55:01.119901",
+          "breaks": []
+        },
+        {
+          "name": "Marco pre-commit clang-tidy",
+          "start": "15:22:37.321939",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-11-30": {
+      "priorities": [
+        {
+          "name": "Check gqm messaging fix",
+          "done": true
+        },
+        {
+          "name": "Update AdaptorFO Documentation",
+          "done": false
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Case fails IP but used to pass",
+          "done": false
+        },
+        {
+          "name": "Create AdaptorFO Trac page",
+          "done": true
+        },
+        {
+          "name": "Move doer to cloud",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check gqm messaging fix",
+          "start": "09:28:54.512023",
+          "breaks": []
+        },
+        {
+          "name": "Create AdaptorFO Trac page",
+          "start": "09:52:15.631592",
+          "breaks": []
+        },
+        {
+          "name": "Check gqm messaging fix",
+          "start": "10:42:51.369135",
+          "breaks": []
+        },
+        {
+          "name": "Review Oliver change",
+          "start": "12:10:52.676724",
+          "breaks": []
+        },
+        {
+          "name": "Case fails IP but used to pass",
+          "start": "12:16:56.594613",
+          "breaks": []
+        },
+        {
+          "name": "Make gWAP multithreaded",
+          "start": "15:01:09.690279",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:24:06.545086"
+    },
+    "2022-12-01": {
+      "priorities": [
+        {
+          "name": "gqm messaging",
+          "done": false
+        },
+        {
+          "name": "gWAP threading",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Check and move IP ticket along",
+          "done": false
+        },
+        {
+          "name": "Sort email access",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gWAP threading",
+          "start": "10:28:34.821606",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-02": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Check and move IP ticket",
+          "done": true
+        },
+        {
+          "name": "gWAP threading",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "gqm messaging",
+          "done": true
+        },
+        {
+          "name": "Update AdaptorFO documentation",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gWAP threading",
+          "start": "09:45:37.246138",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "10:31:12.622750",
+          "breaks": []
+        },
+        {
+          "name": "Check and move IP ticket",
+          "start": "10:31:32.174296",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "10:57:06.865753",
+          "breaks": []
+        },
+        {
+          "name": "gqm messaging",
+          "start": "16:26:15.721586",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-05": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "gWAP threading",
+          "done": false
+        },
+        {
+          "name": "Check gqm messaging",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Update AdaptorFO Documentation",
+          "done": true
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check gqm messaging",
+          "start": "10:15:22.566505",
+          "breaks": []
+        },
+        {
+          "name": "Update AdaptorFO Documentation",
+          "start": "10:17:22.039063",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "11:27:51.034440",
+          "breaks": []
+        },
+        {
+          "name": "Check gqm messaging",
+          "start": "11:48:21.881882",
+          "breaks": [
+            {
+              "start": "11:52:58.011030",
+              "end": "13:51:11.462869"
+            }
+          ]
+        },
+        {
+          "name": "Dovico",
+          "start": "15:24:46.381036",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-06": {
+      "priorities": [
+        {
+          "name": "Dovico",
+          "done": false
+        },
+        {
+          "name": "Read concurrency book",
+          "done": false
+        },
+        {
+          "name": "gWAP threading unit tests",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Dovico",
+          "start": "10:46:18.053316",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-07": {
+      "priorities": [
+        {
+          "name": "Sign off end of year summary",
+          "done": true
+        },
+        {
+          "name": "Dovico",
+          "done": true
+        },
+        {
+          "name": "Read concurrency book",
+          "done": false
+        },
+        {
+          "name": "gWAP threading unit tests",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "QMTets pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Dovico",
+          "start": "10:27:57.429845",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "12:02:46.642655",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "12:10:11.308686",
+          "breaks": []
+        },
+        {
+          "name": "Sign off end of year summary",
+          "start": "15:40:14.100817",
+          "breaks": []
+        },
+        {
+          "name": "Dovico",
+          "start": "16:59:45.366888",
+          "breaks": []
+        },
+        {
+          "name": "tomorrow",
+          "start": "17:12:30.384043",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:16:16.173486"
+    },
+    "2022-12-08": {
+      "priorities": [
+        {
+          "name": "Sign off end of year summary",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "QMTest rebase feature branch",
+          "done": true
+        },
+        {
+          "name": "Read concurrency book",
+          "done": false
+        },
+        {
+          "name": "gWAP threading unit tests",
+          "done": true
+        },
+        {
+          "name": "gWAP threading respond to review",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Triage",
+          "start": "11:24:44.807103",
+          "breaks": []
+        },
+        {
+          "name": "QMTest rebase feature branch",
+          "start": "14:10:42.891679",
+          "breaks": []
+        },
+        {
+          "name": "gWAP threading unit tests",
+          "start": "14:45:29.025415",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-09": {
+      "priorities": [
+        {
+          "name": "Respond to gWAP threading review",
+          "done": false
+        },
+        {
+          "name": "Read concurrency book",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        },
+        {
+          "name": "Write up goals",
+          "done": false
+        },
+        {
+          "name": "Do email things",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Respond to gWAP threading review",
+          "start": "10:14:41.511769",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "10:35:26.612992",
+          "breaks": []
+        },
+        {
+          "name": "Read concurrency book",
+          "start": "11:36:29.622436",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "17:05:09.696561",
+          "breaks": []
+        }
+      ],
+      "notes": ["spent hours setting up a build environment"]
+    },
+    "2022-12-12": {
+      "priorities": [
+        {
+          "name": "Fix file check for QMTest",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Respond to gWAP threading Ben S",
+          "done": false
+        },
+        {
+          "name": "Do email things",
+          "done": false
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        },
+        {
+          "name": "Write up goals",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix file check for QMTest",
+          "start": "10:51:10.744111",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "14:19:45.627205",
+          "breaks": []
+        },
+        {
+          "name": "Review constantin validate linear",
+          "start": "15:51:00.964939",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-13": {
+      "priorities": [
+        {
+          "name": "DevCI slides",
+          "done": true
+        },
+        {
+          "name": "Review Constantin",
+          "done": true
+        },
+        {
+          "name": "Investigate Daren CI failures",
+          "done": true
+        },
+        {
+          "name": "Plan holiday",
+          "done": true
+        },
+        {
+          "name": "Respond to gWAP review Ben S",
+          "done": true
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "DevCI slides",
+          "start": "10:51:23.963674",
+          "breaks": []
+        },
+        {
+          "name": "Review Constantin",
+          "start": "11:25:39.058512",
+          "breaks": []
+        },
+        {
+          "name": "Investigate Daren CI failures",
+          "start": "13:34:08.614413",
+          "breaks": []
+        },
+        {
+          "name": "Plan holiday",
+          "start": "13:36:57.797264",
+          "breaks": []
+        },
+        {
+          "name": "Respond to gWAP review Ben S",
+          "start": "14:22:17.739924",
+          "breaks": []
+        },
+        {
+          "name": "Investigate Daren CI failures",
+          "start": "14:37:48.881886",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipelines",
+          "start": "14:42:45.784311",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:27:19.131071"
+    },
+    "2022-12-14": {
+      "priorities": [
+        {
+          "name": "QMTest pipelines",
+          "done": true
+        },
+        {
+          "name": "Reviews",
+          "done": true
+        },
+        {
+          "name": "Test Sjoerd build instructions",
+          "done": false
+        },
+        {
+          "name": "gWAP threading",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Write up goals",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Reviews",
+          "start": "10:16:00.438205",
+          "breaks": []
+        },
+        {
+          "name": "QMTest pipelines",
+          "start": "14:21:05.690844",
+          "breaks": []
+        },
+        {
+          "name": "Test Sjoerd build instructions",
+          "start": "15:55:08.262554",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-15": {
+      "priorities": [
+        {
+          "name": "gWAP threading revert",
+          "done": false
+        },
+        {
+          "name": "setup CLion",
+          "done": false
+        },
+        {
+          "name": "Check QMTest pipelines",
+          "done": false
+        },
+        {
+          "name": "Write up goals",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Read up on specialised integrator",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": [
+        "Helping Spiros",
+        "Spent the morning solving the accidental develop into stable merge",
+        "Then was doing the threading fix",
+        "Then was helping Spiros",
+        "Then more git fixing"
+      ],
+      "end_time": "17:45:11.096911"
+    },
+    "2022-12-16": {
+      "priorities": [
+        {
+          "name": "Write up goals",
+          "done": true
+        },
+        {
+          "name": "gWAP threading pass tests",
+          "done": true
+        },
+        {
+          "name": "Fix gproms requirements on Linux",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Setup CLion",
+          "done": false
+        },
+        {
+          "name": "QMTest pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Write up goals",
+          "start": "10:17:15.198160",
+          "breaks": []
+        },
+        {
+          "name": "gWAP threading pass tests",
+          "start": "13:54:15.713690",
+          "breaks": []
+        },
+        {
+          "name": "Fix gproms requirements on Linux",
+          "start": "15:47:31.366799",
+          "breaks": []
+        },
+        {
+          "name": "Setup CLion",
+          "start": "15:48:20.261039",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:47:20.531819"
+    },
+    "2022-12-19": {
+      "priorities": [
+        {
+          "name": "Review Istvan conan changes",
+          "done": true
+        },
+        {
+          "name": "Respond to gWAP review",
+          "done": false
+        },
+        {
+          "name": "Fix gproms requirements on Linux",
+          "done": false
+        },
+        {
+          "name": "Setup CLion build arguments",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Add goals to system",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Setup CLion build arguments",
+          "start": "09:38:22.418547",
+          "breaks": []
+        },
+        {
+          "name": "Review Istvan conan changes",
+          "start": "10:55:06.110936",
+          "breaks": []
+        },
+        {
+          "name": "Respond to gWAP review",
+          "start": "12:03:07.152443",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2022-12-20": {
+      "priorities": [
+        {
+          "name": "Redesign gWAP threading",
+          "done": false
+        },
+        {
+          "name": "Add goals to system",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Fix gproms requirements on Linux",
+          "done": true
+        },
+        {
+          "name": "Setup CLion build arguments",
+          "done": false
+        },
+        {
+          "name": "Test pipeline",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Redesign gWAP threading",
+          "start": "09:51:53.831025",
+          "breaks": []
+        },
+        {
+          "name": "Helping Martin with Jira",
+          "start": "11:07:45.320346",
+          "breaks": []
+        },
+        {
+          "name": "Fix gproms requirements on Linux",
+          "start": "16:24:13.116179",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:45:56.759572"
+    },
+    "2022-12-21": {
+      "priorities": [
+        {
+          "name": "Add goals to system",
+          "done": true
+        },
+        {
+          "name": "Update Triage diagram with duplicates note",
+          "done": true
+        },
+        {
+          "name": "Redesign gWAP threading",
+          "done": false
+        },
+        {
+          "name": "Setup email things",
+          "done": false
+        },
+        {
+          "name": "Setup CLion build arguments",
+          "done": false
+        },
+        {
+          "name": "Test QMTest pipeline",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Add goals to system",
+          "start": "09:46:33.396163",
+          "breaks": []
+        },
+        {
+          "name": "Update Triage diagram with duplicates note",
+          "start": "10:31:49.875949",
+          "breaks": []
+        },
+        {
+          "name": "Redesign gWAP threading",
+          "start": "11:07:05.666213",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:47:14.717909"
+    }
+  },
+  "version": "1.4.0"
+}
