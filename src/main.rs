@@ -27,15 +27,15 @@ fn main() -> anyhow::Result<()> {
 fn execute_command(args: CliParser) -> ParseResult<()> {
     match args.command {
         Command::Plan { date } => plan_priorities(date_from_arg(date.as_str())?),
-        Command::Copy { from, to } => {
+        Command::CopyPriorities { from, to } => {
             copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
         }
         Command::Show { date } => show(&date_from_arg(date.as_str())?),
         Command::ShowLast {} => {
             show_last();
         }
-        Command::Tick { id } => tick(&(id - 1)),
-        Command::UnTick { id } => un_tick(&(id - 1)),
+        Command::Tick { id } => tick(id - 1),
+        Command::UnTick { id } => un_tick(id - 1),
         Command::Context {} => context(),
         Command::Contexts {} => contexts(),
         Command::SetContext { context } => set_context(context),

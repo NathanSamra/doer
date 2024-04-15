@@ -21,14 +21,9 @@ fn storage() -> Storage {
 pub fn plan_priorities(date: NaiveDate) {
     let mut data = data();
     let mut edit_guard = EditDayGuard::new(date, &mut data);
-    let mut tasks = vec![];
-
-    if !edit_guard.day().priorities.is_empty() {
-        tasks.extend(edit_guard.day().priorities.clone())
-    }
-
+    let mut tasks = edit_guard.day().priorities().clone();
     collect_tasks(&mut tasks);
-    edit_guard.day().priorities = order_tasks(&tasks);
+    edit_guard.day().set_priorities(order_tasks(&tasks));
     println!("Planning complete")
 }
 
@@ -36,7 +31,7 @@ pub fn copy_priorities(date_from: &NaiveDate, date_to: &NaiveDate) {
     let from = data().day(date_from);
     let mut data = data();
     let mut edit_guard = EditDayGuard::new(*date_to, &mut data);
-    edit_guard.day().priorities = from.priorities.clone();
+    edit_guard.day().set_priorities(from.priorities().clone());
 }
 
 pub fn show(date: &NaiveDate) {
@@ -60,23 +55,23 @@ pub fn last_date() -> Option<NaiveDate> {
     data().last_date()
 }
 
-pub fn tick(id: &PriorityId) {
+pub fn tick(id: PriorityId) {
     set_tick(id, true);
 }
 
-pub fn un_tick(id: &PriorityId) {
+pub fn un_tick(id: PriorityId) {
     set_tick(id, false);
 }
 
-fn set_tick(id: &PriorityId, state: bool) {
+fn set_tick(id: PriorityId, state: bool) {
     let mut data = data();
     let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    let max_id = edit_guard.day().priorities.len() - 1;
-    if id > &max_id {
+    let max_id = edit_guard.day().priorities().len() - 1;
+    if id > max_id {
         println!("Invalid id {id}, maximum is {max_id}");
         return;
     }
-    edit_guard.day().priorities[*id].done = state;
+    edit_guard.day().set_done(id, state);
 }
 
 pub fn context() {
@@ -104,13 +99,13 @@ pub fn set_focus(focus: &str) {
 pub fn set_focus_to_priority(id: PriorityId) {
     let mut data = data();
     let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    let max_id = edit_guard.day().priorities.len() - 1;
+    let max_id = edit_guard.day().priorities().len() - 1;
     if id > max_id {
         println!("Invalid id {id}, maximum is {max_id}");
         return;
     }
     // TODO: Find a better way of doing this than simply copying the name. The focus and priority should reference the same task object more explicitly.
-    let focus_name = edit_guard.day().priorities[id].name.clone();
+    let focus_name = edit_guard.day().priorities()[id].name.clone();
     edit_guard.day().set_focus(focus_name);
 }
 

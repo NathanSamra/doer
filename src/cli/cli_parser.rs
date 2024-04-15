@@ -16,7 +16,8 @@ pub enum Command {
         /// Date to plan
         date: String,
     },
-    Copy {
+    // TODO: I think instead there should also be methods for moving tasks along or copying everything
+    CopyPriorities {
         /// Date/day to copy from
         from: String,
         /// Date/day to copy to

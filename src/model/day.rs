@@ -1,3 +1,4 @@
+use crate::cli::commands::PriorityId;
 use crate::model::focus::Focus;
 use crate::model::r#break::BreakError;
 use crate::model::task::Task;
@@ -11,7 +12,7 @@ use std::fmt::{Debug, Display};
 #[derive(Clone, Default, Deserialize, Serialize)]
 pub struct Day {
     // TODO: Actually I don't think any data in Day should be public. It has too much logic going on.
-    pub priorities: Vec<Task>,
+    priorities: Vec<Task>,
     log: Vec<Focus>,
     // TODO: I think the end time system doesn't work, especially with the focuses and breaks system.
     // Maybe the schedule should be independent from Focus and instead reference relevant Focuses and Breaks.
@@ -20,6 +21,19 @@ pub struct Day {
 }
 
 impl Day {
+    // TODO: I feel like just having a getter and setter is lazy. More encapsulation is needed.
+    pub fn priorities(&self) -> &Vec<Task> {
+        &self.priorities
+    }
+
+    pub fn set_priorities(&mut self, priorities: Vec<Task>) {
+        self.priorities = priorities;
+    }
+
+    pub fn set_done(&mut self, id: PriorityId, state: bool) {
+        self.priorities[id].done = state;
+    }
+
     pub fn focus(&self) -> Option<&Focus> {
         match self.log.last() {
             None => None,
