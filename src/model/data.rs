@@ -87,6 +87,7 @@ impl Data {
         None
     }
 
+    // TODO: Look at globset or walkdir crates for better file globbing
     fn last_year(&self) -> Option<YearNum> {
         // TODO: Handle errors
         let years = fs::read_dir(self.database_dir())

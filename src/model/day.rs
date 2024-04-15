@@ -93,6 +93,7 @@ pub struct Focus {
     pub breaks: Vec<Break>,
 }
 
+// TODO: Use crate thiserror to reduce boilerplate
 pub enum BreakError {
     NoBreak,
     BreakAlreadyEnded,

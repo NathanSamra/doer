@@ -15,6 +15,7 @@ pub struct Client {
     data: Data,
 }
 
+// TODO: Could use termcolor crate to make the output prettier
 impl Client {
     pub fn new() -> Self {
         let data = Data::new(database(), context());
@@ -151,6 +152,7 @@ impl Client {
     }
 }
 
+// TODO: Use inquire crate for better user input collecting.
 // TODO: Have the unfinished items from the previous day (handle weekends? Last day with items?) be added automatically
 fn collect_items() -> Vec<Priority> {
     println!("List items:");
