@@ -7,6 +7,7 @@ use std::fs;
 use std::fs::{File, OpenOptions};
 use std::io::{Read, Write};
 use std::path::PathBuf;
+use thiserror::Error;
 use walkdir::WalkDir;
 
 const DEFAULT_CONTEXT: &str = "default";
@@ -18,6 +19,19 @@ pub struct StorageHandler {
 
 // TODO: Use a completely temp dir for testing
 impl StorageHandler {
+    pub fn connect(dirs: ProjectDirs) -> Result<Self, StorageError> {
+        // TODO: Add qualifier?
+        // TODO: Add organisation?
+        // TODO: Handle errors
+
+        if is_locked(&dirs) {
+            return Err(StorageError::StorageAlreadyConnected);
+        }
+        let handler = Self { dirs };
+        handler.make_lock_file();
+        Ok(handler)
+    }
+
     pub fn load_database(&self) -> Database {
         let _path = self.database_dir();
         todo!()
@@ -65,8 +79,7 @@ impl StorageHandler {
     }
 
     fn root(&self) -> PathBuf {
-        let version_major = app_version().major;
-        self.dirs.data_dir().join(format!("v{version_major}"))
+        root_dir(&self.dirs)
     }
 
     fn state(&self) -> State {
@@ -99,16 +112,37 @@ impl StorageHandler {
     fn state_file(&self) -> PathBuf {
         self.root().join("state.toml")
     }
+
+    fn make_lock_file(&self) {
+        todo!()
+    }
+
+    fn remove_lock_file(&self) {
+        todo!()
+    }
 }
 
-// TODO: Default doesn't seem right. Rename to load()?
-impl Default for StorageHandler {
-    fn default() -> Self {
-        // TODO: Add qualifier?
-        // TODO: Add organisation?
-        // TODO: Handle errors
-        let dirs = ProjectDirs::from("", "", "doer").unwrap();
-        Self { dirs }
+pub fn default_dirs() -> ProjectDirs {
+    // TODO: errors
+    ProjectDirs::from("", "", "doer").unwrap()
+}
+
+fn root_dir(dirs: &ProjectDirs) -> PathBuf {
+    let version_major = app_version().major;
+    dirs.data_dir().join(format!("v{version_major}"))
+}
+
+fn is_locked(_dirs: &ProjectDirs) -> bool {
+    todo!()
+}
+
+pub fn remove_lock(_dirs: &ProjectDirs) -> Result<(), StorageError> {
+    todo!()
+}
+
+impl Drop for StorageHandler {
+    fn drop(&mut self) {
+        self.remove_lock_file();
     }
 }
 
@@ -138,4 +172,12 @@ impl Default for State {
             version: app_version(),
         }
     }
+}
+
+#[derive(Error, Debug)]
+pub enum StorageError {
+    #[error("A storage handler is already connected to the data")]
+    StorageAlreadyConnected,
+    #[error("No lock file to remove")]
+    NoLockFile,
 }

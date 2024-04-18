@@ -41,9 +41,13 @@ pub enum Command {
         id: PriorityId,
     },
     Context {},
-    Contexts {},
+    ListContexts {},
     SetContext {
         /// Context to switch to
+        context: String,
+    },
+    NewContext {
+        /// Context to create
         context: String,
     },
     StartFocus {
@@ -58,4 +62,5 @@ pub enum Command {
         /// Note for today
         note: String,
     },
+    RemoveLock {},
 }

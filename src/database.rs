@@ -1,5 +1,6 @@
 use crate::model::day::Day;
 use crate::model::task::Task;
+use crate::storage::storage_handler::StorageHandler;
 use chrono::NaiveDate;
 use std::collections::HashMap;
 use thiserror::Error;
@@ -16,13 +17,31 @@ pub type Days = HashMap<NaiveDate, Day>;
 // accessible? When crossing to a new year maybe tasks should have a state saying Done/Not Done/Not Done and passed on to next year.
 // Or maybe we just add a prune() method that removes all completed/lost tasks from a defined year.
 pub struct Database {
+    storage: StorageHandler,
     tasks: Tasks,
     days: Days,
 }
 
 impl Database {
-    pub fn new(tasks: Tasks, days: Days) -> Self {
-        Self { tasks, days }
+    pub fn load(_storage: StorageHandler) -> Self {
+        todo!()
+    }
+
+    pub fn context(&self) -> String {
+        self.storage.context()
+    }
+
+    pub fn contexts(&self) -> Vec<String> {
+        self.storage.contexts()
+    }
+
+    pub fn set_context(&mut self, _context: String) {
+        // TODO: Reload data
+        todo!()
+    }
+
+    pub fn new_context(&mut self, _context: String) {
+        todo!()
     }
 
     pub fn last_date(&self) -> Option<NaiveDate> {
@@ -62,6 +81,12 @@ impl Database {
             None => Day::default(),
             Some(day) => day.clone(),
         }
+    }
+}
+
+impl Drop for Database {
+    fn drop(&mut self) {
+        todo!()
     }
 }
 

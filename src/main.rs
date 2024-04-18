@@ -7,7 +7,7 @@ mod storage;
 
 use crate::cli::cli_parser::{CliParser, Command};
 use crate::cli::controller::{Controller, PriorityId};
-use crate::storage::storage_handler::StorageHandler;
+use crate::storage::storage_handler::{default_dirs, StorageHandler};
 use chrono::{Days, Local, NaiveDate, ParseResult, Weekday};
 use clap::Parser;
 
@@ -23,7 +23,7 @@ fn main() -> anyhow::Result<()> {
 // TODO: Print error messages in a nice way instead of getting the stack trace. The trace should
 // just be for very rare cases.
 fn execute_command(args: CliParser) -> ParseResult<()> {
-    let mut controller = Controller::new(StorageHandler::default());
+    let mut controller = Controller::new(StorageHandler::connect(default_dirs()).unwrap());
     match args.command {
         Command::AddTask { date, task } => controller.add_task(date_from_arg(date.as_str())?, task),
         Command::Plan { date } => controller.plan_priorities(date_from_arg(date.as_str())?),
@@ -37,7 +37,8 @@ fn execute_command(args: CliParser) -> ParseResult<()> {
         Command::Tick { id } => controller.tick(id - 1),
         Command::UnTick { id } => controller.un_tick(id - 1),
         Command::Context {} => controller.context(),
-        Command::Contexts {} => controller.contexts(),
+        Command::ListContexts {} => controller.contexts(),
+        Command::NewContext { context } => controller.new_context(context),
         Command::SetContext { context } => controller.set_context(context),
         Command::StartFocus { focus } => match focus.parse::<PriorityId>() {
             Ok(id) => controller.start_focus(id - 1),
@@ -47,6 +48,7 @@ fn execute_command(args: CliParser) -> ParseResult<()> {
         Command::StartDay {} => controller.start_day(),
         Command::EndDay {} => controller.end_day(),
         Command::Note { note } => controller.add_note(note),
+        Command::RemoveLock {} => controller.remove_lock(),
     }
 
     Ok(())

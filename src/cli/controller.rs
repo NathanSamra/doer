@@ -1,7 +1,7 @@
 use crate::database::{Database, TaskId};
 use crate::display_day::DayDisplayer;
 use crate::model::task::Task;
-use crate::storage::storage_handler::StorageHandler;
+use crate::storage::storage_handler::{default_dirs, remove_lock, StorageHandler};
 use chrono::{Local, NaiveDate};
 use std::io::stdin;
 
@@ -11,14 +11,14 @@ pub type PriorityId = usize;
 
 // TODO: Could use termcolor crate to make the output prettier
 pub struct Controller {
-    storage: StorageHandler,
     database: Database,
 }
 
 impl Controller {
     pub fn new(storage: StorageHandler) -> Controller {
-        let database = storage.load_database();
-        Controller { storage, database }
+        Controller {
+            database: Database::load(storage),
+        }
     }
 
     pub fn add_task(&mut self, date: NaiveDate, name: String) {
@@ -94,18 +94,22 @@ impl Controller {
     }
 
     pub fn context(&self) {
-        println!("{}", self.storage.context())
+        println!("{}", self.database.context())
     }
 
     pub fn contexts(&self) {
         // TODO: Try the default print of a vector, or implement Display for Contexts
-        for context in self.storage.contexts() {
+        for context in self.database.contexts() {
             println!("{}", context)
         }
     }
 
     pub fn set_context(&mut self, context: String) {
-        self.storage.set_context(context)
+        self.database.set_context(context)
+    }
+
+    pub fn new_context(&mut self, context: String) {
+        self.database.new_context(context)
     }
 
     // TODO: PriorityId is no longer an appropriate type name
@@ -151,6 +155,12 @@ impl Controller {
         let mut day = self.database.get_day(&date).clone();
         day.add_note(note);
         self.database.set_day(date, day);
+    }
+
+    pub fn remove_lock(&mut self) {
+        println!("Warning: Ensure no other instances are running");
+        // TODO: Handle errors
+        remove_lock(&default_dirs()).unwrap();
     }
 }
 
