@@ -1,4 +1,4 @@
-use crate::cli::commands::PriorityId;
+use crate::cli::controller::PriorityId;
 use clap::{Parser, Subcommand};
 
 #[derive(Parser, Debug)]

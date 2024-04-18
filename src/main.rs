@@ -6,7 +6,7 @@ mod model;
 mod storage;
 
 use crate::cli::cli_parser::{CliParser, Command};
-use crate::cli::commands::{Controller, PriorityId};
+use crate::cli::controller::{Controller, PriorityId};
 use crate::storage::storage_handler::StorageHandler;
 use chrono::{Days, Local, NaiveDate, ParseResult, Weekday};
 use clap::Parser;
