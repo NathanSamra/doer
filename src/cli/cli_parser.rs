@@ -12,6 +12,10 @@ pub struct CliParser {
 // TODO: Rethink all of these. Maybe come up with a resource based approach instead of actions
 #[derive(Subcommand, Debug)]
 pub enum Command {
+    AddTask {
+        date: String,
+        task: String,
+    },
     Plan {
         /// Date to plan
         date: String,
@@ -42,13 +46,13 @@ pub enum Command {
         /// Context to switch to
         context: String,
     },
-    SetFocus {
+    StartFocus {
         // TODO: Consider being more explicit over ID or name, i.e two different variables here.
         /// name or ID of focus
         focus: String,
     },
     StartBreak {},
-    EndBreak {},
+    StartDay {},
     EndDay {},
     Note {
         /// Note for today

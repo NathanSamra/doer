@@ -1,5 +1,7 @@
+use crate::database::Database;
 use crate::metadata::app_version;
 use directories::ProjectDirs;
+use semver::Version;
 use serde::{Deserialize, Serialize};
 use std::fs;
 use std::fs::{File, OpenOptions};
@@ -10,13 +12,18 @@ use walkdir::WalkDir;
 const DEFAULT_CONTEXT: &str = "default";
 
 // TODO: Move to own file
-pub struct Storage {
+pub struct StorageHandler {
     dirs: ProjectDirs,
 }
 
 // TODO: Use a completely temp dir for testing
-impl Storage {
-    pub fn database_dir(&self) -> PathBuf {
+impl StorageHandler {
+    pub fn load_database(&self) -> Database {
+        let _path = self.database_dir();
+        todo!()
+    }
+
+    fn database_dir(&self) -> PathBuf {
         // Handle errors
         let context = self.context();
         let dir = self.root().join(context);
@@ -94,7 +101,8 @@ impl Storage {
     }
 }
 
-impl Default for Storage {
+// TODO: Default doesn't seem right. Rename to load()?
+impl Default for StorageHandler {
     fn default() -> Self {
         // TODO: Add qualifier?
         // TODO: Add organisation?
@@ -117,7 +125,17 @@ impl Default for Context {
     }
 }
 
-#[derive(Default, Deserialize, Serialize)]
+#[derive(Deserialize, Serialize)]
 struct State {
     pub context: Context,
+    pub version: Version,
+}
+
+impl Default for State {
+    fn default() -> Self {
+        Self {
+            context: Context::default(),
+            version: app_version(),
+        }
+    }
 }

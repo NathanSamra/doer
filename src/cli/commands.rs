@@ -1,7 +1,7 @@
-use crate::data::Data;
-use crate::edit_day_guard::EditDayGuard;
+use crate::database::{Database, TaskId};
+use crate::display_day::DayDisplayer;
 use crate::model::task::Task;
-use crate::storage::Storage;
+use crate::storage::storage_handler::StorageHandler;
 use chrono::{Local, NaiveDate};
 use std::io::stdin;
 
@@ -10,164 +10,153 @@ const MAX_NUM_PRIORITIES: usize = 6;
 pub type PriorityId = usize;
 
 // TODO: Could use termcolor crate to make the output prettier
-fn data() -> Data {
-    Data::new(storage().database_dir())
+pub struct Controller {
+    storage: StorageHandler,
+    database: Database,
 }
 
-fn storage() -> Storage {
-    Storage::default()
-}
-
-pub fn plan_priorities(date: NaiveDate) {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(date, &mut data);
-    let mut tasks = edit_guard.day().priorities().clone();
-    collect_tasks(&mut tasks);
-    edit_guard.day().set_priorities(order_tasks(&tasks));
-    println!("Planning complete")
-}
-
-pub fn copy_priorities(date_from: &NaiveDate, date_to: &NaiveDate) {
-    let from = data().day(date_from);
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(*date_to, &mut data);
-    edit_guard.day().set_priorities(from.priorities().clone());
-}
-
-pub fn show(date: &NaiveDate) {
-    let day = &data().day(date);
-    println!("{}", day);
-}
-
-pub fn show_last() {
-    match last_date() {
-        None => {
-            println!("No data to show")
-        }
-        Some(date) => {
-            println!("Last day was {date}:");
-            show(&date);
-        }
+impl Controller {
+    pub fn new(storage: StorageHandler) -> Controller {
+        let database = storage.load_database();
+        Controller { storage, database }
     }
-}
 
-pub fn last_date() -> Option<NaiveDate> {
-    data().last_date()
-}
-
-pub fn tick(id: PriorityId) {
-    set_tick(id, true);
-}
-
-pub fn un_tick(id: PriorityId) {
-    set_tick(id, false);
-}
-
-fn set_tick(id: PriorityId, state: bool) {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    let max_id = edit_guard.day().priorities().len() - 1;
-    if id > max_id {
-        println!("Invalid id {id}, maximum is {max_id}");
-        return;
+    pub fn add_task(&mut self, date: NaiveDate, name: String) {
+        let task = Task::new(name);
+        let task_id = self.database.add_task(task);
+        let mut day = self.database.get_day(&date).clone();
+        // TODO: Handle errors
+        day.add_task(task_id).unwrap();
+        self.database.set_day(date, day);
     }
-    edit_guard.day().set_done(id, state);
-}
 
-pub fn context() {
-    println!("{}", storage().context())
-}
-
-pub fn contexts() {
-    // TODO: Try the default print of a vector, or implement Display for Contexts
-    for context in storage().contexts() {
-        println!("{}", context)
+    pub fn plan_priorities(&mut self, date: NaiveDate) {
+        let mut day = self.database.get_day(&date).clone();
+        let task_ids = day.tasks();
+        let tasks = task_ids
+            .iter()
+            .map(|id| (*id, self.database.get_task(id).unwrap().name.clone()))
+            .collect();
+        let priorities = order_tasks(&tasks);
+        day.set_priorities(priorities);
+        self.database.set_day(date, day);
+        println!("Planning complete")
     }
-}
 
-pub fn set_context(context: String) {
-    storage().set_context(context)
-}
-
-pub fn set_focus(focus: &str) {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    edit_guard.day().set_focus(focus.to_string());
-}
-
-pub fn set_focus_to_priority(id: PriorityId) {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    let max_id = edit_guard.day().priorities().len() - 1;
-    if id > max_id {
-        println!("Invalid id {id}, maximum is {max_id}");
-        return;
+    pub fn copy_priorities(&mut self, date_from: &NaiveDate, date_to: &NaiveDate) {
+        let priorities = self.database.get_day(date_from).priorities().clone();
+        let mut day = self.database.get_day(date_to).clone();
+        day.set_priorities(priorities);
+        self.database.set_day(*date_to, day);
     }
-    // TODO: Find a better way of doing this than simply copying the name. The focus and priority should reference the same task object more explicitly.
-    let focus_name = edit_guard.day().priorities()[id].name.clone();
-    edit_guard.day().set_focus(focus_name);
-}
 
-pub fn start_break() {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    match edit_guard.day().start_break() {
-        Ok(_) => {}
-        Err(err) => {
-            println!("{err}")
+    pub fn show(&self, date: &NaiveDate) {
+        let day_displayer = DayDisplayer::new(*date, &self.database);
+        println!("{}", day_displayer);
+    }
+
+    pub fn show_last(&self) {
+        match self.last_date() {
+            None => {
+                println!("No data to show")
+            }
+            Some(date) => {
+                println!("Last day was {date}:");
+                self.show(&date);
+            }
         }
     }
-}
 
-pub fn end_break() {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    match edit_guard.day().end_break() {
-        Ok(_) => {}
-        Err(err) => {
-            println!("{err}")
+    pub fn last_date(&self) -> Option<NaiveDate> {
+        self.database.last_date()
+    }
+
+    pub fn tick(&mut self, id: PriorityId) {
+        self.set_tick(id, true);
+    }
+
+    pub fn un_tick(&mut self, id: PriorityId) {
+        self.set_tick(id, false);
+    }
+
+    fn set_tick(&mut self, id: PriorityId, state: bool) {
+        let day = self.database.get_day(&today());
+        let max_id = day.priorities().len() - 1;
+        if id > max_id {
+            println!("Invalid id {id}, maximum is {max_id}");
+            return;
+        }
+        let task_id = day.priorities()[id - 1];
+        // Handle errors
+        let mut task = self.database.get_task(&task_id).unwrap().clone();
+        task.done = state;
+        self.database.set_task(task_id, task).unwrap();
+    }
+
+    pub fn context(&self) {
+        println!("{}", self.storage.context())
+    }
+
+    pub fn contexts(&self) {
+        // TODO: Try the default print of a vector, or implement Display for Contexts
+        for context in self.storage.contexts() {
+            println!("{}", context)
         }
     }
-}
 
-pub fn end_day() {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    edit_guard.day().end();
-}
+    pub fn set_context(&mut self, context: String) {
+        self.storage.set_context(context)
+    }
 
-pub fn add_note(note: String) {
-    let mut data = data();
-    let mut edit_guard = EditDayGuard::new(today(), &mut data);
-    edit_guard.day().add_note(note);
+    // TODO: PriorityId is no longer an appropriate type name
+    pub fn start_focus(&mut self, id: PriorityId) {
+        let date = today();
+        let mut day = self.database.get_day(&date).clone();
+        let tasks = day.tasks();
+        let task_id = tasks[id - 1];
+        day.start_focus(task_id).unwrap();
+        self.database.set_day(date, day);
+    }
+
+    pub fn start_focus_on_new_task(&mut self, focus: String) {
+        let task_id = self.database.add_task(Task::new(focus));
+        let date = today();
+        let mut day = self.database.get_day(&date);
+        day.start_focus(task_id).unwrap();
+    }
+
+    pub fn start_break(&mut self) {
+        let date = today();
+        let mut day = self.database.get_day(&date).clone();
+        day.start_break().unwrap();
+        self.database.set_day(date, day);
+    }
+
+    pub fn start_day(&mut self) {
+        let date = today();
+        let mut day = self.database.get_day(&date).clone();
+        day.start_day().unwrap();
+        self.database.set_day(date, day);
+    }
+
+    pub fn end_day(&mut self) {
+        let date = today();
+        let mut day = self.database.get_day(&date).clone();
+        day.end_day().unwrap();
+        self.database.set_day(date, day);
+    }
+
+    pub fn add_note(&mut self, note: String) {
+        let date = today();
+        let mut day = self.database.get_day(&date).clone();
+        day.add_note(note);
+        self.database.set_day(date, day);
+    }
 }
 
 // TODO: Use inquire crate for better user input collecting.
 // TODO: Have the unfinished items from the previous day (handle weekends? Last day with items?) be added automatically
-fn collect_tasks(tasks: &mut Vec<Task>) {
-    if !tasks.is_empty() {
-        println!("Existing tasks:");
-        for (i, task) in tasks.iter().enumerate() {
-            let index = i + 1;
-            let task_name = &task.name;
-            println!("{index}. {task_name}");
-        }
-    }
-
-    println!("\nList items:");
-    loop {
-        let mut line = String::new();
-        // TODO: Should handle this potential error
-        stdin().read_line(&mut line).unwrap();
-        if line.is_empty() {
-            break;
-        }
-        tasks.push(Task::new(line));
-        println!("Anymore?")
-    }
-}
-
-fn order_tasks(items: &[Task]) -> Vec<Task> {
+fn order_tasks(items: &Vec<(TaskId, String)>) -> Vec<TaskId> {
     let mut result = vec![];
     let mut remaining = items.to_owned();
 
@@ -178,10 +167,9 @@ fn order_tasks(items: &[Task]) -> Vec<Task> {
         }
 
         println!("Remaining:");
-        for (i, item) in remaining.iter().enumerate() {
+        for (i, (_task_id, name)) in remaining.iter().enumerate() {
             let index = i + 1;
-            let item_name = &item.name;
-            println!("{index}. {item_name}");
+            println!("{index}. {name}");
         }
 
         match get_item_id(max_id) {
@@ -189,7 +177,7 @@ fn order_tasks(items: &[Task]) -> Vec<Task> {
                 return result;
             }
             Some(choice) => {
-                result.push(remaining.remove(choice - 1));
+                result.push(remaining.remove(choice - 1).0);
             }
         }
     }

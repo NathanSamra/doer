@@ -1,83 +1,85 @@
-use crate::cli::commands::PriorityId;
-use crate::model::focus::Focus;
-use crate::model::r#break::BreakError;
-use crate::model::task::Task;
-use chrono::{Local, NaiveDateTime};
+use crate::database::TaskId;
+use crate::model::log::{EntryType, Log, LogError};
 use serde::{Deserialize, Serialize};
-use std::fmt::Formatter;
-#[allow(unused_imports)]
-use std::fmt::{Debug, Display};
+use std::collections::HashSet;
+use thiserror::Error;
 
+// TODO: Consider using references to Task instead of TaskId.
 // TODO: Consider adding date to Day, and then maybe Year could be a list instead of a map.
 #[derive(Clone, Default, Deserialize, Serialize)]
 pub struct Day {
-    priorities: Vec<Task>,
-    log: Vec<Focus>,
-    // TODO: I think the end time system doesn't work, especially with the focuses and breaks system.
-    // Maybe the schedule should be independent from Focus and instead reference relevant Focuses and Breaks.
-    end_time: Option<NaiveDateTime>,
+    priorities: Vec<TaskId>,
+    extra_tasks: HashSet<TaskId>,
+    log: Log,
     notes: Vec<String>,
 }
 
 impl Day {
+    pub fn tasks(&self) -> Vec<TaskId> {
+        self.priorities
+            .iter()
+            .chain(self.extra_tasks.iter())
+            .cloned()
+            .collect()
+    }
+
     // TODO: I feel like just having a getter and setter is lazy. More encapsulation is needed.
-    pub fn priorities(&self) -> &Vec<Task> {
+    pub fn priorities(&self) -> &Vec<TaskId> {
         &self.priorities
     }
 
-    pub fn set_priorities(&mut self, priorities: Vec<Task>) {
+    pub fn set_priorities(&mut self, priorities: Vec<TaskId>) {
+        for task_id in self.priorities.iter() {
+            if !priorities.contains(task_id) {
+                self.extra_tasks.insert(*task_id);
+            }
+        }
+
         self.priorities = priorities;
-    }
 
-    pub fn set_done(&mut self, id: PriorityId, state: bool) {
-        self.priorities[id].done = state;
-    }
-
-    pub fn focus(&self) -> Option<&Focus> {
-        match self.log.last() {
-            None => None,
-            Some(focus) => Some(focus),
+        for task_id in self.priorities.iter() {
+            self.extra_tasks.remove(task_id);
         }
     }
 
-    // TODO: Maybe return Result to indicate if the focus was unchanged?
-    pub fn set_focus(&mut self, focus_name: String) {
-        match self.log.last_mut() {
-            None => {
-                self.log.push(Focus::now(focus_name));
-            }
-            Some(focus) => {
-                if focus.name == focus_name {
-                    return;
-                }
-                // TODO: This unwraps because it assumes the error is a result of the break not existing,
-                // but that assumption may not always hold. Should come up with a better pattern.
-                focus.end_break().unwrap();
-                self.log.push(Focus::now(focus_name));
-            }
+    pub fn extra_tasks(&self) -> &HashSet<TaskId> {
+        &self.extra_tasks
+    }
+
+    pub fn add_task(&mut self, task_id: TaskId) -> Result<(), DayError> {
+        if self.tasks().contains(&task_id) {
+            return Err(DayError::TaskAlreadyExistsInDay);
+        }
+        self.extra_tasks.insert(task_id);
+        Ok(())
+    }
+
+    pub fn focus(&self) -> Option<TaskId> {
+        match self.log.last()?.type_ {
+            EntryType::Focus(task_id) => Some(task_id),
+            _ => None,
         }
     }
 
-    pub fn start_break(&mut self) -> Result<(), BreakError> {
-        match self.log.last_mut() {
-            None => Err(BreakError::NoFocus),
-            Some(focus) => focus.start_break(),
-        }
-    }
-
-    pub fn end_break(&mut self) -> Result<(), BreakError> {
-        match self.log.last_mut() {
-            None => Err(BreakError::NoFocus),
-            Some(focus) => focus.end_break(),
-        }
-    }
-
-    pub fn log(&self) -> &Vec<Focus> {
+    pub fn log(&self) -> &Log {
         &self.log
     }
 
-    pub fn end(&mut self) {
-        self.end_time = Some(Local::now().naive_local());
+    pub fn start_day(&mut self) -> Result<(), LogError> {
+        self.log.start_day()
+    }
+
+    // TODO: Maybe return Result to indicate if the focus was unchanged?
+    pub fn start_focus(&mut self, task_id: TaskId) -> Result<(), LogError> {
+        self.log.start_focus(task_id)
+    }
+
+    pub fn start_break(&mut self) -> Result<(), LogError> {
+        self.log.start_unfocused()
+    }
+
+    pub fn end_day(&mut self) -> Result<(), LogError> {
+        self.log.end_day()
     }
 
     pub fn notes(&self) -> &Vec<String> {
@@ -87,92 +89,10 @@ impl Day {
     pub fn add_note(&mut self, note: String) {
         self.notes.push(note)
     }
-
-    fn display_priorities(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        if self.priorities.is_empty() {
-            writeln!(f, "No priorities")?;
-            return Ok(());
-        }
-
-        let focus = match self.focus() {
-            None => "",
-            Some(focus) => focus.name.as_str(),
-        };
-
-        writeln!(f, "Priorities:")?;
-        for (i, priority) in self.priorities.iter().enumerate() {
-            let priority_name = priority.name.as_str();
-            let mut line = format!("{i}. {priority_name}");
-
-            if focus == priority_name {
-                line += "*";
-            }
-
-            if priority.done {
-                line += " - done";
-            }
-
-            writeln!(f, "{}", line)?;
-        }
-
-        if !focus.is_empty() {
-            writeln!(f, "\nFocus: {focus}")?;
-        }
-
-        Ok(())
-    }
-
-    fn display_log(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        if self.log().is_empty() {
-            writeln!(f, "No log")?;
-            return Ok(());
-        }
-
-        writeln!(f, "Log:")?;
-        for focus in self.log() {
-            let start = focus.start.format("%H:%M");
-            let focus_name = &focus.name;
-            // TODO: Instead of putting the formatting in here, why not impl Display for Focus.
-            // This could apply to all the other structs as well.
-            writeln!(f, "{start} - {focus_name}")?;
-
-            for break_ in focus.breaks.iter() {
-                let break_start = break_.start.format("%H:%M");
-
-                let break_end = match break_.end {
-                    None => "N/A".to_string(),
-                    Some(end) => end.format("%H:%M").to_string(),
-                };
-
-                writeln!(f, "\t{break_start} - {break_end}")?;
-            }
-        }
-
-        Ok(())
-    }
-
-    fn display_notes(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        if self.notes().is_empty() {
-            writeln!(f, "No notes")?;
-            return Ok(());
-        }
-
-        writeln!(f, "Notes:")?;
-        for (i, note) in self.notes().iter().enumerate() {
-            writeln!(f, "{i}. {note}")?;
-        }
-
-        Ok(())
-    }
 }
 
-impl Display for Day {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        self.display_priorities(f)?;
-        writeln!(f)?;
-        self.display_log(f)?;
-        writeln!(f)?;
-        self.display_notes(f)?;
-        Ok(())
-    }
+#[derive(Error, Debug)]
+pub enum DayError {
+    #[error("Task already exists in this day")]
+    TaskAlreadyExistsInDay,
 }

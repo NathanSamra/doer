@@ -1,15 +1,13 @@
 mod cli;
-mod data;
-pub mod edit_day_guard;
+mod database;
+mod display_day;
 mod metadata;
 mod model;
 mod storage;
 
 use crate::cli::cli_parser::{CliParser, Command};
-use crate::cli::commands::{
-    add_note, context, contexts, copy_priorities, end_break, end_day, plan_priorities, set_context,
-    set_focus, set_focus_to_priority, show, show_last, start_break, tick, un_tick, PriorityId,
-};
+use crate::cli::commands::{Controller, PriorityId};
+use crate::storage::storage_handler::StorageHandler;
 use chrono::{Days, Local, NaiveDate, ParseResult, Weekday};
 use clap::Parser;
 
@@ -25,28 +23,30 @@ fn main() -> anyhow::Result<()> {
 // TODO: Print error messages in a nice way instead of getting the stack trace. The trace should
 // just be for very rare cases.
 fn execute_command(args: CliParser) -> ParseResult<()> {
+    let mut controller = Controller::new(StorageHandler::default());
     match args.command {
-        Command::Plan { date } => plan_priorities(date_from_arg(date.as_str())?),
+        Command::AddTask { date, task } => controller.add_task(date_from_arg(date.as_str())?, task),
+        Command::Plan { date } => controller.plan_priorities(date_from_arg(date.as_str())?),
         Command::CopyPriorities { from, to } => {
-            copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
+            controller.copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
         }
-        Command::Show { date } => show(&date_from_arg(date.as_str())?),
+        Command::Show { date } => controller.show(&date_from_arg(date.as_str())?),
         Command::ShowLast {} => {
-            show_last();
+            controller.show_last();
         }
-        Command::Tick { id } => tick(id - 1),
-        Command::UnTick { id } => un_tick(id - 1),
-        Command::Context {} => context(),
-        Command::Contexts {} => contexts(),
-        Command::SetContext { context } => set_context(context),
-        Command::SetFocus { focus } => match focus.parse::<PriorityId>() {
-            Ok(id) => set_focus_to_priority(id - 1),
-            Err(_) => set_focus(focus.as_str()),
+        Command::Tick { id } => controller.tick(id - 1),
+        Command::UnTick { id } => controller.un_tick(id - 1),
+        Command::Context {} => controller.context(),
+        Command::Contexts {} => controller.contexts(),
+        Command::SetContext { context } => controller.set_context(context),
+        Command::StartFocus { focus } => match focus.parse::<PriorityId>() {
+            Ok(id) => controller.start_focus(id - 1),
+            Err(_) => controller.start_focus_on_new_task(focus),
         },
-        Command::StartBreak {} => start_break(),
-        Command::EndBreak {} => end_break(),
-        Command::EndDay {} => end_day(),
-        Command::Note { note } => add_note(note),
+        Command::StartBreak {} => controller.start_break(),
+        Command::StartDay {} => controller.start_day(),
+        Command::EndDay {} => controller.end_day(),
+        Command::Note { note } => controller.add_note(note),
     }
 
     Ok(())
