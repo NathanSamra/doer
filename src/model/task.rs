@@ -20,3 +20,26 @@ impl Task {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_is_not_done() {
+        let task = Task::new("Test".to_string());
+        assert!(!task.done);
+    }
+
+    #[test]
+    fn new_has_name() {
+        let task = Task::new("Test".to_string());
+        assert_eq!(task.name, "Test");
+    }
+
+    #[test]
+    fn new_has_id() {
+        let task = Task::new("Test".to_string());
+        assert_ne!(task.id, Uuid::nil());
+    }
+}
