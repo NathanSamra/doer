@@ -1,6 +1,5 @@
-use crate::database::{Database, TaskId};
-use crate::display_day::DayDisplayer;
-use crate::model::task::Task;
+use crate::database::Database;
+use crate::model::task::{Task, TaskId};
 use crate::storage::storage_handler::{default_dirs, remove_lock, StorageHandler};
 use chrono::{Local, NaiveDate};
 use std::io::stdin;
@@ -23,20 +22,15 @@ impl Controller {
 
     pub fn add_task(&mut self, date: NaiveDate, name: String) {
         let task = Task::new(name);
-        let task_id = self.database.add_task(task);
         let mut day = self.database.get_day(&date).clone();
         // TODO: Handle errors
-        day.add_task(task_id).unwrap();
+        day.add_task(task).unwrap();
         self.database.set_day(date, day);
     }
 
     pub fn plan_priorities(&mut self, date: NaiveDate) {
         let mut day = self.database.get_day(&date).clone();
-        let task_ids = day.tasks();
-        let tasks = task_ids
-            .iter()
-            .map(|id| (*id, self.database.get_task(id).unwrap().name.clone()))
-            .collect();
+        let tasks = day.tasks();
         let priorities = order_tasks(&tasks);
         day.set_priorities(priorities);
         self.database.set_day(date, day);
@@ -51,8 +45,8 @@ impl Controller {
     }
 
     pub fn show(&self, date: &NaiveDate) {
-        let day_displayer = DayDisplayer::new(*date, &self.database);
-        println!("{}", day_displayer);
+        let day = self.database.get_day(date);
+        println!("{}", day);
     }
 
     pub fn show_last(&self) {
@@ -80,7 +74,8 @@ impl Controller {
     }
 
     fn set_tick(&mut self, id: PriorityId, state: bool) {
-        let day = self.database.get_day(&today());
+        let date = today();
+        let mut day = self.database.get_day(&date);
         let max_id = day.priorities().len() - 1;
         if id > max_id {
             println!("Invalid id {id}, maximum is {max_id}");
@@ -88,9 +83,8 @@ impl Controller {
         }
         let task_id = day.priorities()[id - 1];
         // Handle errors
-        let mut task = self.database.get_task(&task_id).unwrap().clone();
-        task.done = state;
-        self.database.set_task(task_id, task).unwrap();
+        day.set_task_done(&task_id, state).unwrap();
+        self.database.set_day(date, day);
     }
 
     pub fn context(&self) {
@@ -117,15 +111,18 @@ impl Controller {
         let date = today();
         let mut day = self.database.get_day(&date).clone();
         let tasks = day.tasks();
-        let task_id = tasks[id - 1];
-        day.start_focus(task_id).unwrap();
+        let task = tasks[id - 1];
+        day.start_focus(task.id).unwrap();
         self.database.set_day(date, day);
     }
 
     pub fn start_focus_on_new_task(&mut self, focus: String) {
-        let task_id = self.database.add_task(Task::new(focus));
+        let task = Task::new(focus);
+        let task_id = task.id;
         let date = today();
         let mut day = self.database.get_day(&date);
+        // Handle errors
+        day.add_task(task).unwrap();
         day.start_focus(task_id).unwrap();
     }
 
@@ -166,7 +163,7 @@ impl Controller {
 
 // TODO: Use inquire crate for better user input collecting.
 // TODO: Have the unfinished items from the previous day (handle weekends? Last day with items?) be added automatically
-fn order_tasks(items: &Vec<(TaskId, String)>) -> Vec<TaskId> {
+fn order_tasks(items: &Vec<&Task>) -> Vec<TaskId> {
     let mut result = vec![];
     let mut remaining = items.to_owned();
 
@@ -177,8 +174,9 @@ fn order_tasks(items: &Vec<(TaskId, String)>) -> Vec<TaskId> {
         }
 
         println!("Remaining:");
-        for (i, (_task_id, name)) in remaining.iter().enumerate() {
+        for (i, task) in remaining.iter().enumerate() {
             let index = i + 1;
+            let name = &task.name;
             println!("{index}. {name}");
         }
 
@@ -187,7 +185,7 @@ fn order_tasks(items: &Vec<(TaskId, String)>) -> Vec<TaskId> {
                 return result;
             }
             Some(choice) => {
-                result.push(remaining.remove(choice - 1).0);
+                result.push(remaining.remove(choice - 1).id);
             }
         }
     }

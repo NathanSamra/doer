@@ -1,7 +1,6 @@
-use crate::database::{Database, TaskId};
+use crate::database::Database;
 use crate::metadata::app_version;
 use crate::model::day::Day;
-use crate::model::task::Task;
 use chrono::Datelike;
 use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
@@ -16,7 +15,6 @@ use std::collections::HashMap;
 pub struct YearData {
     version: String,
     year: i32,
-    tasks: HashMap<TaskId, Task>,
     days: HashMap<NaiveDate, Day>,
 }
 
@@ -25,7 +23,6 @@ impl YearData {
         Self {
             version: app_version().to_string(),
             year,
-            tasks: HashMap::new(),
             days: HashMap::new(),
         }
     }
@@ -42,11 +39,6 @@ impl From<Database> for Vec<YearData> {
         for (date, day) in database.days() {
             let year = date.year();
             let year_data = years.entry(year).or_insert_with(|| YearData::new(year));
-            for task_id in day.tasks() {
-                // TODO: Handle errors
-                let task = database.get_task(&task_id).unwrap().clone();
-                year_data.tasks.insert(task_id, task);
-            }
             year_data.days.insert(*date, day.clone());
         }
 

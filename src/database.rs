@@ -1,13 +1,8 @@
 use crate::model::day::Day;
-use crate::model::task::Task;
 use crate::storage::storage_handler::StorageHandler;
 use chrono::NaiveDate;
 use std::collections::HashMap;
-use thiserror::Error;
-use uuid::Uuid;
 
-pub type TaskId = Uuid;
-pub type Tasks = HashMap<TaskId, Task>;
 pub type Days = HashMap<NaiveDate, Day>;
 
 // TODO: Put context into this struct so it can handle re-loading itself if the context changes.
@@ -18,7 +13,6 @@ pub type Days = HashMap<NaiveDate, Day>;
 // Or maybe we just add a prune() method that removes all completed/lost tasks from a defined year.
 pub struct Database {
     storage: StorageHandler,
-    tasks: Tasks,
     days: Days,
 }
 
@@ -52,26 +46,6 @@ impl Database {
         &self.days
     }
 
-    pub fn add_task(&mut self, task: Task) -> TaskId {
-        let id = Uuid::now_v7();
-        self.tasks.insert(id, task);
-        id
-    }
-
-    pub fn get_task(&self, id: &TaskId) -> Result<&Task, DatabaseError> {
-        self.tasks.get(id).ok_or(DatabaseError::NoTaskForId)
-    }
-
-    pub fn set_task(&mut self, id: TaskId, task: Task) -> Result<(), DatabaseError> {
-        match self.tasks.get_mut(&id) {
-            Some(t) => {
-                *t = task;
-                Ok(())
-            }
-            None => Err(DatabaseError::NoTaskForId),
-        }
-    }
-
     pub fn set_day(&mut self, date: NaiveDate, day: Day) {
         self.days.insert(date, day);
     }
@@ -88,10 +62,4 @@ impl Drop for Database {
     fn drop(&mut self) {
         todo!()
     }
-}
-
-#[derive(Error, Debug)]
-pub enum DatabaseError {
-    #[error("No task for given ID")]
-    NoTaskForId,
 }

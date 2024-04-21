@@ -1,4 +1,4 @@
-use crate::database::TaskId;
+use crate::model::task::TaskId;
 use chrono::{Local, NaiveDateTime};
 use serde::{Deserialize, Serialize};
 use thiserror::Error;

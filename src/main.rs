@@ -1,6 +1,5 @@
 mod cli;
 mod database;
-mod display_day;
 mod metadata;
 mod model;
 mod storage;
