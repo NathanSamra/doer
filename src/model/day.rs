@@ -22,6 +22,14 @@ impl Day {
         self.tasks.values().collect::<Vec<&Task>>()
     }
 
+    pub fn get_task(&self, task_id: &TaskId) -> Option<&Task> {
+        self.tasks.get(task_id)
+    }
+
+    pub fn insert_task(&mut self, task: Task) -> Option<Task> {
+        self.tasks.insert(task.id, task)
+    }
+
     // TODO: I feel like just having a getter and setter is lazy. More encapsulation is needed.
     pub fn priorities(&self) -> &Vec<TaskId> {
         &self.priorities
@@ -51,22 +59,8 @@ impl Day {
             .collect()
     }
 
-    pub fn add_task(&mut self, task: Task) -> Result<(), DayError> {
-        if self.tasks.contains_key(&task.id) {
-            return Err(DayError::TaskAlreadyExistsInDay);
-        }
-        self.tasks.insert(task.id, task);
-        Ok(())
-    }
-
-    pub fn set_task_done(&mut self, task_id: &TaskId, is_done: bool) -> Result<(), DayError> {
-        match self.tasks.get_mut(task_id) {
-            None => Err(DayError::TaskDoesNotExistInDay),
-            Some(task) => {
-                task.done = is_done;
-                Ok(())
-            }
-        }
+    pub fn log(&self) -> &Log {
+        &self.log
     }
 
     pub fn focus(&self) -> Option<TaskId> {
@@ -74,10 +68,6 @@ impl Day {
             EntryType::Focus(task_id) => Some(task_id),
             _ => None,
         }
-    }
-
-    pub fn log(&self) -> &Log {
-        &self.log
     }
 
     pub fn start_day(&mut self) -> Result<(), LogError> {

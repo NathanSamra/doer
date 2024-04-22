@@ -24,7 +24,9 @@ impl Controller {
         let task = Task::new(name);
         let mut day = self.database.get_day(&date).clone();
         // TODO: Handle errors
-        day.add_task(task).unwrap();
+        if day.insert_task(task).is_some() {
+            panic!("New task already exists in the day");
+        }
         self.database.set_day(date, day);
     }
 
@@ -83,7 +85,9 @@ impl Controller {
         }
         let task_id = day.priorities()[id - 1];
         // Handle errors
-        day.set_task_done(&task_id, state).unwrap();
+        let mut task = day.get_task(&task_id).unwrap().clone();
+        task.done = state;
+        day.insert_task(task);
         self.database.set_day(date, day);
     }
 
@@ -122,7 +126,9 @@ impl Controller {
         let date = today();
         let mut day = self.database.get_day(&date);
         // Handle errors
-        day.add_task(task).unwrap();
+        if day.insert_task(task).is_some() {
+            panic!("New task already exists in the day");
+        }
         day.start_focus(task_id).unwrap();
     }
 
