@@ -30,7 +30,6 @@ impl Day {
         self.tasks.insert(task.id, task)
     }
 
-    // TODO: I feel like just having a getter and setter is lazy. More encapsulation is needed.
     pub fn priorities(&self) -> &Vec<TaskId> {
         &self.priorities
     }
@@ -204,5 +203,241 @@ pub enum DayError {
 impl From<LogError> for DayError {
     fn from(value: LogError) -> Self {
         DayError::LogError(value)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn tasks_is_empty_when_empty() {
+        let day = Day::default();
+        assert!(day.tasks().is_empty());
+    }
+
+    #[test]
+    fn tasks_has_task_when_inserted() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        day.insert_task(task.clone());
+        assert_eq!(day.tasks(), vec![&task]);
+    }
+
+    #[test]
+    fn tasks_has_tasks_when_inserted() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        let task2 = Task::new("Task2".to_string());
+        day.insert_task(task1.clone());
+        day.insert_task(task2.clone());
+        assert_eq!(day.tasks(), vec![&task1, &task2]);
+    }
+
+    #[test]
+    fn get_task_is_none_when_empty() {
+        let day = Day::default();
+        assert!(day.get_task(&TaskId::now_v7()).is_none());
+    }
+
+    #[test]
+    fn get_task_is_none_when_task_does_not_exist() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        day.insert_task(task);
+        assert!(day.get_task(&TaskId::now_v7()).is_none());
+    }
+
+    #[test]
+    fn get_task_is_some_when_task_exists() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        let task_id = task.id;
+        day.insert_task(task);
+        assert_eq!(day.get_task(&task_id).unwrap().name, "Task");
+    }
+
+    #[test]
+    fn insert_task_returns_none_when_empty() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        assert!(day.insert_task(task).is_none());
+    }
+
+    #[test]
+    fn insert_task_returns_none_when_task_does_not_exist() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        day.insert_task(task1);
+        let task2 = Task::new("Task2".to_string());
+        assert!(day.insert_task(task2).is_none());
+    }
+
+    #[test]
+    fn insert_task_when_task_exists_returns_some_and_updates_task() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        let id = task1.id;
+        day.insert_task(task1);
+        let mut task2 = day.get_task(&id).unwrap().clone();
+        task2.name = "Task2".to_string();
+        let replaced_task = day.insert_task(task2).unwrap();
+        assert_eq!(replaced_task.id, id);
+        assert_eq!(day.get_task(&id).unwrap().name, "Task2");
+    }
+
+    #[test]
+    fn priorities_is_empty_when_empty() {
+        let day = Day::default();
+        assert!(day.priorities().is_empty());
+    }
+
+    #[test]
+    fn set_priorities_sets_priorities() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        let task2 = Task::new("Task2".to_string());
+        day.insert_task(task1.clone());
+        day.insert_task(task2.clone());
+        day.set_priorities(vec![task1.id, task2.id]);
+        assert_eq!(day.priorities(), &vec![task1.id, task2.id]);
+    }
+
+    #[test]
+    #[should_panic]
+    fn set_priorities_to_non_existant_tasks_panics() {
+        let mut day = Day::default();
+        let task_id1 = TaskId::now_v7();
+        let task_id2 = TaskId::now_v7();
+        day.set_priorities(vec![task_id1, task_id2]);
+    }
+
+    #[test]
+    fn extra_tasks_is_empty_when_empty() {
+        let day = Day::default();
+        assert!(day.extra_tasks().is_empty());
+    }
+
+    #[test]
+    fn extra_tasks_is_empty_when_all_priorities() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        let task2 = Task::new("Task2".to_string());
+        day.insert_task(task1.clone());
+        day.insert_task(task2.clone());
+        day.set_priorities(vec![task1.id, task2.id]);
+        assert!(day.extra_tasks().is_empty());
+    }
+
+    #[test]
+    fn extra_tasks_has_tasks_when_not_all_priorities() {
+        let mut day = Day::default();
+        let task1 = Task::new("Task1".to_string());
+        let task2 = Task::new("Task2".to_string());
+        let task3 = Task::new("Task3".to_string());
+        day.insert_task(task1.clone());
+        day.insert_task(task2.clone());
+        day.insert_task(task3.clone());
+        day.set_priorities(vec![task1.id, task2.id]);
+        assert_eq!(day.extra_tasks(), vec![&task3]);
+    }
+
+    #[test]
+    fn log_is_empty_when_empty() {
+        let day = Day::default();
+        assert!(day.log().is_empty());
+    }
+
+    #[test]
+    fn log_is_not_empty_when_started() {
+        let mut day = Day::default();
+        day.start_day().unwrap();
+        assert!(!day.log().is_empty());
+    }
+
+    #[test]
+    fn focus_is_none_when_empty() {
+        let day = Day::default();
+        assert!(day.focus().is_none());
+    }
+
+    #[test]
+    fn focus_is_none_when_not_focused() {
+        let mut day = Day::default();
+        day.start_day().unwrap();
+        assert!(day.focus().is_none());
+    }
+
+    #[test]
+    fn focus_is_some_when_focused() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        day.insert_task(task.clone());
+        day.start_day().unwrap();
+        day.start_focus(task.id).unwrap();
+        assert_eq!(day.focus().unwrap(), task.id);
+    }
+
+    #[test]
+    fn start_day_starts_day() {
+        let mut day = Day::default();
+        day.start_day().unwrap();
+        assert!(!day.log().is_empty());
+    }
+
+    #[test]
+    fn start_focus_starts_focus() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        day.insert_task(task.clone());
+        day.start_day().unwrap();
+        day.start_focus(task.id).unwrap();
+        assert_eq!(day.focus().unwrap(), task.id);
+    }
+
+    #[test]
+    fn start_focus_returns_error_when_task_does_not_exist() {
+        let mut day = Day::default();
+        assert!(day.start_focus(TaskId::now_v7()).is_err());
+    }
+
+    #[test]
+    fn start_break_starts_break() {
+        let mut day = Day::default();
+        let task = Task::new("Task".to_string());
+        day.insert_task(task.clone());
+        day.start_day().unwrap();
+        day.start_focus(task.id).unwrap();
+        day.start_break().unwrap();
+        assert!(day.focus().is_none());
+    }
+
+    #[test]
+    fn end_day_ends_day() {
+        let mut day = Day::default();
+        day.start_day().unwrap();
+        day.end_day().unwrap();
+        assert_eq!(day.log().last().unwrap().type_, EntryType::DayEnded);
+    }
+
+    #[test]
+    fn notes_is_empty_when_empty() {
+        let day = Day::default();
+        assert!(day.notes().is_empty());
+    }
+
+    #[test]
+    fn add_note_adds_note() {
+        let mut day = Day::default();
+        day.add_note("Note".to_string());
+        assert_eq!(day.notes(), &vec!["Note".to_string()]);
+    }
+
+    #[test]
+    fn add_two_notes_adds_notes() {
+        let mut day = Day::default();
+        day.add_note("Note1".to_string());
+        day.add_note("Note2".to_string());
+        assert_eq!(day.notes(), &vec!["Note1".to_string(), "Note2".to_string()]);
     }
 }

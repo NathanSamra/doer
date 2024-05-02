@@ -4,10 +4,11 @@ use uuid::Uuid;
 pub type TaskId = Uuid;
 
 // TODO: Impl Display?
-#[derive(Clone, PartialEq, Deserialize, Serialize)]
+#[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
 pub struct Task {
     pub id: TaskId,
     pub name: String,
+    // TODO: Should be a state: todo, doing, waiting, done.
     pub done: bool,
 }
 
