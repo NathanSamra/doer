@@ -12,33 +12,43 @@ pub struct CliParser {
 // TODO: Rethink all of these. Maybe come up with a resource based approach instead of actions
 #[derive(Subcommand, Debug)]
 pub enum Command {
-    AddTask {
+    NewTask {
+        #[arg(short, long, default_value = "today")]
         date: String,
         task: String,
     },
     Plan {
         /// Date to plan
+        #[arg(short, long, default_value = "today")]
         date: String,
     },
     // TODO: I think instead there should also be methods for moving tasks along or copying everything
-    CopyPriorities {
+    CopyTasks {
         /// Date/day to copy from
         from: String,
         /// Date/day to copy to
         to: String,
+        #[arg(short, long, default_value_t = False)]
+        include_unfinished: bool,
     },
     Show {
         /// Date to show
+        #[arg(short, long, default_value = "today")]
         date: String,
     },
     ShowLast {},
     Tick {
         // TODO: Add description
+        // TODO: It's not a priority ID is it
         id: PriorityId,
+        #[arg(short, long, default_value = "today")]
+        date: String,
     },
     UnTick {
         // TODO: Add description
         id: PriorityId,
+        #[arg(short, long, default_value = "today")]
+        date: String,
     },
     Context {},
     ListContexts {},
@@ -61,6 +71,8 @@ pub enum Command {
     Note {
         /// Note for today
         note: String,
+        #[arg(short, long, default_value = "today")]
+        date: String,
     },
     RemoveLock {},
 }
