@@ -28,8 +28,8 @@ pub enum Command {
         from: String,
         /// Date/day to copy to
         to: String,
-        #[arg(short, long, default_value_t = False)]
-        include_unfinished: bool,
+        #[arg(short, long, default_value_t = false)]
+        include_finished: bool,
     },
     Show {
         /// Date to show

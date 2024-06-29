@@ -39,10 +39,21 @@ impl Controller {
         println!("Planning complete")
     }
 
-    pub fn copy_priorities(&mut self, date_from: &NaiveDate, date_to: &NaiveDate) {
-        let priorities = self.database.get_day(date_from).priorities().clone();
+    pub fn copy_tasks(
+        &mut self,
+        date_from: &NaiveDate,
+        date_to: &NaiveDate,
+        include_finished: bool,
+    ) {
+        let binding = self.database.get_day(date_from);
+        let mut tasks = binding.tasks().clone();
+        if !include_finished {
+            tasks.retain(|task| !task.done);
+        }
         let mut day = self.database.get_day(date_to).clone();
-        day.set_priorities(priorities);
+        for task in tasks {
+            day.insert_task(task.clone());
+        }
         self.database.set_day(*date_to, day);
     }
 
@@ -67,17 +78,16 @@ impl Controller {
         self.database.last_date()
     }
 
-    pub fn tick(&mut self, id: PriorityId) {
-        self.set_tick(id, true);
+    pub fn tick(&mut self, date: &NaiveDate, id: PriorityId) {
+        self.set_tick(date, id, true);
     }
 
-    pub fn un_tick(&mut self, id: PriorityId) {
-        self.set_tick(id, false);
+    pub fn un_tick(&mut self, date: &NaiveDate, id: PriorityId) {
+        self.set_tick(date, id, false);
     }
 
-    fn set_tick(&mut self, id: PriorityId, state: bool) {
-        let date = today();
-        let mut day = self.database.get_day(&date);
+    fn set_tick(&mut self, date: &NaiveDate, id: PriorityId, state: bool) {
+        let mut day = self.database.get_day(date);
         let max_id = day.priorities().len() - 1;
         if id > max_id {
             println!("Invalid id {id}, maximum is {max_id}");
@@ -88,7 +98,7 @@ impl Controller {
         let mut task = day.get_task(&task_id).unwrap().clone();
         task.done = state;
         day.insert_task(task);
-        self.database.set_day(date, day);
+        self.database.set_day(*date, day);
     }
 
     pub fn context(&self) {
@@ -153,11 +163,10 @@ impl Controller {
         self.database.set_day(date, day);
     }
 
-    pub fn add_note(&mut self, note: String) {
-        let date = today();
-        let mut day = self.database.get_day(&date).clone();
+    pub fn add_note(&mut self, date: &NaiveDate, note: String) {
+        let mut day = self.database.get_day(date).clone();
         day.add_note(note);
-        self.database.set_day(date, day);
+        self.database.set_day(*date, day);
     }
 
     pub fn remove_lock(&mut self) {

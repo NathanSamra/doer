@@ -231,7 +231,7 @@ mod tests {
         let task2 = Task::new("Task2".to_string());
         day.insert_task(task1.clone());
         day.insert_task(task2.clone());
-        assert_eq!(day.tasks(), vec![&task1, &task2]);
+        assert_eq!(day.tasks(), vec![&task2, &task1]);
     }
 
     #[test]

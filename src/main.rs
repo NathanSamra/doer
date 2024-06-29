@@ -24,17 +24,23 @@ fn main() -> anyhow::Result<()> {
 fn execute_command(args: CliParser) -> ParseResult<()> {
     let mut controller = Controller::new(StorageHandler::connect(default_dirs()).unwrap());
     match args.command {
-        Command::AddTask { date, task } => controller.add_task(date_from_arg(date.as_str())?, task),
+        Command::NewTask { date, task } => controller.add_task(date_from_arg(date.as_str())?, task),
         Command::Plan { date } => controller.plan_priorities(date_from_arg(date.as_str())?),
-        Command::CopyPriorities { from, to } => {
-            controller.copy_priorities(&date_from_arg(from.as_str())?, &date_from_arg(to.as_str())?)
-        }
+        Command::CopyTasks {
+            from,
+            to,
+            include_finished,
+        } => controller.copy_tasks(
+            &date_from_arg(from.as_str())?,
+            &date_from_arg(to.as_str())?,
+            include_finished,
+        ),
         Command::Show { date } => controller.show(&date_from_arg(date.as_str())?),
         Command::ShowLast {} => {
             controller.show_last();
         }
-        Command::Tick { id } => controller.tick(id - 1),
-        Command::UnTick { id } => controller.un_tick(id - 1),
+        Command::Tick { id, date } => controller.tick(&date_from_arg(date.as_str())?, id - 1),
+        Command::UnTick { id, date } => controller.un_tick(&date_from_arg(date.as_str())?, id - 1),
         Command::Context {} => controller.context(),
         Command::ListContexts {} => controller.contexts(),
         Command::NewContext { context } => controller.new_context(context),
@@ -46,7 +52,7 @@ fn execute_command(args: CliParser) -> ParseResult<()> {
         Command::StartBreak {} => controller.start_break(),
         Command::StartDay {} => controller.start_day(),
         Command::EndDay {} => controller.end_day(),
-        Command::Note { note } => controller.add_note(note),
+        Command::Note { note, date } => controller.add_note(&date_from_arg(date.as_str())?, note),
         Command::RemoveLock {} => controller.remove_lock(),
     }
 
