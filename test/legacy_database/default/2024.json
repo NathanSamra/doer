@@ -1,0 +1,5854 @@
+{
+  "days": {
+    "2024-01-03": {
+      "priorities": [
+        {
+          "name": "Catch up on emails",
+          "done": true
+        },
+        {
+          "name": "Update gDAP test values",
+          "done": true
+        },
+        {
+          "name": "Get bootcamp funding",
+          "done": false
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        },
+        {
+          "name": "Input workday goals",
+          "done": false
+        },
+        {
+          "name": "Updgrade clang-tidy",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Catch up on emails",
+          "start": "10:17:53.586273",
+          "breaks": []
+        },
+        {
+          "name": "Update gDAP test values",
+          "start": "12:36:08.020845",
+          "breaks": []
+        },
+        {
+          "name": "Get bootcamp funding",
+          "start": "14:12:08.779196",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Xenia sent a good gPAS update I should reply to",
+        "need to test model validation before next week"
+      ],
+      "end_time": "17:15:37.706435"
+    },
+    "2024-01-04": {
+      "priorities": [
+        {
+          "name": "Check gDAP values",
+          "done": true
+        },
+        {
+          "name": "Get bootcamp funding from Mark or Uwe",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Upgrade Clang-tidy",
+          "done": true
+        },
+        {
+          "name": "Input workday goals",
+          "done": false
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check gDAP values",
+          "start": "09:52:23.071958",
+          "breaks": []
+        },
+        {
+          "name": "Get bootcamp funding from Mark or Uwe",
+          "start": "10:57:22.938866",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "13:30:11.483007",
+          "breaks": []
+        },
+        {
+          "name": "Get bootcamp funding from Mark or Uwe",
+          "start": "15:18:29.643104",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "15:37:59.897831",
+          "breaks": []
+        }
+      ],
+      "notes": ["also spent an hour at least on upgrading clang-tidy"],
+      "end_time": "17:09:20.631276"
+    },
+    "2024-01-05": {
+      "priorities": [
+        {
+          "name": "Apply for company card",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Investigate gSERVER Model Validation",
+          "done": false
+        },
+        {
+          "name": "Fix last gDAP test",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Investigate Xenia QMTest bug",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Apply for company card",
+          "start": "08:25:51.737114",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "10:31:03.450025",
+          "breaks": []
+        },
+        {
+          "name": "Apply for company card",
+          "start": "12:14:16.589416",
+          "breaks": []
+        },
+        {
+          "name": "Test clang-tidy",
+          "start": "14:19:33.177070",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "15:16:48.121622",
+          "breaks": []
+        },
+        {
+          "name": "Investigate gSERVER Model Validation",
+          "start": "15:28:38.571835",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-01-08": {
+      "priorities": [
+        {
+          "name": "Investigate gSERVER model validation",
+          "done": true
+        },
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Investigate Xenia QMTest bug",
+          "done": false
+        },
+        {
+          "name": "Fix last gDAP test",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Investigate gSERVER model validation",
+          "start": "07:34:38.337013",
+          "breaks": []
+        },
+        {
+          "name": "Investigate Xenia QMTest bug",
+          "start": "08:55:51.445596",
+          "breaks": []
+        },
+        {
+          "name": "book travel",
+          "start": "10:06:37.767798",
+          "breaks": []
+        },
+        {
+          "name": "test clang-tidy",
+          "start": "12:58:23.450825",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "13:05:30.846390",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy responding to review",
+          "start": "13:07:01.694904",
+          "breaks": []
+        }
+      ],
+      "notes": ["gWAP have a good point about gProperties"],
+      "end_time": "15:33:24.555084"
+    },
+    "2024-01-09": {
+      "priorities": [
+        {
+          "name": "Talk with Trung about converters repo",
+          "done": true
+        },
+        {
+          "name": "Talk with Xenia about optimisation gPAS",
+          "done": true
+        },
+        {
+          "name": "Find out how pygpas 1.0.0 is going",
+          "done": false
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        },
+        {
+          "name": "Clang-tidy upgrade",
+          "done": false
+        },
+        {
+          "name": "Xenia QMTest bug",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Talk with Xenia about optimisation gPAS",
+          "start": "11:13:15.409465",
+          "breaks": []
+        },
+        {
+          "name": "Talk with Trung about converters repo",
+          "start": "11:28:03.922153",
+          "breaks": []
+        },
+        {
+          "name": "cleaning out home_local",
+          "start": "11:44:42.721470",
+          "breaks": []
+        },
+        {
+          "name": "cleaning up home local",
+          "start": "11:50:02.399538",
+          "breaks": []
+        },
+        {
+          "name": "Find out how pygpas 1.0.0 is going",
+          "start": "11:59:17.473737",
+          "breaks": []
+        },
+        {
+          "name": "catching up with emails",
+          "start": "12:14:58.232725",
+          "breaks": []
+        },
+        {
+          "name": "Xenia QMTest bug",
+          "start": "12:22:34.898158",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent 20 mins on the phone with Trung, and 10 mins meeting with Xenia",
+        "was in meetings from 2pm to 5pm"
+      ],
+      "end_time": "17:07:56.567507"
+    },
+    "2024-01-10": {
+      "priorities": [
+        {
+          "name": "Change bootcamp tagline",
+          "done": false
+        },
+        {
+          "name": "Xenia QMTest bug and type hinting",
+          "done": true
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        },
+        {
+          "name": "Clang-tidy upgrade",
+          "done": false
+        },
+        {
+          "name": "Fix last gDAP test",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Xenia QMTest bug and type hinting",
+          "start": "10:12:06.235901",
+          "breaks": []
+        },
+        {
+          "name": "Update gEP",
+          "start": "15:12:38.262025",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "spent half an hour debugging 27005 with Gerda",
+        "also spent time helping someone with miscellaneous files"
+      ],
+      "end_time": "16:49:58.913422"
+    },
+    "2024-01-11": {
+      "priorities": [
+        {
+          "name": "Change bootcamp tagline",
+          "done": false
+        },
+        {
+          "name": "Create gPAS API",
+          "done": false
+        },
+        {
+          "name": "Update gEP",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Look at my commits in Gerrit",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "adding amex to concur",
+          "start": "08:21:25.588571",
+          "breaks": []
+        },
+        {
+          "name": "Update gEP",
+          "start": "10:08:44.732722",
+          "breaks": []
+        },
+        {
+          "name": "Create gPAS API",
+          "start": "10:08:58.584691",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:14:15.571824"
+    },
+    "2024-01-12": {
+      "priorities": [
+        {
+          "name": "Change bootcamp tagline",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Update gEP details section",
+          "done": false
+        },
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Look at my commits in Gerrit",
+          "done": false
+        },
+        {
+          "name": "Bootcamp learning",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Update gEP details section",
+          "start": "09:26:32.731891",
+          "breaks": []
+        },
+        {
+          "name": "buying train ticket",
+          "start": "12:25:44.958639",
+          "breaks": []
+        },
+        {
+          "name": "Update gEP details section",
+          "start": "13:55:32.016913",
+          "breaks": []
+        }
+      ],
+      "notes": ["spent 20 minutes replying to emails in the morning"],
+      "end_time": "16:58:24.211765"
+    },
+    "2024-01-15": {
+      "priorities": [
+        {
+          "name": "Ask Marco about concur claims system",
+          "done": false
+        },
+        {
+          "name": "Ask Maria about Python 3.8 migration for users, then email Christian",
+          "done": false
+        },
+        {
+          "name": "Change bootcamp tagline",
+          "done": true
+        },
+        {
+          "name": "Finish gEP exclusing snapshots",
+          "done": false
+        },
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Bootcamp learning",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "merge TwoFish",
+          "start": "10:06:24.939472",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy upgrade",
+          "start": "10:27:48.803390",
+          "breaks": []
+        },
+        {
+          "name": "testing Xenia QMTest bug and type hinting",
+          "start": "12:00:06.617703",
+          "breaks": []
+        },
+        {
+          "name": "Change bootcamp tagline",
+          "start": "16:06:26.625880",
+          "breaks": []
+        },
+        {
+          "name": "Ask Marco about concur claims system",
+          "start": "16:19:56.134411",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:55:03.374642"
+    },
+    "2024-01-16": {
+      "priorities": [
+        {
+          "name": "Merge TwoFish",
+          "done": true
+        },
+        {
+          "name": "Clang-tidy",
+          "done": false
+        },
+        {
+          "name": "gqm type hinting",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Ask Marco about concur",
+          "done": false
+        },
+        {
+          "name": "Ask Maria and Christian about Python 3.8",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge TwoFish",
+          "start": "09:36:40.811510",
+          "breaks": []
+        },
+        {
+          "name": "gqm type hinting",
+          "start": "09:44:01.314214",
+          "breaks": []
+        },
+        {
+          "name": "Merge TwoFish",
+          "start": "10:46:51.778025",
+          "breaks": []
+        },
+        {
+          "name": "helping james with git bash",
+          "start": "11:14:14.596307",
+          "breaks": []
+        },
+        {
+          "name": "Ask Maria and Christian about Python 3.8",
+          "start": "11:34:01.181193",
+          "breaks": []
+        },
+        {
+          "name": "Clang-tidy",
+          "start": "11:45:38.889881",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "11:52:46.213479",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:54:10.090153"
+    },
+    "2024-01-17": {
+      "priorities": [
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Email Christian about Python 3.8",
+          "done": true
+        },
+        {
+          "name": "Reviews",
+          "done": false
+        },
+        {
+          "name": "Update gEP with gDAP requirements",
+          "done": false
+        },
+        {
+          "name": "Update gEP API",
+          "done": false
+        },
+        {
+          "name": "Ask Marco about concur",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Ask Marco about concur",
+          "start": "10:00:19.555616",
+          "breaks": []
+        },
+        {
+          "name": "Update gEP API",
+          "start": "10:00:38.899516",
+          "breaks": []
+        },
+        {
+          "name": "Email Christian about Python 3.8",
+          "start": "10:03:09.185301",
+          "breaks": []
+        },
+        {
+          "name": "Update gEP API",
+          "start": "10:52:37.722481",
+          "breaks": []
+        }
+      ],
+      "notes": ["gpas API meeting ran over by almost an hour"]
+    },
+    "2024-01-18": {
+      "priorities": [
+        {
+          "name": "Bootcamp learning",
+          "done": false
+        },
+        {
+          "name": "Update gBA build instructions",
+          "done": false
+        },
+        {
+          "name": "Help gDAP build their gBAs",
+          "done": false
+        },
+        {
+          "name": "Merge develop into gpas and re-test",
+          "done": false
+        },
+        {
+          "name": "Prove clang-tidy works",
+          "done": false
+        },
+        {
+          "name": "gqm type hinting",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Update gBA build instructions",
+          "start": "13:34:38.024773",
+          "breaks": []
+        },
+        {
+          "name": "gEP",
+          "start": "13:46:58.023304",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Costas meeting was actually 2 hours",
+        "Spent an hour+ in the morning working on the gEP",
+        "need to replan tomorrow"
+      ],
+      "end_time": "15:52:16.858602"
+    },
+    "2024-01-19": {
+      "priorities": [
+        {
+          "name": "Non-Ben reviews",
+          "done": true
+        },
+        {
+          "name": "Prove clang-tidy works",
+          "done": false
+        },
+        {
+          "name": "gqm type hinting",
+          "done": false
+        },
+        {
+          "name": "Workday goals",
+          "done": false
+        },
+        {
+          "name": "Write new API",
+          "done": true
+        },
+        {
+          "name": "Rewrite gEP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Prove clang-tidy works",
+          "start": "08:29:22.316334",
+          "breaks": []
+        },
+        {
+          "name": "Write new API",
+          "start": "08:34:31.259107",
+          "breaks": []
+        },
+        {
+          "name": "Non-Ben reviews",
+          "start": "12:59:57.269929",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "review Constantin today2",
+        "review Constantin today",
+        "spent another hour on the gPAS API instead of doing reviews"
+      ]
+    },
+    "2024-01-22": {
+      "priorities": [
+        {
+          "name": "Bootcamp learning",
+          "done": true
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Build gBAs for gDAP",
+          "done": false
+        },
+        {
+          "name": "Workday goals",
+          "done": true
+        },
+        {
+          "name": "gqm type hinting",
+          "done": true
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "check details for travel",
+          "start": "10:05:32.326696",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp learning",
+          "start": "13:52:07.036975",
+          "breaks": []
+        },
+        {
+          "name": "Workday goals",
+          "start": "16:31:03.505696",
+          "breaks": []
+        },
+        {
+          "name": "gqm type hinting",
+          "start": "16:51:14.465041",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "also did a lot of replying to emails in the morning",
+        "been given copilot CLI"
+      ],
+      "end_time": "17:11:20.002087"
+    },
+    "2024-01-23": {
+      "priorities": [
+        {
+          "name": "Timesheets",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Rewrite gEP",
+          "done": false
+        },
+        {
+          "name": "Travel to Amberg",
+          "done": false
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Rewrite gEP",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2024-01-29": {
+      "priorities": [
+        {
+          "name": "catch-up with emails",
+          "done": false
+        },
+        {
+          "name": "Timesheets",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Rewrite gEP",
+          "done": false
+        },
+        {
+          "name": "Merge gqm changes",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "move calender things around",
+          "start": "09:48:15.106789",
+          "breaks": []
+        },
+        {
+          "name": "catch-up with emails",
+          "start": "11:56:18.066424",
+          "breaks": []
+        },
+        {
+          "name": "Building gDAP security objects",
+          "start": "15:21:22.729971",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "much of today was catching up",
+        "also spent at least half an hour reading through extra bootcamp material",
+        "was checking build progress of security objects all evening"
+      ]
+    },
+    "2024-01-30": {
+      "priorities": [
+        {
+          "name": "Build gDAP security objects",
+          "done": false
+        },
+        {
+          "name": "Submit concur request",
+          "done": true
+        },
+        {
+          "name": "Timesheets",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Merge gqm changes",
+          "done": false
+        },
+        {
+          "name": "Move pygpas repo to STG",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Build gDAP security objects",
+          "start": "10:17:02.835579",
+          "breaks": []
+        },
+        {
+          "name": "Submit concur request",
+          "start": "10:43:17.527763",
+          "breaks": []
+        },
+        {
+          "name": "Build gDAP security objects",
+          "start": "10:59:25.396082",
+          "breaks": []
+        }
+      ],
+      "notes": ["need to message Ben S today"]
+    },
+    "2024-01-31": {
+      "priorities": [
+        {
+          "name": "Build gDAP security objects",
+          "done": false
+        },
+        {
+          "name": "Timesheets",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Move pygpas repo to STG",
+          "done": false
+        },
+        {
+          "name": "Change pygpas output api to be iteration based instead of time",
+          "done": false
+        },
+        {
+          "name": "Put gSERVER client into pygpas",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Build gDAP security objects",
+          "start": "11:12:18.915529",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "from 9:30am was working on the security objects",
+        "Had at least an extra hour of gpas meetings"
+      ]
+    },
+    "2024-02-01": {
+      "priorities": [
+        {
+          "name": "Add receipt to concur and submit",
+          "done": true
+        },
+        {
+          "name": "Book travel for bootcamp pitch",
+          "done": false
+        },
+        {
+          "name": "Build gDAP security objects",
+          "done": true
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Attend bootcamp training",
+          "done": true
+        },
+        {
+          "name": "Timesheets",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Build gDAP security objects",
+          "start": "09:36:11.225039",
+          "breaks": []
+        },
+        {
+          "name": "Attend bootcamp training",
+          "start": "12:18:08.381020",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:24:13.214520"
+    },
+    "2024-02-02": {
+      "priorities": [
+        {
+          "name": "Perform IT update",
+          "done": false
+        },
+        {
+          "name": "Timesheets",
+          "done": true
+        },
+        {
+          "name": "Merge and build more security objects",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": true
+        },
+        {
+          "name": "Make slide for WDM on bootcamp",
+          "done": false
+        },
+        {
+          "name": "Move pygpas repo to STG",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Timesheets",
+          "start": "08:38:10.583832",
+          "breaks": []
+        },
+        {
+          "name": "gDAP tests",
+          "start": "11:38:41.329085",
+          "breaks": []
+        },
+        {
+          "name": "Move pygpas repo to STG",
+          "start": "13:39:49.643757",
+          "breaks": []
+        },
+        {
+          "name": "Perform IT update",
+          "start": "15:48:40.025704",
+          "breaks": []
+        }
+      ],
+      "notes": ["ask Maria about Python 3.11"]
+    },
+    "2024-02-05": {
+      "priorities": [
+        {
+          "name": "Make slide for WDM on bootcamp",
+          "done": true
+        },
+        {
+          "name": "Reply to emails",
+          "done": false
+        },
+        {
+          "name": "Timesheets",
+          "done": true
+        },
+        {
+          "name": "Merge and build more gdap security objects",
+          "done": false
+        },
+        {
+          "name": "Book pitch event",
+          "done": false
+        },
+        {
+          "name": "Make pygpas pipeline",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make pygpas pipeline",
+          "start": "07:58:53.131592",
+          "breaks": []
+        },
+        {
+          "name": "Timesheets",
+          "start": "11:31:10.733031",
+          "breaks": []
+        },
+        {
+          "name": "Make pygpas pipeline",
+          "start": "11:43:48.156230",
+          "breaks": [
+            {
+              "start": "11:44:59.578941",
+              "end": "14:20:56.244204"
+            }
+          ]
+        },
+        {
+          "name": "Make slide for WDM on bootcamp",
+          "start": "15:41:40.550590",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "17:30:27.254622"
+    },
+    "2024-02-07": {
+      "priorities": [
+        {
+          "name": "Make pygpas pipeline",
+          "done": false
+        },
+        {
+          "name": "Put gSERVER into pygpas",
+          "done": false
+        },
+        {
+          "name": "Figure out pygpas authentication",
+          "done": false
+        },
+        {
+          "name": "Merge and build more security objects",
+          "done": false
+        },
+        {
+          "name": "Merge gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Fix AdaptorFO for Python 3.11",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Put gSERVER into pygpas",
+          "start": "10:26:02.421534",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "started working at 8:30 am on putting gSERVER in pygpas",
+        "Costas meeting was an hour",
+        "I had an hour meeting with Ben S on interoperability",
+        "Spent half an hour writing thoughts about continuing with the release or not"
+      ],
+      "end_time": "16:30:23.777153"
+    },
+    "2024-02-06": {
+      "priorities": [
+        {
+          "name": "Make pygpas pipeline",
+          "done": true
+        },
+        {
+          "name": "Reply to emails, including Maria",
+          "done": true
+        },
+        {
+          "name": "Merge and build more gDAP security objects",
+          "done": false
+        },
+        {
+          "name": "Make bootcamp stakeholder profiles",
+          "done": false
+        },
+        {
+          "name": "Put gSERVER into pygpas",
+          "done": false
+        },
+        {
+          "name": "Merge gDAP tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make pygpas pipeline",
+          "start": "12:11:23.165472",
+          "breaks": []
+        },
+        {
+          "name": "emailing Andrew about pip and clearing",
+          "start": "14:40:43.664755",
+          "breaks": []
+        },
+        {
+          "name": "Reply to emails, including Maria",
+          "start": "15:37:21.488366",
+          "breaks": []
+        },
+        {
+          "name": "Make pygpas pipeline",
+          "start": "16:36:25.161230",
+          "breaks": []
+        },
+        {
+          "name": "Put gSERVER into pygpas",
+          "start": "17:26:43.808737",
+          "breaks": []
+        }
+      ],
+      "notes": ["AdaptorFO needs fixing with Python 3.11"]
+    },
+    "2024-02-08": {
+      "priorities": [
+        {
+          "name": "Respond to security objects review",
+          "done": true
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Make stakeholder profiles",
+          "done": true
+        },
+        {
+          "name": "Finish pygpas pipeline",
+          "done": false
+        },
+        {
+          "name": "Book more interviews",
+          "done": false
+        },
+        {
+          "name": "Merge gDAP tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Respond to security objects review",
+          "start": "08:34:57.460223",
+          "breaks": []
+        },
+        {
+          "name": "Make stakeholder profiles",
+          "start": "10:14:45.648443",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp",
+          "start": "12:05:07.269970",
+          "breaks": []
+        }
+      ],
+      "notes": ["It's Senseye not SenseI"],
+      "end_time": "16:01:05.583052"
+    },
+    "2024-02-09": {
+      "priorities": [
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Give Xenia Workday feedback",
+          "done": false
+        },
+        {
+          "name": "Discuss with Luke/Frances about SenseI",
+          "done": false
+        },
+        {
+          "name": "Merge gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Finish pygpas pipeline",
+          "done": false
+        },
+        {
+          "name": "Fix AdaptorFO for Python 3.11",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Triage",
+          "start": "08:53:56.315593",
+          "breaks": []
+        },
+        {
+          "name": "building security objects",
+          "start": "08:56:44.808273",
+          "breaks": []
+        },
+        {
+          "name": "Triage",
+          "start": "09:08:34.227793",
+          "breaks": []
+        },
+        {
+          "name": "Finish pygpas pipeline",
+          "start": "09:22:04.315490",
+          "breaks": []
+        },
+        {
+          "name": "Fix AdaptorFO for Python 3.11",
+          "start": "11:39:36.914665",
+          "breaks": []
+        },
+        {
+          "name": "Finish pygpas pipeline",
+          "start": "15:17:43.533424",
+          "breaks": []
+        }
+      ],
+      "notes": ["add start_ide to gPROMS common", "Could write it in rust"],
+      "end_time": "17:21:34.669516"
+    },
+    "2024-02-12": {
+      "priorities": [
+        {
+          "name": "gPAS proto in gproms core",
+          "done": true
+        },
+        {
+          "name": "gPAS bypass authentication with open",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Python",
+          "done": false
+        },
+        {
+          "name": "Discuss SenseEy",
+          "done": false
+        },
+        {
+          "name": "gPAS & pygpas testing",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "pushing pygpas commits to show Xenia",
+          "start": "07:49:37.915726",
+          "breaks": []
+        },
+        {
+          "name": "Fixing AdaptorFO Python 3.11",
+          "start": "08:00:27.718347",
+          "breaks": []
+        },
+        {
+          "name": "gPAS proto in gproms core",
+          "start": "10:11:21.292629",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-02-13": {
+      "priorities": [
+        {
+          "name": "gproms-core gpas test framework",
+          "done": true
+        },
+        {
+          "name": "Ask Ben K about Germany",
+          "done": true
+        },
+        {
+          "name": "AdaptorFO Python fix",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Xenia workday feedback",
+          "done": false
+        },
+        {
+          "name": "Update trac-to-jira",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "send triage messages",
+          "start": "09:51:24.145158",
+          "breaks": []
+        },
+        {
+          "name": "gproms-core gpas test framework",
+          "start": "10:05:42.832102",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to reply to Mark after talking with Constantin",
+        "Should discuss with Spiros unit tests"
+      ]
+    },
+    "2024-02-14": {
+      "priorities": [
+        {
+          "name": "Make gPAS API work",
+          "done": true
+        },
+        {
+          "name": "Reply to Andrew about clearing Python",
+          "done": false
+        },
+        {
+          "name": "Ask Luke about Sense Eye",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Update trac-to-jira",
+          "done": false
+        },
+        {
+          "name": "Watch Ben K AI video",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make gPAS API work",
+          "start": "10:07:33.002721",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:55:35.595445"
+    },
+    "2024-02-15": {
+      "priorities": [
+        {
+          "name": "Book pitch event",
+          "done": false
+        },
+        {
+          "name": "Watch Ben K AI video",
+          "done": false
+        },
+        {
+          "name": "update trac2jira",
+          "done": false
+        },
+        {
+          "name": "AdaptorFO Python fix",
+          "done": false
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Reply to Andrew about clearing Python",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "rebasing on Xenia",
+          "start": "07:49:28.976904",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:02:00.786612"
+    },
+    "2024-02-16": {
+      "priorities": [
+        {
+          "name": "Book pitch event!!",
+          "done": false
+        },
+        {
+          "name": "Update trac2jira",
+          "done": true
+        },
+        {
+          "name": "Reply to Andrew about Python clearing",
+          "done": false
+        },
+        {
+          "name": "Update security objects building page",
+          "done": false
+        },
+        {
+          "name": "Rebase on Xenias commits and make execute work",
+          "done": true
+        },
+        {
+          "name": "Watch Ben K AI video",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Rebase on Xenias commits and make execute work",
+          "start": "08:27:11.091830",
+          "breaks": []
+        },
+        {
+          "name": "Update trac2jira",
+          "start": "12:26:42.011908",
+          "breaks": []
+        },
+        {
+          "name": "Book pitch event!!",
+          "start": "16:25:27.732130",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "On Monday need to review Duane's commit for Spiros",
+        "Need to review Marco"
+      ],
+      "end_time": "17:05:27.226202"
+    },
+    "2024-02-19": {
+      "priorities": [
+        {
+          "name": "Book flight!!!",
+          "done": true
+        },
+        {
+          "name": "Reply to Andrew about Python clearing",
+          "done": false
+        },
+        {
+          "name": "Update security objects page on Trac",
+          "done": true
+        },
+        {
+          "name": "Review Xenia commits",
+          "done": false
+        },
+        {
+          "name": "Get Xenia to rebase and push my changes",
+          "done": false
+        },
+        {
+          "name": "Watch Ben K AI video",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Book flight!!!",
+          "start": "09:37:55.798137",
+          "breaks": []
+        },
+        {
+          "name": "Get Xenia to rebase and push my changes",
+          "start": "12:00:39.194132",
+          "breaks": []
+        },
+        {
+          "name": "Update security objects page on Trac",
+          "start": "12:06:30.697985",
+          "breaks": []
+        },
+        {
+          "name": "Fixing threading",
+          "start": "15:39:57.624456",
+          "breaks": []
+        }
+      ],
+      "notes": ["will present DevCI tomorrow"]
+    },
+    "2024-02-17": {
+      "priorities": [
+        {
+          "name": "Book flight!!!",
+          "done": false
+        },
+        {
+          "name": "Reply to Andrew about Python clearing",
+          "done": false
+        },
+        {
+          "name": "Update security objects page on Trac",
+          "done": false
+        },
+        {
+          "name": "Get Xenia to rebase and push my changes",
+          "done": false
+        },
+        {
+          "name": "Watch Ben K AI video",
+          "done": false
+        },
+        {
+          "name": "Review Duane's commit",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2024-02-20": {
+      "priorities": [
+        {
+          "name": "Review Xenia commits",
+          "done": true
+        },
+        {
+          "name": "gDAP tests",
+          "done": false
+        },
+        {
+          "name": "Reply to emails including Andrew",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        },
+        {
+          "name": "Check gPAS is working",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Pushing my changes to Gerrit",
+          "start": "10:54:38.594889",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia commits",
+          "start": "13:20:08.276470",
+          "breaks": []
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "start": "15:33:47.670499",
+          "breaks": []
+        }
+      ],
+      "notes": ["Must review Ben S"],
+      "end_time": "17:14:09.343405"
+    },
+    "2024-02-21": {
+      "priorities": [
+        {
+          "name": "gDAP tests and reply email",
+          "done": false
+        },
+        {
+          "name": "Reply to all emails including Andrew",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": true
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS hanging",
+          "done": false
+        },
+        {
+          "name": "Reviews",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix gPAS hanging",
+          "start": "09:01:04.173840",
+          "breaks": []
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "start": "09:14:41.796679",
+          "breaks": []
+        },
+        {
+          "name": "gDAP tests and reply email",
+          "start": "12:37:48.795720",
+          "breaks": []
+        },
+        {
+          "name": "Fix gPAS hanging",
+          "start": "13:40:15.956026",
+          "breaks": []
+        }
+      ],
+      "notes": ["Spent half an hour on the phone with Ysmael"],
+      "end_time": "17:48:04.436783"
+    },
+    "2024-02-22": {
+      "priorities": [
+        {
+          "name": "gDAP tests",
+          "done": true
+        },
+        {
+          "name": "Reply to all emails",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        },
+        {
+          "name": "Reviews",
+          "done": false
+        },
+        {
+          "name": "Write up pygpas testing instructions for QA",
+          "done": false
+        },
+        {
+          "name": "gPAS hanging",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS hanging",
+          "start": "08:44:28.945671",
+          "breaks": []
+        },
+        {
+          "name": "gDAP tests",
+          "start": "10:29:17.044177",
+          "breaks": []
+        },
+        {
+          "name": "Reply to all emails",
+          "start": "11:12:57.912763",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:13:38.719695"
+    },
+    "2024-02-23": {
+      "priorities": [
+        {
+          "name": "Send questions for bootcamp",
+          "done": true
+        },
+        {
+          "name": "Reply to all emails including gDAP and Andrew",
+          "done": false
+        },
+        {
+          "name": "Fix AdaptorFO for py 3.11",
+          "done": false
+        },
+        {
+          "name": "Reviews",
+          "done": false
+        },
+        {
+          "name": "Write up pygpas testing instructons for QA",
+          "done": false
+        },
+        {
+          "name": "gPAS hanging",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Send questions for bootcamp",
+          "start": "08:58:15.873852",
+          "breaks": []
+        },
+        {
+          "name": "Fix AdaptorFO for py 3.11",
+          "start": "08:58:22.608851",
+          "breaks": []
+        },
+        {
+          "name": "Reply to all emails including gDAP and Andrew",
+          "start": "10:11:56.718801",
+          "breaks": []
+        },
+        {
+          "name": "Fix AdaptorFO for py 3.11",
+          "start": "11:43:19.185037",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Reply to Lozano about gPAS requirements",
+        "github production survey",
+        "Collect travel documents together"
+      ],
+      "end_time": "15:49:20.200798"
+    },
+    "2024-02-26": {
+      "priorities": [
+        {
+          "name": "Reviews",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        },
+        {
+          "name": "Benefits",
+          "done": false
+        },
+        {
+          "name": "Reply to Lozano about gPAS and gDAP",
+          "done": false
+        },
+        {
+          "name": "Copilot survey",
+          "done": false
+        },
+        {
+          "name": "Ensure travel request is working",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Reply to Gerrit comments",
+          "start": "09:52:06.134184",
+          "breaks": []
+        },
+        {
+          "name": "Benefits",
+          "start": "09:53:38.925068",
+          "breaks": []
+        },
+        {
+          "name": "Reviews",
+          "start": "10:24:07.012997",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Benefits window isn't open yet",
+        "Spent an hour researching Python CI linters and tools",
+        "Spent another half hour at least getting the hooks ready"
+      ],
+      "end_time": "16:44:45.878645"
+    },
+    "2024-02-27": {
+      "priorities": [
+        {
+          "name": "pygpas testing instructions",
+          "done": true
+        },
+        {
+          "name": "gPAS hanging",
+          "done": false
+        },
+        {
+          "name": "Copilot survey",
+          "done": false
+        },
+        {
+          "name": "Reply to gDAP about gPAS",
+          "done": false
+        },
+        {
+          "name": "Clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS hanging",
+          "start": "09:53:15.104148",
+          "breaks": []
+        },
+        {
+          "name": "pygpas testing instructions",
+          "start": "11:09:30.346846",
+          "breaks": []
+        },
+        {
+          "name": "gPAS hanging",
+          "start": "12:07:27.206627",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "spent an hour fixing Python 3.11 with if defs",
+        "Almost two hours fixing Python"
+      ]
+    },
+    "2024-03-01": {
+      "priorities": [
+        {
+          "name": "Choose Benefits",
+          "done": false
+        },
+        {
+          "name": "copilot surveyt",
+          "done": true
+        },
+        {
+          "name": "Ensure travel is setup",
+          "done": true
+        },
+        {
+          "name": "Gerrit Reviews",
+          "done": false
+        },
+        {
+          "name": "Test GSA fix",
+          "done": false
+        },
+        {
+          "name": "gPAS fix parsing port and hanging",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS fix parsing port and hanging",
+          "start": "08:36:23.099970",
+          "breaks": []
+        },
+        {
+          "name": "copilot surveyt",
+          "start": "15:32:41.532680",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:04:20.756862"
+    },
+    "2024-02-28": {
+      "priorities": [
+        {
+          "name": "Ensure travel is setup",
+          "done": false
+        },
+        {
+          "name": "Book interviews through Maria",
+          "done": false
+        },
+        {
+          "name": "gPAS hanging",
+          "done": false
+        },
+        {
+          "name": "copilot survey",
+          "done": false
+        },
+        {
+          "name": "Gerrit reviews",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "copilot survey",
+          "start": "10:04:13.698551",
+          "breaks": []
+        },
+        {
+          "name": "gPAS hanging",
+          "start": "10:04:17.961790",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to fix GSA high priority"],
+      "end_time": "17:40:15.975172"
+    },
+    "2024-02-29": {
+      "priorities": [
+        {
+          "name": "Fix GSA",
+          "done": true
+        },
+        {
+          "name": "Ensure travel is setup",
+          "done": false
+        },
+        {
+          "name": "Gerrit reviews",
+          "done": false
+        },
+        {
+          "name": "copilot survey",
+          "done": false
+        },
+        {
+          "name": "gPAS message consumer hang",
+          "done": false
+        },
+        {
+          "name": "Bootcamp",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS message consumer hang",
+          "start": "08:42:23.296172",
+          "breaks": []
+        },
+        {
+          "name": "Fix GSA",
+          "start": "10:28:59.242367",
+          "breaks": []
+        },
+        {
+          "name": "gPAS message consumer hang",
+          "start": "12:56:37.859079",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp",
+          "start": "14:31:02.708726",
+          "breaks": []
+        },
+        {
+          "name": "Ensure travel is setup",
+          "start": "14:31:47.570058",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp",
+          "start": "14:36:09.389918",
+          "breaks": []
+        },
+        {
+          "name": "set input in gpas",
+          "start": "15:13:53.397129",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Share registration with colleagues for bootcamp",
+        "fill out bootcamp survey"
+      ],
+      "end_time": "16:20:36.627973"
+    },
+    "2024-03-04": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Close gsa ticket",
+          "done": false
+        },
+        {
+          "name": "Gerrit reviews",
+          "done": true
+        },
+        {
+          "name": "Reply to Gerrit comments",
+          "done": false
+        },
+        {
+          "name": "gPAS activity status in gserver and undefined status",
+          "done": false
+        },
+        {
+          "name": "book python dependency security meeting",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Timecards",
+          "start": "09:06:57.750546",
+          "breaks": []
+        },
+        {
+          "name": "Gerrit reviews",
+          "start": "10:15:12.252971",
+          "breaks": []
+        },
+        {
+          "name": "Close gsa ticket",
+          "start": "13:46:38.024769",
+          "breaks": []
+        },
+        {
+          "name": "Making WDM presentation",
+          "start": "15:38:11.211679",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to fix flake8 line length", "must get back to Ben"]
+    },
+    "2024-03-05": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Close GSA ticket",
+          "done": false
+        },
+        {
+          "name": "Reply to emails including booking Python security meeting",
+          "done": false
+        },
+        {
+          "name": "Bootcamp server flowchart",
+          "done": false
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "Choose benefits",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "reviews",
+          "start": "12:10:31.259333",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "15:34:29.336102",
+          "breaks": []
+        },
+        {
+          "name": "bootcamp one-pager",
+          "start": "15:58:12.277634",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Lost an hour to tech issues",
+        "Spent at least half an hour on timecards before 3pm",
+        "Need to ask Tom about the gBA ID",
+        "Need to reply to gDAP! Try to answer all their questions, if can't then set-up a meeting"
+      ],
+      "end_time": "17:17:41.070490"
+    },
+    "2024-03-06": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": true
+        },
+        {
+          "name": "Bootcamp server flowchart",
+          "done": true
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "Choose benefits",
+          "done": true
+        },
+        {
+          "name": "Reply to emails including book Python security meeting and gDAP gPAS",
+          "done": false
+        },
+        {
+          "name": "Request travel payment",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Timecards",
+          "start": "10:28:00.105430",
+          "breaks": [
+            {
+              "start": "12:44:11.895551",
+              "end": "23:59:59.999999"
+            }
+          ]
+        },
+        {
+          "name": "Choose benefits",
+          "start": "12:44:20.311402",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp server flowchart",
+          "start": "15:29:31.199982",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to book dentist",
+        "respond to gDAP first thing tomorrow",
+        "Got a name from Maria for a contact"
+      ],
+      "end_time": "16:59:41.917057"
+    },
+    "2024-03-07": {
+      "priorities": [
+        {
+          "name": "Reply to emails including Python security and gDAP gPAS",
+          "done": true
+        },
+        {
+          "name": "Request travel payment",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments and build failures",
+          "done": false
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "flake8 line length",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Reply to emails including Python security and gDAP gPAS",
+          "start": "09:24:14.725774",
+          "breaks": [
+            {
+              "start": "11:29:34.933740",
+              "end": "23:59:59.999999"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Need to fix state estimation tests",
+        "Need to write up notes for interviews I've been in"
+      ],
+      "end_time": "16:06:06.161406"
+    },
+    "2024-03-08": {
+      "priorities": [
+        {
+          "name": "Request travel payment",
+          "done": true
+        },
+        {
+          "name": "Book interviews through Maria",
+          "done": false
+        },
+        {
+          "name": "Ask Tom about gBA ID",
+          "done": false
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "flake8 line length",
+          "done": false
+        },
+        {
+          "name": "Reply to Gerrit comments and failures",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Reply to Gerrit comments and failures",
+          "start": "08:29:05.211446",
+          "breaks": []
+        },
+        {
+          "name": "Ask Tom about gBA ID",
+          "start": "11:48:03.528454",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy",
+          "start": "13:55:35.453397",
+          "breaks": []
+        },
+        {
+          "name": "Request travel payment",
+          "start": "15:37:58.335341",
+          "breaks": []
+        },
+        {
+          "name": "flake8 line length",
+          "start": "15:52:43.439271",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to go through my Trac tickets and unassign/close",
+        "Need to ask about format and gcc in DevCI",
+        "Need to ask Tom about the gBA ID",
+        "upgrade to Python 3.11 on Monday",
+        "Really need to look at clang-tidy"
+      ],
+      "end_time": "16:05:28.570809"
+    },
+    "2024-03-11": {
+      "priorities": [
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Book interviews from Maria person",
+          "done": false
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "flake8 line length",
+          "done": false
+        },
+        {
+          "name": "Review Xenia",
+          "done": true
+        },
+        {
+          "name": "gPAS respond to comments",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Looking at Duane's commits",
+          "start": "09:26:06.942936",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "start": "11:52:27.098824",
+          "breaks": [
+            {
+              "start": "11:52:30.546933",
+              "end": "13:27:22.822105"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Need to review Xenia again",
+        "Need to try the gWAP thing for Oliver",
+        "Spent half an hour reviewing Xenia as well",
+        "test of pygpas failed but for FP reasons. Not sure where to go from there"
+      ],
+      "end_time": "18:23:52.544703"
+    },
+    "2024-03-12": {
+      "priorities": [
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": false
+        },
+        {
+          "name": "Bootcamp flowchart more Siemens",
+          "done": false
+        },
+        {
+          "name": "gWAP FDLIBM",
+          "done": false
+        },
+        {
+          "name": "flake8 and bandit changes",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "gPAS pass Jenkins",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "start": "09:11:25.204221",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to reschedule skip tier meeting",
+        "Book review meeting with Costas, 1.5 hr minimum"
+      ]
+    },
+    "2024-03-13": {
+      "priorities": [
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "done": true
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Bootcamp flowchart more Siemens",
+          "done": false
+        },
+        {
+          "name": "Catch-up with Trac",
+          "done": false
+        },
+        {
+          "name": "flake8 & bandit changes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Bootcamp dashboard mock-up",
+          "start": "08:58:18.925110",
+          "breaks": []
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "start": "10:25:03.932842",
+          "breaks": []
+        },
+        {
+          "name": "Upgrading Windows Jenkins to 3.11",
+          "start": "11:50:09.436626",
+          "breaks": []
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "start": "13:37:39.146260",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Find out bootcamp dress code",
+        "started at 8:30",
+        "Should replace the graph in the wireframe with some more realistic data"
+      ],
+      "end_time": "15:55:15.671371"
+    },
+    "2024-03-14": {
+      "priorities": [
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "done": false
+        },
+        {
+          "name": "Catch-up with Trac",
+          "done": false
+        },
+        {
+          "name": "flake8 & bandit changes",
+          "done": false
+        },
+        {
+          "name": "gPAS output stability",
+          "done": false
+        },
+        {
+          "name": "gPAS pass Jenkins",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "clang-tidy",
+          "start": "08:24:13.161601",
+          "breaks": []
+        },
+        {
+          "name": "Fix AdaptorFO",
+          "start": "08:48:44.284156",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy",
+          "start": "10:14:56.414279",
+          "breaks": []
+        },
+        {
+          "name": "Bootcamp",
+          "start": "12:35:41.213371",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Started on clang-tidy at 9:45",
+        "need to retry gWAP after a reset"
+      ],
+      "end_time": "16:15:19.899234"
+    },
+    "2024-03-15": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Transfer flowchart to slides",
+          "done": true
+        },
+        {
+          "name": "Improve wireframe realistic data",
+          "done": true
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "flake8 & bandit changes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Transfer flowchart to slides",
+          "start": "08:51:34.059145",
+          "breaks": []
+        },
+        {
+          "name": "gDAP FDLIBM",
+          "start": "10:17:49.089601",
+          "breaks": []
+        },
+        {
+          "name": "Transfer flowchart to slides",
+          "start": "12:29:12.774331",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy",
+          "start": "15:46:07.224517",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "FDLIBM isn't next week urgent so can get back to it post germany",
+        "clang-tidy is because of a devtoolset thing",
+        "need to review Xenia's merge",
+        "I think the line length thing is a no go?"
+      ],
+      "end_time": "16:16:17.663267"
+    },
+    "2024-03-18": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Check clang-tidy result",
+          "done": false
+        },
+        {
+          "name": "Catch-up with Trac",
+          "done": false
+        },
+        {
+          "name": "Check Python 3.11 upgrade",
+          "done": false
+        },
+        {
+          "name": "bandit config file",
+          "done": false
+        },
+        {
+          "name": "Add to the bootcamp presentation",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2024-03-27": {
+      "priorities": [
+        {
+          "name": "Prepare for Costas presentation",
+          "done": true
+        },
+        {
+          "name": "Catch-up post leave",
+          "done": false
+        },
+        {
+          "name": "Check clang-tidy result",
+          "done": false
+        },
+        {
+          "name": "Check Python 3.11 upgrade",
+          "done": false
+        },
+        {
+          "name": "gWAP FDLIBM",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Prepare for Costas presentation",
+          "start": "10:37:16.190229",
+          "breaks": []
+        },
+        {
+          "name": "Catch-up post leave",
+          "start": "13:27:28.194645",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "14:31:57.817626",
+          "breaks": []
+        },
+        {
+          "name": "Prepare for Costas presentation",
+          "start": "15:53:37.411300",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need a rhel8 machine to build security objects for gDAP",
+        "Need to test AdaptorFO numpy test for Python 3.11",
+        "The whole morning was spent casually catching up with things tbh",
+        "Need to implement changes raised in last growth talk, i.e ensure I see the emails",
+        "Should check company benefits"
+      ]
+    },
+    "2024-03-28": {
+      "priorities": [
+        {
+          "name": "Catch-up with emails",
+          "done": false
+        },
+        {
+          "name": "Catch-up with Trac",
+          "done": false
+        },
+        {
+          "name": "Try Python 3.11 adaptorfo tests locally",
+          "done": true
+        },
+        {
+          "name": "gPAS reply to comments",
+          "done": false
+        },
+        {
+          "name": "Check clang-tidy result",
+          "done": false
+        },
+        {
+          "name": "gWAP FDLIBM",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Try Python 3.11 adaptorfo tests locally",
+          "start": "08:02:18.580863",
+          "breaks": []
+        },
+        {
+          "name": "Check clang-tidy result",
+          "start": "08:27:52.112465",
+          "breaks": []
+        },
+        {
+          "name": "gWAP FDLIBM",
+          "start": "08:31:54.997393",
+          "breaks": []
+        },
+        {
+          "name": "Try Python 3.11 adaptorfo tests locally",
+          "start": "09:47:01.404616",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to add extra notes",
+        "Spent the whole day trying to fix Python 3.11"
+      ],
+      "end_time": "15:42:02.014108"
+    },
+    "2024-04-02": {
+      "priorities": [
+        {
+          "name": "Catch up with emails",
+          "done": true
+        },
+        {
+          "name": "Catch up with Trac",
+          "done": true
+        },
+        {
+          "name": "Make gpas.exe and bring all existing changes into it",
+          "done": false
+        },
+        {
+          "name": "clang-tidy rebase and recheck",
+          "done": false
+        },
+        {
+          "name": "bandit config file",
+          "done": false
+        },
+        {
+          "name": "gDAP rhel8 security objects",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Checking Python upgrade",
+          "start": "11:01:21.393195",
+          "breaks": []
+        },
+        {
+          "name": "Catch up with emails",
+          "start": "11:51:08.264020",
+          "breaks": []
+        },
+        {
+          "name": "requesting travel money",
+          "start": "13:36:32.342043",
+          "breaks": []
+        },
+        {
+          "name": "Catch up with Trac",
+          "start": "14:15:22.374246",
+          "breaks": []
+        },
+        {
+          "name": "gOPython tests",
+          "start": "14:51:39.207627",
+          "breaks": []
+        },
+        {
+          "name": "Catch up with Trac",
+          "start": "15:55:40.675511",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to request travel money",
+        "Need to reply to Felix about his newsletter",
+        "Need to propose new time for gPAS reviews",
+        "need to reply to Maria",
+        "Oops I mean need to reply to Catarina",
+        "Need to fix 25903 before Python merge and then reply to Catarina",
+        "Need to do engagement survey"
+      ],
+      "end_time": "16:28:40.921248"
+    },
+    "2024-04-03": {
+      "priorities": [
+        {
+          "name": "Merge Python 3.11 upgrade",
+          "done": true
+        },
+        {
+          "name": "Merge gO:Python test",
+          "done": false
+        },
+        {
+          "name": "Make gpas.exe and bring existing changes into it",
+          "done": false
+        },
+        {
+          "name": "gDAP rhel8 security objects",
+          "done": false
+        },
+        {
+          "name": "clang-tidy rebase and recheck",
+          "done": false
+        },
+        {
+          "name": "gPAS gEP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge Python 3.11 upgrade",
+          "start": "10:04:34.880130",
+          "breaks": []
+        },
+        {
+          "name": "Merge gO:Python test",
+          "start": "10:26:57.137176",
+          "breaks": []
+        },
+        {
+          "name": "Make gpas.exe and bring existing changes into it",
+          "start": "13:36:17.374131",
+          "breaks": []
+        },
+        {
+          "name": "upgrading omniorb",
+          "start": "15:39:23.062152",
+          "breaks": []
+        },
+        {
+          "name": "Merge gO:Python test",
+          "start": "17:33:43.016035",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to push the omniorb upgrade",
+        "Need to send Python email",
+        "spent 90 mins upgrading omniorb with constantin before meeting with andrew instead of working on gPAS",
+        "Need to make gO:Python give the wheel different version constraints depending on el7 or other"
+      ],
+      "end_time": "17:45:13.611561"
+    },
+    "2024-04-04": {
+      "priorities": [
+        {
+          "name": "Fix gO:Python Py 3.11",
+          "done": true
+        },
+        {
+          "name": "Make gpas.exe and update other changes",
+          "done": false
+        },
+        {
+          "name": "gDAP rhel8 security objects",
+          "done": false
+        },
+        {
+          "name": "clang-tidy rebase and check",
+          "done": true
+        },
+        {
+          "name": "gPAS gEP",
+          "done": false
+        },
+        {
+          "name": "QMTest tickets",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix gO:Python Py 3.11",
+          "start": "09:02:31.372683",
+          "breaks": []
+        },
+        {
+          "name": "redoing omniorb conan",
+          "start": "15:08:46.977043",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Also spent half an hour pushing new conan recipes",
+        "Need to do a complete fresh rebuild of the conan stuff"
+      ],
+      "end_time": "16:43:31.543744"
+    },
+    "2024-04-05": {
+      "priorities": [
+        {
+          "name": "Check clang-tidy",
+          "done": true
+        },
+        {
+          "name": "Merge gO:Python changes",
+          "done": true
+        },
+        {
+          "name": "Merge omniorb changes and upload build artifacts",
+          "done": true
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "QMTest tickets",
+          "done": false
+        },
+        {
+          "name": "work on doer",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge gO:Python changes",
+          "start": "08:20:23.060139",
+          "breaks": []
+        },
+        {
+          "name": "Merge omniorb changes and upload build artifacts",
+          "start": "08:38:14.482946",
+          "breaks": []
+        },
+        {
+          "name": "Check clang-tidy",
+          "start": "08:39:48.115645",
+          "breaks": []
+        },
+        {
+          "name": "Merge gO:Python changes",
+          "start": "09:31:27.390528",
+          "breaks": []
+        },
+        {
+          "name": "gOPython integration test",
+          "start": "13:19:43.859525",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent half an hour on omniorb before I started tracking",
+        "Need to check nightly is 3.11",
+        "Need to reply to Catarina",
+        "Need to ask Yuzhao about omniorb",
+        "Need to test nightly"
+      ],
+      "end_time": "16:03:10.148339"
+    },
+    "2024-04-08": {
+      "priorities": [
+        {
+          "name": "Get docker build working locally with Python dependencies",
+          "done": true
+        },
+        {
+          "name": "Fix gO:Python Linux test",
+          "done": false
+        },
+        {
+          "name": "Fix clang-tidy by updating if check in conanconfig",
+          "done": false
+        },
+        {
+          "name": "Test omniorb with exact same Python version 3.11.5 fresh build",
+          "done": false
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "gPAS gEP",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Get docker build working locally with Python dependencies",
+          "start": "07:38:45.773759",
+          "breaks": []
+        },
+        {
+          "name": "Fix clang-tidy by updating if check in conanconfig",
+          "start": "08:27:09.272578",
+          "breaks": []
+        },
+        {
+          "name": "Make gpas.exe",
+          "start": "09:01:43.254233",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to redeem voucher",
+        "Spent half an hour replying to Mariana about the Python upgrade",
+        "Should do IT survey too",
+        "rhel8 machine"
+      ],
+      "end_time": "15:35:02.643957"
+    },
+    "2024-04-09": {
+      "priorities": [
+        {
+          "name": "Merge gO:Python test",
+          "done": true
+        },
+        {
+          "name": "gDAP rhel8 security objects",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": true
+        },
+        {
+          "name": "Try omniorb with exact Python version",
+          "done": false
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "gO:Python update install instructions and address ticket",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge gO:Python test",
+          "start": "08:36:57.511782",
+          "breaks": []
+        },
+        {
+          "name": "gO:Python update install instructions and address ticket",
+          "start": "08:51:59.255871",
+          "breaks": []
+        },
+        {
+          "name": "Make gpas.exe",
+          "start": "09:04:30.619338",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "13:18:01.093666",
+          "breaks": []
+        },
+        {
+          "name": "Make gpas.exe",
+          "start": "14:58:43.840058",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-04-10": {
+      "priorities": [
+        {
+          "name": "Update gO:Python install instructions and reply to two Trac tickets",
+          "done": false
+        },
+        {
+          "name": "Try omniorb with exact Python version",
+          "done": false
+        },
+        {
+          "name": "gDAP rhel8 & debian security objects",
+          "done": false
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "Engagement survey",
+          "done": false
+        },
+        {
+          "name": "Security survey",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make gpas.exe",
+          "start": "08:42:59.766158",
+          "breaks": []
+        },
+        {
+          "name": "gDAP rhel8 & debian security objects",
+          "start": "10:43:26.420569",
+          "breaks": []
+        },
+        {
+          "name": "Make gpas.exe",
+          "start": "14:33:59.052144",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Midway through the execute command",
+        "Need to check my one kernel ticket",
+        "Spent 45 minutes talking with Sree about gO:Python testing"
+      ],
+      "end_time": "16:11:28.612699"
+    },
+    "2024-04-11": {
+      "priorities": [
+        {
+          "name": "gDAP Debian security objects",
+          "done": false
+        },
+        {
+          "name": "Update gO:Python instructions and reply to two Trac tickets",
+          "done": false
+        },
+        {
+          "name": "Check one kernel ticket",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "Engagement survey",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gDAP Debian security objects",
+          "start": "07:46:46.303901",
+          "breaks": [
+            {
+              "start": "12:02:28.166757",
+              "end": "13:36:13.701004"
+            }
+          ]
+        }
+      ],
+      "notes": ["Need to do generative AI training", "Should review Ben"]
+    },
+    "2024-04-12": {
+      "priorities": [
+        {
+          "name": "gDAP Debian security objects",
+          "done": false
+        },
+        {
+          "name": "Update gO:Python instructions and reply to two Trac tickets",
+          "done": false
+        },
+        {
+          "name": "Check one kernel ticket",
+          "done": false
+        },
+        {
+          "name": "clang-tidy",
+          "done": true
+        },
+        {
+          "name": "Make gpas.exe",
+          "done": false
+        },
+        {
+          "name": "Engagement survey",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gDAP Debian security objects",
+          "start": "09:57:36.048444",
+          "breaks": []
+        },
+        {
+          "name": "clang-tidy",
+          "start": "10:07:40.374024",
+          "breaks": []
+        },
+        {
+          "name": "gDAP Debian security objects",
+          "start": "10:18:51.851425",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "15:23:50.513354",
+          "breaks": []
+        },
+        {
+          "name": "doer",
+          "start": "16:01:29.392317",
+          "breaks": []
+        }
+      ],
+      "notes": ["Ben S dances"]
+    },
+    "2024-04-15": {
+      "priorities": [
+        {
+          "name": "Engagement survey",
+          "done": false
+        },
+        {
+          "name": "IT Survey",
+          "done": false
+        },
+        {
+          "name": "Security survey",
+          "done": false
+        },
+        {
+          "name": "Check one kernel ticket",
+          "done": false
+        },
+        {
+          "name": "Update gO:Python instructions and reply to two Trac tickets",
+          "done": false
+        },
+        {
+          "name": "Try omniorb with exact Python version",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "doer upgrade",
+          "start": "08:38:12.538576",
+          "breaks": []
+        },
+        {
+          "name": "Check one kernel ticket",
+          "start": "13:19:10.442825",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Share the security objects",
+        "Ben dance?",
+        "Tell Andrew not doing WDM",
+        "Started on doer at 7am",
+        "Can get flight compensation",
+        "Need to triage!!",
+        "Ben dancing",
+        "Prepare for next wdm",
+        "branching tomorrow",
+        "Was midway through redoing all the task and log logic"
+      ]
+    },
+    "2024-04-16": {
+      "priorities": [
+        {
+          "name": "Check kernel ticket",
+          "done": true
+        },
+        {
+          "name": "Update gO:Python instructions and reply to two tickets",
+          "done": false
+        },
+        {
+          "name": "Try omniorb with exact python version",
+          "done": false
+        },
+        {
+          "name": "Engagement survey",
+          "done": false
+        },
+        {
+          "name": "doer upgrade",
+          "done": false
+        },
+        {
+          "name": "IT survey",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Check kernel ticket",
+          "start": "09:05:53.387006",
+          "breaks": []
+        },
+        {
+          "name": "Try omniorb with exact python version",
+          "start": "09:31:02.472899",
+          "breaks": []
+        },
+        {
+          "name": "IT survey",
+          "start": "11:31:21.603430",
+          "breaks": []
+        },
+        {
+          "name": "Engagement survey",
+          "start": "11:57:43.535954",
+          "breaks": []
+        },
+        {
+          "name": "security survey",
+          "start": "11:58:37.614474",
+          "breaks": [
+            {
+              "start": "12:06:57.303583",
+              "end": "13:11:59.734178"
+            }
+          ]
+        },
+        {
+          "name": "Finding new meeting time",
+          "start": "13:12:46.338799",
+          "breaks": []
+        },
+        {
+          "name": "Engagement survey",
+          "start": "13:56:36.742027",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to review Ben"]
+    },
+    "2024-04-17": {
+      "priorities": [
+        {
+          "name": "Update gO:Python instructions and reply to two tickets",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": false
+        },
+        {
+          "name": "Address Gerrit comments",
+          "done": false
+        },
+        {
+          "name": "QMTest 2024.1 tickets",
+          "done": false
+        },
+        {
+          "name": "omniorb building on Jenkins node",
+          "done": false
+        },
+        {
+          "name": "doer upgrade",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "doer upgrade",
+          "start": "09:23:04.727385",
+          "breaks": []
+        },
+        {
+          "name": "Address Gerrit comments",
+          "start": "10:01:25.413908",
+          "breaks": []
+        },
+        {
+          "name": "Addressing comments on gdap script chain",
+          "start": "12:52:15.643789",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Was almost done with the CMakePresets stuff",
+        "Need to update the gdap script now to use presets",
+        "Should also put the presets into cmake.groovy"
+      ],
+      "end_time": "16:14:01.848327"
+    },
+    "2024-04-18": {
+      "priorities": [
+        {
+          "name": "Put new cmake build stuff up for review",
+          "done": true
+        },
+        {
+          "name": "Update gO:Python build instructions and reply to two tickets",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": true
+        },
+        {
+          "name": "Address Gerrit comments",
+          "done": true
+        },
+        {
+          "name": "QMTest 2024.1 tickets",
+          "done": false
+        },
+        {
+          "name": "Close DevCI tickets in review",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Put new cmake build stuff up for review",
+          "start": "09:34:51.262538",
+          "breaks": []
+        },
+        {
+          "name": "Fix gO:Python test tolerance",
+          "start": "11:44:41.725968",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "11:53:53.394724",
+          "breaks": []
+        },
+        {
+          "name": "Put new cmake build stuff up for review",
+          "start": "13:19:55.959328",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "14:24:31.867941",
+          "breaks": []
+        },
+        {
+          "name": "AdaptorFO version upgrade",
+          "start": "14:48:28.388655",
+          "breaks": []
+        },
+        {
+          "name": "Address Gerrit comments",
+          "start": "15:15:41.689168",
+          "breaks": []
+        },
+        {
+          "name": "gOPython tickets and documentation",
+          "start": "15:45:17.330040",
+          "breaks": []
+        },
+        {
+          "name": "triage",
+          "start": "16:30:50.118751",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent a couple of hours in the morning on doer",
+        "Need to loosen numerical tolerance for gOPython test",
+        "Need to reply to Xenia about QMTest"
+      ],
+      "end_time": "15:33:03.691037"
+    },
+    "2024-04-19": {
+      "priorities": [
+        {
+          "name": "mandatory learning",
+          "done": false
+        },
+        {
+          "name": "pip install slides",
+          "done": false
+        },
+        {
+          "name": "Rework presets to exclude Jenkins and not specify target",
+          "done": false
+        },
+        {
+          "name": "Close DevCI tickets in review",
+          "done": true
+        },
+        {
+          "name": "Omniorb on Jenkins node",
+          "done": true
+        },
+        {
+          "name": "Work on reducing the number of commits I have on Gerrit",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "pip install slides",
+          "start": "08:28:31.600022",
+          "breaks": []
+        },
+        {
+          "name": "Close DevCI tickets in review",
+          "start": "10:52:49.418610",
+          "breaks": []
+        },
+        {
+          "name": "pip install slides",
+          "start": "11:25:36.237754",
+          "breaks": []
+        },
+        {
+          "name": "pruning pipelines",
+          "start": "13:47:46.564515",
+          "breaks": []
+        },
+        {
+          "name": "Omniorb on Jenkins node",
+          "start": "14:54:58.625844",
+          "breaks": []
+        },
+        {
+          "name": "pip install slides",
+          "start": "15:11:51.595483",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Flight refund",
+        "Need to do DevCI tasks",
+        "Need to reply to Xenia",
+        "Need to look at 33850"
+      ],
+      "end_time": "15:38:43.442945"
+    },
+    "2024-04-22": {
+      "priorities": [
+        {
+          "name": "Triage from 33863",
+          "done": true
+        },
+        {
+          "name": "Mandatory learning",
+          "done": true
+        },
+        {
+          "name": "pip install slides",
+          "done": true
+        },
+        {
+          "name": "Check omniorb",
+          "done": false
+        },
+        {
+          "name": "Review Ben S",
+          "done": true
+        },
+        {
+          "name": "Refund flight",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Setting up tasks in todoist",
+          "start": "07:35:11.178571",
+          "breaks": []
+        },
+        {
+          "name": "Check omniorb",
+          "start": "08:02:53.102880",
+          "breaks": []
+        },
+        {
+          "name": "Mandatory learning",
+          "start": "08:16:17.091664",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "09:11:02.952669",
+          "breaks": []
+        },
+        {
+          "name": "Creating tasks for all commits in Gerrit",
+          "start": "09:28:24.273985",
+          "breaks": []
+        },
+        {
+          "name": "pip install slides",
+          "start": "10:45:13.672676",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:57:26.239216"
+    },
+    "2024-04-23": {
+      "priorities": [
+        {
+          "name": "Rehearse pip install slides",
+          "done": true
+        },
+        {
+          "name": "Rework CMake presets",
+          "done": true
+        },
+        {
+          "name": "Omniorb upgrade",
+          "done": false
+        },
+        {
+          "name": "Flight refund",
+          "done": false
+        },
+        {
+          "name": "Loosening of gO:Python test tolerance",
+          "done": true
+        },
+        {
+          "name": "Kernel build scripts",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Omniorb upgrade",
+          "start": "08:43:59.861346",
+          "breaks": []
+        },
+        {
+          "name": "Rehearse pip install slides",
+          "start": "09:52:08.137388",
+          "breaks": []
+        },
+        {
+          "name": "Rework CMake presets",
+          "start": "10:58:13.974602",
+          "breaks": []
+        },
+        {
+          "name": "Omniorb upgrade",
+          "start": "11:43:40.093876",
+          "breaks": [
+            {
+              "start": "12:45:44.843332",
+              "end": "13:01:52.560136"
+            }
+          ]
+        },
+        {
+          "name": "email martin about gdap testing",
+          "start": "15:56:38.222149",
+          "breaks": []
+        }
+      ],
+      "notes": ["Spent 9-10 rehearsing"]
+    },
+    "2024-04-24": {
+      "priorities": [
+        {
+          "name": "Merge AdaptorFO version commit",
+          "done": true
+        },
+        {
+          "name": "Push omniorb debug to conan",
+          "done": true
+        },
+        {
+          "name": "Flight refund",
+          "done": true
+        },
+        {
+          "name": "Prepare gPAS for Costas",
+          "done": false
+        },
+        {
+          "name": "Growth talk",
+          "done": true
+        },
+        {
+          "name": "Organise tasks for GTD",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge AdaptorFO version commit",
+          "start": "08:44:15.302889",
+          "breaks": []
+        },
+        {
+          "name": "Flight refund",
+          "start": "08:48:22.020673",
+          "breaks": []
+        },
+        {
+          "name": "Push omniorb debug to conan",
+          "start": "08:52:22.483164",
+          "breaks": []
+        },
+        {
+          "name": "Writing README.md for conan",
+          "start": "09:42:18.443731",
+          "breaks": []
+        },
+        {
+          "name": "Prepare gPAS for Costas",
+          "start": "10:37:19.581583",
+          "breaks": []
+        },
+        {
+          "name": "Flight refund",
+          "start": "15:25:12.643741",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "15:49:01.633132",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to review Ben S",
+        "Need to merge into develop",
+        "gpas branch is gpas_for_gerit",
+        "Need to use Oliver's ansible suggestion to merge develop into gPASW"
+      ],
+      "end_time": "16:11:27.107243"
+    },
+    "2024-04-25": {
+      "priorities": [
+        {
+          "name": "Check Ben S is ok with PySimpleGUI",
+          "done": true
+        },
+        {
+          "name": "Prepare for Costas gPAS review",
+          "done": true
+        },
+        {
+          "name": "Organise work tasks with GTD",
+          "done": true
+        },
+        {
+          "name": "Get gpas.exe working",
+          "done": false
+        },
+        {
+          "name": "Comment on 33850",
+          "done": false
+        },
+        {
+          "name": "Merge build scripts",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Prepare for Costas gPAS review",
+          "start": "07:51:30.334663",
+          "breaks": []
+        },
+        {
+          "name": "Organise work tasks with GTD",
+          "start": "08:02:49.961525",
+          "breaks": []
+        },
+        {
+          "name": "Prepare for Costas gPAS review",
+          "start": "10:21:05.949717",
+          "breaks": []
+        },
+        {
+          "name": "review Ben S",
+          "start": "13:23:06.149415",
+          "breaks": []
+        },
+        {
+          "name": "Improve Python installation instructions",
+          "start": "13:43:57.844211",
+          "breaks": []
+        },
+        {
+          "name": "Review Ben S",
+          "start": "14:46:43.602596",
+          "breaks": []
+        },
+        {
+          "name": "adding tasks from Costas meeting",
+          "start": "15:04:19.593169",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent half an hour in the morning replying to messages",
+        "Started preparing for costas at 10",
+        "Need to review Ben S desperately",
+        "Need to create gPAS tasks",
+        "Need to tell Trung about gPAS gEP two weeks"
+      ],
+      "end_time": "15:23:51.721180"
+    },
+    "2024-04-26": {
+      "priorities": [
+        {
+          "name": "Consolidate bootcamp notes and plan",
+          "done": true
+        },
+        {
+          "name": "Make WDM bootcamp slides",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Fix gpas.exe to minimal API",
+          "done": false
+        },
+        {
+          "name": "Make bootcamp full presentation",
+          "done": false
+        },
+        {
+          "name": "Doer",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Consolidate bootcamp notes and plan",
+          "start": "07:42:30.073534",
+          "breaks": []
+        },
+        {
+          "name": "Reduce disk use",
+          "start": "09:56:07.912096",
+          "breaks": []
+        },
+        {
+          "name": "Consolidate bootcamp notes and plan",
+          "start": "10:33:38.653067",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:15:42.568558"
+    },
+    "2024-04-29": {
+      "priorities": [
+        {
+          "name": "Make WDM bootcamp slides",
+          "done": true
+        },
+        {
+          "name": "Prepare bootcamp presentation invite",
+          "done": false
+        },
+        {
+          "name": "Fix gpas.exe",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "developing with docker page",
+          "done": false
+        },
+        {
+          "name": "build scripts merge",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "reviewing tasks",
+          "start": "08:16:33.355739",
+          "breaks": []
+        },
+        {
+          "name": "Make WDM bootcamp slides",
+          "start": "08:38:27.637622",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:58:24.281467"
+    },
+    "2024-04-30": {
+      "priorities": [
+        {
+          "name": "Prepare bootcamp presentation invite",
+          "done": true
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Bootcamp survey",
+          "done": false
+        },
+        {
+          "name": "Fix gpas.exe",
+          "done": false
+        },
+        {
+          "name": "Merge build scripts",
+          "done": false
+        },
+        {
+          "name": "Develop with Docker page",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Prepare bootcamp presentation invite",
+          "start": "08:57:47.280297",
+          "breaks": []
+        },
+        {
+          "name": "Fix gpas.exe",
+          "start": "09:34:02.260727",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "11:19:45.440388",
+          "breaks": []
+        },
+        {
+          "name": "Fix gpas.exe",
+          "start": "12:02:46.639959",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent 20 mins in the morning replying to Duane about Python upgrade",
+        "Spent an hour helping John Ferguson"
+      ],
+      "end_time": "17:17:08.531627"
+    },
+    "2024-05-01": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "gpas.exe make simulation run",
+          "done": false
+        },
+        {
+          "name": "gpas.exe add set_inputs",
+          "done": true
+        },
+        {
+          "name": "Merge build scripts",
+          "done": false
+        },
+        {
+          "name": "Develop with Docker page",
+          "done": false
+        },
+        {
+          "name": "JSON schema for gPAS",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gpas.exe add set_inputs",
+          "start": "10:02:29.852520",
+          "breaks": []
+        },
+        {
+          "name": "Helping Ben and Viktor",
+          "start": "15:13:04.530230",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia",
+          "start": "15:28:15.251233",
+          "breaks": []
+        }
+      ],
+      "notes": ["Started on gpas an  hour earlier"],
+      "end_time": "16:06:22.103007"
+    },
+    "2024-05-02": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Create more gpas tickets",
+          "done": false
+        },
+        {
+          "name": "Self-review gpas commits",
+          "done": false
+        },
+        {
+          "name": "Look at CI tasks and do a couple",
+          "done": false
+        },
+        {
+          "name": "Develop with Docker page/readme",
+          "done": false
+        },
+        {
+          "name": "gpas commits more tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Develop with Docker page/readme",
+          "start": "08:00:18.332124",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to get back to Duane",
+        "Looking into Duane's issue at the same time as creating the docker page",
+        "Spent the whole day trying things with Docker and investigating for Duane"
+      ],
+      "end_time": "18:32:19.897940"
+    },
+    "2024-05-03": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Create more gPAS tickets",
+          "done": false
+        },
+        {
+          "name": "Check CI tasks",
+          "done": false
+        },
+        {
+          "name": "Continue working on the Docker stuff",
+          "done": false
+        },
+        {
+          "name": "Self-review gpas commits",
+          "done": false
+        },
+        {
+          "name": "new test program",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "new test program",
+          "start": "07:50:01.612487",
+          "breaks": []
+        },
+        {
+          "name": "Check CI tasks",
+          "start": "09:19:24.051765",
+          "breaks": []
+        },
+        {
+          "name": "Migrate QMTest pipelines to RHEL8",
+          "start": "09:29:25.110915",
+          "breaks": []
+        },
+        {
+          "name": "Continue working on the Docker stuff",
+          "start": "13:05:21.433821",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "15:01:22.839901",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to push the readme update and comment on the wheel commit"
+      ],
+      "end_time": "15:28:55.014939"
+    },
+    "2024-05-07": {
+      "priorities": [
+        {
+          "name": "Timecards",
+          "done": true
+        },
+        {
+          "name": "Review Xenia gPAS",
+          "done": true
+        },
+        {
+          "name": "Review Constantin conan change",
+          "done": true
+        },
+        {
+          "name": "Organise retrospective",
+          "done": true
+        },
+        {
+          "name": "Prepare gpas changes for review",
+          "done": false
+        },
+        {
+          "name": "Update goals",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Timecards",
+          "start": "08:55:56.575648",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia gPAS",
+          "start": "10:58:53.868692",
+          "breaks": []
+        },
+        {
+          "name": "Adding CMakePresets instructions to README and Trac",
+          "start": "11:39:54.590087",
+          "breaks": []
+        },
+        {
+          "name": "Organise retrospective",
+          "start": "12:23:50.246155",
+          "breaks": []
+        },
+        {
+          "name": "Prepare gpas changes for review",
+          "start": "15:16:10.339619",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-05-08": {
+      "priorities": [
+        {
+          "name": "Make gpas exe work",
+          "done": true
+        },
+        {
+          "name": "Clean up gpas commits for review",
+          "done": true
+        },
+        {
+          "name": "Test EL7 pipeline changes on Gerrit",
+          "done": false
+        },
+        {
+          "name": "Show Xenia how to use gpas testing",
+          "done": false
+        },
+        {
+          "name": "Look at gopython error",
+          "done": false
+        },
+        {
+          "name": "Make Oak Docker workflow",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make gpas exe work",
+          "start": "08:53:00.947676",
+          "breaks": []
+        },
+        {
+          "name": "Clean up gpas commits for review",
+          "start": "14:16:23.542350",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:14:08.628864"
+    },
+    "2024-05-09": {
+      "priorities": [
+        {
+          "name": "gPAS Costas slides",
+          "done": true
+        },
+        {
+          "name": "Ensure gpas commits pass jenkins",
+          "done": false
+        },
+        {
+          "name": "Add items to retro board",
+          "done": false
+        },
+        {
+          "name": "Test EL7 pipelines",
+          "done": true
+        },
+        {
+          "name": "Make Docker oak workflow",
+          "done": false
+        },
+        {
+          "name": "Ensure gpas commits pass qmtest",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fixing build instructions",
+          "start": "07:41:04.770114",
+          "breaks": []
+        },
+        {
+          "name": "Ensure gpas commits pass jenkins",
+          "start": "07:53:46.428457",
+          "breaks": []
+        },
+        {
+          "name": "gPAS Costas slides",
+          "start": "07:55:15.681944",
+          "breaks": []
+        },
+        {
+          "name": "Make Docker oak workflow",
+          "start": "10:35:14.902077",
+          "breaks": []
+        },
+        {
+          "name": "Test EL7 pipelines",
+          "start": "14:08:17.692291",
+          "breaks": []
+        },
+        {
+          "name": "Make Docker oak workflow",
+          "start": "14:49:52.760346",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-05-10": {
+      "priorities": [
+        {
+          "name": "Add tasks to todoist",
+          "done": true
+        },
+        {
+          "name": "Retro items",
+          "done": false
+        },
+        {
+          "name": "Check pipeline tests",
+          "done": true
+        },
+        {
+          "name": "Docker worflow",
+          "done": true
+        },
+        {
+          "name": "Make bootcamp presentation",
+          "done": false
+        },
+        {
+          "name": "Fix gpas commits on Jenkins",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check pipeline tests",
+          "start": "07:40:12.035099",
+          "breaks": []
+        },
+        {
+          "name": "Add tasks to todoist",
+          "start": "07:45:16.131007",
+          "breaks": []
+        },
+        {
+          "name": "Docker worflow",
+          "start": "09:20:27.678430",
+          "breaks": []
+        },
+        {
+          "name": "Putting qmtest on nexus2",
+          "start": "13:42:41.267432",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-05-13": {
+      "priorities": [
+        {
+          "name": "Make bootcamp presentation",
+          "done": false
+        },
+        {
+          "name": "Add retro items and remind everyone else",
+          "done": true
+        },
+        {
+          "name": "Catch up with emails",
+          "done": false
+        },
+        {
+          "name": "Look at gerrit pipeline run resulst",
+          "done": false
+        },
+        {
+          "name": "Reply to Maria about gO:Python",
+          "done": false
+        },
+        {
+          "name": "Update Triage flowchart",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Look at gerrit pipeline run resulst",
+          "start": "09:41:36.531705",
+          "breaks": []
+        },
+        {
+          "name": "Add retro items and remind everyone else",
+          "start": "10:04:35.019415",
+          "breaks": []
+        },
+        {
+          "name": "Update Triage flowchart",
+          "start": "10:16:18.717062",
+          "breaks": []
+        },
+        {
+          "name": "Catch up with emails",
+          "start": "10:38:01.765557",
+          "breaks": []
+        },
+        {
+          "name": "Fixing gpas gerrit",
+          "start": "10:38:25.758146",
+          "breaks": []
+        },
+        {
+          "name": "Make bootcamp presentation",
+          "start": "12:02:31.656226",
+          "breaks": [
+            {
+              "start": "12:02:35.143211",
+              "end": "13:33:41.015412"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    "2024-05-14": {
+      "priorities": [
+        {
+          "name": "Make bootcamp presentation",
+          "done": true
+        },
+        {
+          "name": "Rehearse bootcamp presentation",
+          "done": true
+        },
+        {
+          "name": "Catch up with emails",
+          "done": true
+        },
+        {
+          "name": "Rename qmtest pipelines",
+          "done": false
+        },
+        {
+          "name": "Reply to Maria about gO:Python",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS linux build",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make bootcamp presentation",
+          "start": "09:04:13.618304",
+          "breaks": []
+        },
+        {
+          "name": "Catch up with emails",
+          "start": "15:13:19.922906",
+          "breaks": []
+        },
+        {
+          "name": "Preparing Bootcamp pack",
+          "start": "15:36:47.720113",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:19:54.812652"
+    },
+    "2024-05-15": {
+      "priorities": [
+        {
+          "name": "Company directives",
+          "done": true
+        },
+        {
+          "name": "Check for Autorun failures",
+          "done": true
+        },
+        {
+          "name": "Add more to retro",
+          "done": true
+        },
+        {
+          "name": "Reply Maria gO:Python",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS on Linux",
+          "done": false
+        },
+        {
+          "name": "Rename Linux pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix gPAS on Linux",
+          "start": "08:54:19.990930",
+          "breaks": []
+        },
+        {
+          "name": "build scripts",
+          "start": "09:17:09.755032",
+          "breaks": []
+        },
+        {
+          "name": "Check for Autorun failures",
+          "start": "10:11:11.979575",
+          "breaks": []
+        },
+        {
+          "name": "Add more to retro",
+          "start": "10:14:40.868476",
+          "breaks": []
+        },
+        {
+          "name": "Fix gPAS on Linux",
+          "start": "15:00:04.518553",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to add standards actions to todoist"],
+      "end_time": "15:58:31.190810"
+    },
+    "2024-05-16": {
+      "priorities": [
+        {
+          "name": "Reply Maria gO:Python",
+          "done": false
+        },
+        {
+          "name": "Rename Linux pipelines",
+          "done": false
+        },
+        {
+          "name": "Finish gPAS tests",
+          "done": false
+        },
+        {
+          "name": "Create tasks for tickets and notebook",
+          "done": false
+        },
+        {
+          "name": "Watch townhalls",
+          "done": false
+        },
+        {
+          "name": "gqm gerrit changes",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Finish gPAS tests",
+          "start": "07:57:46.265194",
+          "breaks": []
+        }
+      ],
+      "notes": ["In the morning spent half an hour on the docker commits"],
+      "end_time": "15:25:23.211817"
+    },
+    "2024-05-17": {
+      "priorities": [
+        {
+          "name": "Merge and setup new pipelines",
+          "done": true
+        },
+        {
+          "name": "Merge develop into gpas",
+          "done": true
+        },
+        {
+          "name": "Keep adding gPAS tests",
+          "done": false
+        },
+        {
+          "name": "Reply Maria gOPython",
+          "done": false
+        },
+        {
+          "name": "Create tasks for tickets, notebook, and committee meeting",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge and setup new pipelines",
+          "start": "08:01:13.586723",
+          "breaks": []
+        },
+        {
+          "name": "Keep adding gPAS tests",
+          "start": "08:40:52.437390",
+          "breaks": []
+        },
+        {
+          "name": "Merge develop into gpas",
+          "start": "11:21:41.185681",
+          "breaks": []
+        },
+        {
+          "name": "Reply Maria gOPython",
+          "start": "12:21:38.691056",
+          "breaks": []
+        },
+        {
+          "name": "Create tasks for tickets, notebook, and committee meeting",
+          "start": "14:45:17.398762",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:20:46.719300"
+    },
+    "2024-05-20": {
+      "priorities": [
+        {
+          "name": "Check new pipeline results",
+          "done": true
+        },
+        {
+          "name": "Reply Maria gOPython",
+          "done": false
+        },
+        {
+          "name": "Create tasks for Jira and Trac tickets",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "KST Jira board",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS tests",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Check new pipeline results",
+          "start": "07:45:56.192650",
+          "breaks": []
+        },
+        {
+          "name": "Fix gPAS tests",
+          "start": "08:00:22.455529",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Should reply to gerrit comments next",
+        "Tasks made for all Trac tickets, but not Jira tickets",
+        "Spent half an hour minimum to make the Trac ticket tasks"
+      ],
+      "end_time": "15:26:48.619672"
+    },
+    "2024-05-21": {
+      "priorities": [
+        {
+          "name": "KST Jira board",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS double open",
+          "done": true
+        },
+        {
+          "name": "Discuss WDM with Andrew",
+          "done": false
+        },
+        {
+          "name": "Check autorun",
+          "done": false
+        },
+        {
+          "name": "Reply Maria gOPython",
+          "done": false
+        },
+        {
+          "name": "Create tasks for Jira tickets",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix gPAS double open",
+          "start": "09:22:07.610031",
+          "breaks": []
+        },
+        {
+          "name": "Find out why Ninja and VS generator are different",
+          "start": "10:18:04.558679",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent half an hour in the morning talking with Andrew and Constantin about code",
+        "Need to finish cleaning up my test commits"
+      ]
+    },
+    "2024-05-22": {
+      "priorities": [
+        {
+          "name": "KST jira board",
+          "done": true
+        },
+        {
+          "name": "Clean up gPAS for review",
+          "done": false
+        },
+        {
+          "name": "Discuss WDM with Andrew",
+          "done": true
+        },
+        {
+          "name": "Check autorun",
+          "done": false
+        },
+        {
+          "name": "Prepare for retro",
+          "done": true
+        },
+        {
+          "name": "Reply Maria gO:Python",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Clean up gPAS for review",
+          "start": "09:19:54.191429",
+          "breaks": []
+        }
+      ],
+      "notes": ["Andrew seemed very against creating an APM team..."],
+      "end_time": "15:56:50.691994"
+    },
+    "2024-05-23": {
+      "priorities": [
+        {
+          "name": "Prepare for Costas review",
+          "done": true
+        },
+        {
+          "name": "Start the retro voting process",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": false
+        },
+        {
+          "name": "Put more gPAS up for review",
+          "done": true
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Fix metric pipeline",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Start the retro voting process",
+          "start": "07:44:22.271507",
+          "breaks": []
+        },
+        {
+          "name": "Prepare for Costas review",
+          "start": "09:47:17.174608",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:26:04.600889"
+    },
+    "2024-05-24": {
+      "priorities": [
+        {
+          "name": "Review tasks",
+          "done": false
+        },
+        {
+          "name": "Triage",
+          "done": true
+        },
+        {
+          "name": "Fix metric pipeline",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Implement GetValue",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix metric pipeline",
+          "start": "08:04:22.854050",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "14:56:45.807416",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:56:34.837773"
+    },
+    "2024-05-28": {
+      "priorities": [
+        {
+          "name": "Finish configuring Windows release CI libtorch and then push windows and willow libtorch to conan",
+          "done": false
+        },
+        {
+          "name": "Prepare pipeline commits for review",
+          "done": false
+        },
+        {
+          "name": "Reply to Maria",
+          "done": false
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        }
+      ],
+      "log": [],
+      "notes": []
+    },
+    "2024-05-31": {
+      "priorities": [
+        {
+          "name": "Finish configuring Windows release CI libtorch and then push windows and willow libtorch to conan",
+          "done": false
+        },
+        {
+          "name": "Prepare pipeline commits for review",
+          "done": false
+        },
+        {
+          "name": "Reply to Maria",
+          "done": false
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Finish configuring Windows release CI libtorch and then push windows and willow libtorch to conan",
+          "start": "08:32:49.795960",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Could do the qmtest exception raising commit",
+        "Review Alex QMTest commits",
+        "Started on making CMake presets"
+      ]
+    },
+    "2024-06-03": {
+      "priorities": [
+        {
+          "name": "Catch-up with emails and tasks",
+          "done": false
+        },
+        {
+          "name": "Test metrics pipeline again",
+          "done": false
+        },
+        {
+          "name": "Respond to gPAS review comments",
+          "done": false
+        },
+        {
+          "name": "CMake presets in Jenkins",
+          "done": true
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Fix Autorun",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Catch-up with emails and tasks",
+          "start": "08:54:11.858095",
+          "breaks": []
+        },
+        {
+          "name": "Test metrics pipeline again",
+          "start": "08:54:34.448352",
+          "breaks": []
+        },
+        {
+          "name": "Respond to gPAS review comments",
+          "start": "08:55:56.409887",
+          "breaks": []
+        },
+        {
+          "name": "CMake presets in Jenkins",
+          "start": "08:56:00.059888",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:27:06.170440"
+    },
+    "2024-06-04": {
+      "priorities": [
+        {
+          "name": "Catch-up with emails",
+          "done": true
+        },
+        {
+          "name": "Test pipelines, metrics and further",
+          "done": true
+        },
+        {
+          "name": "Go through tasks",
+          "done": true
+        },
+        {
+          "name": "Respond to gPAS review",
+          "done": false
+        },
+        {
+          "name": "Fix clang-tidy",
+          "done": false
+        },
+        {
+          "name": "Fix autorun",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Test pipelines, metrics and further",
+          "start": "08:56:26.198414",
+          "breaks": []
+        },
+        {
+          "name": "Catch-up with emails",
+          "start": "08:56:31.440416",
+          "breaks": []
+        },
+        {
+          "name": "Fix clang-tidy",
+          "start": "11:21:45.891739",
+          "breaks": []
+        },
+        {
+          "name": "Test pipelines, metrics and further",
+          "start": "15:19:41.737419",
+          "breaks": []
+        },
+        {
+          "name": "Getting back into gPAS",
+          "start": "15:35:48.500288",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Should also update goals",
+        "retro",
+        "Ben may come in to the office tomorrow but he has a cold"
+      ]
+    },
+    "2024-06-05": {
+      "priorities": [
+        {
+          "name": "Prepare for final retro session",
+          "done": true
+        },
+        {
+          "name": "Test pipelines on Jenkins",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Fix Autorun",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS output channel",
+          "start": "08:45:17.020970",
+          "breaks": []
+        },
+        {
+          "name": "Prepare for final retro session",
+          "start": "10:05:32.008330",
+          "breaks": []
+        },
+        {
+          "name": "gPAS output channel",
+          "start": "10:48:50.548893",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-06-06": {
+      "priorities": [
+        {
+          "name": "Prepare for Costas review",
+          "done": true
+        },
+        {
+          "name": "Test pipelines on Jenkins",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Fix autorun",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS output channel",
+          "start": "09:07:45.419799",
+          "breaks": []
+        },
+        {
+          "name": "Test pipelines on Jenkins",
+          "start": "15:05:05.590286",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent from 7:30 to 9 preparing for costas review",
+        "Need to switch my design to dll based"
+      ],
+      "end_time": "15:30:04.582017"
+    },
+    "2024-06-07": {
+      "priorities": [
+        {
+          "name": "Test Jenkins metrics pipeline and check Gerrit",
+          "done": true
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "done": true
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Go through tasks",
+          "done": false
+        },
+        {
+          "name": "Change gPAS OC to a .dll",
+          "done": false
+        },
+        {
+          "name": "Fix autorun",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Test Jenkins metrics pipeline and check Gerrit",
+          "start": "08:26:43.829465",
+          "breaks": []
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "start": "08:36:26.074204",
+          "breaks": []
+        },
+        {
+          "name": "Fix autorun",
+          "start": "09:36:15.554937",
+          "breaks": []
+        },
+        {
+          "name": "Find SaaS people for Daren",
+          "start": "13:40:12.390280",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "14:17:29.377953",
+          "breaks": []
+        }
+      ],
+      "notes": ["Started on the pipelines an hour earlier"],
+      "end_time": "15:27:47.287816"
+    },
+    "2024-06-10": {
+      "priorities": [
+        {
+          "name": "Test metrics pipeline",
+          "done": true
+        },
+        {
+          "name": "Timecards",
+          "done": true
+        },
+        {
+          "name": "Review tasks",
+          "done": true
+        },
+        {
+          "name": "Message more SaaS people",
+          "done": false
+        },
+        {
+          "name": "Make gPAS OC a dll",
+          "done": false
+        },
+        {
+          "name": "Get reviews for gPAS",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Test metrics pipeline",
+          "start": "07:46:37.188550",
+          "breaks": []
+        },
+        {
+          "name": "Timecards",
+          "start": "08:20:25.290484",
+          "breaks": []
+        },
+        {
+          "name": "Review tasks",
+          "start": "08:52:45.625275",
+          "breaks": []
+        },
+        {
+          "name": "Get reviews for gPAS",
+          "start": "15:23:24.079974",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to get reviews for my gPAS commits"],
+      "end_time": "15:45:44.214852"
+    },
+    "2024-06-11": {
+      "priorities": [
+        {
+          "name": "Test pipelines",
+          "done": false
+        },
+        {
+          "name": "Message more SaaS people",
+          "done": false
+        },
+        {
+          "name": "Finish up triage",
+          "done": false
+        },
+        {
+          "name": "Make gPAS OC a dll",
+          "done": false
+        },
+        {
+          "name": "Clear up more commits from Gerrit",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Make gPAS OC a dll",
+          "start": "08:53:28.855801",
+          "breaks": []
+        },
+        {
+          "name": "Test pipelines",
+          "start": "08:56:51.688762",
+          "breaks": []
+        },
+        {
+          "name": "Respond to gPAS review",
+          "start": "11:32:32.408520",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:03:50.226624"
+    },
+    "2024-06-12": {
+      "priorities": [
+        {
+          "name": "Message SaaS people",
+          "done": false
+        },
+        {
+          "name": "Reply to Xenia about Putt in the Park",
+          "done": false
+        },
+        {
+          "name": "Converters hackathon",
+          "done": false
+        },
+        {
+          "name": "Fix double Open() failing",
+          "done": false
+        },
+        {
+          "name": "Test other pipelines that aren't metrics",
+          "done": false
+        },
+        {
+          "name": "gPAS Output Channel",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Replying to gPAS messages",
+          "start": "09:06:14.372150",
+          "breaks": []
+        },
+        {
+          "name": "Converters hackathon",
+          "start": "09:42:59.472436",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent an hour discussing gPAS condition expressions with Luke",
+        "Should do last DexPI ticket"
+      ],
+      "end_time": "16:49:07.514009"
+    },
+    "2024-06-13": {
+      "priorities": [
+        {
+          "name": "Message SaaS people",
+          "done": true
+        },
+        {
+          "name": "Fix failing gPAS tests",
+          "done": true
+        },
+        {
+          "name": "Reply about Putt in Park",
+          "done": false
+        },
+        {
+          "name": "Dexpi last ticket",
+          "done": false
+        },
+        {
+          "name": "Dexpi reviews",
+          "done": true
+        },
+        {
+          "name": "Test other CI pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix failing gPAS tests",
+          "start": "09:04:40.375337",
+          "breaks": []
+        },
+        {
+          "name": "Message SaaS people",
+          "start": "10:59:58.637173",
+          "breaks": []
+        },
+        {
+          "name": "Fix failing gPAS tests",
+          "start": "12:57:01.088161",
+          "breaks": []
+        },
+        {
+          "name": "Dexpi reviews",
+          "start": "14:58:04.950448",
+          "breaks": []
+        },
+        {
+          "name": "Dexpi last ticket",
+          "start": "15:11:19.957432",
+          "breaks": []
+        }
+      ],
+      "notes": ["Need to fix merge"],
+      "end_time": "16:17:54.224328"
+    },
+    "2024-06-14": {
+      "priorities": [
+        {
+          "name": "Dexpi fix directory tab commit",
+          "done": false
+        },
+        {
+          "name": "Dexpi last ticket",
+          "done": false
+        },
+        {
+          "name": "Merge gPAS commits",
+          "done": false
+        },
+        {
+          "name": "Message gDAP and gWAP about SaaS",
+          "done": false
+        },
+        {
+          "name": "Test other CI pipelines",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Prepare for gWAP",
+          "start": "11:13:12.967931",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent two hours in the morning helping Ben S",
+        "My entire day has been in meetings"
+      ],
+      "end_time": "16:41:31.368050"
+    },
+    "2024-06-17": {
+      "priorities": [
+        {
+          "name": "Fix Dexpi commit and pass last ticket on",
+          "done": false
+        },
+        {
+          "name": "Address gPAS comments",
+          "done": true
+        },
+        {
+          "name": "Review Xenia gPAS",
+          "done": true
+        },
+        {
+          "name": "Message gWAP and gDAP about SaaS",
+          "done": false
+        },
+        {
+          "name": "Test other CI pipelines",
+          "done": false
+        },
+        {
+          "name": "Give gWAP a build of gPAS",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Xenia gPAS",
+          "start": "07:43:34.991287",
+          "breaks": []
+        },
+        {
+          "name": "Address gPAS comments",
+          "start": "07:45:58.187648",
+          "breaks": []
+        },
+        {
+          "name": "Go through emails",
+          "start": "07:48:39.241372",
+          "breaks": []
+        },
+        {
+          "name": "Address gPAS comments",
+          "start": "07:58:51.379572",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia gPAS",
+          "start": "11:34:11.474966",
+          "breaks": []
+        },
+        {
+          "name": "Add python unit-tests to standard pipelines",
+          "start": "15:13:27.508027",
+          "breaks": []
+        }
+      ],
+      "notes": ["Started reviewing Xenia at 10:50am"],
+      "end_time": "15:46:37.583621"
+    },
+    "2024-06-18": {
+      "priorities": [
+        {
+          "name": "Sort office switch-up",
+          "done": false
+        },
+        {
+          "name": "Fix gPAS commits",
+          "done": true
+        },
+        {
+          "name": "Discuss bytes vs strings with Xenia",
+          "done": false
+        },
+        {
+          "name": "Merge pipeline changes",
+          "done": false
+        },
+        {
+          "name": "SaaS people",
+          "done": false
+        },
+        {
+          "name": "Last Dexpi work",
+          "done": true
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge pipeline changes",
+          "start": "09:13:18.053371",
+          "breaks": []
+        },
+        {
+          "name": "Fix gPAS commits",
+          "start": "09:27:50.298912",
+          "breaks": []
+        },
+        {
+          "name": "gPAS port number",
+          "start": "14:53:36.103861",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent 45 mins in the morning helping Spiros and Ben S with converters",
+        "More like 90 mins on converters work"
+      ],
+      "end_time": "16:24:49.482548"
+    },
+    "2024-06-19": {
+      "priorities": [
+        {
+          "name": "SaaS people",
+          "done": false
+        },
+        {
+          "name": "Clear desk",
+          "done": false
+        },
+        {
+          "name": "proto linter",
+          "done": true
+        },
+        {
+          "name": "gPAS port number",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Discuss bytes vs strings with Xenia",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "proto linter",
+          "start": "08:58:17.025791",
+          "breaks": []
+        },
+        {
+          "name": "gPAS port number",
+          "start": "09:07:54.312702",
+          "breaks": []
+        }
+      ],
+      "notes": []
+    },
+    "2024-06-20": {
+      "priorities": [
+        {
+          "name": "SaaS people",
+          "done": true
+        },
+        {
+          "name": "Proto linter",
+          "done": true
+        },
+        {
+          "name": "gPAS port number",
+          "done": true
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Watch townhalls",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS port number",
+          "start": "07:46:15.414887",
+          "breaks": []
+        },
+        {
+          "name": "Proto linter",
+          "start": "09:38:45.974890",
+          "breaks": []
+        },
+        {
+          "name": "rebuild converters",
+          "start": "10:18:15.155147",
+          "breaks": []
+        },
+        {
+          "name": "SaaS people",
+          "start": "13:27:40.637055",
+          "breaks": []
+        },
+        {
+          "name": "helping Silvia",
+          "start": "13:53:36.002370",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to look at static analysis warnings for gAPS",
+        "Send gDAP the contacts"
+      ],
+      "end_time": "15:46:24.367332"
+    },
+    "2024-06-21": {
+      "priorities": [
+        {
+          "name": "Merge gpas branch with proto and port changes",
+          "done": false
+        },
+        {
+          "name": "Review tasks",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Review Xenia",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Watch townhalls",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Merge gpas branch with proto and port changes",
+          "start": "07:39:25.285310",
+          "breaks": []
+        },
+        {
+          "name": "simplify autorun execution",
+          "start": "08:09:34.001446",
+          "breaks": []
+        },
+        {
+          "name": "Debug pipelines",
+          "start": "08:27:16.989432",
+          "breaks": []
+        },
+        {
+          "name": "metrics pipeline",
+          "start": "09:11:18.707460",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to check debug pipelines",
+        "I spent all day trying to fix the pipelines I'd broken"
+      ],
+      "end_time": "15:42:21.060049"
+    },
+    "2024-06-24": {
+      "priorities": [
+        {
+          "name": "Prepare gPAS Review",
+          "done": true
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "Update goals",
+          "done": false
+        },
+        {
+          "name": "Review work tasks",
+          "done": true
+        },
+        {
+          "name": "Review Xenia",
+          "done": true
+        },
+        {
+          "name": "Fix delay gSERVER start-up commit",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "checking emails",
+          "start": "07:57:32.777721",
+          "breaks": []
+        },
+        {
+          "name": "Review work tasks",
+          "start": "08:23:25.537941",
+          "breaks": []
+        },
+        {
+          "name": "Looking at metrics pipeline",
+          "start": "09:49:45.642093",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia",
+          "start": "11:14:10.683608",
+          "breaks": []
+        },
+        {
+          "name": "Fixing metrics sonar kernel pipeline",
+          "start": "12:13:47.460292",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Need to look at metrics pipeline",
+        "Also spent an hour preparing gPAS slides"
+      ],
+      "end_time": "15:33:05.085994"
+    },
+    "2024-06-25": {
+      "priorities": [
+        {
+          "name": "Review Xenia",
+          "done": true
+        },
+        {
+          "name": "Prepare demo of gPAS for Costas",
+          "done": true
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Give gWAP/gDAP/SCIMIT gPAS build",
+          "done": false
+        },
+        {
+          "name": "Organise defect process meeting",
+          "done": false
+        },
+        {
+          "name": "Merge minor Gerrit commits",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Review Xenia",
+          "start": "08:57:13.923704",
+          "breaks": []
+        },
+        {
+          "name": "Prepare demo of gPAS for Costas",
+          "start": "08:57:20.174160",
+          "breaks": []
+        },
+        {
+          "name": "Review Xenia",
+          "start": "09:04:10.851396",
+          "breaks": []
+        },
+        {
+          "name": "Merge minor Gerrit commits",
+          "start": "09:16:17.022316",
+          "breaks": []
+        },
+        {
+          "name": "Setting up meetings and other admin",
+          "start": "12:17:33.850916",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:22:30.088433"
+    },
+    "2024-06-26": {
+      "priorities": [
+        {
+          "name": "Merge autorun commit",
+          "done": true
+        },
+        {
+          "name": "Review Constantin",
+          "done": true
+        },
+        {
+          "name": "Fix defined race condition",
+          "done": true
+        },
+        {
+          "name": "Rebase and fix port branch",
+          "done": true
+        },
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Organise defect process meeting",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "Fix defined race condition",
+          "start": "08:56:08.233231",
+          "breaks": []
+        },
+        {
+          "name": "Review Constantin",
+          "start": "10:14:47.788267",
+          "breaks": []
+        },
+        {
+          "name": "Rebase and fix port branch",
+          "start": "10:38:05.542503",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "16:11:43.936226"
+    },
+    "2024-06-27": {
+      "priorities": [
+        {
+          "name": "gPAS output channel",
+          "done": false
+        },
+        {
+          "name": "Merge gPAS port branch",
+          "done": false
+        },
+        {
+          "name": "Prepare defect process meeting",
+          "done": false
+        },
+        {
+          "name": "Book growth talks",
+          "done": false
+        },
+        {
+          "name": "Watch townhalls",
+          "done": false
+        },
+        {
+          "name": "CI preset pipelines",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "gPAS output channel",
+          "start": "07:37:20.990504",
+          "breaks": []
+        }
+      ],
+      "notes": [],
+      "end_time": "15:41:57.628283"
+    },
+    "2024-06-28": {
+      "priorities": [
+        {
+          "name": "Merge gPAS port branch",
+          "done": false
+        },
+        {
+          "name": "Timecards",
+          "done": false
+        },
+        {
+          "name": "gPAS output channel with 0MQ",
+          "done": false
+        },
+        {
+          "name": "Review tasks",
+          "done": false
+        },
+        {
+          "name": "Make build for gWAP",
+          "done": false
+        },
+        {
+          "name": "Book defect process meeting",
+          "done": false
+        }
+      ],
+      "log": [
+        {
+          "name": "registering pygpas on pypi",
+          "start": "13:36:00.979258",
+          "breaks": []
+        },
+        {
+          "name": "Review tasks",
+          "start": "15:40:22.918677",
+          "breaks": []
+        }
+      ],
+      "notes": [
+        "Spent an hour doing gO:Python support for someone",
+        "Need to reply to person about support ticket",
+        "Tell Ying about profile integration pipeline"
+      ]
+    }
+  },
+  "version": "1.4.0"
+}
